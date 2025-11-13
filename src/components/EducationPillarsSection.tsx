@@ -1,65 +1,84 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { Users, BookOpen, Award, Link2, GraduationCap } from 'lucide-react';
-import img1 from '../assets/hero-01.jpg';
-import img2 from '../assets/hero-01.jpg';
-import img3 from '../assets/hero-01.jpg';
+import img061 from "../assets/Section-06-1.png"
+import img062 from "../assets/Section-06-2.png"
+import img063 from "../assets/Section-06-3.jpg"
+import img064 from "../assets/Section-06-4.png"
+
+
 
 interface StatCardData {
   icon: React.ReactNode;
   value: string;
   body: string;
+  isExtended?: boolean;
+  minHeight?: string; // Thêm prop để điều chỉnh chiều cao
 }
 
 interface PhotoCardData {
   image: string;
   alt: string;
+  heightRatio?: number;
 }
 
-export function EducationPillarsSection() {
+export default function EducationPillarsSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  // Column 1: StatCard + PhotoCard
+  const img1 = 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800';
+  const img2 = 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800';
+  const img3 = 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800';
+
+  // Column 1: StatCard (cao hơn) + PhotoCard
   const col1: (StatCardData | PhotoCardData)[] = [
     {
       icon: <Users className="w-12 h-12" />,
       value: '+6,000',
-      body: 'Students have graduated from LHBS, equipped with bilingual excellence and global perspectives'
+      body: 'Students have graduated from LHBS, equipped with bilingual excellence and global perspectives',
+      isExtended: true,
+      minHeight: '450px' // Tăng chiều cao StatCard
     } as StatCardData,
     {
-      image: img1,
-      alt: 'LHBS students winning NASA Space Apps Challenge with ATMOS GUARD project'
+      image: img061,
+      alt: 'LHBS students winning NASA Space Apps Challenge with ATMOS GUARD project',
+      heightRatio: 0.6
     } as PhotoCardData
   ];
 
-  // Column 2: PhotoCard + StatCard
+  // Column 2: PhotoCard + StatCard (cao hơn)
   const col2: (StatCardData | PhotoCardData)[] = [
     {
-      image: img2,
-      alt: 'Students engaged in collaborative computer-based learning activities'
+      image: img062,
+      alt: 'Students engaged in collaborative computer-based learning activities',
+      heightRatio: 1.2
     } as PhotoCardData,
     {
       icon: <BookOpen className="w-12 h-12" />,
       value: '+10,000',
-      body: 'Hours of bilingual instruction annually, ensuring fluency and cultural competence in both languages'
+      body: 'Hours of bilingual instruction annually, ensuring fluency and cultural competence in both languages',
+      isExtended: true,
+      minHeight: '460px' // Tăng chiều cao StatCard
     } as StatCardData
   ];
 
-  // Column 3: StatCard + PhotoCard
+  // Column 3: StatCard (cao hơn) + PhotoCard
   const col3: (StatCardData | PhotoCardData)[] = [
     {
       icon: <Award className="w-12 h-12" />,
       value: '96.04%',
-      body: 'University acceptance rate with students admitted to top institutions worldwide'
+      body: 'University acceptance rate with students admitted to top institutions worldwide',
+      isExtended: true,
+      minHeight: '420px' // Tăng chiều cao StatCard
     } as StatCardData,
     {
-      image: img3,
-      alt: 'Students participating in hands-on STEM robotics project'
+      image: img063,
+      alt: 'Students participating in hands-on STEM robotics project',
+      heightRatio: 1
     } as PhotoCardData
   ];
 
-  // Column 4: StatCard + PhotoCard + StatCard
+  // Column 4: StatCard + PhotoCard + StatCard (giữ chiều cao bình thường)
   const col4: (StatCardData | PhotoCardData)[] = [
     {
       icon: <Link2 className="w-12 h-12" />,
@@ -67,8 +86,9 @@ export function EducationPillarsSection() {
       body: 'Partnerships with international schools across Asia, Europe, and North America'
     } as StatCardData,
     {
-      image: 'https://images.unsplash.com/photo-1686213011698-8e70cb7ed011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGdyYWR1YXRpb24lMjBjZXJlbW9ueXxlbnwxfHx8fDE3NjI4NDIzMzV8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      alt: 'LHBS graduation ceremony celebrating student achievements'
+      image: img064,
+      alt: 'LHBS graduation ceremony celebrating student achievements',
+      heightRatio: 0.8
     } as PhotoCardData,
     {
       icon: <GraduationCap className="w-12 h-12" />,
@@ -80,12 +100,9 @@ export function EducationPillarsSection() {
   const columns = [col1, col2, col3, col4];
 
   return (
-    <motion.section
+    <section
       ref={ref}
       className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#fffae9] overflow-hidden"
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.8 }}
     >
       {/* Decorative motif - top left */}
       <div 
@@ -106,7 +123,7 @@ export function EducationPillarsSection() {
       {/* Header - Centered */}
       <div className="text-center mb-16 relative z-10">
         <motion.h2
-          className="font-['Crimson_Pro'] text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
+          className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -137,7 +154,7 @@ export function EducationPillarsSection() {
           </motion.div>
         ))}
       </div>
-    </motion.section>
+    </section>
   );
 }
 
@@ -147,21 +164,24 @@ function isStatCard(card: StatCardData | PhotoCardData): card is StatCardData {
 }
 
 // ==================== STAT CARD COMPONENT ====================
-function StatCard({ icon, value, body }: StatCardData) {
+function StatCard({ icon, value, body, isExtended, minHeight }: StatCardData) {
   return (
-    <div className="bg-[#1a5336] p-6 md:p-7 flex flex-col">
-      {/* Icon */}
-      <div className="text-[#fffae9] mb-3">
+    <div 
+      className={`bg-[#1a5336] p-6 md:p-8 flex flex-col justify-center items-center text-center ${isExtended ? 'min-h-[180px]' : ''}`}
+      style={minHeight ? { minHeight } : {}}
+    >
+      {/* Icon - size lớn hơn */}
+      <div className="text-[#fffae9] mb-4 scale-125 md:scale-150">
         {icon}
       </div>
 
-      {/* Value */}
-      <h3 className="font-['Crimson_Pro'] text-4xl md:text-5xl text-white mb-3">
+      {/* Value - size lớn hơn */}
+      <h3 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-4">
         {value}
       </h3>
 
-      {/* Body */}
-      <p className="font-['Lexend_Deca'] text-sm text-white/90 leading-relaxed">
+      {/* Body - size lớn hơn */}
+      <p className="text-base md:text-lg text-white/90 leading-relaxed max-w-sm">
         {body}
       </p>
     </div>
@@ -169,14 +189,14 @@ function StatCard({ icon, value, body }: StatCardData) {
 }
 
 // ==================== PHOTO CARD COMPONENT ====================
-function PhotoCard({ image, alt }: PhotoCardData) {
+function PhotoCard({ image, alt, heightRatio = 1.2 }: PhotoCardData) {
   return (
     <div className="relative overflow-hidden">
       <img
         src={image}
         alt={alt}
         className="w-full h-auto object-cover"
-        style={{ aspectRatio: '1 / 1.2' }}
+        style={{ aspectRatio: `1 / ${heightRatio}` }}
       />
     </div>
   );

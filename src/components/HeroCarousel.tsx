@@ -127,10 +127,10 @@ export function HeroCarousel({ slides, autoplayDelay = 5000, onNavigate }: HeroC
       </AnimatePresence>
 
       {/* Navigation Arrows - Desktop & Tablet */}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <HeroArrowLeft onClick={prevSlide} />
         <HeroArrowRight onClick={nextSlide} />
-      </div>
+      </div> */}
 
       {/* Pagination Dots */}
       <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-3 md:gap-4">
@@ -339,16 +339,18 @@ interface HeroDotProps {
 function HeroDot({ isActive, onClick, index }: HeroDotProps) {
   return (
     <button
-      onClick={onClick}
-      className={`
-        transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E]
-        ${isActive 
-          ? 'w-10 h-3 md:w-12 md:h-3 bg-white' 
-          : 'w-3 h-3 bg-white/50 hover:bg-white/75'
-        }
-      `}
-      aria-label={`Go to slide ${index + 1}`}
-      aria-current={isActive ? 'true' : 'false'}
-    />
+  onClick={onClick}
+  className={`
+    transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E]
+    rounded-full
+    ${isActive 
+      ? 'w-16 h-3 md:w-12 md:h-3 bg-[#FABA1E]'   // Active: màu cam
+      : 'w-3 h-3 bg-white/50 hover:bg-white/75'   // Inactive: trắng mờ
+    }
+  `}
+  aria-label={`Go to slide ${index + 1}`}
+  aria-current={isActive ? 'true' : 'false'}
+/>
+
   );
 }
