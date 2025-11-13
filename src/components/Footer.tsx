@@ -5,9 +5,9 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
   // Footer content data
   const footerTagline = "Trường Tiểu học - Trung học cơ sở - Trung học phổ thông Song ngữ Lạc Hồng";
   
-  const addressLine = "123 Đường Nguyễn Văn Linh, Phường Tân Phú\nQuận 7, Thành phố Hồ Chí Minh\nViệt Nam";
-  const phone = "+84 (28) 3771 4568";
-  const email = "admissions@lhbs.edu.vn";
+  const addressLine = "152/16 Huỳnh Văn Nghệ, KP Tân Lại, P. Trấn Biên, Đồng Nai.";
+  const phone = "+0251 3952 953";
+  const email = "tuyensinh@lhbs.vn";
   
   const aboutLinks = [
     { label: 'About Us', url: '/our-school/about-us' },
