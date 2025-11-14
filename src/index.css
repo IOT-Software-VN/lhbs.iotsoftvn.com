@@ -104,6 +104,58 @@ button.rounded-lg,
   border-radius: 0.5rem !important;
 }
 
+/* Animated Highlight Utilities */
+@keyframes slideInLeft {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.highlight-container {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-bg {
+  position: absolute;
+  inset: 0;
+  left: -0.75rem;
+  right: -0.75rem;
+  top: -0.25rem;
+  bottom: -0.25rem;
+  background-color: #FABA1E;
+  z-index: -1;
+  transform-origin: left;
+  animation: slideInLeft 1.2s ease-out forwards;
+  animation-delay: 0.6s;
+  transform: scaleX(0);
+}
+
+@media (min-width: 768px) {
+  .highlight-bg {
+    left: -1rem;
+    right: -1rem;
+  }
+}
+
+.highlight-bg.fast {
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+}
+
+.highlight-bg.slow {
+  animation-duration: 1.6s;
+  animation-delay: 0.9s;
+}
+
+.highlight-text {
+  position: relative;
+  z-index: 1;
+}
+
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {

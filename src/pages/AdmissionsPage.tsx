@@ -92,7 +92,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 href="https://tuyensinh.lhbs.vn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center"
+                className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
               >
                 Apply Online
               </a>
@@ -388,7 +388,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                     href="https://tuyensinh.lhbs.vn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors leading-10"
+                    className="inline-block px-6 h-10 bg-[#FABA1E] text-[#1a5336] font-['Arial'] text-sm hover:bg-[#e5a812] transition-colors leading-10 flex items-center justify-center rounded-full"
                   >
                     Apply Online
                   </a>
@@ -747,7 +747,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               href="https://tuyensinh.lhbs.vn"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center"
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-['Arial'] font-bold hover:bg-[#e5a812] transition-colors flex items-center justify-center rounded-full"
             >
               Apply Online
             </a>

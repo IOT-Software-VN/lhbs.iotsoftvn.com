@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { AnimatedHighlight } from './ui/animated-highlight';
 
 interface BVISHeroProps {
   onNavigate: (path: string) => void;
@@ -57,22 +58,22 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mb-6 md:mb-8"
             >
-              <h1 className="relative inline-block whitespace-nowrap">
-                {/* Highlight Background - LHBS yellow */}
-                <span 
-                  className="absolute inset-0 -left-3 -right-3 md:-left-4 md:-right-4 -top-1 -bottom-1 bg-[#FABA1E]"
-                  style={{ zIndex: -1 }}
-                />
-                {/* Text - 40px mobile, 48px tablet, 64px desktop */}
-                <span 
-                  className="relative text-[#1a5336] leading-tight" 
-                  style={{ 
-                    fontSize: '48px',
-                    lineHeight: '1.24'
-                  }}
+              <h1 className="whitespace-nowrap">
+                <AnimatedHighlight 
+                  delay={0.6} 
+                  duration={1.2}
+                  backgroundColor="#FABA1E"
                 >
-                  Lac Hong Bilingual School
-                </span>
+                  <span 
+                    className="text-[#1a5336] leading-tight font-semibold" 
+                    style={{ 
+                      fontSize: '48px',
+                      lineHeight: '1.24'
+                    }}
+                  >
+                    Lac Hong Bilingual School
+                  </span>
+                </AnimatedHighlight>
               </h1>
             </motion.div>
 

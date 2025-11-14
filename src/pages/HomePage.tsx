@@ -10,6 +10,7 @@ import { TestimonialsSection } from '../components/TestimonialsSection';
 import { NewsEventsSection } from '../components/NewsEventsSection';
 import { LetsBeginCTA } from '../components/LetsBeginCTA';
 import { Footer } from '../components/Footer';
+import { AnimatedHighlight } from '../components/ui/animated-highlight';
 import heroImage from '../assets/hero-01.jpg';
 import founderImage from '../assets/hero-01.jpg';
 import founderPortrait from '../assets/Section-03.png';
@@ -106,12 +107,17 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
         >
           {/* Title - Green background only on "Solid education" */}
           <h2 
-            className=" text-[#1a5336] mb-6"
+            className="text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.24' }}
           >
-            <span className="text-[#1a5336] bg-[#FABA1E] px-2 inline-block">
+            <AnimatedHighlight 
+              delay={0.5} 
+              duration={1.0}
+              backgroundColor="#FABA1E"
+              className="text-[#1a5336]"
+            >
               Solid education
-            </span>
+            </AnimatedHighlight>
             <span className="block mt-2">
               foundation to Future
             </span>
@@ -462,29 +468,31 @@ function CoreStrengthsSection() {
             <motion.div
               key={index}
               className="bg-[#fffae9] flex flex-col relative overflow-hidden rounded-2xl"
-              style={{ minHeight: '480px' }}
+              style={{ minHeight: '520px' }}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
             >
               {/* Title at top-left */}
-              <div className="p-6">
-                <h3 className="font-['SVN-Gotham'] text-sm tracking-wider text-[#1a5336]">
+              <div className="p-6 pb-4">
+                <h3 className="font-['SVN-Gotham'] text-base md:text-2xl tracking-wider text-[#1a5336] font-semibold">
                   {pillar.title}
                 </h3>
               </div>
 
               {/* Icon in middle */}
-              <div className="flex-1 flex items-center justify-center relative z-10">
-                {pillar.icon}
+              <div className="flex-1 flex items-center justify-center relative z-10 py-4">
+                <div className="transform scale-125">
+                  {pillar.icon}
+                </div>
               </div>
 
               {/* Circular photo overlapping bottom of icon */}
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
                 <div 
-                  className="w-32 h-32 rounded-full overflow-hidden border-4 border-white"
+                  className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white"
                   style={{
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+                    boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
                   }}
                 >
                   <img 
@@ -496,7 +504,7 @@ function CoreStrengthsSection() {
               </div>
 
               {/* Bottom spacing */}
-              <div className="h-20"></div>
+              <div className="h-24"></div>
             </motion.div>
           ))}
         </div>

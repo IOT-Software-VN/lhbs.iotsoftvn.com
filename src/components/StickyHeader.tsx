@@ -31,7 +31,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
         {/* Logo - Left */}
         <motion.button
           onClick={onLogoClick}
-          className={`flex-shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
+          className={`flex-shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 !rounded-none ${
             isTransparent ? 'focus:ring-offset-[#1a5336]' : menuOpen ? 'focus:ring-offset-[#1a5336]' : 'focus:ring-offset-white'
           }`}
           whileHover={{ scale: 1.02 }}
@@ -41,7 +41,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
          <img 
               src={logoImage} 
               alt="LHBS - Lac Hong Bilingual School" 
-              className="h-16 w-auto"
+              className="h-16 w-auto rounded-none"
             />
         </motion.button>
         
