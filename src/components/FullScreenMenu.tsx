@@ -60,7 +60,8 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
   className="fixed left-0 right-0 z-50 bg-[#1a5336] overflow-hidden"
   style={{ 
     top: 'calc(72px + 2rem)',
-    height: '50vh'
+    maxHeight: 'calc(100vh - 72px - 4rem)', // Dynamic height based on viewport
+    minHeight: 'auto' // Allow natural height based on content
   }}
   initial={{ y: '-100%', opacity: 0 }}
   animate={{ y: 0, opacity: 1 }}
@@ -68,7 +69,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
   transition={{ duration: 0.4, ease: 'easeInOut' }}
 >
   {/* Wrapper có thể cuộn toàn phần nếu cần */}
-  <div className="h-full max-w-[1440px] mx-auto px-12 py-8 pb-24 flex gap-12 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
+  <div className="max-w-[1440px] mx-auto px-12 py-8 pb-16 flex gap-12 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
 
     {/* Column 1 - Primary Navigation */}
     <div className="w-[40%] border-r border-white/20 pr-10 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
@@ -151,7 +152,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
   </div>
 
   {/* Bottom Cyan Strip */}
-  <div className="absolute bottom-0 left-0 right-0 h-[52px] bg-[#3a8f66] flex items-center justify-center">
+  <div className="w-full h-[52px] bg-[#3a8f66] flex items-center justify-center mt-4">
     <div className="flex items-center gap-3">
       <span className="text-white text-sm">
         Part of the LHBS bilingual education community

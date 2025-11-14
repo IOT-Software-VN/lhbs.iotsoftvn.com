@@ -75,10 +75,10 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const educationLevels = [
-    { label: 'Galaxy KG+', link: '/academics/kindergarten' },
-    { label: 'LHBS Primary School +', link: '/academics/primary' },
-    { label: 'LHBS Secondary School +', link: '/academics/lower-secondary' },
-    { label: 'LHBS High School +', link: '/academics/upper-secondary' }
+    { label: 'Galaxy KG', link: '/academics/kindergarten' },
+    { label: 'LHBS Primary School', link: '/academics/primary' },
+    { label: 'LHBS Secondary School', link: '/academics/lower-secondary' },
+    { label: 'LHBS High School', link: '/academics/upper-secondary' }
   ];
 
   return (

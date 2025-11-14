@@ -160,12 +160,12 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
           </button>
         </div>
 
-        <div className="overflow-hidden mx-12" ref={emblaRef}>
+        <div className="overflow-hidden mx-12 " ref={emblaRef}>
           <div className="flex gap-4">
             {cards.map((card, index) => (
               <motion.div
                 key={index}
-                className="flex-[0_0_calc(100%-1rem)] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_calc(33.333%-0.67rem)] xl:flex-[0_0_calc(25%-0.75rem)]"
+                className="flex-[0_0_calc(100%-1rem)] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_calc(33.333%-0.67rem)] xl:flex-[0_0_calc(25%-0.75rem)] bg-[#fffae9] "
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
