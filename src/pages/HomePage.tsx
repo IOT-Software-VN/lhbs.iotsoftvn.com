@@ -237,7 +237,7 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           {/* Decorative quote mark */}
-          <div className="text-[#fffae9] text-6xl md:text-7xl mb-4 leading-none font-serif opacity-40">
+          <div className="text-[#fffae9] text-6xl md:text-7xl mb-4 leading-none opacity-40">
             "
           </div>
           
@@ -423,103 +423,83 @@ function CoreStrengthsSection() {
   return (
     <motion.section
       ref={ref}
-      className="py-24 px-4 md:px-12 bg-[#fffae9]"
+      className="py-24 px-4 md:px-12"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
       {/* Top Text Block with Highlights */}
-      <motion.div 
-        className="text-center mb-16 max-w-4xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] leading-relaxed">
-          We{' '}
-          <span 
-            className="relative inline-block px-2"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
-            }}
-          >
-            educate
-          </span>
-          {' '}not just for success, but{' '}
-          <span 
-            className="relative inline-block px-2"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
-            }}
-          >
-            for significance.
-          </span>
-        </h2>
-        <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] leading-relaxed mt-4">
-          We{' '}
-          <span 
-            className="relative inline-block px-2"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
-            }}
-          >
-            nurture
-          </span>
-          {' '}not just bright minds, but{' '}
-          <span 
-            className="relative inline-block px-2"
-            style={{
-              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, #3FD97F 40%, #3FD97F 80%, transparent 80%)'
-            }}
-          >
-            bright futures.
-          </span>
-        </h2>
-      </motion.div>
+     <motion.div 
+  className="text-center mb-16 max-w-full mx-auto"
+  initial={{ opacity: 0, y: 20 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+
+  {/* Line 1 */}
+  <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336]">
+    We{" "}
+    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">educate</span>{" "}
+    not just for success, but{" "}
+    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">for significance.</span>
+  </h2>
+
+  {/* Line 2 */}
+  <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336] mt-4">
+    We{" "}
+    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">nurture</span>{" "}
+    not just bright minds, but{" "}
+    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">bright futures.</span>
+  </h2>
+
+</motion.div>
+
 
       {/* 5 Vertical Pillar Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-[1440px] mx-auto">
-        {pillars.map((pillar, index) => (
-          <motion.div
-            key={index}
-            className="bg-[#f5f0e1] flex flex-col relative overflow-hidden"
-            style={{ minHeight: '480px' }}
-            initial={{ opacity: 0, y: 40 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
-          >
-            {/* Title at top-left */}
-            <div className="p-6">
-              <h3 className="font-['SVN-Gotham'] text-sm tracking-wider text-[#1a5336]">
-                {pillar.title}
-              </h3>
-            </div>
-
-            {/* Icon in middle */}
-            <div className="flex-1 flex items-center justify-center relative z-10">
-              {pillar.icon}
-            </div>
-
-            {/* Circular photo overlapping bottom of icon */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-              <div 
-                className="w-32 h-32 rounded-full overflow-hidden border-4 border-[#f5f0e1]"
-                style={{
-                  boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
-                }}
-              >
-                <img 
-                  src={pillar.image} 
-                  alt={`${pillar.title} at LHBS`}
-                  className="w-full h-full object-cover"
-                />
+      <div className="py-16 px-8 rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-[1440px] mx-auto">
+          {pillars.map((pillar, index) => (
+            <motion.div
+              key={index}
+              className="bg-[#fffae9] flex flex-col relative overflow-hidden rounded-2xl"
+              style={{ minHeight: '480px' }}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 + (index * 0.1) }}
+            >
+              {/* Title at top-left */}
+              <div className="p-6">
+                <h3 className="font-['SVN-Gotham'] text-sm tracking-wider text-[#1a5336]">
+                  {pillar.title}
+                </h3>
               </div>
-            </div>
 
-            {/* Bottom spacing */}
-            <div className="h-20"></div>
-          </motion.div>
-        ))}
+              {/* Icon in middle */}
+              <div className="flex-1 flex items-center justify-center relative z-10">
+                {pillar.icon}
+              </div>
+
+              {/* Circular photo overlapping bottom of icon */}
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+                <div 
+                  className="w-32 h-32 rounded-full overflow-hidden border-4 border-white"
+                  style={{
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
+                  }}
+                >
+                  <img 
+                    src={pillar.image} 
+                    alt={`${pillar.title} at LHBS`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Bottom spacing */}
+              <div className="h-20"></div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </motion.section>
   );

@@ -57,114 +57,115 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           {/* Desktop Layout */}
           {!isMobile ? (
             <motion.div
-              className="fixed left-0 right-0 z-50 bg-[#1a5336]"
-              style={{ 
-                top: 'calc(72px + 2rem)', // Account for header height + padding
-                height: '50vh' 
-              }}
-              initial={{ y: '-100%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: '-100%', opacity: 0 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
+  className="fixed left-0 right-0 z-50 bg-[#1a5336] overflow-hidden"
+  style={{ 
+    top: 'calc(72px + 2rem)',
+    height: '50vh'
+  }}
+  initial={{ y: '-100%', opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  exit={{ y: '-100%', opacity: 0 }}
+  transition={{ duration: 0.4, ease: 'easeInOut' }}
+>
+  {/* Wrapper có thể cuộn toàn phần nếu cần */}
+  <div className="h-full max-w-[1440px] mx-auto px-12 py-8 pb-24 flex gap-12 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
+
+    {/* Column 1 - Primary Navigation */}
+    <div className="w-[40%] border-r border-white/20 pr-10 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
+      <nav className="space-y-6" aria-label="Main sections">
+        {siteNavigation.map((parent) => (
+          <button
+            key={parent.id}
+            onMouseEnter={() => setActiveParent(parent)}
+            onFocus={() => setActiveParent(parent)}
+            onClick={() => handleNavClick(parent.path)}
+            className={`block w-full text-left text-[32px] md:text-[36px] uppercase tracking-wide transition-all group whitespace-normal break-words leading-snug ${
+              activeParent?.id === parent.id
+                ? 'text-white'
+                : 'text-white/50 hover:text-white/80'
+            }`}
+          >
+            {parent.label}
+          </button>
+        ))}
+      </nav>
+    </div>
+
+    {/* Column 2 - Active Section Submenu */}
+    <div className="w-[30%] border-r border-white/20 pr-12 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
+      {activeParent && (
+        <div>
+          <h3 className="text-white text-[18px] uppercase tracking-wider mb-6">
+            {activeParent.label}
+          </h3>
+          <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
+            {activeParent.children.map((child) => (
+              <button
+                key={child.id}
+                onClick={() => handleNavClick(child.path)}
+                className={`block w-full text-left text-[15px] transition-colors group ${
+                  currentPath === child.path
+                    ? 'text-[#FABA1E]'
+                    : 'text-white hover:text-[#FABA1E]'
+                }`}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="truncate">{child.label}</span>
+                  <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </div>
+              </button>
+            ))}
+          </nav>
+          {activeParent.cta && (
+            <button
+              onClick={() => handleNavClick(activeParent.cta!.path)}
+              className="w-full px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-bold text-sm hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
             >
-              {/* Three Column Layout */}
-              <div className="h-full max-w-[1440px] mx-auto px-12 py-12 pb-24 flex gap-12">
-                
-                {/* Column 1 - Primary Navigation (40%) */}
-                <div className="w-[40%] border-r border-white/20 pr-18">
-                  <nav className="space-y-6" aria-label="Main sections">
-                    {siteNavigation.map((parent) => (
-                      <button
-                        key={parent.id}
-                        onMouseEnter={() => setActiveParent(parent)}
-                        onFocus={() => setActiveParent(parent)}
-                        onClick={() => handleNavClick(parent.path)}
-                        className={`block w-full text-left  text-[36px] uppercase tracking-wide transition-all group ${
-                          activeParent?.id === parent.id
-                            ? 'text-white'
-                            : 'text-white/50 hover:text-white/80'
-                        }`}
-                      >
-                        {parent.label}
-                      </button>
-                    ))}
-                  </nav>
-                </div>
+              {activeParent.cta.text}
+            </button>
+          )}
+        </div>
+      )}
+    </div>
 
-                {/* Column 2 - Active Section Submenu (30%) */}
-                <div className="w-[30%] border-r border-white/20 pr-12">
-                  {activeParent && (
-                    <div>
-                      <h3 className=" text-white text-[18px] uppercase tracking-wider mb-6">
-                        {activeParent.label}
-                      </h3>
-                      <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
-                        {activeParent.children.map((child) => (
-                          <button
-                            key={child.id}
-                            onClick={() => handleNavClick(child.path)}
-                            className={`block w-full text-left  text-[15px] transition-colors group ${
-                              currentPath === child.path
-                                ? 'text-[#FABA1E]'
-                                : 'text-white hover:text-[#FABA1E]'
-                            }`}
-                          >
-                            <div className="flex items-center justify-between">
-                              <span>{child.label}</span>
-                              <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                          </button>
-                        ))}
-                      </nav>
-                      {activeParent.cta && (
-                        <button
-                          onClick={() => handleNavClick(activeParent.cta!.path)}
-                          className="w-full px-6 py-3 bg-[#FABA1E] text-[#1a5336]  font-bold text-sm hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
-                        >
-                          {activeParent.cta.text}
-                        </button>
-                      )}
-                    </div>
-                  )}
-                </div>
+    {/* Column 3 - Discover More */}
+    <div className="w-[30%] overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
+      <h3 className="text-white/60 text-[14px] uppercase tracking-wider mb-6">
+        Discover More
+      </h3>
+      <nav className="space-y-3" aria-label="Additional pages">
+        {moreLinks.map((link, index) => (
+          <button
+            key={index}
+            onClick={() => handleNavClick(link.path)}
+            className="block w-full text-left text-[15px] text-white hover:text-[#FABA1E] transition-colors group"
+          >
+            <div className="flex items-center justify-between">
+              <span className="truncate">{link.label}</span>
+              <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+          </button>
+        ))}
+      </nav>
+    </div>
+  </div>
 
-                {/* Column 3 - Discover More (30%) */}
-                <div className="w-[30%]">
-                  <h3 className=" text-white/60 text-[14px] uppercase tracking-wider mb-6">
-                    Discover More
-                  </h3>
-                  <nav className="space-y-3" aria-label="Additional pages">
-                    {moreLinks.map((link, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleNavClick(link.path)}
-                        className="block w-full text-left  text-[15px] text-white hover:text-[#FABA1E] transition-colors group"
-                      >
-                        <div className="flex items-center justify-between">
-                          <span>{link.label}</span>
-                          <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </div>
-                      </button>
-                    ))}
-                  </nav>
-                </div>
-              </div>
+  {/* Bottom Cyan Strip */}
+  <div className="absolute bottom-0 left-0 right-0 h-[52px] bg-[#3a8f66] flex items-center justify-center">
+    <div className="flex items-center gap-3">
+      <span className="text-white text-sm">
+        Part of the LHBS bilingual education community
+      </span>
+      <button 
+        className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+        aria-label="Learn more"
+      >
+        <ArrowRight className="w-4 h-4 text-white" />
+      </button>
+    </div>
+  </div>
+</motion.div>
 
-              {/* Bottom Cyan Strip */}
-              <div className="absolute bottom-0 left-0 right-0 h-[52px] bg-[#3a8f66] flex items-center justify-center">
-                <div className="flex items-center gap-3">
-                  <span className=" text-white text-sm">
-                    Part of the LHBS bilingual education community
-                  </span>
-                  <button 
-                    className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors focus:outline-none focus:ring-2 focus:ring-white"
-                    aria-label="Learn more"
-                  >
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </button>
-                </div>
-              </div>
-            </motion.div>
           ) : (
             /* Mobile Layout - Single Column Accordion */
             <motion.div
