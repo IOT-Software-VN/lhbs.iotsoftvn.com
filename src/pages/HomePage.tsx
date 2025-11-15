@@ -19,7 +19,7 @@ import items01 from '../assets/items-01.png';
 import items02 from '../assets/items-02.png';
 import items03 from '../assets/items-03.png';
 import anniversaryImage from '../assets/anyver.png';
-
+import bgAcademicBilingual from '../assets/bg-Academic&Bilingual.png'
 
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
   const [showPillarModal, setShowPillarModal] = useState<number | null>(null);
@@ -216,11 +216,22 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
   return (
     <motion.section
       ref={ref}
-      className="mx-auto bg-[#1a5336] flex align-center justify-center"
+      className="mx-auto bg-[#1a5336] flex align-center justify-center relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
-      <div className="max-w-[1440px] grid md:grid-cols-2 gap-16 items-stretch  ">
+      {/* Background Academic Bilingual Image */}
+      <div 
+        className="absolute inset-0 z-10"
+        style={{
+          backgroundImage: `url(${bgAcademicBilingual})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      <div className="max-w-[1440px] grid md:grid-cols-2 gap-16 items-stretch relative z-20">
         {/* Left: Portrait Image - 6 columns */}
         <motion.div
           className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1"
@@ -237,7 +248,7 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
         
         {/* Right: Content with Green Background - 6 columns */}
         <motion.div
-          className="relative bg-[#1a5336] p-8 md:p-12 flex flex-col justify-center order-1 md:order-2"
+          className="relative p-8 md:p-12 flex flex-col justify-center order-1 md:order-2"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -446,18 +457,18 @@ function CoreStrengthsSection() {
 
   {/* Line 1 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336]">
-    We{"  "}
-    <AnimatedHighlight delay={0.4} duration={0.6}>educate</AnimatedHighlight>{" "}
-    not just for success, but{"  "}
-    <AnimatedHighlight delay={0.8} duration={0.6}>for significance.</AnimatedHighlight>
+    We &nbsp;&nbsp;
+    <AnimatedHighlight delay={0.4} duration={0.6} className="px-2">educate</AnimatedHighlight>
+    &nbsp;&nbsp; not just for success, but &nbsp;&nbsp;
+    <AnimatedHighlight delay={0.8} duration={0.6} className="px-2">for significance.</AnimatedHighlight>
   </h2>
 
   {/* Line 2 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336] mt-4">
-    We{" "}
-    <AnimatedHighlight delay={1.0} duration={0.6}>nurture</AnimatedHighlight>{" "}
-    not just bright minds, but{" "}
-    <AnimatedHighlight delay={1.4} duration={0.6}>bright futures.</AnimatedHighlight>
+    We &nbsp;&nbsp;
+    <AnimatedHighlight delay={1.0} duration={0.6} className="px-2">nurture</AnimatedHighlight>
+    &nbsp;&nbsp; not just bright minds, but &nbsp;&nbsp;
+    <AnimatedHighlight delay={1.4} duration={0.6} className="px-2">bright futures.</AnimatedHighlight>
   </h2>
 
 </motion.div>

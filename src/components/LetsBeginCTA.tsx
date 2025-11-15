@@ -4,7 +4,7 @@ import birdMotif from '../assets/hero-01.jpg';
 import items01 from '../assets/items-01.png';
 import items02 from '../assets/items-02.png';
 import items03 from '../assets/items-03.png';
-
+import bgadmissionsCTA from '../assets/bg-admissionsCTA.png'
 export function LetsBeginCTA({ onNavigate }: { onNavigate: (path: string) => void }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -26,49 +26,25 @@ export function LetsBeginCTA({ onNavigate }: { onNavigate: (path: string) => voi
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
+      {/* Background Admissions CTA Image */}
+      <div 
+        className="absolute inset-0 z-10"
+        style={{
+          backgroundImage: `url(${bgadmissionsCTA})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+
       {/* Background Gradient Overlay */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-[#14432b]/15 to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-[#14432b]/15 to-transparent z-20"
         aria-hidden="true"
       />
 
-      {/* Decorative Bird Motif - Top Left */}
-      <div 
-        className="absolute top-8 left-8 w-40 h-40 lg:w-52 lg:h-52 opacity-[0.10] pointer-events-none select-none hidden md:block"
-        aria-hidden="true"
-      >
-        <img src={items02} alt="" className="w-full h-full object-contain" />
-      </div>
-
-      {/* Decorative Bird Motif - Top Right */}
-      <div 
-        className="absolute top-8 right-8 w-40 h-40 lg:w-52 lg:h-52 opacity-[0.08] pointer-events-none select-none hidden md:block"
-        aria-hidden="true"
-        style={{ transform: 'scaleX(-1)' }}
-      >
-        <img src={items02} alt="" className="w-full h-full object-contain" />
-      </div>
-
-      {/* Decorative Bird Motif - Bottom Left */}
-      <div 
-        className="absolute bottom-8 left-8 w-40 h-40 lg:w-52 lg:h-52 opacity-[0.12] pointer-events-none select-none hidden md:block"
-        aria-hidden="true"
-        style={{ transform: 'rotate(0deg)' }}
-      >
-        <img src={items02} alt="" className="w-full h-full object-contain" />
-      </div>
-
-      {/* Decorative Bird Motif - Bottom Right */}
-      <div 
-        className="absolute bottom-8 right-8 w-40 h-40 lg:w-52 lg:h-52 opacity-[0.09] pointer-events-none select-none hidden md:block"
-        aria-hidden="true"
-        style={{ transform: 'scale(-1, -1)' }}
-      >
-        <img src={items02} alt="" className="w-full h-full object-contain" />
-      </div>
-
       {/* Content Group - Centered */}
-      <div className="relative z-10 h-full min-h-[420px] md:min-h-[440px] lg:min-h-[480px] flex items-center justify-center px-4 md:px-20 py-24">
+      <div className="relative z-30 h-full min-h-[420px] md:min-h-[440px] lg:min-h-[480px] flex items-center justify-center px-4 md:px-20 py-24">
         <motion.div
           className="max-w-[720px] text-center"
           initial={{ opacity: 0, y: 30 }}
