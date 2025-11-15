@@ -111,9 +111,9 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
             style={{ fontSize: '48px', lineHeight: '1.24' }}
           >
             <AnimatedHighlight 
-              delay={0.5} 
-              duration={1.0}
-              backgroundColor="#FABA1E"
+              delay={1.5} 
+              duration={1.5}
+              backgroundColor="#95F77E"
               className="text-[#1a5336]"
             >
               Solid education
@@ -321,11 +321,13 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           {/* Title with highlight */}
           <h2 className="font-['SVN-Gotham'] text-3xl md:text-4xl lg:text-5xl text-[#1a5336] mb-6 leading-tight">
             15 years{' '}
-            <span 
-              className="relative inline-block px-2 bg-[#FABA1E]"
+            <AnimatedHighlight 
+              delay={0.5} 
+              duration={1.2}
+              backgroundColor="#95F77E"
             >
               and continuing
-            </span>
+            </AnimatedHighlight>
             {' '}to educate
           </h2>
           
@@ -444,18 +446,18 @@ function CoreStrengthsSection() {
 
   {/* Line 1 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336]">
-    We{" "}
-    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">educate</span>{" "}
-    not just for success, but{" "}
-    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">for significance.</span>
+    We{"  "}
+    <AnimatedHighlight delay={0.4} duration={0.6}>educate</AnimatedHighlight>{" "}
+    not just for success, but{"  "}
+    <AnimatedHighlight delay={0.8} duration={0.6}>for significance.</AnimatedHighlight>
   </h2>
 
   {/* Line 2 */}
   <h2 className="whitespace-nowrap font-['SVN-Gotham'] text-2xl md:text-3xl lg:text-4xl text-[#1a5336] mt-4">
     We{" "}
-    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">nurture</span>{" "}
+    <AnimatedHighlight delay={1.0} duration={0.6}>nurture</AnimatedHighlight>{" "}
     not just bright minds, but{" "}
-    <span className="px-2 bg-[#FABA1E] text-[#1a5336]">bright futures.</span>
+    <AnimatedHighlight delay={1.4} duration={0.6}>bright futures.</AnimatedHighlight>
   </h2>
 
 </motion.div>

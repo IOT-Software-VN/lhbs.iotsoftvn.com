@@ -14,16 +14,16 @@ export function AnimatedHighlight({
   className = '', 
   delay = 0, 
   duration = 0.8,
-  backgroundColor = '#FABA1E'
+  backgroundColor = '#95F371'
 }: AnimatedHighlightProps) {
   return (
-    <span className={`relative inline-block ${className}`}>
+    <span className={`relative inline-block${className}`}>
       {/* Animated highlight background */}
       <motion.span
         className="absolute inset-0 -left-3 -right-3 md:-left-4 md:-right-4 -top-1 -bottom-1"
         style={{ 
           backgroundColor,
-          zIndex: -1,
+          zIndex: 0,
           originX: 0 // Animation starts from left
         }}
         initial={{ scaleX: 0 }}

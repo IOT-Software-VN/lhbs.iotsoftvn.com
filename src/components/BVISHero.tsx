@@ -13,18 +13,13 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
         <img
           src="https://images.unsplash.com/photo-1696238572906-2a85322d2152?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBzY2hvb2wlMjBzdHVkZW50cyUyMGNhbXB1c3xlbnwxfHx8fDE3NjMwODQxNTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="LHBS campus with students"
-          className="w-full h-full object-cover backdrop-blur-sm"
-          style={{ filter: 'blur(1px)' }}
+          className="w-full h-full object-cover"
+          style={{ filter: 'blur(2px) brightness(0.7)' }}
         />
       </div>
 
-      {/* Dark Overlay - black 20% opacity */}
-      <div 
-        className="absolute inset-0 z-10 bg-black"
-        style={{
-          opacity: 0.2
-        }}
-      />
+      {/* Dark Overlay with gradient for better text readability */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/60 via-black/40 to-black/30" />
 
       {/* Content Container */}
       <div className="relative z-20 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
