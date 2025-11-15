@@ -17,8 +17,11 @@ export function LetsBeginCTA({ onNavigate }: { onNavigate: (path: string) => voi
   return (
     <motion.section
       ref={ref}
-      className="relative overflow-hidden bg-[#1a5336]"
-      style={{ minHeight: '420px' }}
+      className="relative overflow-hidden"
+      style={{ 
+        minHeight: '420px',
+        backgroundColor: '#064e29ff'
+      }}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

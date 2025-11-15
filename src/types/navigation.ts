@@ -43,6 +43,8 @@ export const siteNavigation: NavParent[] = [
       { id: 'admission-tuition', label: 'Tuition & Fees', path: '/admissions/tuition-fees', description: 'Transparent pricing and flexible payment options' },
       { id: 'admission-scholarships', label: 'Scholarships', path: '/admissions/scholarships', description: 'Financial support for deserving students' },
       { id: 'admission-requirements', label: 'Entry Requirements', path: '/admissions', description: 'Admission criteria and documentation needed' },
+      { id: 'admission-opensday', label: 'Open days', path: '/admissions/opendays', description: 'Open days' },
+
     ],
     cta: {
       text: 'Apply Now',
@@ -76,6 +78,7 @@ export const siteNavigation: NavParent[] = [
       { id: 'holistic-lower', label: 'LHBS Secondary School', path: '/academics/lower-secondary', description: 'Grades 6-9: Advanced concepts and critical thinking' },
       { id: 'holistic-upper', label: 'LHBS High School', path: '/academics/upper-secondary', description: 'Grades 10-12: University preparation and global readiness' },
       { id: 'holistic-overview', label: 'Curriculum Overview', path: '/academics/overview', description: 'Our comprehensive educational approach' },
+      { id: 'how-we-teach', label: 'How We Teach', path: '/academics/how-we-teach', description: 'Our comprehensive educational approach' },
     ],
     cta: {
       text: 'Discover Our Programme',

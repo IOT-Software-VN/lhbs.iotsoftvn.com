@@ -1,5 +1,5 @@
-import { motion } from 'motion/react';
-import { ReactNode } from 'react';
+import { motion, useInView } from 'motion/react';
+import { ReactNode, useRef } from 'react';
 
 interface AnimatedHighlightProps {
   children: ReactNode;
@@ -7,6 +7,7 @@ interface AnimatedHighlightProps {
   delay?: number;
   duration?: number;
   backgroundColor?: string;
+  triggerOnView?: boolean;
 }
 
 export function AnimatedHighlight({ 
@@ -14,10 +15,17 @@ export function AnimatedHighlight({
   className = '', 
   delay = 0, 
   duration = 0.8,
-  backgroundColor = '#95F371'
+  backgroundColor = '#95F371',
+  triggerOnView = true
 }: AnimatedHighlightProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  
+  // Determine when to start animation
+  const shouldAnimate = triggerOnView ? isInView : true;
+
   return (
-    <span className={`relative inline-block${className}`}>
+    <span ref={ref} className={`relative inline-block ${className}`}>
       {/* Animated highlight background */}
       <motion.span
         className="absolute inset-0 -left-3 -right-3 md:-left-4 md:-right-4 -top-1 -bottom-1"
@@ -27,10 +35,10 @@ export function AnimatedHighlight({
           originX: 0 // Animation starts from left
         }}
         initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
+        animate={shouldAnimate ? { scaleX: 1 } : { scaleX: 0 }}
         transition={{ 
           duration,
-          delay,
+          delay: shouldAnimate ? delay : 0,
           ease: [0.25, 0.46, 0.45, 0.94] // Custom easing for smooth animation
         }}
       />
