@@ -19,7 +19,7 @@ export function BookTourCTA({ onNavigate }: BookTourCTAProps) {
     <motion.section
       ref={ref}
       className="relative bg-[#1a5336] overflow-hidden"
-      style={{ minHeight: '520px' }}
+      style={{ minHeight: '520px',  backgroundColor: '#064e29ff' }}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

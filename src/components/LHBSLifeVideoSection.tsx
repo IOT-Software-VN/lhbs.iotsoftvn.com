@@ -18,7 +18,7 @@ export function LHBSLifeVideoSection() {
       <motion.section
         ref={ref}
         className="relative overflow-hidden"
-        style={{ minHeight: '640px' }}
+        style={{ minHeight: '790px' }}
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8 }}

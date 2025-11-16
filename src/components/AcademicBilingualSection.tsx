@@ -65,14 +65,14 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
       image: 'https://images.unsplash.com/photo-1605781645799-c9c7d820b4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHNjaWVuY2UlMjBsYWJvcmF0b3J5fGVufDF8fHx8MTc2Mjg5MTY0N3ww&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'Students conducting hands-on science experiments in modern laboratory',
       title: 'STEM Excellence',
-      description: 'Our rigorous science, technology, engineering, and mathematics programs foster critical thinking and innovation through hands-on learning and real-world applications.',
+      description: 'Our rigorous science, technology, engineering, and mathematics programs foster critical thinking and innovation through hands-on learning and real-world applications',
       link: '/academics/stem'
     },
     {
       image: 'https://images.unsplash.com/photo-1673515334717-da4d85aaf38b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBsYW5ndWFnZXxlbnwxfHx8fDE3NjI5NjM2Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080',
       alt: 'Students engaged in bilingual language instruction and cultural exchange',
       title: 'True Bilingual Education',
-      description: 'Balanced Vietnamese-English curriculum delivered by native speakers, enabling students to achieve fluency and cultural competence in both languages naturally.',
+      description: 'Balanced Vietnamese-English curriculum delivered by native speakers, enabling students to achieve fluency and cultural competence in both languages naturally, world.',
       link: '/academics/bilingual-program'
     },
     {
@@ -160,12 +160,12 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
           </button>
         </div>
 
-        <div className="overflow-hidden mx-12 " ref={emblaRef}>
+        <div className="overflow-hidden mx-12" ref={emblaRef}>
           <div className="flex gap-4">
             {cards.map((card, index) => (
               <motion.div
                 key={index}
-                className="flex-[0_0_calc(100%-1rem)] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_calc(33.333%-0.67rem)] xl:flex-[0_0_calc(25%-0.75rem)] bg-[#fffae9] "
+                className="h-full flex-[0_0_calc(100%-1rem)] md:flex-[0_0_calc(50%-0.5rem)] lg:flex-[0_0_calc(33.333%-0.67rem)] xl:flex-[0_0_calc(25%-0.75rem)] bg-[#fffae9] h-full flex flex-col"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -175,22 +175,6 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
             ))}
           </div>
         </div>
-        
-        {/* Slider indicators */}
-        {/* <div className="flex justify-center mt-8 gap-2">
-          {cards.map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === selectedIndex 
-                  ? ' scale-110' 
-                  : '/40 hover:/60'
-              }`}
-              onClick={() => scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div> */}
       </div>
 
       {/* Section Divider - Bottom */}
@@ -213,9 +197,9 @@ interface AB_CardProps extends AcademicBilingualCard {
 
 function AB_Card({ image, alt, title, description, link, onNavigate }: AB_CardProps) {
   return (
-    <div className=" overflow-hidden group cursor-pointer" onClick={() => onNavigate(link)}>
-      {/* Media Top */}
-      <div className="relative overflow-hidden" style={{ aspectRatio: '3 / 2' }}>
+    <div className="overflow-hidden group cursor-pointer h-full flex flex-col" onClick={() => onNavigate(link)}>
+      {/* Media Top - Fixed Height */}
+      <div className="relative overflow-hidden h-48 flex-shrink-0">
         <img
           src={image}
           alt={alt}
@@ -223,21 +207,21 @@ function AB_Card({ image, alt, title, description, link, onNavigate }: AB_CardPr
         />
       </div>
 
-      {/* Body */}
-      <div className="p-5 md:p-6">
-        {/* Title */}
-        <h3 className=" text-xl md:text-2xl text-[#1a5336] mb-3">
+      {/* Body - Flexible Content */}
+      <div className="p-5 md:p-6 flex flex-col flex-grow">
+        {/* Title - Fixed Height */}
+        <h3 className="text-xl md:text-2xl text-[#1a5336] mb-3 min-h-[3.5rem] flex items-start">
           {title}
         </h3>
 
-        {/* Description */}
-        <p className=" text-sm text-[#212121] mb-4 leading-relaxed">
+        {/* Description - Flexible Height */}
+        <p className="text-sm text-[#212121] mb-4 leading-relaxed flex-grow">
           {description}
         </p>
 
-        {/* Link Row */}
+        {/* Link Row - Fixed Position at Bottom */}
         <button
-          className="flex items-center gap-2  text-sm text-[#1a5336] group/link focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+          className="flex items-center gap-2 text-sm text-[#1a5336] group/link focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 mt-auto"
           onClick={(e) => {
             e.stopPropagation();
             onNavigate(link);
