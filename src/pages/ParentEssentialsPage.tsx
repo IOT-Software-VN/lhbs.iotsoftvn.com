@@ -84,33 +84,6 @@ export function ParentEssentialsPage({ onNavigate }: ParentEssentialsPageProps) 
         </div>
       </section>
 
-      {/* Parent Message Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1556157382-97eda2d62296?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBwcmluY2lwYWwlMjBlZHVjYXRpb24lMjBsZWFkZXJ8ZW58MHx8fHwxNjk0NTE0MDY3fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="LHBS Principal - Educational Leadership"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            <div>
-              <div className="bg-[#FABA1E] p-8 md:p-12">
-                <blockquote className="text-[24px] md:text-[28px] text-[#1a5336] leading-relaxed mb-6">
-                  "At LHBS, we believe that education is a partnership between school and family. Together, we create an environment where every child can thrive and reach their full potential."
-                </blockquote>
-                <cite className="text-[16px] text-[#1a5336] font-semibold">
-                  - Principal, LHBS
-                </cite>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Key Term Dates Section */}
       <section id="term-dates" className="py-16 md:py-24">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12">
