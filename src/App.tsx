@@ -22,6 +22,7 @@ import { AcademicResultsPage } from './pages/AcademicResultsPage';
 import { OurSchoolPage } from './pages/OurSchoolPage';
 import { FacilitiesPage } from './pages/FacilitiesPage';
 import { LHBSCampusPage } from './pages/LHBSCampusPage';
+import { NewsEventsPage } from './pages/NewsEventsPage';
 import { siteNavigation } from './types/navigation';
 
 export default function App() {
@@ -124,6 +125,8 @@ export default function App() {
         <OurSchoolPage onNavigate={handleNavigate} />
       ) : currentPath === '/our-school/facilities' ? (
         <FacilitiesPage onNavigate={handleNavigate} />
+      ) : currentPath === '/news-events' ? (
+        <NewsEventsPage onNavigate={handleNavigate} />
       ) : (
         <GenericPage 
           path={currentPath} 

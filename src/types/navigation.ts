@@ -60,8 +60,8 @@ export const siteNavigation: NavParent[] = [
     children: [
       { id: 'campus-about', label: 'About Our Campus', path: '/our-school/about-us', description: '15 years of educational excellence and innovation' },
       { id: 'campus-facilities', label: 'Facilities', path: '/our-school/facilities', description: 'State-of-the-art learning environments' },
-      { id: 'campus-leadership', label: 'Leadership & Vision', path: '/our-school/leadership', description: 'Meet our dedicated leaders and founder\'s vision' },
-      { id: 'campus-accreditation', label: 'Accreditation', path: '/our-school/accreditation', description: 'International standards and certifications' },
+      // { id: 'campus-leadership', label: 'Leadership & Vision', path: '/our-school/leadership', description: 'Meet our dedicated leaders and founder\'s vision' },
+      // { id: 'campus-accreditation', label: 'Accreditation', path: '/our-school/accreditation', description: 'International standards and certifications' },
     ],
     cta: {
       text: 'Explore Our Campus',
@@ -93,9 +93,9 @@ export const siteNavigation: NavParent[] = [
     description: 'Beyond the classroom experiences',
     children: [
       { id: 'passion-clubs', label: 'Clubs & Activities', path: '/student-life/clubs-activities', description: 'Diverse extracurricular programs for every interest' },
-      { id: 'passion-sports', label: 'Sports', path: '/student-life/sports', description: 'Athletics, teamwork, and physical development' },
-      { id: 'passion-wellbeing', label: 'Wellbeing & Support', path: '/student-life/wellbeing', description: 'Comprehensive student support services' },
-      { id: 'passion-arts', label: 'Arts & Culture', path: '/student-life/clubs-activities', description: 'Creative expression and cultural activities' },
+      // { id: 'passion-sports', label: 'Sports', path: '/student-life/sports', description: 'Athletics, teamwork, and physical development' },
+      // { id: 'passion-wellbeing', label: 'Wellbeing & Support', path: '/student-life/wellbeing', description: 'Comprehensive student support services' },
+      // { id: 'passion-arts', label: 'Arts & Culture', path: '/student-life/clubs-activities', description: 'Creative expression and cultural activities' },
     ],
     cta: {
       text: 'See Activities & Clubs',
