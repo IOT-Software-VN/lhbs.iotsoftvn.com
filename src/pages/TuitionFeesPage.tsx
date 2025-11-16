@@ -208,12 +208,12 @@ function SummaryCardsSection() {
   ];
 
   return (
-    <section id="summary" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto ">
+    <section id="summary" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {summaryCards.map((card, index) => (
           <motion.div
             key={index}
-            className="bg-white border-2 border-[#1a5336] p-6 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white border-2 border-[#1a5336] p-6 shadow-sm hover:shadow-md transition-shadow rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -322,7 +322,7 @@ function TuitionTablesSection() {
             {tuitionData[selectedTab as keyof typeof tuitionData].name}
           </h3>
           
-          <table className="w-full border-2 border-[#1a5336]">
+          <table className="w-full border-2 border-[#1a5336] rounded-lg overflow-hidden">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
                 <th className=" text-lg text-left p-4 border-r border-[#fffae9]/20">Grade Level</th>
@@ -348,7 +348,7 @@ function TuitionTablesSection() {
       </div>
 
       {/* Under-table note */}
-      <div className="mt-6 bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-4">
+      <div className="mt-6 bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-4 rounded-r">
         <p className=" text-sm text-[#212121]">
           <strong className="text-[#1a5336]">📋 Note:</strong> Tuition fees are subject to annual review. 
           Any adjustments will be communicated at least 60 days in advance. All payments are non-refundable 
@@ -396,7 +396,7 @@ function IncludedExcludedSection() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Included */}
-        <div className="border-2 border-[#1a5336] p-8 bg-white">
+        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
               <CheckCircle className="w-6 h-6 text-[#FABA1E]" />
@@ -417,7 +417,7 @@ function IncludedExcludedSection() {
         </div>
 
         {/* Excluded */}
-        <div className="border-2 border-[#1a5336] p-8 bg-white">
+        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
               <X className="w-6 h-6 text-[#FABA1E]" />
@@ -510,7 +510,7 @@ function OptionalServicesSection() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="border-2 border-[#1a5336] p-6 ">
+          <div key={index} className="border-2 border-[#1a5336] p-6 rounded-lg">
             <h3 className=" text-2xl text-[#1a5336] mb-3">
               {service.title}
             </h3>
@@ -528,7 +528,7 @@ function OptionalServicesSection() {
               ))}
             </div>
             
-            <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-3">
+            <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-3 rounded-r">
               <p className=" text-xs text-[#212121]">
                 {service.note}
               </p>
@@ -593,17 +593,17 @@ function PaymentPlansSection() {
         {plans.map((plan, index) => (
           <div 
             key={index} 
-            className={`border-2 p-6 bg-white relative ${
+            className={`border-2 p-6 bg-white relative rounded-lg ${
               plan.recommended ? 'border-[#FABA1E]' : 'border-[#1a5336]'
             }`}
           >
             {plan.recommended && (
-              <div className="absolute -top-3 left-6 px-3 py-1 bg-[#FABA1E] text-[#1a5336]  text-xs font-bold">
+              <div className="absolute -top-3 left-6 px-3 py-1 bg-[#FABA1E] text-[#1a5336]  text-xs font-bold rounded">
                 MOST POPULAR
               </div>
             )}
             
-            <div className={`inline-block px-3 py-1 ${plan.badgeColor}  text-xs font-bold mb-4`}>
+            <div className={`inline-block px-3 py-1 ${plan.badgeColor}  text-xs font-bold mb-4 rounded`}>
               {plan.badge}
             </div>
             
@@ -629,7 +629,7 @@ function PaymentPlansSection() {
 
       {/* Payment Methods Block */}
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="border-2 border-[#1a5336] p-8 bg-white">
+        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
           <div className="flex items-center gap-3 mb-6">
             <CreditCard className="w-6 h-6 text-[#1a5336]" />
             <h3 className=" text-2xl text-[#1a5336]">
@@ -647,7 +647,7 @@ function PaymentPlansSection() {
           </ul>
         </div>
 
-        <div className="border-2 border-[#1a5336] p-8 bg-white">
+        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
           <div className="flex items-center gap-3 mb-6">
             <FileText className="w-6 h-6 text-[#1a5336]" />
             <h3 className=" text-2xl text-[#1a5336]">
@@ -756,7 +756,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
         {/* Right: Accordion */}
         <div className="space-y-4">
           {scholarships.map((scholarship, index) => (
-            <div key={index} className="border-2 border-[#1a5336]">
+            <div key={index} className="border-2 border-[#1a5336] rounded-lg">
               <button
                 onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
                 className="w-full p-6 flex items-center justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
@@ -868,7 +868,7 @@ function RefundPolicySection() {
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         {policies.map((policy, index) => (
-          <div key={index} className="border-2 border-[#1a5336] p-6 bg-white">
+          <div key={index} className="border-2 border-[#1a5336] p-6 bg-white rounded-lg">
             <h3 className=" text-xl text-[#1a5336] mb-4">
               {policy.title}
             </h3>
@@ -885,7 +885,7 @@ function RefundPolicySection() {
         ))}
       </div>
 
-      <div className="bg-[#1a5336]/5 border-l-4 border-[#1a5336] p-6">
+      <div className="bg-[#1a5336]/5 border-l-4 border-[#1a5336] p-6 rounded-r">
         <p className=" text-sm text-[#212121] mb-3">
           <strong className="text-[#1a5336]">⏰ Seat Deposit:</strong> Your enrollment deposit of 20M VND 
           secures your child's place. This deposit is fully refundable if you withdraw your application 
@@ -933,7 +933,7 @@ function CalculatorCTASection({ onShowCalculator }: { onShowCalculator: () => vo
   return (
     <section id="calculator" className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white">
       <div className="max-w-[900px] mx-auto">
-        <div className=" border-2 border-[#1a5336] p-8">
+        <div className="bg-white border-2 border-[#1a5336] p-8 rounded-lg">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-[#1a5336] mb-4">
               <Calculator className="w-8 h-8 text-[#FABA1E]" />
@@ -1088,10 +1088,10 @@ function FAQSection() {
 
       <div className="max-w-[900px] mx-auto space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-2 border-[#1a5336] bg-white">
+          <div key={index} className="border-2 border-[#1a5336] bg-white rounded-lg">
             <button
               onClick={() => setOpenFaq(openFaq === index ? null : index)}
-              className="w-full p-6 flex items-start justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="w-full p-6 flex items-start justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
             >
               <div className="flex-1 flex items-start gap-4">
                 <HelpCircle className="w-5 h-5 text-[#FABA1E] flex-shrink-0 mt-1" />
@@ -1151,7 +1151,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
                 key={index}
                 href={doc.url}
                 download
-                className="flex items-center justify-between p-4 border-2 border-[#1a5336] hover: transition-colors group focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="flex items-center justify-between p-4 border-2 border-[#1a5336] hover: transition-colors group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
               >
                 <div className="flex items-center gap-4 flex-1">
                   <FileText className="w-6 h-6 text-[#1a5336] flex-shrink-0" />
@@ -1172,7 +1172,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
 
         {/* Right: Help Card (Sticky on Desktop) */}
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <div className="bg-[#1a5336] p-8 text-[#fffae9]">
+          <div className="bg-[#1a5336] p-8 text-[#fffae9] rounded-lg">
             <h3 className=" text-2xl mb-4">
               Need Help?
             </h3>
@@ -1245,7 +1245,7 @@ function DownloadsContactsSection({ onNavigate }: { onNavigate: (path: string) =
 function StickyHelper() {
   return (
     <div className="hidden xl:block fixed right-8 top-1/2 -translate-y-1/2 z-40">
-      <div className="bg-[#1a5336] p-4 shadow-lg w-[200px]">
+      <div className="bg-[#1a5336] p-4 shadow-lg w-[200px] rounded-lg">
         <p className=" text-lg text-[#fffae9] mb-4">
           Need Help?
         </p>
@@ -1278,7 +1278,7 @@ function StickyHelper() {
 function CalculatorModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1a5336]/80">
-      <div className=" max-w-[600px] w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white max-w-[600px] w-full max-h-[90vh] overflow-y-auto rounded-lg">
         <div className="p-8">
           <div className="flex items-center justify-between mb-6">
             <h3 className=" text-2xl text-[#1a5336]">

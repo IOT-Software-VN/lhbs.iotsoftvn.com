@@ -166,7 +166,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
 
               {/* Intake Cards */}
               <div className="space-y-4">
-                <div className="bg-white p-6 border-l-4 border-[#1a5336]">
+                <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 1</h3>
                     <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">224 students</span>
@@ -176,7 +176,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   </p>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#1a5336]">
+                <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 6</h3>
                     <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">224 students</span>
@@ -186,7 +186,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   </p>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#1a5336]">
+                <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 10</h3>
                     <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">180 students</span>
@@ -196,7 +196,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                   </p>
                 </div>
 
-                <div className="bg-white p-6 border-l-4 border-[#FABA1E]">
+                <div className="bg-white p-6 border-l-4 border-[#FABA1E] rounded-r">
                   <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-2">Transfer to Other Grades</h3>
                   <p className="text-[#212121]/70 text-sm">
                     Admissions until quotas are filled. Contact for more details.
@@ -289,7 +289,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Contact Details */}
-            <div className="bg-[#1a5336] p-8 text-center">
+            <div className="bg-[#1a5336] p-8 text-center rounded-lg">
               <h3 className="font-['SVN-Gotham'] text-2xl text-[#fffae9] mb-6">Contact Admissions Office</h3>
               <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
                 <div className="flex items-center gap-3">
@@ -332,7 +332,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
           {/* Timeline Steps */}
           <div className="space-y-8">
             {/* Step 1 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
                   <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">1</span>
@@ -353,7 +353,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
                   <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">2</span>
@@ -374,7 +374,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
                   <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">3</span>
@@ -397,7 +397,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Step 4 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
                   <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">4</span>
@@ -412,7 +412,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Step 5 */}
-            <div className="bg-white p-8 border-l-4 border-[#1a5336]">
+            <div className="bg-white p-8 border-l-4 border-[#1a5336] rounded-r">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-[#1a5336] flex items-center justify-center flex-shrink-0">
                   <span className="font-['SVN-Gotham'] text-2xl text-[#FABA1E]">5</span>
@@ -427,7 +427,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Step 6 */}
-            <div className="bg-white p-8 border-l-4 border-[#FABA1E]">
+            <div className="bg-white p-8 border-l-4 border-[#FABA1E] rounded-r">
               <div className="flex items-start gap-6">
                 <div className="w-16 h-16 bg-[#FABA1E] flex items-center justify-center flex-shrink-0">
                   <span className="font-['SVN-Gotham'] text-2xl text-[#1a5336]">6</span>
@@ -522,7 +522,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
           </div>
 
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336]">
+            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336] rounded-lg">
               <DollarSign className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
               <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Primary–Lower Secondary–High School Fees</h3>
               <p className="text-[#212121]/70 text-sm mb-6">
@@ -536,7 +536,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               </button>
             </div>
 
-            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336]">
+            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336] rounded-lg">
               <BookOpen className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
               <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Kindergarten Bien Hoa Fees</h3>
               <p className="text-[#212121]/70 text-sm mb-6">
@@ -550,7 +550,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               </button>
             </div>
 
-            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336]">
+            <div className="bg-white p-8 text-center border-t-4 border-[#1a5336] rounded-lg">
               <Building className="w-12 h-12 text-[#FABA1E] mx-auto mb-4" />
               <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-4">Kindergarten Long Khanh Fees</h3>
               <p className="text-[#212121]/70 text-sm mb-6">
@@ -649,7 +649,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
           </div>
 
           {/* Stats Row */}
-          <div className="bg-[#1a5336] p-12">
+          <div className="bg-[#1a5336] p-12 rounded-lg">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="font-['SVN-Gotham'] text-4xl text-[#FABA1E] mb-2">2,600+</div>
@@ -689,7 +689,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
 
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className=" border border-[#1a5336]/20">
+              <div key={index} className=" border border-[#1a5336]/20 rounded-lg">
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full p-6 flex items-start justify-between gap-4 text-left hover:bg-white/50 transition-colors"

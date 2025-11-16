@@ -155,7 +155,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
 
 function StatBadge({ value, label }: { value: string; label: string }) {
   return (
-    <div className="/10 backdrop-blur-sm border border-[#fffae9]/20 p-4 text-center">
+    <div className="/10 backdrop-blur-sm border border-[#fffae9]/20 p-4 text-center rounded-lg">
       <div className=" text-2xl md:text-3xl text-[#FABA1E] mb-1">
         {value}
       </div>
@@ -231,7 +231,7 @@ function ProgramHighlightsSection() {
         {highlights.map((highlight, index) => (
           <motion.div
             key={index}
-            className="bg-white border-2 border-[#1a5336] p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            className="bg-white border-2 border-[#1a5336] p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 rounded-lg"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -405,7 +405,7 @@ function CurriculumStructureSection({ onNavigate }: { onNavigate: (path: string)
         {/* Right Column: At-a-Glance */}
         <div className="space-y-8">
           {/* Weekly Allocation */}
-          <div className="border-2 border-[#1a5336] p-6">
+          <div className="border-2 border-[#1a5336] p-6 rounded-lg">
             <h3 className=" text-2xl text-[#1a5336] mb-4">
               Weekly Time Allocation
             </h3>
@@ -631,7 +631,7 @@ function PathwaysSection({ onNavigate }: { onNavigate: (path: string) => void })
             key={index}
             className="pathway-card flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start"
           >
-            <div className="bg-white border-2 border-[#1a5336] h-full flex flex-col">
+            <div className="bg-white border-2 border-[#1a5336] h-full flex flex-col rounded-lg">
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
                 <ImageWithFallback 

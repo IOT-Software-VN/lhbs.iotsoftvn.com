@@ -104,6 +104,24 @@ button.rounded-lg,
   border-radius: 0.5rem !important;
 }
 
+/* Override for div and general elements with rounded classes */
+.rounded-lg {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-r {
+  border-top-right-radius: 0.25rem !important;
+  border-bottom-right-radius: 0.25rem !important;
+}
+
 /* Animated Highlight Utilities */
 @keyframes slideInLeft {
   0% {
