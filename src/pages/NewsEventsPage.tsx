@@ -514,7 +514,7 @@ function PaginationSection() {
     <motion.section
       ref={ref}
       id="pagination"
-      className="py-12 px-4 md:px-20 bg-white border-t border-[#1a5336]/10"
+      className="py-12 px-4 md:px-20 bg-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}

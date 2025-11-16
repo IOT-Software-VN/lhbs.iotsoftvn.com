@@ -43,7 +43,7 @@ export const siteNavigation: NavParent[] = [
     children: [
       { id: 'admission-tuition', label: 'Tuition & Fees', path: '/admissions/tuition-fees', description: 'Transparent pricing and flexible payment options' },
       { id: 'admission-scholarships', label: 'Scholarships', path: '/admissions/scholarships', description: 'Financial support for deserving students' },
-      { id: 'admission-requirements', label: 'Entry Requirements', path: '/admission/requirementss', description: 'Admission criteria and documentation needed' },
+      { id: 'admission-requirements', label: 'Entry Requirements', path: '/admissions/entry-requirements', description: 'Admission criteria and documentation needed' },
       { id: 'admission-opensday', label: 'Open days', path: '/admissions/opendays', description: 'Open days' },
 
     ],
