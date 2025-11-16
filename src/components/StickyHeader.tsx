@@ -29,9 +29,9 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
     >
       <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8 py-4">
         {/* Logo - Left */}
-        <motion.button
+        <motion.div
           onClick={onLogoClick}
-          className={`flex-shrink-0 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 !rounded-none ${
+          className={`flex-shrink-0 cursor-pointer ${
             isTransparent ? 'focus:ring-offset-[#1a5336]' : menuOpen ? 'focus:ring-offset-[#1a5336]' : 'focus:ring-offset-white'
           }`}
           whileHover={{ scale: 1.02 }}
@@ -43,7 +43,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
               alt="LHBS - Lac Hong Bilingual School" 
               className="h-16 w-auto rounded-none"
             />
-        </motion.button>
+        </motion.div>
         
         {/* Right - Actions */}
         <div className="flex items-center gap-3">

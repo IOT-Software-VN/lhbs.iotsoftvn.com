@@ -47,14 +47,14 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (
     <section 
       ref={ref}
-      className="relative w-full min-h-[65vh] md:min-h-[70vh] flex flex-col overflow-hidden"
+      className="relative w-full min-h-[65vh] md:min-h-[70vh] flex flex-col overflow-hidden mb-12"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2MzAxNDM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="LHBS Campus Facilities"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-fit"
         />
       </div>
 
@@ -150,58 +150,60 @@ function DiscoverFacilitiesSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
+      className="bg-[#fdfcf8] overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-4xl mx-auto">
-        {/* Section Heading */}
-        <motion.h2
-          className=" text-[#1a5336] mb-8 text-center"
-          style={{ fontSize: '48px', lineHeight: '1.2' }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Discover our facilities
-        </motion.h2>
-
-        {/* Body Text */}
+      <div className="grid md:grid-cols-2 h-[1500px]">
+        {/* Left: Text Content */}
         <motion.div
-          className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          className="h-full px-4 md:px-20 flex items-center"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <p>
-            Located in the green, peaceful surroundings of Đồng Nai province, LHBS provides a welcoming 
-            campus where students from kindergarten through grade 12 can thrive. Our bilingual learning 
-            environment combines Vietnamese heritage with international standards, creating spaces that 
-            inspire curiosity and academic achievement.
-          </p>
-          <p>
-            Every classroom, laboratory, and learning space is thoughtfully designed to support active, 
-            student-centered education. From modern technology integration to comfortable study areas, 
-            we ensure that our facilities meet the evolving needs of 21st-century learners.
-          </p>
-          <p>
-            LHBS continuously invests in upgrading our infrastructure and services, maintaining high 
-            standards that reflect our commitment to educational excellence and holistic student development.
-          </p>
+          <div>
+            {/* Section Heading */}
+            <h2 
+              className=" text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.2' }}
+            >
+              Discover our facilities
+            </h2>
+            
+            {/* Body Copy */}
+            <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
+              <p>
+                Located in the green, peaceful surroundings of Đồng Nai province, LHBS provides a welcoming 
+                campus where students from kindergarten through grade 12 can thrive. Our bilingual learning 
+                environment combines Vietnamese heritage with international standards, creating spaces that 
+                inspire curiosity and academic achievement.
+              </p>
+              <p>
+                Every classroom, laboratory, and learning space is thoughtfully designed to support active, 
+                student-centered education. From modern technology integration to comfortable study areas, 
+                we ensure that our facilities meet the evolving needs of 21st-century learners.
+              </p>
+              <p>
+                LHBS continuously invests in upgrading our infrastructure and services, maintaining high 
+                standards that reflect our commitment to educational excellence and holistic student development.
+              </p>
+            </div>
+          </div>
         </motion.div>
-
-        {/* Wide Campus Image */}
+        
+        {/* Right: Image */}
         <motion.div
-          className="relative h-[400px] md:h-[500px] overflow-hidden"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          className="relative h-[1200px] h-full"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
             src="https://images.unsplash.com/photo-1758936381581-f85b4d1da1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBjYW1wdXMlMjBhZXJpYWwlMjB2aWV3fGVufDF8fHx8MTc2MzA4NzQ1Mnww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="LHBS Campus Overview"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-fit object-center"
           />
         </motion.div>
       </div>
@@ -217,15 +219,15 @@ function CreativitySection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
+      className="relative bg-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="grid md:grid-cols-2 h-[1200px]">
         {/* Left: Image */}
         <motion.div
-          className="relative h-[400px] md:h-[550px] overflow-hidden order-2 md:order-1"
+          className="relative h-[1200px] h-full order-2 md:order-1"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -233,37 +235,39 @@ function CreativitySection() {
           <img
             src="https://images.unsplash.com/photo-1598389118600-9a83ceb4ebe6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGFydCUyMGNsYXNzJTIwcGFpbnRpbmd8ZW58MXx8fHwxNzYzMDg3NDUyfDA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Students engaging in art and creative activities"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-fit object-center"
           />
         </motion.div>
         
         {/* Right: Text Content */}
         <motion.div
-          className="order-1 md:order-2"
+          className="h-full px-4 md:px-20 flex items-center order-1 md:order-2"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          {/* Section Heading */}
-          <h2 
-            className=" text-[#1a5336] mb-6"
-            style={{ fontSize: '48px', lineHeight: '1.2' }}
-          >
-            Unleashing creativity and self-expression
-          </h2>
-          
-          {/* Body Copy */}
-          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
-            <p>
-              At LHBS, we believe the arts are essential to a well-rounded education. Our dedicated art rooms, 
-              music studios, and performance spaces encourage students to explore their creative talents through 
-              painting, sculpture, music, drama, and dance.
-            </p>
-            <p>
-              Throughout the year, students participate in school festivals, concerts, exhibitions, and 
-              competitions where they can showcase their work and celebrate their achievements. These experiences 
-              build confidence, cultural appreciation, and the ability to express ideas in diverse and meaningful ways.
-            </p>
+          <div>
+            {/* Section Heading */}
+            <h2 
+              className=" text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.2' }}
+            >
+              Unleashing creativity and self-expression
+            </h2>
+            
+            {/* Body Copy */}
+            <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
+              <p>
+                At LHBS, we believe the arts are essential to a well-rounded education. Our dedicated art rooms, 
+                music studios, and performance spaces encourage students to explore their creative talents through 
+                painting, sculpture, music, drama, and dance.
+              </p>
+              <p>
+                Throughout the year, students participate in school festivals, concerts, exhibitions, and 
+                competitions where they can showcase their work and celebrate their achievements. These experiences 
+                build confidence, cultural appreciation, and the ability to express ideas in diverse and meaningful ways.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -279,45 +283,48 @@ function TechLearningSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
+      className="relative bg-[#fdfcf8]"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="grid md:grid-cols-2 h-[1200px]">
         {/* Left: Text Content */}
         <motion.div
+          className="h-full px-4 md:px-20 flex items-center"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Section Heading */}
-          <h2 
-            className=" text-[#1a5336] mb-6"
-            style={{ fontSize: '48px', lineHeight: '1.2' }}
-          >
-            Tech-driven learning environments
-          </h2>
-          
-          {/* Body Copy */}
-          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
-            <p>
-              LHBS equips students with the skills they need for the digital age. Our STEAM and STEM labs 
-              provide hands-on experiences in science, technology, engineering, arts, and mathematics, 
-              fostering critical thinking and problem-solving abilities.
-            </p>
-            <p>
-              Students explore robotics, AI, coding, and experimental science using modern computers, 
-              specialized software, and innovative tools. Our language labs and ICT facilities further 
-              support bilingual proficiency and digital literacy, preparing learners to excel in a 
-              globally connected world.
-            </p>
+          <div>
+            {/* Section Heading */}
+            <h2 
+              className=" text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.2' }}
+            >
+              Tech-driven learning environments
+            </h2>
+            
+            {/* Body Copy */}
+            <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
+              <p>
+                LHBS equips students with the skills they need for the digital age. Our STEAM and STEM labs 
+                provide hands-on experiences in science, technology, engineering, arts, and mathematics, 
+                fostering critical thinking and problem-solving abilities.
+              </p>
+              <p>
+                Students explore robotics, AI, coding, and experimental science using modern computers, 
+                specialized software, and innovative tools. Our language labs and ICT facilities further 
+                support bilingual proficiency and digital literacy, preparing learners to excel in a 
+                globally connected world.
+              </p>
+            </div>
           </div>
         </motion.div>
         
         {/* Right: Image */}
         <motion.div
-          className="relative h-[400px] md:h-[550px] overflow-hidden"
+          className="relative h-[1200px] h-full"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -325,7 +332,7 @@ function TechLearningSection() {
           <img
             src="https://images.unsplash.com/photo-1680264370818-659352fa16f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHJvYm90aWNzJTIwbGFifGVufDF8fHx8MTc2MzA4NzQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Students working in robotics and technology lab"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-fit object-center"
           />
         </motion.div>
       </div>
@@ -341,15 +348,15 @@ function SportsSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
+      className="relative bg-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="grid md:grid-cols-2 h-[1200px]">
         {/* Left: Image */}
         <motion.div
-          className="relative h-[400px] md:h-[550px] overflow-hidden order-2 md:order-1"
+          className="relative h-[1200px] h-full order-2 md:order-1"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -357,38 +364,40 @@ function SportsSection() {
           <img
             src="https://images.unsplash.com/photo-1762345565397-ba85070a5bd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlpbmclMjBzcG9ydHMlMjBvdXRkb29yfGVufDF8fHx8MTc2MzA4NzQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Students participating in sports and physical activities"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-fit object-center"
           />
         </motion.div>
         
         {/* Right: Text Content */}
         <motion.div
-          className="order-1 md:order-2"
+          className="h-full px-4 md:px-20 flex items-center order-1 md:order-2"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          {/* Section Heading */}
-          <h2 
-            className=" text-[#1a5336] mb-6"
-            style={{ fontSize: '48px', lineHeight: '1.2' }}
-          >
-            Sporting opportunities for all
-          </h2>
-          
-          {/* Body Copy */}
-          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
-            <p>
-              Physical education is a vital part of student life at LHBS. Our campus features outdoor sports 
-              fields, multi-purpose halls, and playgrounds where students can engage in a variety of athletic 
-              activities—from team sports like football and basketball to individual pursuits like athletics 
-              and fitness training.
-            </p>
-            <p>
-              Regular PE classes, inter-school competitions, and sports clubs help students develop 
-              resilience, teamwork, and a healthy lifestyle. These experiences teach discipline, 
-              perseverance, and the value of collaboration—skills that benefit learners throughout their lives.
-            </p>
+          <div>
+            {/* Section Heading */}
+            <h2 
+              className=" text-[#1a5336] mb-6"
+              style={{ fontSize: '48px', lineHeight: '1.2' }}
+            >
+              Sporting opportunities for all
+            </h2>
+            
+            {/* Body Copy */}
+            <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
+              <p>
+                Physical education is a vital part of student life at LHBS. Our campus features outdoor sports 
+                fields, multi-purpose halls, and playgrounds where students can engage in a variety of athletic 
+                activities—from team sports like football and basketball to individual pursuits like athletics 
+                and fitness training.
+              </p>
+              <p>
+                Regular PE classes, inter-school competitions, and sports clubs help students develop 
+                resilience, teamwork, and a healthy lifestyle. These experiences teach discipline, 
+                perseverance, and the value of collaboration—skills that benefit learners throughout their lives.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -456,7 +465,7 @@ function ServicesSection() {
         {services.map((service, index) => (
           <motion.div
             key={index}
-            className="flex items-start gap-6 p-8 bg-white border border-[#1a5336]/10 hover:border-[#1a5336]/30 transition-colors"
+            className="flex items-start gap-6 p-8 bg-white border border-[#1a5336]/10 hover:border-[#1a5336]/30 transition-colors rounded-lg"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
@@ -497,7 +506,7 @@ function VisitCTASection({ onNavigate }: { onNavigate: (path: string) => void })
         <img
           src="https://images.unsplash.com/photo-1687709644302-8eceed73f2dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1wdXMlMjBmYWNpbGl0aWVzJTIwb3ZlcnZpZXd8ZW58MXx8fHwxNzYzMDg3NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="LHBS Campus"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-fit"
         />
       </div>
 

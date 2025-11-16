@@ -310,7 +310,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
       <div className="grid md:grid-cols-2 gap-16 items-center">
         {/* Left: Anniversary Image - 6 columns */}
         <motion.div
-          className="relative h-[500px] md:h-[600px] overflow-hidden"
+          className="relative h-[600px] md:h-[7700px] overflow-hidden"
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -318,7 +318,7 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
           <img
             src={anniversaryImage}
             alt="Student holding trophy celebrating 15 years of LHBS excellence"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-fit"
           />
         </motion.div>
         

@@ -85,73 +85,86 @@ export function ParentEssentialsPage({ onNavigate }: ParentEssentialsPageProps) 
       </section>
 
       {/* Key Term Dates Section */}
-      <section id="term-dates" className="py-16 md:py-24">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-          <div className="mb-12 text-center">
-            <h2 className="text-[40px] md:text-[48px] text-[#1a5336] font-bold mb-6">
-              Key Term Dates
-            </h2>
-            <p className="text-[18px] text-[#666] leading-relaxed max-w-[600px] mx-auto">
-              Stay informed with our academic calendar and important school dates throughout the year.
-            </p>
+      <section id="term-dates" className="relative py-16 md:py-24 bg-gradient-to-br from-[#4ECDC4] to-[#44B09E] overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 right-0 w-96 h-96">
+            <div className="grid grid-cols-8 gap-3">
+              {Array.from({ length: 64 }).map((_, i) => (
+                <div key={i} className="w-3 h-3 bg-white rounded-full"></div>
+              ))}
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-[24px] text-[#1a5336] font-semibold mb-6">Academic Terms</h3>
-              <div className="space-y-4 text-[#666]">
-                <p className="leading-relaxed">
-                  Our academic year is divided into three terms, each offering unique learning opportunities and activities. 
-                  Each term includes assessment periods, parent-teacher conferences, and special events.
-                </p>
-                <p className="leading-relaxed">
-                  Please note these important dates in your calendar and ensure your child is prepared for each term.
-                </p>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#1a5336] rounded-full opacity-30"></div>
+        </div>
+
+        <div className="relative max-w-[1440px] mx-auto px-6 md:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <div className="text-[#1a5336]">
+              <h2 className="text-[40px] md:text-[48px] lg:text-[56px] font-bold leading-tight mb-8 text-[#1a5336]">
+                KEY TERM DATES:<br />
+                2025-2026
+              </h2>
+              
+              <p className="text-[18px] leading-relaxed mb-8 text-[#1a5336]">
+                Here are the most important dates for your diary in the upcoming school year.
+              </p>
+              
+              <div className="mb-8">
+                <p className="text-[16px] mb-4 text-[#1a5336]">Download academic calendars here:</p>
+                <div className="space-y-2">
+                  <button className="block text-left text-[16px] font-medium border-b border-[#1a5336]/30 pb-1 hover:border-[#1a5336] transition-colors text-[#1a5336]">
+                    Academic Year 2025 - 2026
+                  </button>
+                  <button className="block text-left text-[16px] font-medium border-b border-[#1a5336]/30 pb-1 hover:border-[#1a5336] transition-colors text-[#1a5336]">
+                    Academic Year 2026 - 2027
+                  </button>
+                </div>
               </div>
               
-              <div className="mt-8">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBjYWxlbmRhciUyMGFjYWRlbWljJTIwdGVybXxlbnwwfHx8fDE2OTQ1MTQwNjd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                    alt="Academic Calendar and Term Planning"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+              <button className="px-8 py-3 bg-transparent border-2 border-[#1a5336] text-[#1a5336] font-medium hover:bg-[#1a5336] hover:text-white transition-colors rounded-lg">
+                ADD TO MY CALENDAR
+              </button>
             </div>
-            
-            <div>
-              <div className="bg-white border border-gray-200 p-6">
-                <h4 className="text-[18px] text-[#1a5336] font-semibold mb-6">Term Schedule 2024-25</h4>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="font-medium text-[#1a5336]">Autumn Term</span>
-                    <span className="text-[#666]">Sept 4 - Dec 15</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="font-medium text-[#1a5336]">Spring Term</span>
-                    <span className="text-[#666]">Jan 8 - Mar 28</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="font-medium text-[#1a5336]">Summer Term</span>
-                    <span className="text-[#666]">Apr 14 - Jul 18</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="font-medium text-[#1a5336]">Half-Term Breaks</span>
-                    <span className="text-[#666]">Various</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="font-medium text-[#1a5336]">Assessment Periods</span>
-                    <span className="text-[#666]">End of Term</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="font-medium text-[#1a5336]">Parent Conferences</span>
-                    <span className="text-[#666]">Termly</span>
-                  </div>
+
+            {/* Right Content - Term Dates Card */}
+            <div className="bg-white/95 rounded-xl p-8 shadow-2xl border border-white/20">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Term 1</h3>
+                  <p className="text-[14px] text-gray-600">Thursday 14 Aug to Wednesday 17 Dec 2025</p>
                 </div>
-                <button className="w-full mt-6 px-6 py-3 bg-[#FABA1E] text-[#1a5336] font-semibold hover:bg-[#e5a812] transition-colors">
-                  Download Full Calendar
-                </button>
+
+                <div className="pt-6 border-t border-gray-100">
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Christmas holidays</h3>
+                  <p className="text-[14px] text-gray-600">Thursday 18 Dec 2025 to Monday 05 Jan 2026</p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-100">
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Term 2</h3>
+                  <p className="text-[14px] text-gray-600">Tuesday 06 Jan to Friday 17 Apr 2026</p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-100">
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Tet Holidays</h3>
+                  <p className="text-[14px] text-gray-600">Monday 09 Feb to Tuesday 24 Feb 2026</p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-100">
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Easter holidays</h3>
+                  <p className="text-[14px] text-gray-600">Monday 20 Apr to Friday 01 May 2026</p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-100">
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Term 3</h3>
+                  <p className="text-[14px] text-gray-600">Monday 04 May to Friday 19 Jun 2026</p>
+                </div>
+
+                <div className="pt-6 border-t border-gray-100">
+                  <h3 className="text-[20px] font-bold text-[#1a5336] mb-2">Summer holiday begins</h3>
+                  <p className="text-[14px] text-gray-600">Monday 22 Jun 2026</p>
+                </div>
               </div>
             </div>
           </div>
