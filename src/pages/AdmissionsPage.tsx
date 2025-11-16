@@ -64,7 +64,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 </button>
               </li>
               <li><ChevronRight className="w-4 h-4 text-[#fffae9]/70" /></li>
-              <li className="text-[#fffae9] font-['Lexend_Deca']">Admissions</li>
+              <li className="text-[#fffae9] ">Admissions</li>
             </ol>
           </nav>
 
@@ -169,7 +169,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 1</h3>
-                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">224 students</span>
+                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs ">224 students</span>
                   </div>
                   <p className="text-[#212121]/70 text-sm">
                     Admissions from 17/02/2025 until quotas are filled
@@ -179,7 +179,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 6</h3>
-                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">224 students</span>
+                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs ">224 students</span>
                   </div>
                   <p className="text-[#212121]/70 text-sm">
                     Admissions from 17/02/2025 until quotas are filled
@@ -189,7 +189,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
                 <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 10</h3>
-                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs font-['Lexend_Deca']">180 students</span>
+                    <span className="px-3 py-1 bg-[#1a5336] text-[#fffae9] text-xs ">180 students</span>
                   </div>
                   <p className="text-[#212121]/70 text-sm">
                     Admissions from 17/02/2025 until quotas are filled

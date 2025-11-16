@@ -24,6 +24,7 @@ import { FacilitiesPage } from './pages/FacilitiesPage';
 import { LHBSCampusPage } from './pages/LHBSCampusPage';
 import { NewsEventsPage } from './pages/NewsEventsPage';
 import { OutstandingExperiencesPage } from './pages/OutstandingExperiencesPage';
+import { ExtracurricularActivitiesPage } from './pages/ExtracurricularActivitiesPage';
 import { siteNavigation } from './types/navigation';
 
 export default function App() {
@@ -130,6 +131,8 @@ export default function App() {
         <NewsEventsPage onNavigate={handleNavigate} />
       ) : currentPath === '/student-life/outstanding-experiences' ? (
         <OutstandingExperiencesPage onNavigate={handleNavigate} />
+      ) : currentPath === '/student-life/clubs-activities' ? (
+        <ExtracurricularActivitiesPage onNavigate={handleNavigate} />
       ) : (
         <GenericPage 
           path={currentPath} 

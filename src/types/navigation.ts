@@ -92,7 +92,7 @@ export const siteNavigation: NavParent[] = [
     path: '/student-life/outstanding-experiences',
     description: 'Beyond the classroom experiences',
     children: [
-      { id: 'passion-clubs', label: 'Clubs & Activities', path: '/student-life/clubs-activities', description: 'Diverse extracurricular programs for every interest' },
+      { id: 'passion-clubs', label: 'Extracurricular Activities', path: '/student-life/clubs-activities', description: 'Diverse extracurricular programs for every interest' },
       // { id: 'passion-sports', label: 'Sports', path: '/student-life/sports', description: 'Athletics, teamwork, and physical development' },
       // { id: 'passion-wellbeing', label: 'Wellbeing & Support', path: '/student-life/wellbeing', description: 'Comprehensive student support services' },
       // { id: 'passion-arts', label: 'Arts & Culture', path: '/student-life/clubs-activities', description: 'Creative expression and cultural activities' },
