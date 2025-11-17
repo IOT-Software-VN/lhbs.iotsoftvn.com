@@ -52,9 +52,9 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1626402570254-3e3d1790e14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGV4dGVyaW9yfGVufDF8fHx8MTc2MzAxNDM1N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://lhbs.edu.vn/wp-content/uploads/2022/11/BL8Q8839-scaled.jpg"
           alt="LHBS Campus Facilities"
-          className="w-full h-full object-fit"
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -201,9 +201,9 @@ function DiscoverFacilitiesSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1758936381581-f85b4d1da1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBjYW1wdXMlMjBhZXJpYWwlMjB2aWV3fGVufDF8fHx8MTc2MzA4NzQ1Mnww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://lhbs.edu.vn/wp-content/uploads/2022/08/BL8Q9488-2048x1365.jpg"
             alt="LHBS Campus Overview"
-            className="w-full h-full object-fit object-center"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
       </div>
@@ -233,9 +233,9 @@ function CreativitySection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1598389118600-9a83ceb4ebe6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGFydCUyMGNsYXNzJTIwcGFpbnRpbmd8ZW58MXx8fHwxNzYzMDg3NDUyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://lhbs.edu.vn/wp-content/uploads/2022/08/BL8Q9833-1024x683.jpg"
             alt="Students engaging in art and creative activities"
-            className="w-full h-full object-fit object-center"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
         
@@ -330,9 +330,9 @@ function TechLearningSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1680264370818-659352fa16f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHJvYm90aWNzJTIwbGFifGVufDF8fHx8MTc2MzA4NzQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/558223139_786418630686946_8377401039273207831_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGhJ9AwXVVBNkS2yTFwv2SLXfakVD1JV2dd9qRUPUlXZ1jO9z7E9zrqctgEpX0mjVCSxYAF-OXvyZnxy0q_ox7M&_nc_ohc=IXQXuc0UtgUQ7kNvwEbY_8R&_nc_oc=AdnQelucxJvXuy8o9BKe5p3qVA7ocfIgKHawlEPsaQ1LOtyvEOmHYftx6KguevtLHcs&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=rSxE3TPHAjyISsbWkjY5Qg&oh=00_Afj-5Yjwcy3bzYlU93REHUb_Ujw8qjR1oyy6izyvit8ioQ&oe=69213984"
             alt="Students working in robotics and technology lab"
-            className="w-full h-full object-fit object-center"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
       </div>
@@ -362,9 +362,9 @@ function SportsSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1762345565397-ba85070a5bd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlpbmclMjBzcG9ydHMlMjBvdXRkb29yfGVufDF8fHx8MTc2MzA4NzQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5222.jpg"
             alt="Students participating in sports and physical activities"
-            className="w-full h-full object-fit object-center"
+            className="w-full h-full object-cover object-center"
           />
         </motion.div>
         
@@ -506,7 +506,7 @@ function VisitCTASection({ onNavigate }: { onNavigate: (path: string) => void })
         <img
           src="https://images.unsplash.com/photo-1687709644302-8eceed73f2dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYW1wdXMlMjBmYWNpbGl0aWVzJTIwb3ZlcnZpZXd8ZW58MXx8fHwxNzYzMDg3NDUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="LHBS Campus"
-          className="w-full h-full object-fit"
+          className="w-full h-full object-cover"
         />
       </div>
 

@@ -137,10 +137,12 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-white text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[600px]"
             >
-              Lac Hong Bilingual School (LHBS) is a Vietnamese-owned independent school established in 2009, 
-              providing high-quality education from kindergarten through grade 12. We nurture young minds with 
-              a solid foundation of Vietnamese values while fostering global perspectives, preparing students 
-              to become confident, compassionate, and capable citizens of the world.
+             Lac Hong Bilingual School is a leading bilingual school in Dong Nai, 
+             where every student is nurtured to develop intellectually, ethically, 
+             and globally competent in the digital era. The school preserves and promotes 
+             Vietnamese cultural values while fostering creativity, lifelong learning, and 
+             social responsibility, empowering students to become compassionate, confident, 
+             innovative, and adaptable citizens in an ever-changing world.
             </motion.p>
 
             {/* CTA Button */}

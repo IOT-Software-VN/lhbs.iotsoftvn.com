@@ -146,17 +146,33 @@ function IntroSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1640px] mx-auto "
+      className="relative mx-auto mt-12 "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
       <div className="grid md:grid-cols-2 gap-16 items-center">
+        
+         {/* Right: Image */}
+        <motion.div
+          className="relative h-full overflow-hidden"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img
+            src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5222.jpg"
+            alt="Modern LHBS classroom environment"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+
         {/* Left: Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className="py-24 px-4 md:px-20"
         >
           {/* Section Heading */}
           <h2 
@@ -186,20 +202,6 @@ function IntroSection() {
               we cultivate not only academic excellence but also character, creativity, and global citizenship.
             </p>
           </div>
-        </motion.div>
-        
-        {/* Right: Image */}
-        <motion.div
-          className="relative h-[400px] md:h-[550px] overflow-hidden"
-          initial={{ opacity: 0, x: 50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <img
-            src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5222.jpg"
-            alt="Modern LHBS classroom environment"
-            className="w-full h-full object-cover object-center"
-          />
         </motion.div>
       </div>
     </motion.section>

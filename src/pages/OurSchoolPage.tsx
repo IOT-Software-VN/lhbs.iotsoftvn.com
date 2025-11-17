@@ -14,7 +14,7 @@ export function OurSchoolPage({ onNavigate }: OurSchoolPageProps) {
       <HeroSection onNavigate={onNavigate} />
       
       {/* Section 2: Who We Are and What We Do */}
-      <IntroSection />
+      {/* <IntroSection /> */}
       
       {/* Section 3: Who We Are and What We Do (Repeated with different content) */}
       <WhoWeAreSection />
@@ -140,9 +140,12 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               transition={{ duration: 0.6, delay: 0.5 }}
               className=" text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
             >
-              LHBS is a leading bilingual school in Đồng Nai, dedicated to nurturing global citizens 
-              through active learning in a dynamic, supportive environment that celebrates Vietnamese 
-              heritage and international excellence.
+               With a leading international school located in the heart city and one of the
+            most vibrant and exciting cities in Vietnam, LHBS is a dynamic and 
+            multi-cultural place to learn and work. We offer a world-class British-based
+            education for children aged 3 to 18 that embraces the very best of
+            Vietnamese culture while preparing students to be global citizens of the
+            future.
             </motion.p>
           </motion.div>
         </div>
@@ -152,37 +155,37 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
 }
 
 // ==================== SECTION 2: INTRO / ABOUT ====================
-function IntroSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+// function IntroSection() {
+//   const ref = useRef(null);
+//   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  return (
-    <motion.section
-      ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#E8F4FD]"
-      initial={{ opacity: 0 }}
-      animate={isInView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="max-w-4xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <p className="text-base md:text-lg text-[#212121] leading-relaxed mb-8">
-            With a leading international school located in the heart city and one of the
-            most vibrant and exciting cities in Vietnam, LHBS is a dynamic and 
-            multi-cultural place to learn and work. We offer a world-class British-based
-            education for children aged 3 to 18 that embraces the very best of
-            Vietnamese culture while preparing students to be global citizens of the
-            future.
-          </p>
-        </motion.div>
-      </div>
-    </motion.section>
-  );
-}
+//   return (
+//     <motion.section
+//       ref={ref}
+//       className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#E8F4FD]"
+//       initial={{ opacity: 0 }}
+//       animate={isInView ? { opacity: 1 } : {}}
+//       transition={{ duration: 0.8 }}
+//     >
+//       <div className="max-w-4xl mx-auto text-center">
+//         <motion.div
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={isInView ? { opacity: 1, y: 0 } : {}}
+//           transition={{ duration: 0.6, delay: 0.2 }}
+//         >
+//           <p className="text-base md:text-lg text-[#212121] leading-relaxed mb-8">
+//             With a leading international school located in the heart city and one of the
+//             most vibrant and exciting cities in Vietnam, LHBS is a dynamic and 
+//             multi-cultural place to learn and work. We offer a world-class British-based
+//             education for children aged 3 to 18 that embraces the very best of
+//             Vietnamese culture while preparing students to be global citizens of the
+//             future.
+//           </p>
+//         </motion.div>
+//       </div>
+//     </motion.section>
+//   );
+// }
 
 // ==================== SECTION 3: WHO WE ARE ====================
 function WhoWeAreSection() {
@@ -750,12 +753,25 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#1a5336]"
+      className="relative py-32 px-4 md:px-20 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      <div className="max-w-3xl mx-auto text-center">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1558696149-f2cf87eb99c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwc3R1ZGVudHMlMjBoYXBweXxlbnwxfHx8fDE3NjMwNDgyMDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="LHBS Community"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 z-10 bg-[#1a5336]" style={{ opacity: 0.85 }} />
+
+      {/* Content */}
+      <div className="relative z-20 max-w-3xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
           className=" text-white mb-6"
@@ -774,9 +790,9 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          LHBS welcomes applications for all grade levels throughout the year. We invite you to learn more 
-          about our admissions process, tuition fees, scholarship opportunities, and entry requirements. 
-          Join a community dedicated to academic excellence and holistic development.
+          We invite you to discover more about LHBS admissions, tuition and fees, scholarship opportunities, 
+          and our enrollment process. Connect with our counselling team to learn how LHBS can support your 
+          child's educational journey from kindergarten through high school graduation.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -787,21 +803,21 @@ function WelcomingCTASection({ onNavigate }: { onNavigate: (path: string) => voi
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <motion.button
-            onClick={() => onNavigate('/admissions/apply-now')}
+            onClick={() => onNavigate('/admissions')}
             className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Apply Now
+            More About Admissions
           </motion.button>
           
           <motion.button
-            onClick={() => onNavigate('/admissions')}
+            onClick={() => onNavigate('/admissions/apply-now')}
             className="px-8 h-12 border-2 border-white text-white  font-bold uppercase text-sm tracking-wider hover:bg-white hover:text-[#1a5336] transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            More About Admissions
+            Book a School Tour
           </motion.button>
         </motion.div>
       </div>

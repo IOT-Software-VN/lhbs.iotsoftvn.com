@@ -85,7 +85,7 @@ export function ParentEssentialsPage({ onNavigate }: ParentEssentialsPageProps) 
       </section>
 
       {/* Key Term Dates Section */}
-      <section id="term-dates" className="relative py-16 md:py-24 bg-gradient-to-br from-[#4ECDC4] to-[#44B09E] overflow-hidden">
+      <section id="term-dates" className="relative py-16 md:py-24  bg-[#FFFAE9] overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 right-0 w-96 h-96">

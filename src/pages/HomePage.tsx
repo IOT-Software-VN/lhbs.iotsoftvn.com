@@ -127,12 +127,8 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           
           {/* Body copy */}
           <p className=" text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
-            At LHBS, we believe that a strong educational foundation is the cornerstone of lifelong success. 
-            Our comprehensive programs span from early childhood through high school, providing a seamless journey 
-            of bilingual excellence. Each stage is carefully designed to build upon the previous, ensuring students 
-            develop critical thinking, cultural awareness, and global competence. We integrate Vietnamese heritage 
-            with international standards, preparing young minds not just for academic achievement, but for meaningful 
-            contribution to society.
+          Lac Hong Bilingual School cultivates lifelong learning, nurtures character, and builds global readiness through a holistic bilingual education that harmonizes Vietnamese cultural values with international excellence.
+The school empowers students to develop intellectually, emotionally, and globally, enabling them to live with compassion, confidence, and a strong sense of contribution to society.
           </p>
           
           {/* Education levels list */}
@@ -257,7 +253,7 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           {/* Decorative quote mark */}
-          <div className="text-[#E5A812] text-6xl md:text-7xl mb-4 leading-none opacity-40">
+          <div className="text-[#E5A812] text-xl md:text-7xl mb-4 leading-none">
             <ImQuotesRight/>
           </div>
           
