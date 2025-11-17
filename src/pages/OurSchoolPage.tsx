@@ -9,27 +9,35 @@ interface OurSchoolPageProps {
 
 export function OurSchoolPage({ onNavigate }: OurSchoolPageProps) {
   return (
-    <div className="relative ">
-      {/* Section 1: Level-2 Hero */}
+    <div className="relative">
+      {/* Section 1: Hero */}
       <HeroSection onNavigate={onNavigate} />
       
-      {/* Section 2: Intro - About LHBS */}
+      {/* Section 2: Who We Are and What We Do */}
       <IntroSection />
       
-      {/* Section 3: Facilities Highlight */}
-      <FacilitiesSection />
-            {/* Section 4.5: Campus Life Video */}
+      {/* Section 3: Who We Are and What We Do (Repeated with different content) */}
+      <WhoWeAreSection />
+
+            {/* Section 6: Campus Life Video */}
       <CampusLifeVideoSection />
-      {/* Section 4: Experience & Spaces */}
-      <ExperienceSection />
+      
+      {/* Section 4: History and Heritage */}
+      <HistoryHeritageSection />
+      
+      {/* Section 5: Leadership Quote */}
+      <LeadershipQuoteSection />
       
 
       
-      {/* Section 5: CTA - Welcoming You From The Start */}
-      <WelcomingCTASection onNavigate={onNavigate} />
+      {/* Section 7: Facilities Grid */}
+      {/* <FacilitiesSection /> */}
       
-      {/* Section 6: Contact & Location */}
-      <ContactSection onNavigate={onNavigate} />
+      {/* Section 8: Accreditations & Memberships */}
+      <AccreditationsSection />
+      
+      {/* Section 9: Welcome CTA */}
+      <WelcomingCTASection onNavigate={onNavigate} />
     </div>
   );
 }
@@ -151,7 +159,40 @@ function IntroSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-[#E8F4FD]"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <p className="text-base md:text-lg text-[#212121] leading-relaxed mb-8">
+            With a leading international school located in the heart city and one of the
+            most vibrant and exciting cities in Vietnam, LHBS is a dynamic and 
+            multi-cultural place to learn and work. We offer a world-class British-based
+            education for children aged 3 to 18 that embraces the very best of
+            Vietnamese culture while preparing students to be global citizens of the
+            future.
+          </p>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ==================== SECTION 3: WHO WE ARE ====================
+function WhoWeAreSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.section
+      ref={ref}
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -163,74 +204,218 @@ function IntroSection() {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Section Heading */}
-          <AnimatedHighlight>
-             <h2 
-            className=" text-[#1a5336]"
-            style={{ fontSize: '48px' }}
-          >
-              Solid foundations 
-          </h2>
-          </AnimatedHighlight>
           <h2 
-            className=" text-[#1a5336] mb-6"
+            className="text-[#1a5336] mb-6"
             style={{ fontSize: '48px', lineHeight: '1.2' }}
           >
-            for future leaders
+            WHO WE ARE AND WHAT WE DO
           </h2>
           
-          {/* Body Copy */}
-          <div className="space-y-4  text-base md:text-lg text-[#212121] leading-relaxed">
+          <div className="space-y-4 text-base md:text-lg text-[#212121] leading-relaxed">
             <p>
-              Founded in 2009, Lac Hong Bilingual School (LHBS) has established itself as a pioneering 
-              educational institution in Đồng Nai province. We offer a comprehensive bilingual curriculum 
-              in Vietnamese and English, from kindergarten through grade 12, preparing students for success 
-              in both local and international contexts.
+              We help students discover, prepare to pursue, and align students the early stages of their academic pursuits.
             </p>
             <p>
-              Our mission is to nurture well-rounded global citizens who honor their Vietnamese identity 
-              while embracing international perspectives. We integrate academic excellence with character 
-              development, critical thinking, and cultural awareness—equipping students to contribute 
-              meaningfully to themselves, their communities, and society at large.
+              With more than thirteen years of experience in creating amazing journeys, our well qualified and experienced teachers and staff offer high-level expertise in all areas from KG to year twelve including Mathematics, Vietnamese, Geography and Science.
             </p>
             <p>
-              At LHBS, we believe education extends beyond the classroom. Our modern campus, experienced 
-              educators, and innovative programs create an environment where every student can discover 
-              their potential and pursue their passions with confidence.
+              Our school employs the finest curriculum for Kindergarten through grade 12, with teachers who understand that students have different characteristics that need to be accommodated with different strategies tailored to help them succeed and eventually graduating school.
             </p>
           </div>
-          
-          {/* CTA Button */}
-          <motion.div
-            className="mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            <motion.button
-              onClick={() => window.open('https://360.lhu.edu.vn/', '_blank', 'noopener,noreferrer')}
-              className="px-8 h-12 bg-[#1a5336] text-white font-bold hover:bg-[#14432b] transition-colors rounded-lg inline-flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span>Take a Virtual Tour</span>
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </motion.button>
-          </motion.div>
         </motion.div>
         
         {/* Right: Image */}
         <motion.div
-          className="relative h-[400px] md:h-[500px] overflow-hidden"
+          className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1654366698665-e6d611a9aaa9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNsYXNzcm9vbSUyMGxlYXJuaW5nfGVufDF8fHx8MTc2MzA1ODYwMHww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Students engaged in active learning at LHBS"
+            src="https://images.unsplash.com/photo-1509062522246-3755977927d7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFjaGVyJTIwc3R1ZGVudCUyMGNsYXNzcm9vbXxlbnwxfHx8fDE3NjMwNTg2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Teacher and student interaction at LHBS"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ==================== SECTION 4: HISTORY AND HERITAGE ====================
+function HistoryHeritageSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.section
+      ref={ref}
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-gray-50"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        {/* Left: Image */}
+        <motion.div
+          className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGhpc3Rvcnl8ZW58MXx8fHwxNzYzMDU4NjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="LHBS School building showcasing our heritage"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+        
+        {/* Right: Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="mb-4">
+            <span className="text-[#FABA1E] text-sm font-semibold uppercase tracking-wider">
+              ABOUT LHBS
+            </span>
+          </div>
+          
+          <h2 
+            className="text-[#1a5336] mb-6"
+            style={{ fontSize: '48px', lineHeight: '1.2' }}
+          >
+            HISTORY AND HERITAGE
+          </h2>
+          
+          <div className="space-y-4 text-base md:text-lg text-[#212121] leading-relaxed">
+            <p>
+              LHBS school opened in March 2011, when Hanoi Campus was established. The reason for the school's establishment is the passion for education. 
+            </p>
+            <p>
+              Established by Lac Hong Construction Corporation, the story of the building of the school here and there in the location in our new buildings.
+            </p>
+            <p>
+              Built on 1.8 hectares, our secondary and higher campus provides a natural environment on the outskirts of the city, while also convenient. Both also provide for our current and prospective students and family with state-of-the-art facilities offering a great learning environment in which students can flourish and grow.
+            </p>
+            <p>
+              In our teaching methodology, we combine Eastern and Western approaches to provide high quality bilingual education which is both deeply rooted in Vietnamese culture and globally competitive.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ==================== SECTION 5: LEADERSHIP QUOTE ====================
+function LeadershipQuoteSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.section
+      ref={ref}
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        {/* Left: Quote Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-[#E8F4FD] p-8 md:p-12 rounded-lg"
+        >
+          <div className="mb-6">
+            <p className="text-2xl md:text-3xl text-[#1a5336] font-medium leading-relaxed mb-6">
+              "Success at BVIS HCMC is not just measured by grades and awards, but by the growth of each individual student. We also prioritise developing a lifelong enjoyment for learning that incorporates a compassion and empathy towards others."
+            </p>
+            
+            <div className="border-t border-[#1a5336]/20 pt-4">
+              <p className="text-[#1a5336] font-semibold">Mrs Kim Thompson</p>
+              <p className="text-[#1a5336]/70 text-sm">Head of Primary, Secondary and High School</p>
+            </div>
+          </div>
+        </motion.div>
+        
+        {/* Right: Portrait */}
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div className="relative w-80 h-80 mx-auto">
+            <div className="absolute inset-0 bg-[#FABA1E] rounded-full transform rotate-12"></div>
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFkbWFzdGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYzMDU4NjAwfDA&ixlib=rb-4.1.0&q=80&w=400"
+              alt="Mrs Kim Thompson, Head of School"
+              className="relative z-10 w-full h-full object-cover rounded-full"
+            />
+          </div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ==================== SECTION 8: ACCREDITATIONS ====================
+function AccreditationsSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.section
+      ref={ref}
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-gray-50"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        {/* Left: Text Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="mb-6">
+            <div className="w-16 h-16 bg-[#FABA1E] rounded-full flex items-center justify-center mb-6">
+              <span className="text-2xl font-bold text-[#1a5336]">✓</span>
+            </div>
+          </div>
+          
+          <h2 
+            className="text-[#1a5336] mb-6"
+            style={{ fontSize: '48px', lineHeight: '1.2' }}
+          >
+            OUR ACCREDITATIONS & MEMBERSHIPS
+          </h2>
+          
+          <div className="space-y-4 text-base md:text-lg text-[#212121] leading-relaxed mb-8">
+            <p>
+              Our academic achievements, policy and governance is governed and maintained by high standards educational authority and organizations have great impact on Vietnamese Education.
+            </p>
+            <p>
+              Teaching excellence and student learning are prioritized on our academic roadmap, with the goal to become one of the best schools in Vietnam that meets international standards.
+            </p>
+          </div>
+        </motion.div>
+        
+        {/* Right: Happy Students Image */}
+        <motion.div
+          className="relative h-[400px] md:h-[500px] overflow-hidden rounded-lg"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img
+            src="https://images.unsplash.com/photo-1622737133809-d95047b9e673?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHN0dWRlbnRzJTIwc2Nob29sfGVufDF8fHx8MTc2MzA1ODYwMHww&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Happy students at LHBS celebrating achievements"
             className="w-full h-full object-cover object-center"
           />
         </motion.div>

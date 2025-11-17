@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
-import { ChevronRight, ChevronLeft, Check } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Check, X } from 'lucide-react';
 
 interface LHBSCampusPageProps {
   onNavigate: (path: string) => void;
@@ -18,6 +18,7 @@ export function LHBSCampusPage({ onNavigate }: LHBSCampusPageProps) {
       {/* Section 3: Facilities Highlight */}
       <FacilitiesHighlightSection onNavigate={onNavigate} />
       
+      <CampusLifeVideoSection />
       {/* Section 4: Experience Carousel */}
       <ExperienceCarouselSection />
       
@@ -145,7 +146,7 @@ function IntroSection() {
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto "
+      className="relative py-24 px-4 md:px-20 max-w-[1640px] mx-auto "
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -222,75 +223,244 @@ function FacilitiesHighlightSection({ onNavigate }: { onNavigate: (path: string)
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
+      className="relative mx-auto bg-white mb-16"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
-      {/* Section Heading */}
-      <motion.div
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <h2 
-          className=" text-[#1a5336] mb-4"
-          style={{ fontSize: '48px', lineHeight: '1.2' }}
+      <div className="grid md:grid-cols-2 gap-16  items-center">
+        {/* Left: Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="py-24 px-4 md:px-20 m-20"
         >
-          Our modern learning facilities
-        </h2>
-        <p className=" text-base md:text-lg text-[#212121] max-w-3xl mx-auto leading-relaxed">
-          LHBS provides purpose-built classrooms, laboratories, and shared spaces that support bilingual 
-          learning and 21st-century skills including STEAM/STEM, ICT, English proficiency, and essential 
-          soft skills for future success.
-        </p>
-      </motion.div>
+          {/* Section Heading */}
+          <h2 
+            className="text-[#1a5336] mb-6"
+            style={{ fontSize: '48px', lineHeight: '1.2' }}
+          >
+            Our modern learning facilities
+          </h2>
+          
+          <p className="text-base md:text-lg text-[#212121] mb-8 leading-relaxed">
+            LHBS provides purpose-built classrooms, laboratories, and shared spaces that support bilingual 
+            learning and 21st-century skills including STEAM/STEM, ICT, English proficiency, and essential 
+            soft skills for future success.
+          </p>
 
-      {/* Facilities Checklist */}
-      <motion.div
-        className="max-w-3xl mx-auto mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.3 }}
-      >
-        <div className="grid md:grid-cols-2 gap-4">
-          {facilities.map((facility, index) => (
-            <motion.div
-              key={index}
-              className="flex items-start gap-3"
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.4 + index * 0.05 }}
+          {/* Facilities List - Vertical */}
+          <div className="space-y-4 mb-8">
+            {facilities.map((facility, index) => (
+              <motion.div
+                key={index}
+                className="flex items-start gap-3"
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              >
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1a5336] flex items-center justify-center mt-0.5">
+                  <Check className="w-4 h-4 text-white" />
+                </div>
+                <p className="text-[#212121] text-base leading-relaxed">
+                  {facility}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <motion.button
+              onClick={() => onNavigate('/our-school/facilities')}
+              className="px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1a5336] flex items-center justify-center mt-0.5">
-                <Check className="w-4 h-4 text-white" />
-              </div>
-              <p className=" text-[#212121] text-base leading-relaxed">
-                {facility}
-              </p>
-            </motion.div>
-          ))}
+              Explore Our Facilities
+            </motion.button>
+          </motion.div>
+        </motion.div>
+        
+        {/* Right: Image */}
+        <motion.div
+          className="relative h-full h-[800px] overflow-hidden"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img
+            src="https://lhbs.edu.vn/wp-content/uploads/2022/08/BL8Q9833-2048x1365.jpg"
+            alt="Modern LHBS learning facilities and classrooms"
+            className="w-full h-full object-cover object-center"
+          />
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+function CampusLifeVideoSection() {
+  const [showVideoModal, setShowVideoModal] = useState(false);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  const videoTitle = "Experience Our Campus";
+  const videoBody = "Take a virtual tour of our modern facilities and see how our students engage in daily learning activities. Discover the vibrant campus life that makes LHBS a special place to grow and learn.";
+  const videoUrl = "https://www.youtube.com/embed/O7iVtgnbww4";
+  const thumbnailImage = "https://lhbs.edu.vn/wp-content/uploads/2023/10/IMG_6953.jpg";
+  const playAriaLabel = "Play Campus Life video";
+
+  return (
+    <>
+      <motion.section
+        ref={ref}
+        className="relative overflow-hidden"
+        style={{ minHeight: '790px' }}
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.8 }}
+      >
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0"
+          aria-hidden="true"
+        >
+          <img
+            src={thumbnailImage}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Dark Overlay */}
+        <div 
+          className="absolute inset-0 bg-black/50"
+          aria-hidden="true"
+        />
+
+        {/* Content Group - Centered */}
+        <div className="relative z-10 h-full min-h-[640px] flex items-center justify-center px-4 md:px-20 py-24">
+          <motion.div
+            className="max-w-[880px] text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            {/* Title */}
+            <h2 className="text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6 font-bold">
+              {videoTitle}
+            </h2>
+            
+            {/* Body */}
+            <p className="text-base md:text-lg text-[#fffae9]/90 mb-12 leading-relaxed max-w-[70ch] mx-auto">
+              {videoBody}
+            </p>
+            
+            {/* Play Button */}
+            <motion.button
+              onClick={() => setShowVideoModal(true)}
+              className="group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 focus:ring-offset-black/50"
+              aria-label={playAriaLabel}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <svg 
+                width="96" 
+                height="96" 
+                viewBox="0 0 96 96" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl"
+              >
+                {/* White Circle */}
+                <circle cx="48" cy="48" r="48" fill="#fffae9" />
+                
+                {/* Green Play Triangle */}
+                <path 
+                  d="M38 32L38 64L66 48L38 32Z" 
+                  fill="#1a5336"
+                />
+              </svg>
+              
+              {/* Visually hidden label */}
+              <span className="sr-only">{playAriaLabel}</span>
+            </motion.button>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Video Modal */}
+      {showVideoModal && (
+        <VideoModal 
+          videoUrl={videoUrl} 
+          onClose={() => setShowVideoModal(false)} 
+        />
+      )}
+    </>
+  );
+}
+
+// ==================== VIDEO MODAL COMPONENT ====================
+interface VideoModalProps {
+  videoUrl: string;
+  onClose: () => void;
+}
+
+function VideoModal({ videoUrl, onClose }: VideoModalProps) {
+  // Handle Escape key
+  useState(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  });
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        className="relative w-full max-w-5xl bg-black rounded-lg overflow-hidden"
+        initial={{ scale: 0.9, y: 50 }}
+        animate={{ scale: 1, y: 0 }}
+        exit={{ scale: 0.9, y: 50 }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute -top-12 right-0 text-white hover:text-[#FABA1E] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] p-2 z-10"
+          aria-label="Close video"
+        >
+          <X className="w-8 h-8" />
+        </button>
+
+        {/* Video Container */}
+        <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src={videoUrl}
+            title="LHBS Campus Life Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </motion.div>
-
-      {/* CTA Button */}
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <motion.button
-          onClick={() => onNavigate('/our-school/facilities')}
-          className="px-8 h-12 bg-[#FABA1E] text-[#1a5336]  font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Explore Our Facilities
-        </motion.button>
-      </motion.div>
-    </motion.section>
+    </motion.div>
   );
 }
 
