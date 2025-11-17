@@ -102,9 +102,9 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
     <div className="w-[30%] border-r border-white/20 pr-12 overflow-y-auto scrollbar-thin scrollbar-thumb-[#ffffff33] scrollbar-track-transparent">
       {activeParent && (
         <div>
-          {/* <h3 className="text-white text-[18px] uppercase tracking-wider mb-6">
+          <h3 className="text-white text-[18px] uppercase tracking-wider mb-6">
             {activeParent.label}
-          </h3> */}
+          </h3>
           <nav className="space-y-3 mb-6" aria-label={`${activeParent.label} pages`}>
             {/* Link to main parent page */}
             <button
