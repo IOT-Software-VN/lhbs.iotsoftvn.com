@@ -141,475 +141,384 @@ export function ApplyNowPage({ onNavigate }: ApplyNowPageProps) {
 
   if (submitted) {
     return (
-      <div className="">
-        {/* Hero Section with Breadcrumbs */}
-        <section className="relative min-h-[40vh] md:min-h-[65vh] bg-[#1a5336] overflow-hidden flex flex-col">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a5336] to-[#14432b]" />
-          
-          {/* Breadcrumbs inside Hero */}
-          <nav 
-            className="relative z-20 w-full px-4 md:px-20 pt-3 pb-2"
-            style={{ marginTop: '76px' }}
-            aria-label="Breadcrumb"
-          >
-            <div className="max-w-[1200px] mx-auto flex items-center gap-2 flex-wrap">
-              {breadcrumbs.map((item, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  {index > 0 && <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />}
-                  {item.onClick ? (
-                    <button
-                      onClick={item.onClick}
-                      className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
-                    >
-                      {item.label}
-                    </button>
-                  ) : (
-                    <span className=" text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
-                  )}
-                </div>
-              ))}
-            </div>
-          </nav>
-          
-          <div className="relative z-10 w-full px-4 md:px-20 max-w-[1200px] mx-auto flex-1 flex flex-col justify-center pb-16 md:pb-24 pt-4">
-            <motion.h1
-              className=" text-white text-[32px] md:text-[56px] mb-4 max-w-[22ch]"
-              style={{ lineHeight: '1.1' }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Thank You
-            </motion.h1>
-          </div>
-        </section>
-        
-        {/* Success Message */}
-        <section className="py-16 md:py-24 px-4 md:px-20">
-          <div className="max-w-[760px] mx-auto text-center">
-            <div className="w-20 h-20 bg-[#1a5336] rounded-full flex items-center justify-center mx-auto mb-8">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="max-w-md w-full mx-4">
+          <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+            <div className="w-20 h-20 bg-[#1a5336] rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
             
-            <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-6">
-              Enquiry Submitted Successfully
+            <h2 className="text-[24px] md:text-[28px] text-[#1a5336] mb-4">
+              Thank You!
             </h2>
             
-            <p className=" text-[#212121] mb-4" style={{ lineHeight: '1.5' }}>
-              Thank you for your interest in LHBS. We have received your enquiry and a member of our admissions team will be in touch with you shortly.
+            <p className="text-[#212121] mb-4 leading-relaxed">
+              We have received your enquiry and will be in touch with you shortly.
             </p>
             
-            <p className=" text-[#666] mb-8" style={{ lineHeight: '1.5' }}>
-              Please check your email for a confirmation message. If you don't receive it within 24 hours, please contact us directly.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-3">
               <button
                 onClick={() => onNavigate('/')}
-                className="px-8 h-12 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+                className="px-6 h-12 bg-[#1a5336] text-white font-semibold hover:bg-[#14432b] transition-colors rounded"
               >
                 Return to Home
               </button>
               
               <button
                 onClick={() => onNavigate('/contact/book-tour')}
-                className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+                className="px-6 h-12 border-2 border-[#1a5336] text-[#1a5336] font-semibold hover:bg-[#1a5336] hover:text-white transition-colors rounded"
               >
                 Book a School Tour
               </button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="">
-      {/* Hero Section with Breadcrumbs */}
-      <section className="relative min-h-[40vh] md:min-h-[65vh] bg-[#1a5336] overflow-hidden flex flex-col">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a5336] to-[#14432b]" />
-        
-        {/* Breadcrumbs inside Hero */}
-        <nav 
-          className="relative z-20 w-full px-4 md:px-20 pt-3 pb-2"
-          style={{ marginTop: '76px' }}
-          aria-label="Breadcrumb"
-        >
-          <div className="max-w-[1200px] mx-auto flex items-center gap-2 flex-wrap">
-            {breadcrumbs.map((item, index) => (
-              <div key={index} className="flex items-center gap-2">
-                {index > 0 && <ChevronRight className="w-4 h-4 text-[#fffae9]/70" />}
-                {item.onClick ? (
-                  <button
-                    onClick={item.onClick}
-                    className=" text-sm text-[#fffae9]/90 hover:text-[#fffae9] transition-colors focus:outline-none focus:text-[#fffae9] focus:underline whitespace-nowrap"
-                  >
-                    {item.label}
-                  </button>
-                ) : (
-                  <span className=" text-sm text-[#fffae9]/70 whitespace-nowrap">{item.label}</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </nav>
-        
-        {/* Hero Content */}
-        <div className="relative z-10 w-full px-4 md:px-20 max-w-[1200px] mx-auto flex-1 flex flex-col justify-center pb-16 md:pb-24 pt-4">
-          <motion.h1
-            className=" text-white text-[32px] md:text-[48px] mb-4 max-w-[22ch]"
-            style={{ lineHeight: '1.24' }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Apply Now
-          </motion.h1>
-          
-          <motion.p
-            className=" text-white/95 text-[16px] md:text-[18px] max-w-[65ch]"
-            style={{ lineHeight: '1.5' }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Start your LHBS journey with our simple application process
-          </motion.p>
+    <div className="min-h-screen bg-white flex">
+      {/* Left Column - Sticky Sidebar */}
+  <div className="min-w-[700px] bg-gradient-to-br from-[#1a5336] to-[#14432b] justify-center p-8 md:p-12 sticky top-0 z-30 overflow-y-auto">
+    {/* Background Pattern */}
+    <div className="absolute inset-0 bg-gradient-to-br from-[#1a5336]/90 to-[#14432b]/90" />
+
+    {/* Decorative Elements */}
+    <div className="absolute top-8 right-8 w-24 h-24 border border-[#FABA1E]/30 rounded-full" />
+    <div className="absolute bottom-8 left-8 w-16 h-16 bg-[#FABA1E]/20 rounded-full" />
+
+    {/* Content */}
+    <div className="relative z-10 text-white">
+      {/* Logo Area */}
+      <div className="mb-8">
+        <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center mb-4">
+          <span className="text-[#1a5336] font-bold text-xl">LHBS</span>
         </div>
-      </section>
+        <h2 className="text-2xl md:text-3xl font-bold mb-2">Welcome to</h2>
+        <h1 className="text-3xl md:text-4xl font-bold text-[#FABA1E] mb-2">Lac Hong Bilingual School</h1>
+        <p className="text-white/80 text-sm">Ho Chi Minh City Campus</p>
+      </div>
 
-      {/* Form Section */}
-      <section ref={formRef} className="py-12 md:py-16 px-4 md:px-20">
-        <motion.div
-          className="max-w-[1200px] mx-auto"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="mb-8 text-center">
-            <h2 className=" text-[32px] md:text-[40px] text-[#1a5336] mb-4">
-              Enquiry Form
-            </h2>
-            <p className=" text-[#666]" style={{ lineHeight: '1.5' }}>
-              Please complete the form below and our admissions team will be in touch shortly.
-            </p>
-          </div>
+      {/* Key Points */}
+      <div className="space-y-4 mb-8">
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-sm leading-relaxed">
+            World-class bilingual education with British curriculum
+          </p>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-sm leading-relaxed">
+            Experienced international teaching staff
+          </p>
+        </div>
+        <div className="flex items-start gap-3">
+          <div className="w-2 h-2 bg-[#FABA1E] rounded-full mt-2 flex-shrink-0" />
+          <p className="text-white/90 text-sm leading-relaxed">
+            Modern facilities and innovative learning environment
+          </p>
+        </div>
+      </div>
 
-          <form onSubmit={handleSubmit} noValidate className="bg-white p-6 md:p-10 border border-[#d0d0d0]">
-            {/* Group A: Parent/Guardian Details */}
-            <div className="mb-10 md:mb-12">
-              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
-                Parent/Guardian Details
-              </h3>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <FormSelect
-                  label="Title"
-                  name="title"
-                  value={title}
-                  onChange={setTitle}
-                  options={[
-                    { value: 'mr', label: 'Mr' },
-                    { value: 'mrs', label: 'Mrs' },
-                    { value: 'ms', label: 'Ms' },
-                    { value: 'dr', label: 'Dr' },
-                    { value: 'prof', label: 'Prof' }
-                  ]}
-                  required
-                  error={errors.title}
-                />
-                
-                <FormInput
-                  label="First name"
-                  name="firstName"
-                  value={firstName}
-                  onChange={setFirstName}
-                  required
-                  error={errors.firstName}
-                />
-                
-                <FormInput
-                  label="Last name"
-                  name="lastName"
-                  value={lastName}
-                  onChange={setLastName}
-                  required
-                  error={errors.lastName}
-                />
-                
-                <FormInput
-                  label="Company name"
-                  name="companyName"
-                  value={companyName}
-                  onChange={setCompanyName}
-                  helpText="Optional"
-                />
-                
-                <FormInput
-                  label="Email address"
-                  name="email"
-                  type="email"
-                  value={email}
-                  onChange={setEmail}
-                  required
-                  error={errors.email}
-                />
-                
-                <FormInput
-                  label="Contact telephone number"
-                  name="telephone"
-                  type="tel"
-                  value={telephone}
-                  onChange={setTelephone}
-                  required
-                  error={errors.telephone}
-                />
-                
-                <FormInput
-                  label="Nationality"
-                  name="nationality"
-                  value={nationality}
-                  onChange={setNationality}
-                />
-                
-                <FormSelect
-                  label="Country/Region of residence"
-                  name="countryOfResidence"
-                  value={countryOfResidence}
-                  onChange={setCountryOfResidence}
-                  options={[
-                    { value: 'vn', label: 'Vietnam' },
-                    { value: 'us', label: 'United States' },
-                    { value: 'uk', label: 'United Kingdom' },
-                    { value: 'sg', label: 'Singapore' },
-                    { value: 'jp', label: 'Japan' },
-                    { value: 'kr', label: 'South Korea' },
-                    { value: 'cn', label: 'China' },
-                    { value: 'au', label: 'Australia' },
-                    { value: 'other', label: 'Other' }
-                  ]}
-                  required
-                  error={errors.countryOfResidence}
-                />
-              </div>
-              
-              <div className="mt-6">
-                <FormRadio
-                  label="Preferred contact method"
-                  name="preferredContact"
-                  value={preferredContact}
-                  onChange={setPreferredContact}
-                  options={[
-                    { value: 'phone', label: 'Phone' },
-                    { value: 'email', label: 'Email' }
-                  ]}
-                  layout="horizontal"
-                />
-              </div>
-              
-              <div className="mt-6">
-                <FormSelect
-                  label="How did you hear about us?"
-                  name="hearAboutUs"
-                  value={hearAboutUs}
-                  onChange={setHearAboutUs}
-                  options={[
-                    { value: 'agent', label: 'Agent' },
-                    { value: 'company', label: 'Company recommendation' },
-                    { value: 'advisor', label: 'Educational advisor' },
-                    { value: 'online', label: 'Online advert' },
-                    { value: 'referral-word', label: 'Referral (word-of-mouth)' },
-                    { value: 'referral-school', label: 'Referral (from another school)' },
-                    { value: 'sibling', label: 'Sibling already attending' }
-                  ]}
-                />
-              </div>
-            </div>
+      {/* Statistics */}
+      <div className="grid grid-cols-1 gap-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+          <div className="text-2xl font-bold text-[#FABA1E]">97%</div>
+          <div className="text-xs text-white/80">University acceptance rate</div>
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+          <div className="text-2xl font-bold text-[#FABA1E]">15+</div>
+          <div className="text-xs text-white/80">Years of excellence</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            {/* Group B: Children Details */}
-            <div className="mb-10 md:mb-12">
-              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
-                Children Details
-              </h3>
-              
-              <div className="mb-6">
-                <FormSelect
-                  label="Number of children"
-                  name="numberOfChildren"
-                  value={numberOfChildren}
-                  onChange={handleNumberOfChildrenChange}
-                  options={[
-                    { value: '1', label: '1' },
-                    { value: '2', label: '2' },
-                    { value: '3', label: '3' },
-                    { value: '4', label: '4' },
-                    { value: '5', label: '5' }
-                  ]}
-                  required
-                  error={errors.numberOfChildren}
-                />
-              </div>
-              
-              {numberOfChildren && (
+  {/* Right Column - Scrollable Form */}
+  <div className="w-full overflow-y-auto">
+    <div className="p-8 lg:p-12 pt-24 lg:pt-12 border-b border-gray-200">
+      <h1 className="text-3xl lg:text-4xl font-medium text-[#2c3e50] mb-4">
+        Welcome to LHBS HCMC
+      </h1>
+      <p className="text-gray-600 mb-4 leading-relaxed">
+        We're delighted that you're considering Lac Hong Bilingual School Ho Chi Minh City for your child's education.
+      </p>
+          <p className="text-gray-600 mb-4 leading-relaxed">
+            To have the best experience of our school, share your availability for a tour. Our team will respond within 24 hours (Mon-Fri).
+          </p>
+          <p className="text-sm text-gray-500">
+            Questions?{' '}
+            <button 
+              onClick={() => onNavigate('/contact/contact-us')}
+              className="text-[#2c5282] underline hover:text-[#1e3a5f] transition-colors"
+            >
+              Email us
+            </button>
+            {' '}or call{' '}
+            <span className="text-[#2c5282]">+84 (28) 3758 8033</span>
+          </p>
+        </div>
+
+        
+        {/* Form Section */}
+        <div className="flex-1 p-8 lg:p-16 pb-16 overflow-y-auto">
+          <motion.div
+            ref={formRef}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+          >
+            <form onSubmit={handleSubmit} noValidate className="space-y-10">
+              {/* Step 1: Tell us about you and your family */}
+              <div>
+                <h3 className="text-lg font-medium text-[#2c3e50] mb-6">
+                  1. Tell us about you and your family
+                </h3>
+                
                 <div className="space-y-6">
-                  {childrenData.map((child, index) => (
-                    <ChildDetailsForm
-                      key={index}
-                      index={index}
-                      data={child}
-                      onChange={handleChildDataChange}
-                      errors={errors}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Group C: Tell us more */}
-            <div className="mb-10 md:mb-12">
-              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
-                Tell Us More
-              </h3>
-              
-              <FormTextarea
-                label="Tell us more about your enquiry"
-                name="enquiryDetails"
-                value={enquiryDetails}
-                onChange={setEnquiryDetails}
-                placeholder="Please share details about your interests such as facilities, curriculum, fees, specific programs, etc."
-                rows={6}
-                maxLength={1000}
-                showCharCount
-                helpText="Optional - Share any specific questions or interests"
-              />
-            </div>
-
-            {/* Group D: Visit our school */}
-            <div className="mb-10 md:mb-12">
-              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
-                Visit Our School
-              </h3>
-              
-              <div className="space-y-6">
-                <FormRadio
-                  label="Would you like to visit us?"
-                  name="wantToVisit"
-                  value={wantToVisit}
-                  onChange={setWantToVisit}
-                  options={[
-                    { value: 'yes', label: 'Yes' },
-                    { value: 'not-now', label: 'Not at the moment' }
-                  ]}
-                  layout="horizontal"
-                />
-                
-                {wantToVisit === 'yes' && (
-                  <div className="grid md:grid-cols-2 gap-6 pl-0 md:pl-6">
-                    <FormSelect
-                      label="Preferred time"
-                      name="preferredTime"
-                      value={preferredTime}
-                      onChange={setPreferredTime}
-                      options={[
-                        { value: 'morning', label: 'Morning' },
-                        { value: 'afternoon', label: 'Afternoon' }
-                      ]}
+                  <FormSelect
+                    label="Title"
+                    name="title"
+                    value={title}
+                    onChange={setTitle}
+                    options={[
+                      { value: '', label: 'Please select...' },
+                      { value: 'mr', label: 'Mr' },
+                      { value: 'mrs', label: 'Mrs' },
+                      { value: 'ms', label: 'Ms' },
+                      { value: 'dr', label: 'Dr' },
+                      { value: 'prof', label: 'Prof' }
+                    ]}
+                    required
+                    error={errors.title}
+                  />
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <FormInput
+                      label="First Name"
+                      name="firstName"
+                      value={firstName}
+                      onChange={setFirstName}
+                      required
+                      error={errors.firstName}
                     />
                     
                     <FormInput
-                      label="Preferred date"
-                      name="preferredDate"
-                      type="date"
-                      value={preferredDate}
-                      onChange={setPreferredDate}
+                      label="Last Name"
+                      name="lastName"
+                      value={lastName}
+                      onChange={setLastName}
+                      required
+                      error={errors.lastName}
                     />
                   </div>
-                )}
+                  
+                  <FormInput
+                    label="Company Name"
+                    name="companyName"
+                    value={companyName}
+                    onChange={setCompanyName}
+                  />
+                  
+                  <FormInput
+                    label="Email Address"
+                    name="email"
+                    type="email"
+                    value={email}
+                    onChange={setEmail}
+                    required
+                    error={errors.email}
+                  />
+                  
+                  <FormInput
+                    label="Contact Telephone Number"
+                    name="telephone"
+                    type="tel"
+                    value={telephone}
+                    onChange={setTelephone}
+                    required
+                    error={errors.telephone}
+                    placeholder="+84"
+                  />
+                </div>
+              </div>
+
+              {/* Children Details */}
+              <div>
+                <h3 className="text-lg font-medium text-[#2c3e50] mb-6">
+                  2. Children Details
+                </h3>
                 
-                <FormSelect
-                  label="Are you interested in Boarding?"
-                  name="interestedInBoarding"
-                  value={interestedInBoarding}
-                  onChange={setInterestedInBoarding}
-                  options={[
-                    { value: 'yes', label: 'Yes' },
-                    { value: 'no', label: 'No' }
-                  ]}
-                />
+                <div className="space-y-6">
+                  <FormSelect
+                    label="Number of children"
+                    name="numberOfChildren"
+                    value={numberOfChildren}
+                    onChange={handleNumberOfChildrenChange}
+                    options={[
+                      { value: '', label: 'Please select...' },
+                      { value: '1', label: '1' },
+                      { value: '2', label: '2' },
+                      { value: '3', label: '3' },
+                      { value: '4', label: '4' },
+                      { value: '5', label: '5' }
+                    ]}
+                    required
+                    error={errors.numberOfChildren}
+                  />
+                  
+                  {numberOfChildren && (
+                    <div className="space-y-6">
+                      {childrenData.map((child, index) => (
+                        <ChildDetailsForm
+                          key={index}
+                          index={index}
+                          data={child}
+                          onChange={handleChildDataChange}
+                          errors={errors}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Tell us more */}
+              <div>
+                <h3 className="text-lg font-medium text-[#2c3e50] mb-6">
+                  3. Tell Us More
+                </h3>
                 
-                <FormSelect
-                  label="Campus of interest"
-                  name="campusOfInterest"
-                  value={campusOfInterest}
-                  onChange={setCampusOfInterest}
-                  options={[
-                    { value: 'not-sure', label: 'Not sure' },
-                    { value: 'hanoi-main', label: 'Hanoi Main Campus' },
-                    { value: 'hcmc', label: 'Ho Chi Minh City Campus' },
-                    { value: 'danang', label: 'Da Nang Campus' }
-                  ]}
-                  helpText="Select the campus you're most interested in visiting"
+                <FormTextarea
+                  label="Tell us more about your enquiry"
+                  name="enquiryDetails"
+                  value={enquiryDetails}
+                  onChange={setEnquiryDetails}
+                  placeholder="Please share details about your interests such as facilities, curriculum, fees, specific programs, etc."
+                  rows={4}
+                  maxLength={1000}
+                  showCharCount
+                  helpText="Optional - Share any specific questions or interests"
                 />
               </div>
-            </div>
 
-            {/* Group E: Marketing Consent */}
-            <div className="mb-10">
-              <h3 className=" text-[24px] md:text-[28px] text-[#1a5336] mb-6 pb-3 border-b-2 border-[#FABA1E]">
-                Stay Connected
-              </h3>
-              
-              <FormCheckbox
-                label="I'd like to receive updates about news, events and admissions"
-                name="marketingConsent"
-                checked={marketingConsent}
-                onChange={setMarketingConsent}
-              />
-              
-              <p className=" text-xs text-[#666] mt-4" style={{ lineHeight: '1.5' }}>
-                By submitting this form, you agree to our{' '}
-                <button
-                  type="button"
-                  onClick={() => onNavigate('/privacy-policy')}
-                  className="text-[#1a5336] underline hover:text-[#14432b] focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
-                >
-                  Privacy Policy
-                </button>
-                {' '}and{' '}
-                <button
-                  type="button"
-                  onClick={() => onNavigate('/cookie-policy')}
-                  className="text-[#1a5336] underline hover:text-[#14432b] focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
-                >
-                  Cookie Policy
-                </button>
-                . We are committed to protecting your personal information.
-              </p>
-            </div>
+              {/* Visit our school */}
+              <div>
+                <h3 className="text-lg font-medium text-[#2c3e50] mb-6">
+                  4. Visit Our School
+                </h3>
+                
+                <div className="space-y-6">
+                  <FormRadio
+                    label="Would you like to visit us?"
+                    name="wantToVisit"
+                    value={wantToVisit}
+                    onChange={setWantToVisit}
+                    options={[
+                      { value: 'yes', label: 'Yes' },
+                      { value: 'not-now', label: 'Not at the moment' }
+                    ]}
+                    layout="horizontal"
+                  />
+                  
+                  {wantToVisit === 'yes' && (
+                    <div className="grid md:grid-cols-2 gap-4 pl-6">
+                      <FormSelect
+                        label="Preferred time"
+                        name="preferredTime"
+                        value={preferredTime}
+                        onChange={setPreferredTime}
+                        options={[
+                          { value: '', label: 'Please select...' },
+                          { value: 'morning', label: 'Morning' },
+                          { value: 'afternoon', label: 'Afternoon' }
+                        ]}
+                      />
+                      
+                      <FormInput
+                        label="Preferred date"
+                        name="preferredDate"
+                        type="date"
+                        value={preferredDate}
+                        onChange={setPreferredDate}
+                      />
+                    </div>
+                  )}
+                  
+                  <FormSelect
+                    label="Campus of interest"
+                    name="campusOfInterest"
+                    value={campusOfInterest}
+                    onChange={setCampusOfInterest}
+                    options={[
+                      { value: '', label: 'Please select...' },
+                      { value: 'not-sure', label: 'Not sure' },
+                      { value: 'hanoi-main', label: 'Hanoi Main Campus' },
+                      { value: 'hcmc', label: 'Ho Chi Minh City Campus' },
+                      { value: 'danang', label: 'Da Nang Campus' }
+                    ]}
+                    helpText="Select the campus you're most interested in visiting"
+                  />
+                </div>
+              </div>
 
-            {/* Form Actions */}
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-between pt-6 border-t border-[#d0d0d0]">
-              <button
-                type="submit"
-                className="w-full sm:w-auto px-10 h-12 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
-              >
-                Submit Enquiry
-              </button>
-              
-              <button
-                type="button"
-                onClick={() => onNavigate('/contact/contact-us')}
-                className=" text-sm text-[#1a5336] underline hover:text-[#14432b] focus:outline-none focus:ring-2 focus:ring-[#1a5336]"
-              >
-                Or contact admissions directly
-              </button>
-            </div>
-          </form>
-        </motion.div>
-      </section>
+              {/* Marketing Consent */}
+              <div className="border-t border-gray-200 pt-6">
+                <FormCheckbox
+                  label="I'd like to receive updates about news, events and admissions"
+                  name="marketingConsent"
+                  checked={marketingConsent}
+                  onChange={setMarketingConsent}
+                />
+                
+                <p className="text-xs text-gray-500 mt-4 leading-relaxed">
+                  By submitting this form, you agree to our{' '}
+                  <button
+                    type="button"
+                    onClick={() => onNavigate('/privacy-policy')}
+                    className="text-[#2c5282] underline hover:text-[#1e3a5f]"
+                  >
+                    Privacy Policy
+                  </button>
+                  {' '}and{' '}
+                  <button
+                    type="button"
+                    onClick={() => onNavigate('/cookie-policy')}
+                    className="text-[#2c5282] underline hover:text-[#1e3a5f]"
+                  >
+                    Cookie Policy
+                  </button>
+                  . We are committed to protecting your personal information.
+                </p>
+              </div>
+
+              {/* Submit Button */}
+              <div className="pt-6">
+                <button
+                  type="submit"
+                  className="w-full h-12 bg-[#2c5282] text-white font-semibold hover:bg-[#1e3a5f] transition-colors focus:outline-none focus:ring-2 focus:ring-[#2c5282] focus:ring-offset-2 rounded"
+                >
+                  Submit Enquiry
+                </button>
+                
+                <div className="text-center mt-4">
+                  <button
+                    type="button"
+                    onClick={() => onNavigate('/contact/contact-us')}
+                    className="text-sm text-[#2c5282] underline hover:text-[#1e3a5f]"
+                  >
+                    Or contact admissions directly
+                  </button>
+                </div>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 }
