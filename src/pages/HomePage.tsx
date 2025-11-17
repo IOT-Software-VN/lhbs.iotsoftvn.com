@@ -217,6 +217,7 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
   return (
     <motion.section
       ref={ref}
+      data-section="founding-message"
       className="mx-auto bg-[#1a5336] flex align-center justify-center relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}

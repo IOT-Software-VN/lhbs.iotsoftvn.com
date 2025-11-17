@@ -15,36 +15,35 @@ interface StickyHeaderProps {
 
 export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, onEnquireClick, menuOpen }: StickyHeaderProps) {
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const controlHeaderVisibility = () => {
-      const currentScrollY = window.scrollY;
-      
       // Always show header when menu is open
       if (menuOpen) {
         setIsVisible(true);
-        setLastScrollY(currentScrollY);
         return;
       }
 
-      // Show header at the top of the page
-      if (currentScrollY < 10) {
-        setIsVisible(true);
-      }
-      // Hide header when scrolling down, show when scrolling up
-      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
+      // Check if we're in the FoundingMessageSection area
+      const foundingSection = document.querySelector('[data-section="founding-message"]');
+      if (foundingSection) {
+        const rect = foundingSection.getBoundingClientRect();
+        const headerHeight = 72; // Header height
+        
+        // Hide header when FoundingMessageSection is visible on screen
+        if (rect.top <= headerHeight && rect.bottom > headerHeight) {
+          setIsVisible(false);
+          return;
+        }
       }
 
-      setLastScrollY(currentScrollY);
+      // Show header in all other cases
+      setIsVisible(true);
     };
 
     window.addEventListener('scroll', controlHeaderVisibility);
     return () => window.removeEventListener('scroll', controlHeaderVisibility);
-  }, [lastScrollY, menuOpen]);
+  }, [menuOpen]);
 
   // Determine if header should be transparent (at top with menu closed)
   const isTransparent = !scrolled && !menuOpen;
