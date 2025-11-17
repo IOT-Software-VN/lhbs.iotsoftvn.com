@@ -49,7 +49,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1759834687385-fc3a66687fb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzY2hvb2wlMjBjYW1wdXMlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjMwNzU0MjN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5061.jpg"
           alt="LHBS Campus"
           className="w-full h-full object-cover"
         />

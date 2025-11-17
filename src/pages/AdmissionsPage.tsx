@@ -46,7 +46,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://images.unsplash.com/photo-1760917094679-d33f2ec13110?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBhZG1pc3Npb25zJTIwc3R1ZGVudHMlMjBjYW1wdXN8ZW58MXx8fHwxNzYzMTA1MTg1fDA&ixlib=rb-4.1.0&q=80&w=1080)`,
+          backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://lhbs.edu.vn/wp-content/uploads/2022/05/IMG_8667-scaled.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
@@ -133,7 +133,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             {/* Right: Image */}
             <div className="relative h-[500px] lg:h-[600px]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1760210094557-7d9515843f10?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjB0b3VyJTIwZmFtaWxpZXN8ZW58MXx8fHwxNzYzMTA1MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/08/434818564_404521965543283_4252110783277038068_n.jpg"
                 alt="Families visiting LHBS campus during school tour"
                 className="w-full h-full object-cover"
               />
@@ -215,9 +215,9 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             </div>
 
             {/* Right: Image */}
-            <div className="relative h-[500px] lg:h-[600px]">
+            <div className="relative h-full">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1609153315701-1a12bc6acf63?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwcmVnaXN0cmF0iW9uJTIwZm9ybXN8ZW58MXx8fHwxNzYzMTA1MTg2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="https://lhbs.edu.vn/wp-content/uploads/2024/08/M0M_1370.jpg"
                 alt="Student registration and admissions forms"
                 className="w-full h-full object-cover"
               />

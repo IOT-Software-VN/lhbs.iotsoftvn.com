@@ -60,7 +60,7 @@ function HeaderAcademics({ onNavigate }: { onNavigate: (path: string) => void })
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <ImageWithFallback 
-          src="https://images.unsplash.com/photo-1690192435015-319c1d5065b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaWxpbmd1YWwlMjBjbGFzc3Jvb20lMjBzdHVkZW50c3xlbnwxfHx8fDE3NjI5Mjg3OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://lhbs.edu.vn/wp-content/uploads/2025/02/BL8Q8839.jpg"
           alt="LHBS students engaged in bilingual learning"
           className="w-full h-full object-cover"
         />

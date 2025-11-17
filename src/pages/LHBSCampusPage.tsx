@@ -48,7 +48,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1758632191243-2ae754748db2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBjYW1wdXMlMjBncmVlbiUyMGVudmlyb25tZW50fGVufDF8fHx8MTc2MzA4NzkyMHww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://lhbs.edu.vn/wp-content/uploads/2021/04/MG_5271_Recovered.jpg"
           alt="LHBS Campus"
           className="w-full h-full object-cover"
         />
@@ -195,7 +195,7 @@ function IntroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1586144131462-fa2a2b6d070c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGFzc3Jvb20lMjBicmlnaHR8ZW58MXx8fHwxNzYzMDg3OTE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5222.jpg"
             alt="Modern LHBS classroom environment"
             className="w-full h-full object-cover object-center"
           />
