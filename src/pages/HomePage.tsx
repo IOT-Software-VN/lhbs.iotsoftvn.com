@@ -85,7 +85,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
   return (
     <motion.section
       ref={ref}
-      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white overflow-hidden"
+      className="relative mx-auto bg-white overflow-hidden flex justify-center"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -98,12 +98,13 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
         🎓
       </div>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="max-w-[1440px] grid md:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left: Text Content - 6 columns */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
+          className=" py-24 px-4 md:px-20"
         >
           {/* Title - Green background only on "Solid education" */}
           <h2 
@@ -150,13 +151,13 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
         
         {/* Right: Image - 6 columns */}
         <motion.div
-          className="relative h-[500px] md:h-[600px] overflow-hidden"
+          className="relative h-full overflow-hidden"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src={educationImage}
+            src="https://lhbs.edu.vn/wp-content/uploads/2025/02/BL8Q9742.jpg"
             alt="Students engaged in hands-on learning activities with educational materials"
             className="w-full h-full object-cover object-center"
           />

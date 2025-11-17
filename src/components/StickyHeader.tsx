@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { Search, Menu, X } from 'lucide-react';
 import { siteNavigation } from '../types/navigation';
 import logoImage from '../assets/logo-lhbs-02.png';
+import { useState, useEffect } from 'react';
+
 interface StickyHeaderProps {
   scrolled: boolean;
   onMenuClick: () => void;
@@ -12,6 +14,38 @@ interface StickyHeaderProps {
 }
 
 export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, onEnquireClick, menuOpen }: StickyHeaderProps) {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlHeaderVisibility = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Always show header when menu is open
+      if (menuOpen) {
+        setIsVisible(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      // Show header at the top of the page
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+      }
+      // Hide header when scrolling down, show when scrolling up
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', controlHeaderVisibility);
+    return () => window.removeEventListener('scroll', controlHeaderVisibility);
+  }, [lastScrollY, menuOpen]);
+
   // Determine if header should be transparent (at top with menu closed)
   const isTransparent = !scrolled && !menuOpen;
   
@@ -23,8 +57,14 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
       style={{ minHeight: '72px' }}
       initial={{ y: 0 }}
       animate={{ 
+        y: isVisible ? 0 : '-100%',
         backgroundColor: isTransparent ? 'rgba(26, 83, 54, 0)' : menuOpen ? 'rgba(26, 83, 54, 1)' : 'rgba(255, 255, 255, 0.98)',
         backdropFilter: isTransparent ? 'blur(0px)' : 'blur(10px)'
+      }}
+      transition={{ 
+        y: { duration: 0.3, ease: 'easeInOut' },
+        backgroundColor: { duration: 0.3 },
+        backdropFilter: { duration: 0.3 }
       }}
     >
       <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8 py-4 mb-2">
