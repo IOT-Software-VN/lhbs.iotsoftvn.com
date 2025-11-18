@@ -38,7 +38,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
       ref={ref}
       className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://lhbs.edu.vn/wp-content/uploads/2023/02/IMG_1957-605x510.jpg)`,
+        backgroundImage: `linear-gradient(rgba(26, 83, 54, 0.85), rgba(26, 83, 54, 0.85)), url(https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/576872304_810927521569390_990693962335074842_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeELHd7R2B_ZV7bjPWu4OHAiy3EtHgyJlfLLcS0eDImV8sV2dt5wLLFUukqUEEzcgI39kYxPIEbikW8IoPsIAmA-&_nc_ohc=HqM2hNzNu9cQ7kNvwGy0pPW&_nc_oc=Adk7W1U9tbC0Gn1jyWFmD19FZUpOmi2ae5zuUq3gA8Qc2DDjtJ02Mt-ZbMcXcZRUD-4&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=sMP_M0sv5xoQ_kMdvJ0_2Q&oh=00_AfixxmT26zzbTi_QQK_f70RBJCcsVaMrmQTm26hJJtRI9g&oe=6921A541)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
@@ -221,23 +221,23 @@ function ApplicationProcessSection() {
   const steps = [
     {
       title: "Step 1 – Enquiry",
-      content: "{AP_STEP1_TEXT} Begin your LHBS journey by contacting our admissions team through our online enquiry form, phone, or email. We'll provide you with comprehensive information about our programs, facilities, and educational approach. Schedule an initial consultation to discuss your child's specific needs and interests."
+      content: "Begin your LHBS journey by contacting our admissions team through our online enquiry form, phone, or email. We'll provide you with comprehensive information about our programs, facilities, and educational approach. Schedule an initial consultation to discuss your child's specific needs and interests."
     },
     {
       title: "Step 2 – Visit",
-      content: "{AP_STEP2_TEXT} Experience LHBS firsthand through a personalized campus tour. Meet our teachers, explore our facilities, and observe our learning environment. We encourage families to attend our regular Open House events or schedule a private visit to see our bilingual education program in action."
+      content: "Experience LHBS firsthand through a personalized campus tour. Meet our teachers, explore our facilities, and observe our learning environment. We encourage families to attend our regular Open House events or schedule a private visit to see our bilingual education program in action."
     },
     {
       title: "Step 3 – Application",
-      content: "{AP_STEP3_TEXT} Complete the official application form and submit required documents including academic records, birth certificate, health certificate, and passport photos. Our admissions team will review your application and guide you through any additional requirements specific to your child's grade level."
+      content: "Complete the official application form and submit required documents including academic records, birth certificate, health certificate, and passport photos. Our admissions team will review your application and guide you through any additional requirements specific to your child's grade level."
     },
     {
       title: "Step 4 – Admission Assessments",
-      content: "{AP_STEP4_TEXT} Your child will participate in age-appropriate assessments designed to understand their academic level, learning style, and social development. These include informal observations, play-based activities for younger students, and academic assessments for older students, all conducted in a supportive, welcoming environment."
+      content: "Your child will participate in age-appropriate assessments designed to understand their academic level, learning style, and social development. These include informal observations, play-based activities for younger students, and academic assessments for older students, all conducted in a supportive, welcoming environment."
     },
     {
       title: "Step 5 – Offering Your Child a Place",
-      content: "{AP_STEP5_TEXT} Upon successful completion of the admissions process, we'll extend a formal offer of enrollment. You'll receive detailed information about class placement, school policies, uniform requirements, and orientation schedules. Our team will support you through the enrollment finalization and preparation for your child's first day."
+      content: "Upon successful completion of the admissions process, we'll extend a formal offer of enrollment. You'll receive detailed information about class placement, school policies, uniform requirements, and orientation schedules. Our team will support you through the enrollment finalization and preparation for your child's first day."
     }
   ];
 
@@ -283,7 +283,7 @@ function ApplicationProcessSection() {
             >
               <button
                 onClick={() => toggleStep(index)}
-                className="w-full text-left p-6 flex items-center justify-between hover:bg-[#e8f4f1] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full !rounded-none text-left p-6 flex items-center justify-between hover:bg-[#e8f4f1] transition-colors"
               >
                 <span className="font-['SVN-Gotham'] text-lg text-[#1a5336]">{step.title}</span>
                 {openStep === index ? (

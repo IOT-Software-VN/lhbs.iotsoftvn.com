@@ -62,7 +62,7 @@ export function AcademicBilingualSection({ onNavigate }: { onNavigate: (path: st
 
   const cards: AcademicBilingualCard[] = [
     {
-      image: 'https://images.unsplash.com/photo-1605781645799-c9c7d820b4ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMHNjaWVuY2UlMjBsYWJvcmF0b3J5fGVufDF8fHx8MTc2Mjg5MTY0N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://lhbs.edu.vn/wp-content/uploads/2024/08/434818564_404521965543283_4252110783277038068_n.jpg',
       alt: 'Students conducting hands-on science experiments in modern laboratory',
       title: 'STEM Excellence',
       description: 'Our rigorous science, technology, engineering, and mathematics programs foster critical thinking and innovation through hands-on learning and real-world applications',
