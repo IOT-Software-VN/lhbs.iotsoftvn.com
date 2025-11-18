@@ -20,9 +20,16 @@ interface PhotoCardData {
   image: string;
   alt: string;
   heightRatio?: number;
+  title?: string;
+  subtitle?: string;
 }
 
-export default function EducationPillarsSectionComponent() {
+interface EducationPillarsSectionProps {
+  showModal?: { image: string; alt: string; title?: string; subtitle?: string } | null;
+  setShowModal?: (data: { image: string; alt: string; title?: string; subtitle?: string } | null) => void;
+}
+
+export default function EducationPillarsSectionComponent({ showModal, setShowModal }: EducationPillarsSectionProps = {}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -42,7 +49,9 @@ export default function EducationPillarsSectionComponent() {
     {
       image: img061,
       alt: 'LHBS students winning NASA Space Apps Challenge with ATMOS GUARD project',
-      heightRatio: 0.6
+      heightRatio: 0.6,
+      title: 'NASA Space Apps Challenge Winners',
+      subtitle: 'LHBS students achieved remarkable success in the prestigious NASA Space Apps Challenge with their innovative ATMOS GUARD project, showcasing their scientific excellence and global competitiveness.'
     } as PhotoCardData
   ];
 
@@ -51,7 +60,9 @@ export default function EducationPillarsSectionComponent() {
     {
       image: img062,
       alt: 'Students engaged in collaborative computer-based learning activities',
-      heightRatio: 1.2
+      heightRatio: 1.2,
+      title: 'Collaborative Digital Learning',
+      subtitle: 'Students engage in innovative computer-based learning activities that promote collaboration, critical thinking, and 21st-century skills development in our modern classrooms.'
     } as PhotoCardData,
     {
       icon: <BookOpen className="w-16 h-16" />,
@@ -74,7 +85,9 @@ export default function EducationPillarsSectionComponent() {
     {
       image: img063,
       alt: 'Students participating in hands-on STEM robotics project',
-      heightRatio: 1
+      heightRatio: 1,
+      title: 'STEM Robotics Excellence',
+      subtitle: 'Our students actively participate in hands-on STEM robotics projects, developing engineering skills, programming abilities, and innovative problem-solving techniques for the digital age.'
     } as PhotoCardData
   ];
 
@@ -88,7 +101,9 @@ export default function EducationPillarsSectionComponent() {
     {
       image: "https://lhbs.edu.vn/wp-content/uploads/2025/10/571224197_816046061447624_4563907960086315049_n.jpg",
       alt: 'LHBS graduation ceremony celebrating student achievements',
-      heightRatio: 0.8
+      heightRatio: 0.8,
+      title: 'Graduation Excellence',
+      subtitle: 'LHBS graduation ceremony celebrates outstanding student achievements, marking the successful completion of their bilingual education journey and readiness for global opportunities.'
     } as PhotoCardData,
     {
       icon: <GraduationCap className="w-16 h-16" />,
@@ -147,7 +162,7 @@ export default function EducationPillarsSectionComponent() {
                 {isStatCard(card) ? (
                   <StatCard {...card} />
                 ) : (
-                  <PhotoCard {...card} />
+                  <PhotoCard {...card} setShowModal={setShowModal} />
                 )}
               </div>
             ))}
@@ -189,15 +204,31 @@ function StatCard({ icon, value, body, isExtended, minHeight }: StatCardData) {
 }
 
 // ==================== PHOTO CARD COMPONENT ====================
-function PhotoCard({ image, alt, heightRatio = 1.2 }: PhotoCardData) {
+function PhotoCard({ image, alt, heightRatio = 1.2, title, subtitle, setShowModal }: PhotoCardData & { setShowModal?: (data: { image: string; alt: string; title?: string; subtitle?: string } | null) => void }) {
+  const handleClick = () => {
+    if (setShowModal && title && subtitle) {
+      setShowModal({ image, alt, title, subtitle });
+    }
+  };
+
   return (
-    <div className="relative overflow-hidden">
+    <div 
+      className="relative overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+      onClick={handleClick}
+    >
       <img
         src={image}
         alt={alt}
         className="w-full h-auto object-cover"
         style={{ aspectRatio: `1 / ${heightRatio}` }}
       />
+      {title && (
+        <div className="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+          <div className="text-white text-center p-4">
+            <h3 className="text-lg font-semibold">{title}</h3>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
