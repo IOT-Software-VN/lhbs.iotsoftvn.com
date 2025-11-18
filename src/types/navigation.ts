@@ -74,7 +74,7 @@ export const siteNavigation: NavParent[] = [
     path: '/academics/overview',
     description: 'Comprehensive bilingual learning programs',
     children: [
-      { id: 'holistic-kindergarten', label: 'Galaxy KC', path: '/academics/kindergarten', description: 'Ages 3-5: Play-based bilingual learning' },
+      { id: 'holistic-kindergarten', label: 'Galaxy KG', path: '/academics/kindergarten', description: 'Ages 3-5: Play-based bilingual learning' },
       { id: 'holistic-primary', label: 'LHBS Primary School', path: '/academics/primary', description: 'Grades 1-5: Building strong foundations' },
       { id: 'holistic-lower', label: 'LHBS Secondary School', path: '/academics/lower-secondary', description: 'Grades 6-9: Advanced concepts and critical thinking' },
       { id: 'holistic-upper', label: 'LHBS High School', path: '/academics/upper-secondary', description: 'Grades 10-12: University preparation and global readiness' },

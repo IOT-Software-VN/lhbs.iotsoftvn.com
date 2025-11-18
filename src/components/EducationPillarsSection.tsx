@@ -117,7 +117,7 @@ export default function EducationPillarsSectionComponent({ showModal, setShowMod
   return (
     <section
       ref={ref}
-      className="relative pb-24 px-4 md:px-20 max-w-[1440px] mx-auto  overflow-hidden"
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto  overflow-hidden"
     >
       {/* Decorative motif - top left */}
       <div 
@@ -135,6 +135,16 @@ export default function EducationPillarsSectionComponent({ showModal, setShowMod
         🎯
       </div>
 
+  <div className="text-center mb-16 relative z-10">
+        <motion.h2
+          className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Outstanding Academic and Holistic Achievements
+        </motion.h2>
+      </div>
 
       {/* Masonry 4 columns */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10">

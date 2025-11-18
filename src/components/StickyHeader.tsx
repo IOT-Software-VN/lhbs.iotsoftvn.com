@@ -66,7 +66,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
         backdropFilter: { duration: 0.3 }
       }}
     >
-      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8 py-4 mb-2">
+      <div className="h-full max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between gap-8  py-4 mb-2">
         {/* Logo - Left */}
         <motion.div
           onClick={onLogoClick}
@@ -80,7 +80,7 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, onLogoClick, 
          <img 
               src={logoImage} 
               alt="LHBS - Lac Hong Bilingual School" 
-              className="h-16 w-auto rounded-none"
+              className="h-23 w-auto rounded-none"
             />
         </motion.div>
         

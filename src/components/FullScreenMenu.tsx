@@ -67,7 +67,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
             <motion.div
             className="fixed left-0 right-0 z-[70] bg-[#1a5336] overflow-hidden"
             style={{ 
-              top: 'calc(72px + 2rem)',
+              top: 'calc(75px + 2rem)',
               maxHeight: 'calc(100vh - 72px - 4rem)', // Dynamic height based on viewport
               minHeight: 'auto' // Allow natural height based on content
             }}
