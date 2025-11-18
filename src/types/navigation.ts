@@ -78,8 +78,9 @@ export const siteNavigation: NavParent[] = [
       { id: 'holistic-primary', label: 'LHBS Primary School', path: '/academics/primary', description: 'Grades 1-5: Building strong foundations' },
       { id: 'holistic-lower', label: 'LHBS Secondary School', path: '/academics/lower-secondary', description: 'Grades 6-9: Advanced concepts and critical thinking' },
       { id: 'holistic-upper', label: 'LHBS High School', path: '/academics/upper-secondary', description: 'Grades 10-12: University preparation and global readiness' },
-      //{ id: 'holistic-overview', label: 'Curriculum Overview', path: '/academics/overview', description: 'Our comprehensive educational approach' },
       { id: 'how-we-teach', label: 'How We Teach', path: '/academics/how-we-teach', description: 'Our comprehensive educational approach' },
+      { id: 'holistic-counselling', label: 'University and Career Counselling', path: '/academics/counselling', description: 'Our comprehensive educational approach' },
+
     ],
     cta: {
       text: 'Discover Our Programme',

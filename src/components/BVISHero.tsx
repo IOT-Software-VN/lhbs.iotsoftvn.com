@@ -141,7 +141,8 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
             >
              Lac Hong Bilingual School is a leading bilingual school in Dong Nai, 
              where every student is nurtured to develop intellectually, ethically, 
-             and globally competent in the digital era. The school preserves and promotes 
+             and globally competent in the digital era. <br />
+             The school preserves and promotes 
              Vietnamese cultural values while fostering creativity, lifelong learning, and 
              social responsibility, empowering students to become compassionate, confident, 
              innovative, and adaptable citizens in an ever-changing world.

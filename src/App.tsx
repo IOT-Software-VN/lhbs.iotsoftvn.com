@@ -26,6 +26,7 @@ import { NewsEventsPage } from './pages/NewsEventsPage';
 import { OutstandingExperiencesPage } from './pages/OutstandingExperiencesPage';
 import { ExtracurricularActivitiesPage } from './pages/ExtracurricularActivitiesPage';
 import { EntryRequirementsPage } from './pages/EntryRequirementsPage';
+import { UniversityCareerCounsellingPage } from './pages/UniversityCareerCounsellingPage';
 import { siteNavigation } from './types/navigation';
 
 export default function App() {
@@ -114,6 +115,8 @@ export default function App() {
         <AcademicsHighSchoolPage onNavigate={handleNavigate} />
       ) : currentPath === '/academics/how-we-teach' ? (
         <HowWeTeachPage onNavigate={handleNavigate} />
+      ) : currentPath === '/academics/counselling' ? (
+        <UniversityCareerCounsellingPage onNavigate={handleNavigate} />
       ) : currentPath === '/admissions/opendays' ? (
         <OpenDayPage onNavigate={handleNavigate} />
       ) : currentPath === '/parents' ? (

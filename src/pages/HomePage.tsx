@@ -23,8 +23,8 @@ import bgAcademicBilingual from '../assets/bg-Academic&Bilingual.png'
 import { ImQuotesRight } from "react-icons/im";
 
 export function HomePage({ onNavigate }: { onNavigate: (path: string) => void }) {
-  const [showPillarModal, setShowPillarModal] = useState<number | null>(null);
   const [showEducationModal, setShowEducationModal] = useState<{ image: string; alt: string; title?: string; subtitle?: string } | null>(null);
+  const [showCoreStrengthModal, setShowCoreStrengthModal] = useState<{ title: string; description: string; points: string[]; image: string; alt: string } | null>(null);
   
   return (
     <div className="relative bg-white">
@@ -41,14 +41,21 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
       <AnniversarySection onNavigate={onNavigate} />
 
        {/* Section 2.75: Core Strengths - 5 Pillars */}
-       <CoreStrengthsSection />
+       <CoreStrengthsSection showModal={showCoreStrengthModal} setShowModal={setShowCoreStrengthModal} />
       
       {/* Section 3: LHBS UNIQUE Education Pillars */}
       <EducationPillarsSection showModal={showEducationModal} setShowModal={setShowEducationModal} />
       
-      {/* Pillar Modal */}
-      {showPillarModal !== null && (
-        <PillarModal pillarIndex={showPillarModal} onClose={() => setShowPillarModal(null)} />
+      {/* Core Strength Modal */}
+      {showCoreStrengthModal && (
+        <CoreStrengthModal 
+          title={showCoreStrengthModal.title}
+          description={showCoreStrengthModal.description}
+          points={showCoreStrengthModal.points}
+          image={showCoreStrengthModal.image}
+          alt={showCoreStrengthModal.alt}
+          onClose={() => setShowCoreStrengthModal(null)}
+        />
       )}
       
       {/* Education Pillars Modal */}
@@ -66,7 +73,7 @@ export function HomePage({ onNavigate }: { onNavigate: (path: string) => void })
       <LHBSLifeVideoSection />
       
       {/* Section 5: Academic & Bilingual Identity */}
-      <AcademicBilingualSection onNavigate={onNavigate} />
+      {/* <AcademicBilingualSection onNavigate={onNavigate} /> */}
       
       {/* Section 6: Book a School Tour CTA */}
       <BookTourCTA onNavigate={onNavigate} />
@@ -386,13 +393,25 @@ function AnniversarySection({ onNavigate }: { onNavigate: (path: string) => void
 }
 
 // ==================== SECTION 2.75: Core Strengths - 5 Pillars ====================
-function CoreStrengthsSection() {
+interface CoreStrengthsSectionProps {
+  showModal: { title: string; description: string; points: string[]; image: string; alt: string } | null;
+  setShowModal: (modal: { title: string; description: string; points: string[]; image: string; alt: string } | null) => void;
+}
+
+function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const pillars = [
     {
       title: 'ACADEMIC EXCELLENCE',
+      description: 'We provide a rigorous, engaging curriculum that challenges students to think deeply, ask questions, and develop a genuine passion for learning across all disciplines.',
+      points: [
+        'International curriculum standards',
+        'Personalized learning approaches',
+        'Critical thinking development',
+        'Research-based methodologies'
+      ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
           <path d="M32 8 L52 18 L52 38 L32 48 L12 38 L12 18 Z" strokeLinejoin="round" />
@@ -404,6 +423,13 @@ function CoreStrengthsSection() {
     },
     {
       title: 'TRULY BILINGUAL',
+      description: 'Our bilingual program seamlessly integrates Vietnamese and English, enabling students to think, communicate, and excel in both languages naturally.',
+      points: [
+        'Balanced Vietnamese-English instruction',
+        'Native-speaking teachers',
+        'Cultural integration',
+        'Language immersion approach'
+      ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
           <circle cx="24" cy="24" r="16" />
@@ -416,6 +442,13 @@ function CoreStrengthsSection() {
     },
     {
       title: 'INTELLECTUAL CURIOSITY',
+      description: 'We foster a spirit of inquiry and exploration, encouraging students to discover, question, and understand the world around them.',
+      points: [
+        'Project-based learning',
+        'Global perspectives',
+        'Scientific exploration',
+        'Creative problem-solving'
+      ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
           <circle cx="32" cy="28" r="14" />
@@ -428,6 +461,13 @@ function CoreStrengthsSection() {
     },
     {
       title: 'GLOBAL MINDSET',
+      description: 'Students develop cultural awareness, international perspectives, and the skills to thrive in an interconnected world.',
+      points: [
+        'Cross-cultural competence',
+        'International partnerships',
+        'Study abroad opportunities',
+        'Global citizenship values'
+      ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
           <circle cx="32" cy="32" r="20" />
@@ -441,6 +481,13 @@ function CoreStrengthsSection() {
     },
     {
       title: 'ENGAGED CITIZENSHIP',
+      description: 'We cultivate responsible, compassionate citizens who contribute positively to their communities and society.',
+      points: [
+        'Community service programs',
+        'Leadership development',
+        'Social responsibility',
+        'Environmental stewardship'
+      ],
       icon: (
         <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#1a5336" strokeWidth="1.5">
           <path d="M32 12 L36 28 L52 28 L40 38 L44 54 L32 44 L20 54 L24 38 L12 28 L28 28 Z" strokeLinejoin="round" />
@@ -449,6 +496,16 @@ function CoreStrengthsSection() {
       image: 'https://images.unsplash.com/photo-1758582171503-ce7b5c28bb4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50cyUyMGNvbW11bml0eSUyMHNlcnZpY2V8ZW58MXx8fHwxNzYzMTA3NzcyfDA&ixlib=rb-4.1.0&q=80&w=400'
     }
   ];
+
+  const handleImageClick = (pillar: typeof pillars[0]) => {
+    setShowModal({
+      title: pillar.title,
+      description: pillar.description,
+      points: pillar.points,
+      image: pillar.image,
+      alt: `${pillar.title} at LHBS`
+    });
+  };
 
   return (
     <motion.section
@@ -496,6 +553,16 @@ function CoreStrengthsSection() {
         </motion.h2>
       </div>
 
+ {/* <div className="text-center mb-16 relative z-10">
+        <motion.h2
+          className=" text-4xl md:text-5xl lg:text-6xl text-[#1a5336]"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Academic & Bilingual Identity
+        </motion.h2>
+      </div> */}
 
       {/* 5 Vertical Pillar Cards */}
       <div className="py-16 px-8 rounded-lg">
@@ -525,8 +592,9 @@ function CoreStrengthsSection() {
 
               {/* Circular photo overlapping bottom of icon */}
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-                <div 
-                  className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white"
+                <button 
+                  onClick={() => handleImageClick(pillar)}
+                  className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white hover:border-[#FABA1E] transition-all duration-300 hover:scale-105 cursor-pointer focus:outline-none focus:ring-4 focus:ring-[#FABA1E]/50"
                   style={{
                     boxShadow: '0 6px 20px rgba(0,0,0,0.15)'
                   }}
@@ -536,7 +604,7 @@ function CoreStrengthsSection() {
                     alt={`${pillar.title} at LHBS`}
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </button>
               </div>
 
               {/* Bottom spacing */}
@@ -550,117 +618,85 @@ function CoreStrengthsSection() {
 }
 
 
-// ==================== PILLAR MODAL ====================
-function PillarModal({ pillarIndex, onClose }: { pillarIndex: number; onClose: () => void }) {
-  const pillars = [
-    {
-      title: 'Academic Excellence',
-      icon: '🎓',
-      description: 'We provide a rigorous, engaging curriculum that challenges students to think deeply, ask questions, and develop a genuine passion for learning across all disciplines.',
-      points: [
-        'International curriculum standards',
-        'Personalized learning approaches',
-        'Critical thinking development',
-        'Research-based methodologies'
-      ]
-    },
-    {
-      title: 'Truly Bilingual',
-      icon: '🌏',
-      description: 'Our bilingual program seamlessly integrates Vietnamese and English, enabling students to think, communicate, and excel in both languages naturally.',
-      points: [
-        'Balanced Vietnamese-English instruction',
-        'Native-speaking teachers',
-        'Cultural integration',
-        'Language immersion approach'
-      ]
-    },
-    {
-      title: 'International Curiosity',
-      icon: '🔍',
-      description: 'We foster a spirit of inquiry and exploration, encouraging students to discover, question, and understand the world around them.',
-      points: [
-        'Project-based learning',
-        'Global perspectives',
-        'Scientific exploration',
-        'Creative problem-solving'
-      ]
-    },
-    {
-      title: 'Global Mindset',
-      icon: '🌐',
-      description: 'Students develop cultural awareness, international perspectives, and the skills to thrive in an interconnected world.',
-      points: [
-        'Cross-cultural competence',
-        'International partnerships',
-        'Study abroad opportunities',
-        'Global citizenship values'
-      ]
-    },
-    {
-      title: 'Engaged Citizenship',
-      icon: '🤝',
-      description: 'We cultivate responsible, compassionate citizens who contribute positively to their communities and society.',
-      points: [
-        'Community service programs',
-        'Leadership development',
-        'Social responsibility',
-        'Environmental stewardship'
-      ]
-    }
-  ];
+// ==================== CORE STRENGTH MODAL ====================
+interface CoreStrengthModalProps {
+  title: string;
+  description: string;
+  points: string[];
+  image: string;
+  alt: string;
+  onClose: () => void;
+}
 
-  const pillar = pillars[pillarIndex];
+function CoreStrengthModal({ title, description, points, image, alt, onClose }: CoreStrengthModalProps) {
+  // Handle Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [onClose]);
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 p-4"
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={onClose}
     >
       <motion.div
-        className="bg-white max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-4xl bg-white rounded-lg overflow-hidden"
         initial={{ scale: 0.9, y: 50 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.9, y: 50 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="p-8">
-          <div className="flex justify-between items-start mb-6">
-            <div className="flex items-center gap-4">
-              <div className="text-6xl">{pillar.icon}</div>
-              <h2 className=" text-4xl text-[#1a5336]">{pillar.title}</h2>
-            </div>
-            <button
-              onClick={onClose}
-              className="text-3xl text-[#666] hover:text-[#1a5336] transition-colors"
-            >
-              ×
-            </button>
-          </div>
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 z-20 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Close modal"
+        >
+          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        {/* Image - Top Half */}
+        <div className="relative h-80 md:h-96 overflow-hidden">
+          <img
+            src={image}
+            alt={alt}
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+        </div>
+
+        {/* Content - Bottom Half */}
+        <div className="p-8 md:p-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1a5336] mb-4">
+            {title}
+          </h2>
           
-          <p className=" text-lg text-[#212121] mb-6 leading-relaxed">
-            {pillar.description}
+          <p className="text-lg md:text-xl text-[#212121] leading-relaxed mb-8">
+            {description}
           </p>
-          
-          <h3 className=" text-2xl text-[#1a5336] mb-4">Key Features:</h3>
-          <ul className="space-y-3 mb-8">
-            {pillar.points.map((point, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="text-[#FABA1E] text-xl">✓</span>
-                <span className=" text-[#212121]">{point}</span>
-              </li>
+
+          <h3 className="text-2xl font-bold text-[#1a5336] mb-6">Key Features:</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {points.map((point, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <span className="text-[#FABA1E] text-xl font-bold">✓</span>
+                <span className="text-[#212121] text-lg">{point}</span>
+              </div>
             ))}
-          </ul>
-          
-          <button
-            onClick={onClose}
-            className="w-full px-8 py-4 bg-[#1a5336] text-white  font-bold hover:bg-[#14432b] transition-colors cursor-pointer"
-          >
-            Close
-          </button>
+          </div>
         </div>
       </motion.div>
     </motion.div>
