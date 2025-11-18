@@ -145,7 +145,7 @@ function WeeklyHighlightsSection() {
               Weekly Highlights 14/11/2025
             </h2>
             <p className="text-[#212121] text-base leading-relaxed mb-6">
-              Weekly Highlights is a weekly newsletter sent by the BVIS Leadership Team to parents, providing updates on notable news and activities at the school. The newsletter consists of three main sections: updates from the Principal, Head of Primary, and Head of Secondary.
+              Weekly Highlights is a weekly newsletter sent by the LHBS Leadership Team to parents, providing updates on notable news and activities at the school. The newsletter consists of three main sections: updates from the Principal, Head of Primary, and Head of Secondary.
             </p>
             <button className="px-6 py-2 bg-[#1a5336] text-white text-sm font-medium hover:bg-[#0f3021] transition-colors w-fit">
               WEEKLY HIGHLIGHTS

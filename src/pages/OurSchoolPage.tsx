@@ -61,7 +61,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5061.jpg"
+          src="https://lhbs.edu.vn/wp-content/uploads/2025/09/4.jpg"
           alt="LHBS Campus"
           className="w-full h-full object-cover"
         />
@@ -140,12 +140,7 @@ function HeroSection({ onNavigate }: { onNavigate: (path: string) => void }) {
               transition={{ duration: 0.6, delay: 0.5 }}
               className=" text-white/90 text-base md:text-lg leading-relaxed max-w-[600px]"
             >
-               With a leading international school located in the heart city and one of the
-            most vibrant and exciting cities in Vietnam, LHBS is a dynamic and 
-            multi-cultural place to learn and work. We offer a world-class British-based
-            education for children aged 3 to 18 that embraces the very best of
-            Vietnamese culture while preparing students to be global citizens of the
-            future.
+           Established in 2011 in Biên Hòa, Lac Hong Bilingual School offers a modern bilingual education that empowers students to unlock their full potential. Our comprehensive K–12 program blends Vietnamese national curriculum standards with international best practices, preparing learners for success in a globalized world.
             </motion.p>
           </motion.div>
         </div>
@@ -267,7 +262,7 @@ function HistoryHeritageSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2hvb2wlMjBidWlsZGluZyUyMGhpc3Rvcnl8ZW58MXx8fHwxNzYzMDU4NjAwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://lhbs.edu.vn/wp-content/uploads/2022/05/IMG_8460-1024x683.jpg"
             alt="LHBS School building showcasing our heritage"
             className="w-full h-full object-cover object-center"
           />
@@ -335,29 +330,29 @@ function LeadershipQuoteSection() {
         >
           <div className="mb-6">
             <p className="text-2xl md:text-3xl text-[#1a5336] font-medium leading-relaxed mb-6">
-              "Success at BVIS HCMC is not just measured by grades and awards, but by the growth of each individual student. We also prioritise developing a lifelong enjoyment for learning that incorporates a compassion and empathy towards others."
+              "Success at LHBS is not just measured by grades and awards, but by the growth of each individual student. We also prioritise developing a lifelong enjoyment for learning that incorporates a compassion and empathy towards others."
             </p>
             
             <div className="border-t border-[#1a5336]/20 pt-4">
-              <p className="text-[#1a5336] font-semibold">Mrs Kim Thompson</p>
-              <p className="text-[#1a5336]/70 text-sm">Head of Primary, Secondary and High School</p>
+              <p className="text-[#1a5336] font-semibold">Ms. Dang Thi Tuyet</p>
+              <p className="text-[#1a5336]/70 text-sm">Principal of Lac Hong Bilingual Kindergarten Bien Hoa Campus</p>
             </div>
           </div>
         </motion.div>
         
         {/* Right: Portrait */}
         <motion.div
-          className="relative"
+          className="relative content-center"
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <div className="relative w-80 h-80 mx-auto">
-            <div className="absolute inset-0 bg-[#FABA1E] rounded-full transform rotate-12"></div>
+          <div className="relative w-[200px] h-[300px] mx-auto ">
+            <div className="absolute inset-0 rounded-full transform rotate-12"></div>
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFkbWFzdGVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYzMDU4NjAwfDA&ixlib=rb-4.1.0&q=80&w=400"
-              alt="Mrs Kim Thompson, Head of School"
-              className="relative z-10 w-full h-full object-cover rounded-full"
+              src="https://lhbs.edu.vn/wp-content/uploads/2023/08/DANG-THI-TUYET_HIEU-TRUONG-MN_LHBS-01-01-200x300.jpg"
+              alt="Ms. Dang Thi Tuyet"
+              className="relative z-10 w-full h-full"
             />
           </div>
         </motion.div>
@@ -417,7 +412,7 @@ function AccreditationsSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1622737133809-d95047b9e673?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHN0dWRlbnRzJTIwc2Nob29sfGVufDF8fHx8MTc2MzA1ODYwMHww&ixlib=rb-4.1.0&q=80&w=1080"
+            src="https://lhbs.edu.vn/wp-content/uploads/2024/08/DSC09904.jpg"
             alt="Happy students at LHBS celebrating achievements"
             className="w-full h-full object-cover object-center"
           />
