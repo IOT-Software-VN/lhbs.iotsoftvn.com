@@ -268,71 +268,131 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
             </p>
           </div>
 
-          {/* Timeline Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Morning Welcome */}
-            <div className=" p-6 border-l-4 border-[#FABA1E]">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-                  <Heart className="w-6 h-6 text-[#FABA1E]" />
+          {/* Cards with Timeline */}
+          <div className="relative overflow-hidden">
+            {/* Timeline Cards - Horizontal scrollable layout */}
+            <div className="flex gap-6 mb-16 overflow-x-auto pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+              <style jsx>{`
+                div::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>
+              
+              {/* Card 1: Early Morning Arrival */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
+                <div className="relative h-[250px] overflow-hidden">
+                  <img
+                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-3111zon.jpg?h=3986&iar=0&w=5976&rev=bd0f178b43d041a2bc0dc98d120a8be7&extension=webp&hash=02A588539A379C0E44C2B399583C2B51"
+                    alt="Children arriving at school in the morning"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Warm welcome & morning play</h3>
+                <div className="p-6">
+                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
+                    Early birds
+                  </h3>
+                  <p className="text-[#212121]/70 text-sm leading-relaxed">
+                    Our students arrive at 8:30am and spend time with their tutor or study personal, social, health, and economic (PSHE) education. Regular whole-school celebration assemblies give our students a huge boost, ensuring they start the day on a positive note.
+                  </p>
+                </div>
               </div>
-              <p className=" text-[#212121]/70 text-sm">
-                Children arrive to a friendly greeting, enjoy free play with peers, and gather for morning circle time with songs, warm-up activities, and sharing.
-              </p>
+
+              {/* Card 2: Morning Learning */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
+                <div className="relative h-[250px] overflow-hidden">
+                  <img
+                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-3211zon.jpg?h=4507&iar=0&w=6758&rev=78ef55189bac4109a4542ffa03604eb2&extension=webp&hash=E63E12FC839D4C8D9A19B14FE057B54A"
+                    alt="Students engaged in morning learning activities"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
+                    Design your morning
+                  </h3>
+                  <p className="text-[#212121]/70 text-sm leading-relaxed">
+                    Fresh ideas are brainstormed and tricky challenges tackled in our STEAM rooms, equipped with the latest equipment in design technology. A whole computer suite helps our students to complete a 3D design which can be laser-cut in a matter of minutes!
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Lunch & Social Time */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
+                <div className="relative h-[250px] overflow-hidden">
+                  <img
+                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-3311zon.jpg?h=4412&iar=0&w=6616&rev=caf134b818834447ac1a7cdfa6fb4a57&extension=webp&hash=3C13EC74475348D2D05D3788D4AA974E"
+                    alt="Children enjoying healthy lunch together"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
+                    Healthy food
+                  </h3>
+                  <p className="text-[#212121]/70 text-sm leading-relaxed">
+                    At lunchtime, fresh, nutritious, and delicious Asian and Western meals are prepared onsite for students to enjoy with their friends.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 4: Afternoon Activities */}
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg border border-gray-200 flex-shrink-0 w-[280px]">
+                <div className="relative h-[250px] overflow-hidden">
+                  <img
+                    src="https://www.nordangliaeducation.com/bvis-hcmc/-/media/british-vietnamese-hcmc/academic-excellence/fy22-23/ks3-34.jpg?h=3824&iar=0&w=5734&rev=7e7308b6c26342caa118a88297460227&extension=webp&hash=515D85938E836B86879A433274D09E97"
+                    alt="Students learning through movement and arts"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336] mb-3">
+                    Learning through movement
+                  </h3>
+                  <p className="text-[#212121]/70 text-sm leading-relaxed">
+                    It's not all a flute, piano, or guitar class or creative dance session! The performing arts is enhanced by our expert colleagues from Juilliard School, who deliver innovative sessions in our fabulous purpose-built studio.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Learning Through Play */}
-            <div className=" p-6 border-l-4 border-[#FABA1E]">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-                  <BookOpen className="w-6 h-6 text-[#FABA1E]" />
-                </div>
-                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Learning through play</h3>
+            {/* Timeline Navigation with connecting lines */}
+            <div className="relative px-[140px]">
+              {/* Timeline Line */}
+              <div className="absolute top-1/2 left-[140px] right-[140px] h-0.5 bg-[#1a5336]/20 transform -translate-y-1/2"></div>
+              
+              {/* Vertical connecting lines from cards to timeline */}
+              <div className="absolute top-[-40px] left-[140px] w-0.5 h-12 bg-[#1a5336]/30"></div>
+              <div className="absolute top-[-40px] left-[426px] w-0.5 h-12 bg-[#FABA1E]/60"></div>
+              <div className="absolute top-[-40px] left-[712px] w-0.5 h-12 bg-[#1a5336]/30"></div>
+              <div className="absolute top-[-40px] left-[998px] w-0.5 h-12 bg-[#FABA1E]/60"></div>
+              
+              {/* Timeline Dots with exact positioning */}
+              <div className="flex justify-between items-center relative">
+                <div className="w-4 h-4 bg-[#1a5336] rounded-full border-4 border-white shadow-lg relative z-10"></div>
+                <div className="w-4 h-4 bg-[#FABA1E] rounded-full border-4 border-white shadow-lg relative z-10"></div>
+                <div className="w-4 h-4 bg-[#1a5336] rounded-full border-4 border-white shadow-lg relative z-10"></div>
+                <div className="w-4 h-4 bg-[#FABA1E] rounded-full border-4 border-white shadow-lg relative z-10"></div>
               </div>
-              <p className=" text-[#212121]/70 text-sm">
-                Small-group exploration in classroom learning centers and outdoor playground—STEAM activities, storytelling, creative games, and hands-on discovery.
-              </p>
-            </div>
-
-            {/* Healthy Meals & Rest */}
-            <div className=" p-6 border-l-4 border-[#FABA1E]">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-                  <Utensils className="w-6 h-6 text-[#FABA1E]" />
+              
+              {/* Timeline Labels */}
+              <div className="flex justify-between mt-4">
+                <div className="text-center">
+                  <p className="text-[#1a5336] text-sm font-bold">8:30 AM</p>
+                  <p className="text-[#212121]/60 text-xs">Arrival</p>
                 </div>
-                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Healthy meals & rest</h3>
-              </div>
-              <p className=" text-[#212121]/70 text-sm">
-                Nutritious lunch following school menu standards, quiet rest time in comfortable spaces, and healthy snacks to keep energy levels balanced.
-              </p>
-            </div>
-
-            {/* Afternoon Discovery */}
-            <div className=" p-6 border-l-4 border-[#FABA1E]">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-                  <Paintbrush className="w-6 h-6 text-[#FABA1E]" />
+                <div className="text-center">
+                  <p className="text-[#1a5336] text-sm font-bold">9:00 AM</p>
+                  <p className="text-[#212121]/60 text-xs">Learning</p>
                 </div>
-                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Afternoon discovery</h3>
-              </div>
-              <p className=" text-[#212121]/70 text-sm">
-                Creative arts sessions, music and movement activities, outdoor games, and project work that builds on morning learning experiences.
-              </p>
-            </div>
-
-            {/* After-School Clubs */}
-            <div className=" p-6 border-l-4 border-[#FABA1E]">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-[#FABA1E]" />
+                <div className="text-center">
+                  <p className="text-[#1a5336] text-sm font-bold">12:00 PM</p>
+                  <p className="text-[#212121]/60 text-xs">Lunch</p>
                 </div>
-                <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">After-school clubs & Saturday programme</h3>
+                <div className="text-center">
+                  <p className="text-[#1a5336] text-sm font-bold">2:00 PM</p>
+                  <p className="text-[#212121]/60 text-xs">Activities</p>
+                </div>
               </div>
-              <p className=" text-[#212121]/70 text-sm">
-                Optional enrichment clubs and special Saturday Program extending learning through themed activities, sports, arts, and additional language support.
-              </p>
             </div>
           </div>
         </div>
