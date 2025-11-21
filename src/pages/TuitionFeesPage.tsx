@@ -293,9 +293,18 @@ function TuitionTablesSection() {
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Tuition Fees by Division
         </h2>
-        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
           All fees are in Vietnamese Dong (VND). Prices may be adjusted annually with 60 days notice.
         </p>
+        
+        <a
+          href="/downloads/tuition-fees-detailed-schedule-2025.pdf"
+          download
+          className="inline-flex items-center gap-2 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
+        >
+          <Download className="w-4 h-4" />
+          Download Detailed Fee Schedule (PDF)
+        </a>
       </div>
 
       {/* Tabs */}
@@ -389,9 +398,22 @@ function IncludedExcludedSection() {
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           What's Included in Tuition?
         </h2>
-        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
           Clear breakdown of what your tuition covers and optional add-on services.
         </p>
+        
+        <button
+          onClick={() => {
+            const downloadsSection = document.getElementById('downloads');
+            if (downloadsSection) {
+              downloadsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="inline-flex items-center gap-2 px-8 h-12 border-2 border-[#FABA1E] text-[#FABA1E] font-bold hover:bg-[#FABA1E] hover:text-[#1a5336] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] rounded-lg"
+        >
+          <FileText className="w-4 h-4" />
+          View Complete Fee Breakdown
+        </button>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
@@ -583,9 +605,22 @@ function PaymentPlansSection() {
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Payment Plans & Methods
         </h2>
-        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
           Choose the payment plan that works best for your family budget.
         </p>
+        
+        <button
+          onClick={() => {
+            const downloadsSection = document.getElementById('downloads');
+            if (downloadsSection) {
+              downloadsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="inline-flex items-center gap-2 px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
+        >
+          <FileText className="w-4 h-4" />
+          View Payment Documents
+        </button>
       </div>
 
       {/* Payment Plans Timeline */}
@@ -719,7 +754,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
         {/* Left: Overview */}
         <div>
           <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-6">
-            Scholarships & Financial Support
+            Special Programmes
           </h2>
           
           <p className=" text-base text-[#212121] mb-6 leading-relaxed">
@@ -861,9 +896,22 @@ function RefundPolicySection() {
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Refund & Withdrawal Policy
         </h2>
-        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
           Clear guidelines for tuition refunds and service cancellations.
         </p>
+        
+        <button
+          onClick={() => {
+            const downloadsSection = document.getElementById('downloads');
+            if (downloadsSection) {
+              downloadsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="inline-flex items-center gap-2 px-8 h-12 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e0a615] transition-colors focus:outline-none focus:ring-2 focus:ring-[#1a5336] rounded-lg"
+        >
+          <Download className="w-4 h-4" />
+          Download Policy Documents
+        </button>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -1081,9 +1129,22 @@ function FAQSection() {
         <h2 className=" text-4xl md:text-5xl text-[#1a5336] mb-4">
           Frequently Asked Questions
         </h2>
-        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto">
+        <p className=" text-base text-[#212121] max-w-[70ch] mx-auto mb-8">
           Common questions about tuition, payments, and financial policies
         </p>
+        
+        <button
+          onClick={() => {
+            const downloadsSection = document.getElementById('downloads');
+            if (downloadsSection) {
+              downloadsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="inline-flex items-center gap-2 px-6 h-10 bg-[#1a5336] text-[#fffae9] font-bold hover:bg-[#14432b] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg text-sm"
+        >
+          <FileText className="w-4 h-4" />
+          More Documents
+        </button>
       </div>
 
       <div className="max-w-[900px] mx-auto space-y-4">

@@ -11,7 +11,7 @@ export function LetsBeginCTA({ onNavigate }: { onNavigate: (path: string) => voi
 
   const lbTitle = "Let's Begin";
   const lbSubcopy = "Begin your child's journey to bilingual excellence and global citizenship today";
-  const lbCtaText = "ENQUIRE NOW";
+  const lbCtaText = "MAKE A TOUR";
   const lbCtaLink = "/admissions/apply-now";
 
   return (

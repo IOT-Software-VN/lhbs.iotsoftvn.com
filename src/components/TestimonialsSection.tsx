@@ -16,27 +16,27 @@ export function TestimonialsSection() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const testimonials: Testimonial[] = [
-    {
-      quote: "LHBS has transformed our daughter's education. The bilingual program is exceptional—she speaks both Vietnamese and English fluently. The teachers are dedicated, and the international curriculum prepares her for a global future.",
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
-      avatarAlt: 'Mrs. Nguyen Thi Lan, parent',
-      name: 'Mrs. Nguyen Thi Lan',
-      role: 'Parent of Grade 8 Student'
-    },
-    {
-      quote: "As an alumnus, I can say LHBS gave me the foundation to succeed at university abroad. The critical thinking skills, bilingual fluency, and cultural awareness I gained here were invaluable. I'm grateful for the opportunities LHBS provided.",
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
-      avatarAlt: 'Tran Minh Quan, alumnus',
-      name: 'Tran Minh Quan',
-      role: 'Class of 2018 Alumnus, University of Melbourne'
-    },
-    {
-      quote: "Teaching at LHBS is incredibly rewarding. The school's commitment to bilingual excellence and holistic development creates an environment where both teachers and students thrive. The community support and professional development are outstanding.",
-      avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop',
-      avatarAlt: 'Ms. Emily Carter, teacher',
-      name: 'Ms. Emily Carter',
-      role: 'English Language Teacher, 5 years at LHBS'
-    }
+     {
+        quote: "LHBS has been an incredible experience for our family. Our daughter has grown confident and expressive in both English and Vietnamese. We truly appreciate how the school nurtures her character as much as her academic progress.",
+        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
+        avatarAlt: "Mrs. Nguyen Thi Lan, parent",
+        name: "Mrs. Nguyen Thi Lan",
+        role: "Parent of Grade 8 Student"
+      },
+      {
+        quote: "We chose LHBS for its bilingual program, and it has exceeded all expectations. Our son now communicates naturally in two languages, and we love how the teachers encourage creativity and global awareness every day.",
+        avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop",
+        avatarAlt: "Mr. Tran Van Hung, parent",
+        name: "Mr. Tran Van Hung",
+        role: "Parent of Grade 5 Student"
+      },
+      {
+        quote: "The teachers at LHBS truly care about every child. They create a supportive and inspiring environment that helps our kids discover their strengths and become confident learners prepared for the future.",
+        avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=200&h=200&fit=crop",
+        avatarAlt: "Mrs. Le Thi Thu Ha, parent",
+        name: "Mrs. Le Thi Thu Ha",
+        role: "Parent of Grade 3 and Grade 7 Students"
+      }
   ];
 
   return (
@@ -55,7 +55,7 @@ export function TestimonialsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          What Our Community Says
+            What Parents Say About LHBS
         </motion.h2>
         
         <motion.p
@@ -64,8 +64,8 @@ export function TestimonialsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Hear from parents, students, and teachers about their experiences at LHBS and how our bilingual 
-          education has made a lasting impact on their lives and future success.
+           These are heartfelt testimonials from parents who have entrusted LHBS with their children's education — 
+    sharing how our bilingual learning environment has nurtured growth, confidence, and academic excellence.
         </motion.p>
       </div>
 

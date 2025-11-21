@@ -19,13 +19,17 @@ export function LHBSCampusPage({ onNavigate }: LHBSCampusPageProps) {
       <FacilitiesHighlightSection onNavigate={onNavigate} />
       
       <CampusLifeVideoSection />
-      {/* Section 4: Experience Carousel */}
+      
+      {/* Section 4: VR Campus Tour */}
+      <VRCampusTourSection />
+      
+      {/* Section 5: Experience Carousel */}
       <ExperienceCarouselSection />
       
-      {/* Section 5: Admissions CTA */}
+      {/* Section 6: Admissions CTA */}
       <AdmissionsCTASection onNavigate={onNavigate} />
       
-      {/* Section 6: Newsletter/Contact */}
+      {/* Section 7: Newsletter/Contact */}
       <NewsletterSection />
     </div>
   );
@@ -466,7 +470,144 @@ function VideoModal({ videoUrl, onClose }: VideoModalProps) {
   );
 }
 
-// ==================== SECTION 4: EXPERIENCE CAROUSEL ====================
+// ==================== VR CAMPUS TOUR SECTION ====================
+function VRCampusTourSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  return (
+    <motion.section
+      ref={ref}
+      className="relative py-24 px-4 md:px-20 max-w-[1440px] mx-auto bg-white"
+      initial={{ opacity: 0 }}
+      animate={isInView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="grid md:grid-cols-2 gap-16 items-center">
+        {/* Left: Content */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {/* Section Heading */}
+          <h2 
+            className="text-[#1a5336] mb-6"
+            style={{ fontSize: '48px', lineHeight: '1.2' }}
+          >
+            Explore Our Campus in Virtual Reality
+          </h2>
+          
+          <p className="text-base md:text-lg text-[#212121] mb-8 leading-relaxed">
+            Take a 360° virtual tour of our beautiful campus from the comfort of your home. Experience our modern classrooms, 
+            state-of-the-art laboratories, library spaces, sports facilities, and green areas through immersive VR technology.
+          </p>
+
+          {/* Features List */}
+          <div className="space-y-4 mb-8">
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FABA1E] flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-[#1a5336]" />
+              </div>
+              <p className="text-[#212121] text-base leading-relaxed">
+                360° panoramic views of all campus areas
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FABA1E] flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-[#1a5336]" />
+              </div>
+              <p className="text-[#212121] text-base leading-relaxed">
+                Interactive navigation through classrooms and facilities
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FABA1E] flex items-center justify-center mt-0.5">
+                <Check className="w-4 h-4 text-[#1a5336]" />
+              </div>
+              <p className="text-[#212121] text-base leading-relaxed">
+                Experience the learning environment virtually before visiting
+              </p>
+            </div>
+          </div>
+
+          {/* VR Tour Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <motion.a
+              href="https://360.lhu.edu.vn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 h-12 bg-[#1a5336] text-[#fffae9] font-bold uppercase text-sm tracking-wider hover:bg-[#14432b] transition-colors rounded-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+              >
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" strokeWidth="2"/>
+                <path d="M2 12h20" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+              Start Virtual Tour
+            </motion.a>
+          </motion.div>
+          
+          <p className="text-sm text-[#212121]/70 mt-4">
+            * Opens in a new window. Best experienced with VR headset or desktop browser.
+          </p>
+        </motion.div>
+        
+        {/* Right: Image/Visual */}
+        <motion.div
+          className="relative h-[500px] overflow-hidden rounded-lg"
+          initial={{ opacity: 0, x: 50 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <img
+            src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5222.jpg"
+            alt="LHBS Campus VR Tour Preview"
+            className="w-full h-full object-cover object-center"
+          />
+          
+          {/* VR Overlay Icon */}
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <div className="bg-white/90 backdrop-blur-sm rounded-full p-6">
+              <svg 
+                width="64" 
+                height="64" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="text-[#1a5336]"
+              >
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" strokeWidth="2"/>
+                <path d="M2 12h20" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </div>
+          </div>
+          
+          {/* VR Badge */}
+          <div className="absolute top-4 left-4 bg-[#FABA1E] text-[#1a5336] px-4 py-2 rounded-full text-sm font-bold">
+            360° VR TOUR
+          </div>
+        </motion.div>
+      </div>
+    </motion.section>
+  );
+}
+
+// ==================== SECTION 5: EXPERIENCE CAROUSEL ====================
 function ExperienceCarouselSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -610,7 +751,7 @@ function ExperienceCarouselSection() {
   );
 }
 
-// ==================== SECTION 5: ADMISSIONS CTA ====================
+// ==================== SECTION 6: ADMISSIONS CTA ====================
 function AdmissionsCTASection({ onNavigate }: { onNavigate: (path: string) => void }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
@@ -690,7 +831,7 @@ function AdmissionsCTASection({ onNavigate }: { onNavigate: (path: string) => vo
   );
 }
 
-// ==================== SECTION 6: NEWSLETTER ====================
+// ==================== SECTION 7: NEWSLETTER ====================
 function NewsletterSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });

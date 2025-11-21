@@ -24,8 +24,7 @@ export function OpenDayPage({ onNavigate }: { onNavigate: (path: string) => void
       {/* Section 4: Opportunities */}
       <OpportunitiesSection />
       
-      {/* Section 5: Registration Form */}
-      <RegistrationFormSection />
+
       
       {/* Section 6: Learning Without Limits */}
       <LearningWithoutLimitsSection />
@@ -35,6 +34,8 @@ export function OpenDayPage({ onNavigate }: { onNavigate: (path: string) => void
       
       {/* Section 8: Welcoming Message */}
       <WelcomingMessageSection onNavigate={onNavigate} />
+            {/* Section 5: Registration Form */}
+      <RegistrationFormSection />
     </div>
   );
 }

@@ -161,11 +161,21 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
             {/* Left: Text */}
             <div>
               <p className="text-[#212121] text-lg leading-relaxed mb-8">
-                LHBS admits students across key levels—<strong>Grade 1, Grade 6, Grade 10</strong>, and transfer students to other grades—for the new school year. Admissions open from <strong>17/02/2025 until intake quotas are filled</strong>. Seats are limited, so we encourage parents to complete applications early.
+                LHBS admits students across key levels—<strong>Kindergarten (Ages 3-5), Grade 1, Grade 6, Grade 10</strong>, and transfer students to other grades—for the new school year. Admissions open from <strong>17/02/2025 until intake quotas are filled</strong>. Seats are limited, so we encourage parents to complete applications early.
               </p>
 
               {/* Intake Cards */}
               <div className="space-y-4">
+                <div className="bg-white p-6 border-l-4 border-[#FABA1E] rounded-r">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Kindergarten</h3>
+                    <span className="px-3 py-1 bg-[#FABA1E] text-[#1a5336] text-xs ">150 students</span>
+                  </div>
+                  <p className="text-[#212121]/70 text-sm">
+                    Admissions from 17/02/2025 until quotas are filled - Ages 3-5
+                  </p>
+                </div>
+
                 <div className="bg-white p-6 border-l-4 border-[#1a5336] rounded-r">
                   <div className="flex items-start justify-between mb-2">
                     <h3 className="font-['SVN-Gotham'] text-xl text-[#1a5336]">Grade 1</h3>
@@ -237,7 +247,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
               style={{ fontSize: '48px', lineHeight: '1.24' }}
             >
-              Speak to Our Admissions Team
+              We're Here to Support Your Family
             </h2>
             <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto mb-12">
               Our admissions team provides personalised guidance to help parents understand our programmes, intake timelines, and documentation requirements.
@@ -322,7 +332,7 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
               className="font-['SVN-Gotham'] text-[#1a5336] mb-6"
               style={{ fontSize: '48px', lineHeight: '1.24' }}
             >
-              Our Step-by-Step Admissions Process
+              Step-by-Step Admissions Process
             </h2>
             <p className="text-[#212121]/70 text-lg max-w-3xl mx-auto">
               We've designed a clear, supportive admissions journey to make the process smooth for every family.
