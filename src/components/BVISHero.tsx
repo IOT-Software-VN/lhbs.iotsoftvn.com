@@ -84,13 +84,10 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
       {/* Content Container */}
       <div className="relative z-20 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Left spacer on desktop */}
-          <div className="hidden lg:block lg:col-span-1" />
-          
-          {/* Right Content Column */}
+          {/* Left Content Column */}
           <motion.div 
-            className="lg:col-span-6 lg:col-start-7 flex flex-col justify-center py-12 lg:py-0"
-            initial={{ opacity: 0, x: 50 }}
+            className="lg:col-span-6 flex flex-col justify-center py-12 lg:py-0"
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >

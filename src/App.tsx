@@ -27,6 +27,7 @@ import { OutstandingExperiencesPage } from './pages/OutstandingExperiencesPage';
 import { ExtracurricularActivitiesPage } from './pages/ExtracurricularActivitiesPage';
 import { EntryRequirementsPage } from './pages/EntryRequirementsPage';
 import { UniversityCareerCounsellingPage } from './pages/UniversityCareerCounsellingPage';
+import { ScrollToTop } from './components/ui/ScrollToTop';
 import { siteNavigation } from './types/navigation';
 
 export default function App() {
@@ -149,6 +150,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer onNavigate={handleNavigate} />
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 }
