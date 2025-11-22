@@ -123,6 +123,8 @@ export function AdmissionsPage({ onNavigate }: AdmissionsPageProps) {
 
   return (
     <div className="w-full ">
+
+      
       {/* 1. HERO SECTION */}
       <section 
         className="relative min-h-[65vh] md:min-h-[40vh] flex items-center"

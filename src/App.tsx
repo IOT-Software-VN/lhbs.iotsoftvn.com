@@ -29,12 +29,16 @@ import { EntryRequirementsPage } from './pages/EntryRequirementsPage';
 import { UniversityCareerCounsellingPage } from './pages/UniversityCareerCounsellingPage';
 import { ScrollToTop } from './components/ui/ScrollToTop';
 import { siteNavigation } from './types/navigation';
+import { FloatingActionButtons } from './components/FloatingActionButtons';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState('/');
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+ 
+  interface Navigate{
+    onNavigate: (path: string) => void;
+  }
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
@@ -153,6 +157,9 @@ export default function App() {
       
       {/* Scroll to Top Button */}
       <ScrollToTop />
+
+      {/* Floating Action Buttons */}
+      <FloatingActionButtons onNavigate={handleNavigate} />
     </div>
   );
 }
