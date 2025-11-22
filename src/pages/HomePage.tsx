@@ -173,7 +173,7 @@ The school empowers students to develop intellectually, emotionally, and globall
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/573965179_808501755145300_3798141295024672112_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHPZL5GxT5a1nzeExBQd2bTBzw_Kofc56UHPD8qh9znpUgV69Rp96hl6ZK_ka__K4suhizkVAROJdMXgvYqpr1J&_nc_ohc=vC2xtv34es4Q7kNvwHj_J_p&_nc_oc=AdnxA-XQEjjYLzrObHrfzftXfx22MBcARjXXJ6usB6HiBOGX30TCffpPGDjJYdTpQsc&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=q8x1v1PUin_LdLXso7YPBg&oh=00_AfjySPSyk5xRXL3vB0sHGssjBKbiQfnA5F8edUVlwyeZmg&oe=6921C362"
+            src={heroImage}
             alt="Students engaged in hands-on learning activities with educational materials"
             className="w-full h-full object-left object-cover"
           />

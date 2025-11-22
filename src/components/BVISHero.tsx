@@ -12,9 +12,9 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
 
   // Only background images array - content stays the same
   const backgroundImages = [
-    "https://scontent.fsgn5-8.fna.fbcdn.net/v/t39.30808-6/544617598_759813676680775_7215406401678366449_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeErVSujIREFa9LGAXg8wwqBE9Kz72b-q10T0rPvZv6rXUoaylVxj5jRCy--9nXUmVgxZnEoREq-L26nYMDst0MI&_nc_ohc=Ys3zi1WxmmkQ7kNvwEKHJHb&_nc_oc=AdkVIrUFq-UuHfp_4LZAXOaX2t4VxiZpXNS02kRXXn1t9DDPtusugTk0avcmlLuf_hk&_nc_zt=23&_nc_ht=scontent.fsgn5-8.fna&_nc_gid=aalASfx1FCwBWKfrWrWxuw&oh=00_AfggcrWJxQiTkqY7YBm4qEpPlLj63YiRe0Da-FJwdjo0EA&oe=6921BDF3",
-    "https://scontent.fsgn5-9.fna.fbcdn.net/v/t39.30808-6/481226783_622811750380969_3491653085939171068_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEQrOq1VlcMG9Q2x_u49LWu0jnCaJX1omnSOcJolfWiafczTosd97Z9K9XJ5dXJJqVkZ5Ua7D_vthY71Vp9CtCD&_nc_ohc=HwrH__tQJgAQ7kNvwHOXduJ&_nc_oc=AdlUNW-Kbj0-cDUX5TlLr7DbRqoZNvPOLLUiycU5bGyMYug-W2epum40PfVETSRAH6s&_nc_zt=23&_nc_ht=scontent.fsgn5-9.fna&_nc_gid=07v3UH3vTiaskHIlokbUTA&oh=00_Afgx5P3J6-PV99G1AgR5vbM1qMLoR2a5a4IzZDljvLDnFA&oe=6921B0F6",
-    "https://scontent.fsgn5-15.fna.fbcdn.net/v/t39.30808-6/558172315_810926194902856_4574627077857969087_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEgxJW01a8wquCUjRJqon1osG_3f2uo4BOwb_d_a6jgE71MEHqfMFQMG8dmBNL0mxvJvGa-ImOpyFgrsrA_DB3F&_nc_ohc=47a5LnTmsTIQ7kNvwENrj01&_nc_oc=Adl-5Sr49iU-OVZGkkW0LGzKhNFEsKxjAN43V5elJHR-KdPwVs_5MrQG2tcKFkH-Ddg&_nc_zt=23&_nc_ht=scontent.fsgn5-15.fna&_nc_gid=nv00owzF2cbHn6utJDtCaA&oh=00_AfgSasz4OZJnNbNpN3EqYpmBnoloqMqYw-_NiCSNtZddng&oe=6921A303",
+    "https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg",
+    "https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg",
+    "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
     "https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5074.jpg",
 
   ];

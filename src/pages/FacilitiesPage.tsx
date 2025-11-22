@@ -330,7 +330,7 @@ function TechLearningSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <img
-            src="https://scontent.fvca1-1.fna.fbcdn.net/v/t39.30808-6/558223139_786418630686946_8377401039273207831_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGhJ9AwXVVBNkS2yTFwv2SLXfakVD1JV2dd9qRUPUlXZ1jO9z7E9zrqctgEpX0mjVCSxYAF-OXvyZnxy0q_ox7M&_nc_ohc=IXQXuc0UtgUQ7kNvwEbY_8R&_nc_oc=AdnQelucxJvXuy8o9BKe5p3qVA7ocfIgKHawlEPsaQ1LOtyvEOmHYftx6KguevtLHcs&_nc_zt=23&_nc_ht=scontent.fvca1-1.fna&_nc_gid=rSxE3TPHAjyISsbWkjY5Qg&oh=00_Afj-5Yjwcy3bzYlU93REHUb_Ujw8qjR1oyy6izyvit8ioQ&oe=69213984"
+            src="https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5085.jpg"
             alt="Students working in robotics and technology lab"
             className="w-full h-full object-cover object-center"
           />
