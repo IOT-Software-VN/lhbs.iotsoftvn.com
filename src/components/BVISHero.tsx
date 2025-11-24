@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { AnimatedHighlight } from './ui/animated-highlight';
+import { ScrollIndicator } from './ui/ScrollIndicator';
 
 interface BVISHeroProps {
   onNavigate: (path: string) => void;
@@ -181,7 +182,7 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
       </div>
 
       {/* Carousel Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
         {backgroundImages.map((_, index) => (
           <button
             key={index}
@@ -194,10 +195,10 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-30">
+      {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-30">
         <motion.div
           className="h-full bg-[#FABA1E]"
           initial={{ width: '0%' }}
@@ -210,7 +211,10 @@ export function BVISHero({ onNavigate }: BVISHeroProps) {
           }}
           key={currentSlide}
         />
-      </div>
+      </div> */}
+
+      {/* Scroll Indicator */}
+      <ScrollIndicator targetSectionId="solid-education-section" />
     </section>
   );
 }

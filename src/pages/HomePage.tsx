@@ -104,6 +104,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
 
   return (
     <motion.section
+      id="solid-education-section"
       ref={ref}
       className="relative mx-auto bg-white overflow-hidden flex justify-center"
       initial={{ opacity: 0 }}

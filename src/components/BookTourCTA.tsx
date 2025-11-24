@@ -1,7 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
-import busIllustration from '../assets/school-bus.png';
-// import busIllustration from '../assets/Bus3.png';
+// import busIllustration from '../assets/school-bus.png';
+import busIllustration from '../assets/Bus3.png';
 
 
 interface BookTourCTAProps {
@@ -42,13 +42,13 @@ export function BookTourCTA({ onNavigate }: BookTourCTAProps) {
       <div className="max-w-[1440px] mx-auto h-full relative z-10">
         {/* Left Art Area (60%) - Bus Illustration as Background Decorative */}
         <div 
-          className="absolute left-0 bottom-0 top-25 w-[60%] h-full pointer-events-none"
+          className="absolute left-0 bottom-12 w-[60%] h-full pointer-events-none"
           aria-hidden="true"
         >
           <img
             src={busIllustration}
             alt=""
-            className="object-fit absolute left-0 bottom-0 w-[70%] h-auto opacity-80"
+            className="object-fit object-center absolute left-0 bottom-0 w-[70%] h-auto"
             // style={{ 
             //   filter: 'brightness(1.2)',
             //   maxHeight: '85%'
