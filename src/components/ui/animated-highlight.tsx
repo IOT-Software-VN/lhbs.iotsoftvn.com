@@ -28,7 +28,7 @@ export function AnimatedHighlight({
     <span ref={ref} className={`relative inline-block ${className}`}>
       {/* Animated highlight background */}
       <motion.span
-        className="absolute inset-0 -top-1 -bottom-1"
+        className="absolute inset-0 -top-14 -bottom-1"
         style={{ 
           backgroundColor,
           zIndex: 0,

@@ -666,8 +666,8 @@ function CoreStrengthsSection({ showModal, setShowModal }: CoreStrengthsSectionP
               whileHover={{ y: -5 }}
             >
               {/* Title at top-left */}
-              <div className="p-6 pb-4">
-                <h3 className="text-center font-['SVN-Gotham'] text-base md:text-2xl tracking-wider text-[#1a5336] font-semibold">
+              <div className="p-4 md:p-6 pb-3 md:pb-4">
+                <h3 className="text-center font-['SVN-Gotham'] text-xs sm:text-sm md:text-xl lg:text-xl xl:text-xl tracking-wide md:tracking-wider text-[#1a5336] font-semibold leading-tight">
                   {pillar.title}
                 </h3>
               </div>

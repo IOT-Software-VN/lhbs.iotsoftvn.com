@@ -1,6 +1,8 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import busIllustration from '../assets/school-bus.png';
+// import busIllustration from '../assets/Bus3.png';
+
 
 interface BookTourCTAProps {
   onNavigate: (path: string) => void;
@@ -18,14 +20,26 @@ export function BookTourCTA({ onNavigate }: BookTourCTAProps) {
   return (
     <motion.section
       ref={ref}
-      className="content-center bg-[#1a5336] overflow-hidden"
+      className="content-center bg-[#1a5336] overflow-hidden relative"
       style={{ minHeight: '520px',  backgroundColor: '#064e29ff' }}
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
+      {/* Map Background Overlay */}
+      {/* <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: 'url(https://lhbs.edu.vn/wp-content/uploads/2019/09/map-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+        aria-hidden="true"
+      /> */}
+
       {/* Container with max-width */}
-      <div className="max-w-[1440px] mx-auto h-full relative">
+      <div className="max-w-[1440px] mx-auto h-full relative z-10">
         {/* Left Art Area (60%) - Bus Illustration as Background Decorative */}
         <div 
           className="absolute left-0 bottom-0 top-25 w-[60%] h-full pointer-events-none"

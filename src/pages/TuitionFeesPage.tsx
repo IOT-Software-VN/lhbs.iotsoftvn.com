@@ -331,7 +331,7 @@ function TuitionTablesSection() {
             {tuitionData[selectedTab as keyof typeof tuitionData].name}
           </h3>
           
-          <table className="w-full border-2 border-[#1a5336] rounded-lg overflow-hidden">
+          <table className="w-full bg-white rounded-lg overflow-hidden shadow-md">
             <thead>
               <tr className="bg-[#1a5336] text-[#fffae9]">
                 <th className=" text-lg text-left p-4 border-r border-[#fffae9]/20">Grade Level</th>
@@ -357,7 +357,7 @@ function TuitionTablesSection() {
       </div>
 
       {/* Under-table note */}
-      <div className="mt-6 bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-4 rounded-r">
+      <div className="mt-6 bg-[#FABA1E]/10 p-4 rounded-lg">
         <p className=" text-sm text-[#212121]">
           <strong className="text-[#1a5336]">📋 Note:</strong> Tuition fees are subject to annual review. 
           Any adjustments will be communicated at least 60 days in advance. All payments are non-refundable 
@@ -418,7 +418,7 @@ function IncludedExcludedSection() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Included */}
-        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
               <CheckCircle className="w-6 h-6 text-[#FABA1E]" />
@@ -439,7 +439,7 @@ function IncludedExcludedSection() {
         </div>
 
         {/* Excluded */}
-        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 bg-[#1a5336] flex items-center justify-center">
               <X className="w-6 h-6 text-[#FABA1E]" />
@@ -532,7 +532,7 @@ function OptionalServicesSection() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {services.map((service, index) => (
-          <div key={index} className="border-2 border-[#1a5336] p-6 rounded-lg">
+          <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className=" text-2xl text-[#1a5336] mb-3">
               {service.title}
             </h3>
@@ -616,7 +616,7 @@ function PaymentPlansSection() {
               downloadsSection.scrollIntoView({ behavior: 'smooth' });
             }
           }}
-          className="inline-flex items-center gap-2 px-8 h-12 border-2 border-[#1a5336] text-[#1a5336] font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
+          className="inline-flex items-center gap-2 px-8 h-12 text-[#1a5336] font-bold bg-gray-50 hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
         >
           <FileText className="w-4 h-4" />
           View Payment Documents
@@ -628,8 +628,8 @@ function PaymentPlansSection() {
         {plans.map((plan, index) => (
           <div 
             key={index} 
-            className={`border-2 p-6 bg-white relative rounded-lg ${
-              plan.recommended ? 'border-[#FABA1E]' : 'border-[#1a5336]'
+            className={`p-6 bg-white relative rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ${
+              plan.recommended ? 'ring-2 ring-[#FABA1E]' : ''
             }`}
           >
             {plan.recommended && (
@@ -664,7 +664,7 @@ function PaymentPlansSection() {
 
       {/* Payment Methods Block */}
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-6">
             <CreditCard className="w-6 h-6 text-[#1a5336]" />
             <h3 className=" text-2xl text-[#1a5336]">
@@ -682,7 +682,7 @@ function PaymentPlansSection() {
           </ul>
         </div>
 
-        <div className="border-2 border-[#1a5336] p-8 bg-white rounded-lg">
+        <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-6">
             <FileText className="w-6 h-6 text-[#1a5336]" />
             <h3 className=" text-2xl text-[#1a5336]">
@@ -762,7 +762,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
             scholarships and financial aid programs to support deserving families.
           </p>
           
-          <div className="bg-[#FABA1E]/10 border-l-4 border-[#FABA1E] p-6 mb-8">
+          <div className="bg-[#FABA1E]/10 p-6 mb-8 rounded-lg">
             <p className=" text-sm text-[#212121]">
               <strong className="text-[#1a5336]">💡 Can be combined:</strong> Students may qualify for multiple awards. 
               For example, a high-achieving student with siblings could receive both merit scholarship and sibling discount.
@@ -781,7 +781,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
             
             <button
               onClick={() => onNavigate('/admissions/scholarship-application')}
-              className="px-8 h-12 border-2 border-[#1a5336] text-[#1a5336]  font-bold hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+              className="px-8 h-12 text-[#1a5336] font-bold bg-gray-50 hover:bg-[#1a5336] hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
             >
               Apply for Scholarship
             </button>
@@ -791,10 +791,10 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
         {/* Right: Accordion */}
         <div className="space-y-4">
           {scholarships.map((scholarship, index) => (
-            <div key={index} className="border-2 border-[#1a5336] rounded-lg">
+            <div key={index} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <button
                 onClick={() => setOpenAccordion(openAccordion === index ? null : index)}
-                className="w-full p-6 flex items-center justify-between text-left hover: transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
+                className="w-full p-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] rounded-lg"
               >
                 <div className="flex-1">
                   <h3 className=" text-xl text-[#1a5336] mb-1">
@@ -813,7 +813,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
               </button>
               
               {openAccordion === index && (
-                <div className="p-6 pt-0 border-t border-[#1a5336]/20">
+                <div className="p-6 pt-0 bg-gray-50/50">
                   <div className="mb-4">
                     <h4 className=" font-bold text-sm text-[#1a5336] mb-2">Criteria:</h4>
                     <ul className="space-y-1">
@@ -832,7 +832,7 @@ function ScholarshipsAidSection({ onNavigate }: { onNavigate: (path: string) => 
                     </ul>
                   </div>
                   
-                  <div className=" p-3 mb-4">
+                  <div className="bg-gray-50 p-3 mb-4 rounded">
                     <span className=" text-sm text-[#212121]">
                       <strong>Deadline:</strong> {scholarship.deadline}
                     </span>
@@ -933,7 +933,7 @@ function RefundPolicySection() {
         ))}
       </div>
 
-      <div className="bg-[#1a5336]/5 border-l-4 border-[#1a5336] p-6 rounded-r">
+      <div className="bg-[#1a5336]/5 p-6 rounded-lg">
         <p className=" text-sm text-[#212121] mb-3">
           <strong className="text-[#1a5336]">⏰ Seat Deposit:</strong> Your enrollment deposit of 20M VND 
           secures your child's place. This deposit is fully refundable if you withdraw your application 
