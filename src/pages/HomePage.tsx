@@ -158,10 +158,96 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
 
           
           {/* Body copy */}
-          <p className=" text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
-          Lac Hong Bilingual School cultivates lifelong learning, nurtures character, and builds global readiness through a holistic bilingual education that harmonizes Vietnamese cultural values with international excellence.
-The school empowers students to develop intellectually, emotionally, and globally, enabling them to live with compassion, confidence, and a strong sense of contribution to society.
-          </p>
+          <div className="text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
+            <p className="mb-6">
+              Lac Hong Bilingual School{' '} 
+              <AnimatedHighlight 
+                delay={0.5} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                cultivates lifelong learning, 
+              </AnimatedHighlight>{' '}
+                            <AnimatedHighlight 
+                delay={0.5} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+              nurtures character, and builds global readiness
+              </AnimatedHighlight>
+              through a{' '}
+              <AnimatedHighlight 
+                delay={1.8} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                holistic bilingual education
+              </AnimatedHighlight>{' '}
+              that harmonizes{' '}
+              <AnimatedHighlight 
+                delay={2.4} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                Vietnamese 
+              </AnimatedHighlight>{' '}
+                            <AnimatedHighlight 
+                delay={2.4} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+              cultural values with international excellence.
+              </AnimatedHighlight>
+              The school empowers students to{' '}
+              <AnimatedHighlight 
+                delay={3.0} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                develop intellectually, emotionally
+              </AnimatedHighlight>{' '}
+                            <AnimatedHighlight 
+                delay={3.0} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+              , and globally,
+              </AnimatedHighlight>
+              enabling them to{' '}
+              <AnimatedHighlight 
+                delay={3.6} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                live with compassion
+              </AnimatedHighlight>
+                            <AnimatedHighlight 
+                delay={3.6} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+              , confidence, and a strong sense of contribution 
+              </AnimatedHighlight>
+               <AnimatedHighlight 
+                delay={3.6} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                to society.
+              </AnimatedHighlight>
+              
+            </p>
+          </div>
           
           {/* Education levels list */}
           <div className="space-y-3">
@@ -292,14 +378,18 @@ function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => 
           {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#fffae9] mb-6">
             <span className="block whitespace-nowrap">
-              Vietnamese Identity,
+              Vietnamese 
+                Identity
             </span>
             Global Vision 
           </h2>
           
           {/* Body copy */}
           <p className="font-medium text-base md:text-xl text-[#fffae9]/90 mb-8 leading-relaxed">
-            LHBS is committed to creating a humanistic learning environment that nurtures and educates young generations to appreciate Vietnamese heritage and identity while embracing global knowledge, skills, and citizenship—contributing positively to themselves, their communities, and society.
+            LHBS is committed to creating a humanistic learning environment that nurtures and educates young generations to appreciate Vietnamese heritage and 
+             {' '}
+ identity 
+ while embracing global knowledge, skills, and citizenship—contributing positively to themselves, their communities, and society.
           </p>
           
           {/* Attribution */}

@@ -43,7 +43,7 @@ export function AnimatedHighlight({
         }}
       />
       {/* Text content */}
-      <span className="relative">{children}</span>
+      <span className="relative ">{children}</span>
     </span>
   );
 }
