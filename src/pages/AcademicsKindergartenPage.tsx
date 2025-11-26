@@ -106,14 +106,14 @@ export function AcademicsKindergartenPage({ onNavigate }: AcademicsKindergartenP
                 </button>
               </li>
               <li><ChevronRight className="w-4 h-4 text-[#fffae9]/70" /></li>
-              <li className="text-[#fffae9] ">Kindergarten</li>
+              <li className="text-[#fffae9] ">Galaxy KG</li>
             </ol>
           </nav>
 
           {/* Hero Content */}
           <div className="max-w-3xl">
             <p className="text-[#FABA1E] mb-4  uppercase tracking-wider text-sm">
-              ACADEMIC • KINDERGARTEN
+              ACADEMIC • GALAXY KG
             </p>
             <h1 
               className="font-['SVN-Gotham'] text-white mb-6"
