@@ -212,7 +212,15 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
                 backgroundColor="#FABA1E"
                 className="text-[#1a5336] mx-1 my-2"
               >
-                develop intellectually, emotionally
+                develop intellectually, 
+              </AnimatedHighlight>{' '}
+               <AnimatedHighlight 
+                delay={3.0} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                emotionally,
               </AnimatedHighlight>{' '}
                             <AnimatedHighlight 
                 delay={3.0} 
@@ -220,16 +228,24 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
                 backgroundColor="#FABA1E"
                 className="text-[#1a5336] mx-1 my-2"
               >
-              , and globally,
+              and globally,
               </AnimatedHighlight>
               enabling them to{' '}
+                <AnimatedHighlight 
+                delay={3.6} 
+                duration={1.2}
+                backgroundColor="#FABA1E"
+                className="text-[#1a5336] mx-1 my-2"
+              >
+                live with
+              </AnimatedHighlight>
               <AnimatedHighlight 
                 delay={3.6} 
                 duration={1.2}
                 backgroundColor="#FABA1E"
                 className="text-[#1a5336] mx-1 my-2"
               >
-                live with compassion
+                compassion, confidence, and a strong sense of
               </AnimatedHighlight>
                             <AnimatedHighlight 
                 delay={3.6} 
@@ -237,15 +253,7 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
                 backgroundColor="#FABA1E"
                 className="text-[#1a5336] mx-1 my-2"
               >
-              , confidence, and a strong sense of contribution 
-              </AnimatedHighlight>
-               <AnimatedHighlight 
-                delay={3.6} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                to society.
+              contribution to society.
               </AnimatedHighlight>
               
             </p>

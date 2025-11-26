@@ -75,7 +75,7 @@ export function ScrollIndicator({ targetSectionId = 'solid-education-section' }:
     >
       {/* Animated ripple effect */}
       <motion.div
-        className="absolute inset-0 w-40 h-40 rounded-full border border-white/20"
+        className="absolute inset-0 w-38 h-38 rounded-full border border-white/20"
         animate={{
           scale: [1, 1.5, 2],
           opacity: [0.6, 0.3, 0]
@@ -90,7 +90,7 @@ export function ScrollIndicator({ targetSectionId = 'solid-education-section' }:
       
       {/* Second ripple with delay */}
       <motion.div
-        className="absolute inset-0 w-40 h-40 rounded-full border border-[#FABA1E]/40"
+        className="absolute inset-0 w-38 h-38 rounded-full border border-[#FABA1E]/40"
         animate={{
           scale: [1, 1.5, 2],
           opacity: [0.5, 0.2, 0]
@@ -105,7 +105,7 @@ export function ScrollIndicator({ targetSectionId = 'solid-education-section' }:
       />
 
       {/* Main container with enhanced effects */}
-      <div className="relative w-40 h-40 flex items-center justify-center">
+      <div className="relative w-38 h-38 flex items-center justify-center">
         {/* Pulsing background circle */}
         <motion.div
           className="absolute inset-2 bg-gradient-to-br from-[#FABA1E]/20 to-white/10 rounded-full backdrop-blur-sm"
@@ -269,7 +269,7 @@ export function ScrollIndicator({ targetSectionId = 'solid-education-section' }:
 
       {/* Enhanced glow effect with color */}
         <motion.div
-          className="absolute inset-0 w-40 h-40 rounded-full bg-gradient-to-br from-[#FABA1E]/10 to-white/5 blur-2xl -z-10"
+          className="absolute inset-0 w-38 h-38 rounded-full bg-gradient-to-br from-[#FABA1E]/10 to-white/5 blur-2xl -z-10"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]
