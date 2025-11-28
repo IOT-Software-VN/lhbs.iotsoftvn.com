@@ -162,100 +162,13 @@ function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => v
           {/* Body copy */}
           <div className="text-base md:text-lg text-[#212121] mb-8 leading-relaxed max-w-[70ch]">
             <p className="mb-6">
-              Lac Hong Bilingual School{' '} 
-              <AnimatedHighlight 
-                delay={0.5} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                cultivates lifelong learning, 
-              </AnimatedHighlight>{' '}
-                            <AnimatedHighlight 
-                delay={0.5} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
+              Lac Hong Bilingual School cultivates lifelong learning, 
               nurtures character, and builds global readiness
-              </AnimatedHighlight>
-              through a{' '}
-              <AnimatedHighlight 
-                delay={1.8} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                holistic bilingual education
-              </AnimatedHighlight>{' '}
-              that harmonizes{' '}
-              <AnimatedHighlight 
-                delay={2.4} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                Vietnamese 
-              </AnimatedHighlight>{' '}
-                            <AnimatedHighlight 
-                delay={2.4} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-              cultural values with international excellence.
-              </AnimatedHighlight>
-              The school empowers students to{' '}
-              <AnimatedHighlight 
-                delay={3.0} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                develop intellectually, 
-              </AnimatedHighlight>{' '}
-               <AnimatedHighlight 
-                delay={3.0} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                emotionally,
-              </AnimatedHighlight>{' '}
-                            <AnimatedHighlight 
-                delay={3.0} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-              and globally,
-              </AnimatedHighlight>
-              enabling them to{' '}
-                <AnimatedHighlight 
-                delay={3.6} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                live with
-              </AnimatedHighlight>
-              <AnimatedHighlight 
-                delay={3.6} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
-                compassion, confidence, and a strong sense of
-              </AnimatedHighlight>
-                            <AnimatedHighlight 
-                delay={3.6} 
-                duration={1.2}
-                backgroundColor="#FABA1E"
-                className="text-[#1a5336] mx-1 my-2"
-              >
+              through a holistic bilingual education
+              that harmonizes Vietnamese cultural values with international excellence.
+              The school empowers students to develop intellectually, emotionally, and globally,
+              enabling them to live with compassion, confidence, and a strong sense of
               contribution to society.
-              </AnimatedHighlight>
-              
             </p>
           </div>
           

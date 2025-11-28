@@ -29,7 +29,7 @@ import { EntryRequirementsPage } from './pages/EntryRequirementsPage';
 import { UniversityCareerCounsellingPage } from './pages/UniversityCareerCounsellingPage';
 import { ScrollToTop } from './components/ui/ScrollToTop';
 import { siteNavigation } from './types/navigation';
-import { FloatingActionButtons } from './components/FloatingActionButtons';
+// import { FloatingActionButtons } from './components/FloatingActionButtons';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState('/');
@@ -159,7 +159,7 @@ export default function App() {
       <ScrollToTop />
 
       {/* Floating Action Buttons */}
-      <FloatingActionButtons onNavigate={handleNavigate} />
+      {/* <FloatingActionButtons onNavigate={handleNavigate} /> */}
     </div>
   );
 }
