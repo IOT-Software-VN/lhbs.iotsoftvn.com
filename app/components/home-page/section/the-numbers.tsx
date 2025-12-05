@@ -72,10 +72,18 @@ export default function TheNumbers() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
-              style={{ color: '#227D46' }}>
+          <h2
+            className="text-4xl md:text-5xl lg:text-[64px] font-bold mb-4 leading-tight bg-gradient-to-b from-[#FF9500] to-[#FFD267] bg-clip-text text-transparent"
+            style={{
+              backgroundImage: "linear-gradient(180deg, #FF9500 0%, #FFD267 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             By the numbers
           </h2>
+
         </motion.div>
 
         {/* Statistics Grid */}
@@ -100,7 +108,7 @@ export default function TheNumbers() {
                 <span 
                   className="block text-7xl lg:text-8xl font-black leading-none"
                   style={{ 
-                    color: '#FFAE00',
+                    color: '#00602F',
                     fontSize: '72px',
                     fontWeight: '900'
                   }}
@@ -173,8 +181,8 @@ export default function TheNumbers() {
             </CarouselContent>
             
             {/* Navigation Buttons */}
-            <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-gray-200 text-gray-600 hover:text-gray-900" />
-            <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white border-gray-200 text-gray-600 hover:text-gray-900" />
+            <CarouselPrevious className="w-12 h-12 absolute left-4 top-1/2 -translate-y-1/2 border-0" />
+            <CarouselNext className="w-12 h-12  absolute right-4 top-1/2 -translate-y-1/2 border-0" />
           </Carousel>
         </motion.div>
 

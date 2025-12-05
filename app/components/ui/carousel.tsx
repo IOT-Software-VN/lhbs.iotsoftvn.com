@@ -193,7 +193,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft />
+      <ChevronLeft size={48} />
       <span className="sr-only">Previous slide</span>
     </Button>
   )

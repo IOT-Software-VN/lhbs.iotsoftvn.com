@@ -8,6 +8,7 @@ import TestimonialsSection from './section/testimonial'
 import TestimonialQuoteSection from './section/testimonial-quote'
 import { CollegeAcceptancesSection } from './section/college-acceptances'
 import TheNumbers from './section/the-numbers'
+import EducationLevel from './section/education-level'
 export { 
   VideoHero, 
   HeroCarousel, 
@@ -20,5 +21,6 @@ export {
   EducationPillarModal,
   EducationPillarsSection,
   TestimonialQuoteSection,
-  TheNumbers
+  TheNumbers,
+  EducationLevel
 }
