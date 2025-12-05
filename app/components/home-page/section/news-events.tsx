@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { ChevronRight, Calendar } from 'lucide-react';
+import backgroundImage from '@/images/home-page/section-news/Layer_5.png';
 
 interface NewsEvent {
   image: string;
@@ -49,11 +50,22 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
   return (
     <motion.section
       ref={ref}
-      className="py-24 px-4 md:px-20 max-w-[1440px] mx-auto"
+      className="py-24 max-w-[1640px] mx-auto relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
     >
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          top: '0%',
+        }}
+      />
+      
+      {/* Content with relative z-index */}
+      <div className="relative z-10">
       {/* Header Row */}
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
         {/* Left: Title & Subtitle */}
@@ -109,6 +121,8 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
           </motion.div>
         ))}
       </div>
+      
+      </div> {/* Close content wrapper */}
     </motion.section>
   );
 }
@@ -136,8 +150,8 @@ function N_Card({ image, imageAlt, tag, date, title, excerpt, link, onNavigate }
         
         {/* Optional Tag Pill */}
         {tag && (
-          <div className="absolute top-3 left-3 bg-[#FABA1E] px-3 py-1">
-            <span className=" text-xs text-[#1a5336] font-semibold">
+          <div className="absolute bottom-0 left-0 bg-[#227D46] px-4 py-1">
+            <span className=" text-xs text-white font-medium">
               {tag}
             </span>
           </div>
@@ -147,20 +161,20 @@ function N_Card({ image, imageAlt, tag, date, title, excerpt, link, onNavigate }
       {/* Body Panel */}
       <div className="p-5 md:p-6 flex flex-col flex-grow">
         {/* Meta Row - Date */}
-        <div className="flex items-center gap-2 mb-3">
+        {/* <div className="flex items-center gap-2 mb-3">
           <Calendar className="w-4 h-4 text-[#1a5336]/60" />
           <span className=" text-xs text-[#212121]/70">
             {date}
           </span>
-        </div>
+        </div> */}
 
         {/* Headline */}
-        <h3 className=" text-xl md:text-2xl text-[#1a5336] mb-3 leading-tight">
+        <h3 className=" text-sm md:text-xl text-[#1a5336] mb-3 leading-tight">
           {title}
         </h3>
 
         {/* Excerpt */}
-        <p className=" text-sm text-[#212121] mb-4 leading-relaxed line-clamp-3 flex-grow">
+        <p className=" text-sm text-[#1A1A1A99] mb-4 leading-relaxed line-clamp-3 flex-grow">
           {excerpt}
         </p>
 
@@ -173,14 +187,14 @@ function N_Card({ image, imageAlt, tag, date, title, excerpt, link, onNavigate }
           }}
           aria-label={`Read more about ${title}`}
         >
-          <span>Read more</span>
-          <motion.div
+          <span className='text-[14px]'>READ MORE</span>
+          {/* <motion.div
             initial={{ x: 0 }}
             whileHover={{ x: 2 }}
             transition={{ duration: 0.2 }}
           >
             <ChevronRight className="w-4 h-4" />
-          </motion.div>
+          </motion.div> */}
         </button>
       </div>
     </div>

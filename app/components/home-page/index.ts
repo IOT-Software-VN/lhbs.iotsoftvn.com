@@ -5,6 +5,7 @@ import FoundingMessageSection from './section/founding-message'
 import { CoreStrengthsSection, CoreStrengthModal } from './section/core-strength'
 import NewsEventsSection from './section/news-events'
 import TestimonialsSection from './section/testimonial'
+import TestimonialQuoteSection from './section/testimonial-quote'
 import { CollegeAcceptancesSection } from './section/college-acceptances'
 export { 
   VideoHero, 
@@ -16,5 +17,6 @@ export {
   TestimonialsSection,
   CollegeAcceptancesSection,
   EducationPillarModal,
-  EducationPillarsSection
+  EducationPillarsSection,
+  TestimonialQuoteSection
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { Route } from './+types/home'
-import { EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, VideoHero, CollegeAcceptancesSection, EducationPillarModal } from '@/components/home-page'
+import { TestimonialQuoteSection, EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, VideoHero, CollegeAcceptancesSection, EducationPillarModal } from '@/components/home-page'
 import ScrollToTop from '@/components/ui/components/ScrollToTop';
 import { SolidEducationSection } from '@/components/home-page/section/solid-education';
 import { LHBSLifeVideoSection } from '@/components/home-page/section/life-video';
@@ -16,7 +16,7 @@ export default function Home({onNavigate}: {onNavigate: (path: string) => void})
     <>
     
       <VideoHero onNavigate={onNavigate} />
-      <SolidEducationSection onNavigate={onNavigate} />
+      {/* <SolidEducationSection onNavigate={onNavigate} />
       <EducationPillarsSection showModal={showEducationModal} setShowModal={setShowEducationModal}/>
       {showEducationModal && (
         <EducationPillarModal 
@@ -27,11 +27,11 @@ export default function Home({onNavigate}: {onNavigate: (path: string) => void})
           onClose={() => setShowEducationModal(null)}
         />
       )}
-      <CollegeAcceptancesSection onNavigate={onNavigate} />
+      <CollegeAcceptancesSection onNavigate={onNavigate} /> */}
       {/* Section xxx: Founding Message */}
       <FoundingMessageSection onNavigate={onNavigate} />
       {/* Section xxx: Core Strengths - 5 Pillars */}
-      <CoreStrengthsSection showModal={showCoreStrengthModal} setShowModal={setShowCoreStrengthModal} />
+      {/* <CoreStrengthsSection showModal={showCoreStrengthModal} setShowModal={setShowCoreStrengthModal} />
       {showCoreStrengthModal && (
         <CoreStrengthModal 
           title={showCoreStrengthModal.title}
@@ -44,8 +44,9 @@ export default function Home({onNavigate}: {onNavigate: (path: string) => void})
       )}
 
       <TestimonialsSection />
-      <LHBSLifeVideoSection/>
+      <LHBSLifeVideoSection/> */}
       <NewsEventsSection onNavigate={onNavigate} />
+      <TestimonialQuoteSection onNavigate={onNavigate} />
       <ScrollToTop/>
     </>
   )
