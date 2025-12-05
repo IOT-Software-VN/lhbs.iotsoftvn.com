@@ -120,7 +120,7 @@ export default function TheNumbers() {
                   className="text-lg md:text-[28px] font-light max-w-xs"
                   style={{ 
                     color: '#212121',
-                    fontWeight: '300'
+                    fontWeight: '350'
                   }}
                 >
                   {stat.description}
