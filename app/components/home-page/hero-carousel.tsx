@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { AnimatedHighlight } from '~/components/animated-highlight';
 import { ScrollIndicator } from '~/components/ScrollIndicator';
-
+import Herobg from '@/images/home-page/Hero-bg.png'
 interface HeroProps {
   onNavigate: (path: string) => void;
 }
@@ -13,10 +13,11 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
 
   // Only background images array - content stays the same
   const backgroundImages = [
+    Herobg,
     "https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg",
-    "https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg",
-    "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
-    "https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5074.jpg",
+    // "https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg",
+    // "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
+    // "https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5074.jpg",
 
   ];
 
@@ -51,7 +52,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
   };
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] flex items-center overflow-hidden">
+    <section className="relative w-full h-screen min-h-[600px] flex items-end overflow-hidden">
       {/* Background Image with smooth transition */}
       <div className="absolute inset-0 z-0">
         {backgroundImages.map((image, index) => (
@@ -79,9 +80,9 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
       </div>
 
       {/* Dark Overlay focused on bottom-left content area */}
-      {/* <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent" /> */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/80 via-black/30 to-transparent" />
 
-      <div 
+      {/* <div 
         className="absolute inset-0 z-10" 
         style={{
           background: `linear-gradient(45deg, 
@@ -91,90 +92,73 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
             rgba(39, 41, 17, 0.08) 85%, 
             transparent 100%)`
         }}
-      />
+      /> */}
 
 
 
       {/* Content Container */}
-      <div className="relative z-20 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+      <div className="relative z-20 w-full max-w-[1640px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Left Content Column */}
+          {/* Left Content Column - Positioned at bottom left */}
           <motion.div 
-            className="lg:col-span-6 flex flex-col justify-center py-12 lg:py-0"
+            className="lg:col-span-6 flex flex-col justify-end py-12 lg:py-0 lg:pb-16"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            {/* Small Label */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mb-4"
-            >
-              <span className="text-white/95 text-sm md:text-base uppercase tracking-[0.15em] font-medium drop-shadow-lg">
-                Welcome to
-              </span>
-            </motion.div>
-
-            {/* Main Title with Highlight */}
+            {/* Main Title - 2 rows as requested */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mb-6 md:mb-8"
+              className="mb-8"
             >
-              <h1 className="whitespace-nowrap">
-                <AnimatedHighlight 
-                  delay={0.6} 
-                  duration={1.2}
-                  backgroundColor="#FABA1E"
-                >
-                  <span 
-                    className="text-[#1a5336] leading-tight font-semibold drop-shadow-2xl" 
-                    style={{ 
-                      fontSize: '48px',
-                      lineHeight: '1.24',
-                    }}
-                  >
-                    Lac Hong Bilingual School
-                  </span>
-                </AnimatedHighlight>
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold drop-shadow-lg">
+                <span className="block">Văn hóa Việt Nam</span>
+                <span className="block">Tầm nhìn quốc tế</span>
               </h1>
             </motion.div>
 
-            {/* Body Paragraph */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-white text-base md:text-lg leading-relaxed mb-8 md:mb-10 max-w-[600px] drop-shadow-lg font-semibold"
-              style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.8)' }}
-            >
-             Lac Hong Bilingual School is a leading bilingual school in Dong Nai, 
-             where every student is nurtured to develop intellectually, ethically, 
-             and globally competent in the digital era. <br />
-             The school preserves and promotes 
-             Vietnamese cultural values while fostering creativity, lifelong learning, and 
-             social responsibility, empowering students to become compassionate, confident, 
-             innovative, and adaptable citizens in an ever-changing world.
-            </motion.p>
-
-            {/* CTA Button */}
+            {/* CTA Button - Row 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
+              className="mb-8"
             >
               <button
                 onClick={() => onNavigate('/admissions')}
-                className="px-8 md:px-10 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm md:text-base tracking-wider 
+                className="px-8 md:px-10 h-12 bg-[#FABA1E] text-black font-bold uppercase text-sm md:text-base tracking-wider 
                           hover:bg-[#e5a812] transition-all focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 
-                          focus:ring-offset-transparent rounded-full shadow-xl drop-shadow-lg"
+                          focus:ring-offset-transparent shadow-xl drop-shadow-lg !rounded-none"
                 style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
               >
-                Enquire Now
+                Discover More →
               </button>
+            </motion.div>
+
+            {/* Row 3 - Arrow down icon and tagline */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="flex items-center gap-4"
+            >
+              {/* Arrow down icon */}
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="text-white"
+              >
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 4V20M12 20L6 14M12 20L18 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </motion.div>
+              
+              {/* Tagline */}
+              <p className="text-white text-lg md:text-xl font-medium drop-shadow-lg">
+                #Bước đệm vững chắc để trở thành công dân toàn cầu
+              </p>
             </motion.div>
 
           </motion.div>

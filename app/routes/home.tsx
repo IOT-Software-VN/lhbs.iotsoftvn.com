@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { Route } from './+types/home'
-import { TestimonialQuoteSection, EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, VideoHero, CollegeAcceptancesSection, EducationPillarModal } from '@/components/home-page'
+import { TestimonialQuoteSection, EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, HeroCarousel, CollegeAcceptancesSection, EducationPillarModal } from '@/components/home-page'
 import ScrollToTop from '@/components/ui/components/ScrollToTop';
 import { SolidEducationSection } from '@/components/home-page/section/solid-education';
 import { LHBSLifeVideoSection } from '@/components/home-page/section/life-video';
@@ -15,7 +15,7 @@ export default function Home({onNavigate}: {onNavigate: (path: string) => void})
     return(
     <>
     
-      <VideoHero onNavigate={onNavigate} />
+      <HeroCarousel onNavigate={onNavigate} />
       {/* <SolidEducationSection onNavigate={onNavigate} />
       <EducationPillarsSection showModal={showEducationModal} setShowModal={setShowEducationModal}/>
       {showEducationModal && (

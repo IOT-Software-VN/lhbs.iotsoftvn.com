@@ -64,7 +64,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
   ];
 
   return (
-    <footer className="bg-[#1a5336] text-[#fffae9] relative z-50">
+    <footer className="footer text-[#fffae9] relative z-50">
       {/* Footer Top - 4 Columns */}
       <div className="max-w-[1440px] mx-auto px-4 md:px-20 py-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">

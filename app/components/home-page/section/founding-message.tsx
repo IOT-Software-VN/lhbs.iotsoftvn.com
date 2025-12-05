@@ -15,7 +15,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
     <motion.section
       ref={ref}
       data-section="founding-message"
-      className="mx-auto bg-[#1a5336] flex align-center justify-center relative"
+      className="h-screen mx-auto bg-[#1a5336] flex align-center justify-center relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >
@@ -30,7 +30,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
         }}
       />
       
-      <div className="max-w-[1440px] grid md:grid-cols-2 gap-16 items-stretch relative z-20">
+      <div className="grid md:grid-cols-2 gap-16 items-stretch relative z-20">
         {/* Left: Portrait Image - 6 columns */}
         <motion.div
           className="relative h-[500px] md:h-auto overflow-hidden order-2 md:order-1"

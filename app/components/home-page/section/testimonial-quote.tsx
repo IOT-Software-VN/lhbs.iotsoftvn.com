@@ -2,6 +2,8 @@ import { useState, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import tour360Image from '@/images/home-page/section-news/360.png';
+import { Link } from 'react-router';
 
 interface Testimonial {
   quote: string;
@@ -38,7 +40,7 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
   return (
     <motion.section
       ref={ref}
-      className="py-14 overflow-hidden"
+      className="py-14 overflow-hidden relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -50,10 +52,10 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full pr-64"
+          className="w-full pr-92"
         >
           
-          <Carousel className="w-full">
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
@@ -98,11 +100,22 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
             
             {/* Custom Navigation */}
             <CarouselPrevious className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 bg-white shadow-lg hover:shadow-xl border-0 text-[#1a5336] hover:bg-[#F8F9FA] focus:ring-2 focus:ring-[#FABA1E]" />
-            <CarouselNext className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 bg-white shadow-lg hover:shadow-xl border-0 text-[#1a5336] hover:bg-[#F8F9FA] focus:ring-2 focus:ring-[#FABA1E]" />
+            <CarouselNext className="z-50 absolute right-4 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 md:w-14 md:h-14 bg-white shadow-lg hover:shadow-xl border-0 text-[#1a5336] hover:bg-[#F8F9FA] focus:ring-2 focus:ring-[#FABA1E]" />
           </Carousel>
 
         </motion.div>
         
+      </div>
+
+      {/* 360 Tour Image - Bottom Right */}
+      <div className="absolute bottom-0 right-0">
+        <a href="https://360.lhu.edu.vn/" target="_blank" rel="noopener noreferrer">
+          <img 
+            src={tour360Image} 
+            alt="360 Tour"
+            className="w-full h-full object-fit  max-w-none cursor-pointer"
+          />
+        </a>
       </div>
     </motion.section>
   );

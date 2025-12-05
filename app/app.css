@@ -319,7 +319,9 @@ button.rounded-lg,
   }
 }
 
-
+.footer{
+  background: linear-gradient(180deg, #1A5336 0%, #14432B 100%);
+}
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
