@@ -11,13 +11,13 @@ export interface SchoolLevel {
 export const SCHOOL_LEVELS: SchoolLevel[] = [
   {
     id: "galaxy-kc",
-    title: "GALAXY KC",
+    title: "KINDERGARTEN",
     subtitle: "From 18 months to 3 years",
     descriptions: [
-      "Early childhood program focusing on foundational development.",
-      "Safe and nurturing environment with experienced educators.",
-      "Activities designed to stimulate creativity and motor skills.",
-      "Daily routines that build confidence and independence."
+      "A modern early childhood program built on advanced international teaching methods.",
+      "Integrated curriculum combining Vietnam’s MOET standards with global best practices.",
+      "Focus on nurturing physical growth, knowledge, character, and essential social skills.",
+      "Enhanced language development through engaging, age-appropriate learning experiences."
     ],
     image: "/images/home-page/section-education/program-03.png",
     slug: "/campus/galaxy-kc"
@@ -25,7 +25,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: "elementary",
-    title: "ELEMENTARY SCHOOL",
+    title: "PRIMARY SCHOOL",
     subtitle: "From Grade 1 to Grade 5",
     descriptions: [
       "Comprehensive bilingual curriculum with strong academic foundation.",
@@ -40,7 +40,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: "middle",
-    title: "MIDDLE SCHOOL",
+    title: "SECONDARY SCHOOL",
     subtitle: "From Grade 6 to Grade 9",
     descriptions: [
       "Curriculum focusing on critical thinking and independent learning.",

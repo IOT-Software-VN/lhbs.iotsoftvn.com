@@ -61,10 +61,8 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
           {/* Title */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#fffae9] mb-6">
             <span className="block whitespace-nowrap">
-              Vietnamese 
-                Identity
+Founder's Philosophy
             </span>
-            Global Vision 
           </h2>
           
           {/* Body copy */}
