@@ -13,8 +13,8 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
 
   // Only background images array - content stays the same
   const backgroundImages = [
-    Herobg,
-    "https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg",
+    Herobg
+    // "https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg",
     // "https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg",
     // "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
     // "https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5074.jpg",
