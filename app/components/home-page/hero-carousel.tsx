@@ -107,7 +107,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
 
 
       {/* Content Container */}
-      <div className="relative z-20 w-full max-w-[1640px] mx-auto">
+      <div className="relative z-20 w-full max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Content Column - Positioned at bottom left */}
           <motion.div 

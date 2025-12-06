@@ -50,7 +50,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
   return (
     <motion.section
       ref={ref}
-      className="py-24 max-w-[1640px] mx-auto relative"
+      className="py-24 max-w-[1200px] mx-auto relative"
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
