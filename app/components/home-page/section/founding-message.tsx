@@ -13,7 +13,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
     <motion.section
       id='founding-message-section'
       ref={ref}
-      className='w-full h-auto lg:h-screen lg:min-h-[600px] bg-[#00602F] flex items-center justify-center relative'
+      className='w-full h-auto lg:h-screen lg:min-h-[600px] bg-[#00602F] flex items-center justify-center relative snap-start'
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
     >

@@ -51,7 +51,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
   }
 
   return (
-    <section className='relative w-full h-screen min-h-[600px] flex items-end overflow-hidden'>
+    <section className='relative w-full h-screen min-h-[600px] flex items-end overflow-hidden snap-start'>
       {/* Background Image with smooth transition */}
       <div className='absolute inset-0 z-0'>
         {backgroundImages.map((image, index) => (

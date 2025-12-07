@@ -6,7 +6,10 @@ export default function EducationLevel() {
   const [activeIndex, setActiveIndex] = useState(0)
 
   return (
-    <section id='solid-education-level' className='w-full h-screen flex overflow-hidden relative bg-[#050505]'>
+    <section
+      id='solid-education-level'
+      className='w-full h-screen flex overflow-hidden relative bg-[#050505] snap-start'
+    >
       {SCHOOL_LEVELS.map((item, index) => {
         const isActive = index === activeIndex
         // Calculation for width
@@ -32,7 +35,7 @@ export default function EducationLevel() {
               <div
                 className={`
                      absolute inset-0 w-full h-full transition-all duration-700 ease-in-out
-                     ${isActive ? 'grayscale-0' : 'grayscale-[50%] group-hover:grayscale-0'}
+                     ${isActive ? 'grayscale-0' : 'grayscale-50 group-hover:grayscale-0'}
                    `}
               >
                 {/* Inner Motion Div handles ONLY the Scale/Ken Burns animation */}
@@ -57,10 +60,10 @@ export default function EducationLevel() {
                 `}
               />
 
-              {/* Bottom Gradient - Always present for text contrast */}
+              {/* Gradient */}
               <div
                 className={`
-                  absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent 
+                  absolute inset-x-0 bottom-0 bg-linear-to-t from-black/90 via-black/50 to-transparent 
                   transition-all duration-500 pointer-events-none
                   ${isActive ? 'h-[80%] opacity-100' : 'h-[60%] opacity-90'}
                 `}
