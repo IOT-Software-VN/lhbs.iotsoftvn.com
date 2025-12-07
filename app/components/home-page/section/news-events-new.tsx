@@ -88,13 +88,14 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 grow h-full pt-4'>
           {/* Column 1: TIN TỨC */}
           <motion.div
-            className='pl-4 md:pl-6 flex flex-col relative group/col h-full border-l-4 border-[#FABA1E]'
+            className='border-l-4 border-gray-100 pl-4 md:pl-6 flex flex-col relative group/col h-full'
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className='text-2xl md:text-3xl font-black text-[#1E5338] mb-6 uppercase tracking-wide shrink-0'>
-              TIN TỨC
+            <div className='absolute -left-[4px] top-0 w-[4px] h-12 bg-[#FABA1E] group-hover/col:h-full transition-all duration-500 ease-in-out'></div>
+            <h3 className='text-xl md:text-2xl font-black text-[#1E5338] mb-4 md:mb-6 uppercase tracking-wide shrink-0'>
+              News
             </h3>
 
             {/* Main Image Item - Fixed Aspect Ratio */}
@@ -107,7 +108,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                     className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
                   />
                 </div>
-                <div className='absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent pointer-events-none' />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none' />
                 <div className='absolute left-4 bottom-4 right-4 text-white pointer-events-none'>
                   <div className='flex items-end gap-3'>
                     <div className='text-white/90 font-black text-4xl leading-none'>
@@ -129,7 +130,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
               {newsItems.slice(1).map((item, index) => (
                 <div
                   key={index}
-                  className='cursor-pointer group/item grow flex items-center border-b border-dashed border-gray-200 pb-4 last:border-none'
+                  className='p-3 cursor-pointer bg-gray-50 border border-gray-100 hover:border-[#1E5338]/20 hover:bg-[#FABA1E]/10 transition-all rounded-sm group/item grow flex items-center'
                   onClick={() => onNavigate(item.link)}
                 >
                   <div className='flex items-center gap-4 w-full'>
@@ -153,23 +154,22 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                 onClick={() => onNavigate('/news')}
                 className='flex items-center gap-3 px-6 py-2.5 bg-[#1E5338] text-white font-bold uppercase tracking-wide text-xs rounded-full hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all shadow-lg group/btn'
               >
-                <span>XEM THÊM</span>
-                <div className='bg-white text-[#1E5338] rounded-full p-1 group-hover/btn:bg-[#1E5338] group-hover/btn:text-[#FABA1E] transition-colors'>
-                  <ArrowRight className='w-3 h-3' />
-                </div>
+                <span>View More</span>
+                <ArrowRight className='w-3.5 h-3.5' />
               </button>
             </div>
           </motion.div>
 
           {/* Column 2: SỰ KIỆN */}
           <motion.div
-            className='pl-4 md:pl-6 flex flex-col relative group/col h-full border-l-4 border-[#FABA1E]'
+            className='border-l-4 border-gray-100 pl-4 md:pl-6 flex flex-col relative group/col h-full'
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className='text-2xl md:text-3xl font-black text-[#1E5338] mb-6 uppercase tracking-wide shrink-0'>
-              SỰ KIỆN
+            <div className='absolute -left-[4px] top-0 w-[4px] h-12 bg-[#FABA1E] group-hover/col:h-full transition-all duration-500 ease-in-out'></div>
+            <h3 className='text-xl md:text-2xl font-black text-[#1E5338] mb-4 md:mb-6 uppercase tracking-wide shrink-0'>
+              Events
             </h3>
 
             {/* Main Image Item - Fixed Aspect Ratio */}
@@ -182,7 +182,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                     className='w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
                   />
                 </div>
-                <div className='absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent pointer-events-none' />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none' />
                 <div className='absolute left-4 bottom-4 right-4 text-white pointer-events-none'>
                   <div className='flex items-end gap-3'>
                     <div className='text-white/90 font-black text-4xl leading-none'>
@@ -229,23 +229,22 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                 onClick={() => onNavigate('/events')}
                 className='flex items-center gap-3 px-6 py-2.5 bg-[#1E5338] text-white font-bold uppercase tracking-wide text-xs rounded-full hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all shadow-lg group/btn'
               >
-                <span>XEM THÊM</span>
-                <div className='bg-white text-[#1E5338] rounded-full p-1 group-hover/btn:bg-[#1E5338] group-hover/btn:text-[#FABA1E] transition-colors'>
-                  <ArrowRight className='w-3 h-3' />
-                </div>
+                <span>View More</span>
+                <ArrowRight className='w-3.5 h-3.5' />
               </button>
             </div>
           </motion.div>
 
           {/* Column 3: HÌNH ẢNH - Full Height */}
           <motion.div
-            className='pl-4 md:pl-6 flex flex-col relative group/col h-full border-l-4 border-[#FABA1E]'
+            className='border-l-4 border-gray-100 pl-4 md:pl-6 flex flex-col relative group/col h-full'
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h3 className='text-2xl md:text-3xl font-black text-[#1E5338] mb-6 uppercase tracking-wide shrink-0'>
-              HÌNH ẢNH
+            <div className='absolute -left-[4px] top-0 w-[4px] h-12 bg-[#FABA1E] group-hover/col:h-full transition-all duration-500 ease-in-out'></div>
+            <h3 className='text-xl md:text-2xl font-black text-[#1E5338] mb-4 md:mb-6 uppercase tracking-wide shrink-0'>
+              Gallery
             </h3>
 
             {/* Large Image - Takes remaining height */}
@@ -292,10 +291,8 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
                 onClick={() => onNavigate('/gallery')}
                 className='flex items-center gap-3 px-6 py-2.5 bg-[#1E5338] text-white font-bold uppercase tracking-wide text-xs rounded-full hover:bg-[#FABA1E] hover:text-[#1E5338] transition-all shadow-lg group/btn'
               >
-                <span>XEM THÊM</span>
-                <div className='bg-white text-[#1E5338] rounded-full p-1 group-hover/btn:bg-[#1E5338] group-hover/btn:text-[#FABA1E] transition-colors'>
-                  <ArrowRight className='w-3 h-3' />
-                </div>
+                <span>View More</span>
+                <ArrowRight className='w-3.5 h-3.5' />
               </button>
             </div>
           </motion.div>
