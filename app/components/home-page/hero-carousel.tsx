@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { AnimatedHighlight } from '~/components/animated-highlight'
 import { ScrollIndicator } from '~/components/ScrollIndicator'
 import Herobg from '@/images/home-page/Hero-bg.png'
+
 interface HeroProps {
   onNavigate: (path: string) => void
 }
@@ -132,8 +133,8 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 className='mb-6'
               >
                 <h1 className='text-4xl md:text-6xl lg:text-8xl font-black text-white leading-[1.1] md:leading-none drop-shadow-2xl uppercase tracking-tight'>
-                  <span className='block mb-2 lg:mb-4'>Văn hóa Việt Nam</span>
-                  <span className='block text-white/90'>Tầm nhìn quốc tế</span>
+                  <span className='block mb-2 lg:mb-4'>Vietnamese Culture</span>
+                  <span className='block text-white/90'>International Vision</span>
                 </h1>
               </motion.div>
 
@@ -144,7 +145,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className='text-white/90 text-lg md:text-2xl font-medium mb-10 max-w-2xl leading-relaxed drop-shadow-lg'
               >
-                #Bước đệm vững chắc để trở thành công dân toàn cầu
+                #A solid stepping stone to becoming a global citizen
               </motion.p>
 
               {/* CTA Button */}
@@ -161,7 +162,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                   className='group relative px-10 py-5 bg-[#FABA1E] text-[#1E5338] font-bold text-sm md:text-base uppercase tracking-widest rounded-sm 
                            hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
                 >
-                  <span className='relative z-10'>Khám phá ngay</span>
+                  <span className='relative z-10'>Discover Now</span>
                 </button>
               </motion.div>
             </motion.div>

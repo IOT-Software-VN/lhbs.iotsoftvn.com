@@ -11,7 +11,7 @@ import {
 import lhbslogo from '@/images/base/logo.png'
 const statsData = [
   {
-    number: '100%',
+    number: '11',
     description: 'Years of excellence'
   },
   {
@@ -50,8 +50,8 @@ const universityLogos = [
   },
   {
     id: 5,
-    name: 'LHBS',
-    image: lhbslogo
+    name: 'BKHCM',
+    image: 'https://media.loveitopcdn.com/3807/logo-bach-khoa-dongphucsongphu2.png'
   },
   {
     id: 6,
