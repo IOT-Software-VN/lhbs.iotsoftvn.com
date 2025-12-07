@@ -15,7 +15,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
   // Only background images array - content stays the same
   const backgroundImages = [
     Herobg,
-    'https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg',
+    // 'https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg',
     'https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/543157713_759809520014524_6243659489729173596_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFpZW4UkWopXLqUwnApPxzx6Sldju96q1rpKV2O73qrWlVgT_N9-qqIf8pv8uUhxEi4rgsx8AI2JKqSn1pil16h&_nc_ohc=yu4yLYaebQ0Q7kNvwGtodRu&_nc_oc=Adn7HVWs-KKiiFver-Sdn3LQEDs0TbEms4LZ0qLqJi4sZwIVys-IZlz3_97J6i3XmTk&_nc_zt=23&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=aax7A0hj7hhJKvywZYorng&oh=00_AflCXcNX4DQf4t8pNoI3cZ6kDATevPjhSufI1C85MDCGrg&oe=693B8DE4'
   ]
 
