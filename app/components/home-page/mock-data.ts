@@ -33,7 +33,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     ],
     image: '/images/home-page/section-education/program-02.png',
     slug: '/campus/elementary',
-    learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/'
+    learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/primary-school'
   },
 
   {
@@ -47,7 +47,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     ],
     image: '/images/home-page/section-education/program.jpg',
     slug: '/campus/middle-school',
-    learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/'
+    learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/secondary-school'
   },
 
   {
@@ -61,6 +61,6 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     ],
     image: '/images/home-page/section-education/program-01.png',
     slug: '/campus/high-school',
-    learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/'
+    learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/high-school'
   }
 ]

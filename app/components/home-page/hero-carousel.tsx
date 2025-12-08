@@ -144,7 +144,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                   className='group relative px-5 py-2.5 md:px-7 md:py-3 lg:px-8 lg:py-3.5 bg-[#FABA1E] text-[#1E5338] font-bold text-[10px] md:text-xs lg:text-sm uppercase tracking-widest rounded-sm md:rounded 
                            hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
                 >
-                  <span className='relative z-10'>Discover Now</span>
+                  <span className='relative z-10'>Enquire Now</span>
                 </button>
               </motion.div>
             </motion.div>
