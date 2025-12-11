@@ -1,17 +1,42 @@
-const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
-const { join } = require('path');
+// const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+// const { join } = require('path');
+
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   content: [
+//     join(
+//       __dirname,
+//       '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+//     ),
+//     ...createGlobPatternsForDependencies(__dirname),
+//   ],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// };
+
+
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
-    ...createGlobPatternsForDependencies(__dirname),
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+      },
+      borderColor: {
+        DEFAULT: "hsl(var(--border))",
+      },
+    },
   },
   plugins: [],
 };

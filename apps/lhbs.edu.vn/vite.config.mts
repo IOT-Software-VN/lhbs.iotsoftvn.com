@@ -27,7 +27,7 @@ export default defineConfig(() => ({
     },
   },
   test: {
-    name: '@lhbs-project/lhbs.edu.vn',
+    name: 'lhbs.edu.vn',
     watch: false,
     globals: true,
     environment: 'jsdom',

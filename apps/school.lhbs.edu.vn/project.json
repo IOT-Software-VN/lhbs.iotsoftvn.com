@@ -1,0 +1,20 @@
+{
+  "name": "school.lhbs.edu.vn",
+  "sourceRoot": "apps/school.lhbs.edu.vn/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "school.lhbs.edu.vn:build"
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/school.lhbs.edu.vn"
+      }
+    }
+  }
+}

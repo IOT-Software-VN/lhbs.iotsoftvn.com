@@ -5,6 +5,9 @@
   "references": [
     {
       "path": "./apps/lhbs.edu.vn"
+    },
+    {
+      "path": "./apps/school.lhbs.edu.vn"
     }
   ]
 }

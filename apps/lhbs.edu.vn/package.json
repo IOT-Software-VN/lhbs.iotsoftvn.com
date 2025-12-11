@@ -1,7 +1,6 @@
 {
-  "name": "@lhbs-project/lhbs.edu.vn",
+  "name": "lhbs.edu.vn",
   "private": true,
-  "type": "module",
   "scripts": {},
   "sideEffects": false,
   "dependencies": {
