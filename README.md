@@ -1,82 +1,153 @@
-# LhbsProject
+# 🏫 LHBS Project - Trường Song Ngữ Lạc Hồng
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+<div align="center">
+  <img src=".github/images/Logo-LHBS.png" alt="LHBS Logo" width="200"/>
+  <p><strong>Lac Hong Bilingual School - Since 2011</strong></p>
+</div>
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+---
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+## 📖 Giới Thiệu
 
-## Finish your remote caching setup
+**LHBS Project** là hệ thống website cho **Trường Song Ngữ Lạc Hồng** - trường học quốc tế uy tín tại Việt Nam, được thành lập từ năm 2011. Dự án được xây dựng dưới dạng **Monorepo** sử dụng **Nx** để quản lý 4 applications chính.
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/Gs9oceinMx)
+### 🎯 Thông Tin Dự Án
 
+| | |
+|---|---|
+| **Khách hàng** | LHBS - Trường Song Ngữ Lạc Hồng |
+| **Thực hiện bởi** | ERICSS Developer |
+| **Công ty** | IOT Software |
+| **Năm thành lập** | 2011 |
+| **Kiến trúc** | Monorepo với Nx |
 
-## Run tasks
+---
 
-To run the dev server for your app, use:
+## 🌐 Applications
 
-```sh
-npx nx serve lhbs.edu.vn
+| # | Application | Domain | Port | Mô Tả |
+|---|-------------|--------|------|-------|
+| 1 | **lhbs.edu.vn** | https://lhbs.edu.vn | 4200 | Website chính |
+| 2 | **school.lhbs.edu.vn** | https://school.lhbs.edu.vn | 4201 | School Portal |
+| 3 | **bienhoa.galaxy.lhbs.edu.vn** | - | 4202 | Campus Biên Hòa |
+| 4 | **longkhanh.galaxy.lhbs.edu.vn** | - | 4203 | Campus Long Khánh |
+
+---
+
+## 🛠️ Tech Stack
+
+| Công Nghệ | Version | Mục Đích |
+|-----------|---------|----------|
+| **Nx** | 22.2.1 | Monorepo management |
+| **React** | 19.x | UI library |
+| **React Router** | 7.2.0 | Routing framework (CSR) |
+| **Vite** | 7.x | Build tool & dev server |
+| **TailwindCSS** | 4.1.x | CSS framework |
+| **TypeScript** | 5.9.x | Type system |
+| **Vitest** | 4.x | Unit testing |
+
+---
+
+## 🚀 Quick Start
+
+### Yêu Cầu Hệ Thống
+
+- Node.js >= 20.x
+- npm >= 10.x
+
+### Cài Đặt
+
+```bash
+# Clone repository
+git clone <repository-url>
+cd LHBS-demo
+
+# Install dependencies
+npm install
 ```
 
-To create a production bundle:
+### Development
 
-```sh
-npx nx build lhbs.edu.vn
+```bash
+# Chạy 1 app
+nx dev lhbs.edu.vn
+
+# Chạy nhiều apps
+nx run-many --target=dev --projects=lhbs.edu.vn,school.lhbs.edu.vn
 ```
 
-To see all available targets to run for a project, run:
+### Build
 
-```sh
-npx nx show project lhbs.edu.vn
+```bash
+# Build 1 app
+nx build lhbs.edu.vn
+
+# Build tất cả apps
+nx run-many --target=build --all
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+---
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 📚 Documentation
 
-## Add new projects
+- [Monorepo Overview](./documents/monorepo-overview.md) - Setup workspace từ đầu
+- [Apps Overview](./documents/apps-overview.md) - Hướng dẫn tạo và phát triển apps
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+---
 
-Use the plugin's generator to create new projects.
+## 📁 Cấu Trúc Dự Án
 
-To generate a new application, use:
-
-```sh
-npx nx g @nx/react:app demo
+```
+LHBS-demo/
+├── apps/                          # 4 Applications
+│   ├── lhbs.edu.vn/
+│   ├── school.lhbs.edu.vn/
+│   ├── bienhoa.galaxy.lhbs.edu.vn/
+│   └── longkhanh.galaxy.lhbs.edu.vn/
+├── libs/                          # Shared libraries (future)
+├── documents/                     # Documentation
+├── .github/images/                # Assets
+│   └── Logo-LHBS.png
+├── nx.json                        # Nx configuration
+├── package.json                   # Dependencies
+└── README.md
 ```
 
-To generate a new library, use:
+---
 
-```sh
-npx nx g @nx/react:lib mylib
+## 🔗 Useful Links
+
+### Nx Commands
+
+```bash
+# Xem workspace graph
+nx graph
+
+# Xem project info
+nx show project lhbs.edu.vn
+
+# Run tests
+nx test lhbs.edu.vn
+
+# Lint code
+nx lint lhbs.edu.vn
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+### Resources
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+- [Nx Documentation](https://nx.dev)
+- [React Router v7](https://reactrouter.com)
+- [TailwindCSS v4](https://tailwindcss.com/docs/v4-beta)
 
+---
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 👨‍💻 Developer
 
-## Install Nx Console
+**ERICSS Developer**  
+IOT Software  
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
+---
 
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 📄 License
 
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+© 2025 LHBS - Trường Song Ngữ Lạc Hồng. All rights reserved.
