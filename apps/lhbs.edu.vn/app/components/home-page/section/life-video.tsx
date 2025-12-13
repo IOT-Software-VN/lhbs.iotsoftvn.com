@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { X } from 'lucide-react';
-import lifeBgImage from '@/images/home-page/section-01.jpg';
+import lifeBgImage from '@assets/images/home-page/section-01.jpg';
 
 export function LHBSLifeVideoSection() {
   const [showVideoModal, setShowVideoModal] = useState(false);
@@ -25,7 +25,7 @@ const lifeBody =
         transition={{ duration: 0.8 }}
       >
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0"
           aria-hidden="true"
         >
@@ -37,7 +37,7 @@ const lifeBody =
         </div>
 
         {/* Dark Overlay */}
-        <div 
+        <div
           className="absolute inset-0 bg-black/50"
           aria-hidden="true"
         />
@@ -54,12 +54,12 @@ const lifeBody =
             <h2 className=" text-5xl md:text-6xl lg:text-7xl text-[#fffae9] mb-6">
               {lifeTitle}
             </h2>
-            
+
             {/* Body */}
             <p className=" text-base md:text-lg text-[#fffae9]/90 mb-12 leading-relaxed max-w-[70ch] mx-auto">
               {lifeBody}
             </p>
-            
+
 
             {/* <motion.button
               onClick={() => setShowVideoModal(true)}
@@ -68,17 +68,17 @@ const lifeBody =
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              <svg 
-                width="96" 
-                height="96" 
-                viewBox="0 0 96 96" 
-                fill="none" 
+              <svg
+                width="96"
+                height="96"
+                viewBox="0 0 96 96"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl"
               >
                 <circle cx="48" cy="48" r="48" fill="#fffae9" />
-                <path 
-                  d="M38 32L38 64L66 48L38 32Z" 
+                <path
+                  d="M38 32L38 64L66 48L38 32Z"
                   fill="#1a5336"
                 />
               </svg>
@@ -94,17 +94,17 @@ const lifeBody =
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              <svg 
-                width="96" 
-                height="96" 
-                viewBox="0 0 96 96" 
-                fill="none" 
+              <svg
+                width="96"
+                height="96"
+                viewBox="0 0 96 96"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 className="drop-shadow-lg transition-all duration-300 group-hover:drop-shadow-2xl"
               >
                 <circle cx="48" cy="48" r="48" fill="#fffae9" />
-                <path 
-                  d="M38 32L38 64L66 48L38 32Z" 
+                <path
+                  d="M38 32L38 64L66 48L38 32Z"
                   fill="#1a5336"
                 />
               </svg>
@@ -117,9 +117,9 @@ const lifeBody =
 
       {/* Video Modal */}
       {showVideoModal && (
-        <VideoModal 
-          videoUrl={videoUrl} 
-          onClose={() => setShowVideoModal(false)} 
+        <VideoModal
+          videoUrl={videoUrl}
+          onClose={() => setShowVideoModal(false)}
         />
       )}
     </>
@@ -140,7 +140,7 @@ function VideoModal({ videoUrl, onClose }: VideoModalProps) {
         onClose();
       }
     };
-    
+
     document.addEventListener('keydown', handleEscape);
     return () => document.removeEventListener('keydown', handleEscape);
   });

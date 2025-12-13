@@ -1,6 +1,7 @@
 {
   "name": "lhbs.edu.vn",
   "private": true,
+  "type": "module",
   "scripts": {},
   "sideEffects": false,
   "dependencies": {

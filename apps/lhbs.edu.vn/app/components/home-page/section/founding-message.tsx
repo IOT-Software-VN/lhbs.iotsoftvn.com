@@ -1,8 +1,8 @@
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
 import { ImQuotesRight } from 'react-icons/im'
-import bgAcademicBilingual from '@/images/home-page/section-03-bg.png'
-import founderImage from '@/images/home-page/section-03.png'
+import bgAcademicBilingual from '@assets/images/home-page/section-03-bg.png'
+import founderImage from '@assets/images/home-page/section-03.png'
 
 // ==================== SECTION 2: Founding Message ====================
 export default function FoundingMessageSection({ onNavigate }: { onNavigate: (path: string) => void }) {
@@ -87,7 +87,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
               <div className='pt-2'>
                 <motion.button
                   onClick={() => onNavigate('/our-school/about-us')}
-                  className='group relative px-8 py-3 md:px-10 md:py-4 bg-[#FABA1E] text-[#1E5338] font-bold text-xs md:text-base uppercase tracking-widest rounded-sm 
+                  className='group relative px-8 py-3 md:px-10 md:py-4 bg-[#FABA1E] text-[#1E5338] font-bold text-xs md:text-base uppercase tracking-widest rounded-sm
                            hover:bg-white transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]'
                 >
                   <span className='relative z-10'>Learn More</span>

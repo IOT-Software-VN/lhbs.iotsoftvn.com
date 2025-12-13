@@ -6,6 +6,11 @@
     "importHelpers": true,
     "isolatedModules": true,
     "lib": ["es2022"],
+    "paths": {
+      "@/*": ["./app/*", "./public/*"],
+      "~/*": ["./app/components/ui/*"],
+      "@assets/*": ["./assets/*"]
+    },
     "module": "esnext",
     "moduleResolution": "bundler",
     "noEmitOnError": true,
@@ -16,6 +21,6 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@lhbs-project/source"]
+    "customConditions": ["@/source"]
   }
 }

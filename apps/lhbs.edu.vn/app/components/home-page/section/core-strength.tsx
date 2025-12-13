@@ -1,7 +1,7 @@
 import { motion, useInView } from 'motion/react'
 import { useRef, useEffect } from 'react'
 import { AnimatedHighlight } from '~/components/animated-highlight'
-import core2 from '@/images/home-page/core2.jpg'
+import core2 from '@assets/images/home-page/core2.jpg'
 
 // ==================== SECTION 2.75: Core Strengths - 5 Pillars ====================
 interface CoreStrengthsSectionProps {

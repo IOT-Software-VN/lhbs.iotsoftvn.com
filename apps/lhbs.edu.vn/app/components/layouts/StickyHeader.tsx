@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { Search, Menu, X } from 'lucide-react'
 import { Link, useNavigate } from 'react-router'
-import logoImage from '@/images/base/logo-head.png'
+import logoImage from '@assets/images/base/logo-head.png'
 import { useState, useEffect } from 'react'
 
 interface StickyHeaderProps {

@@ -7,7 +7,7 @@ const heroImage = 'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?
 const admissionImage = 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&auto=format&fit=crop&q=80';
 const opportunitiesImage = 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop&q=80';
 const learningImage = 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&auto=format&fit=crop&q=80';
-import welcomingImage from '@/images/admissions/items-02.png';
+import welcomingImage from '@assets/images/admissions/items-02.png';
 
 export default function OpenDayPage() {
   const navigate = useNavigate();
@@ -18,24 +18,24 @@ export default function OpenDayPage() {
     <div id="open-day" className="relative bg-white">
       {/* Section 1: Header */}
       <HeaderSection onNavigate={onNavigate} />
-      
+
       {/* Section 2: Hero Visual */}
       <HeroVisualSection />
-      
+
       {/* Section 3: Admission Offer */}
       <AdmissionOfferSection />
-      
+
       {/* Section 4: Opportunities */}
       <OpportunitiesSection />
-      
 
-      
+
+
       {/* Section 6: Learning Without Limits */}
       <LearningWithoutLimitsSection />
-      
+
       {/* Section 7: Success Stories */}
       <SuccessStoriesSection />
-      
+
       {/* Section 8: Welcoming Message */}
       <WelcomingMessageSection onNavigate={onNavigate} />
             {/* Section 5: Registration Form */}
@@ -75,7 +75,7 @@ function HeaderSection({ onNavigate }: { onNavigate: (path: string) => void }) {
         <nav className="mb-6" aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 text-sm">
             <li>
-              <button 
+              <button
                 onClick={() => onNavigate('/')}
                 className="text-[#fffae9]/70 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
@@ -84,7 +84,7 @@ function HeaderSection({ onNavigate }: { onNavigate: (path: string) => void }) {
             </li>
             <li><ChevronRight className="w-4 h-4 text-[#fffae9]/70" /></li>
             <li>
-              <button 
+              <button
                 onClick={() => onNavigate('/admissions')}
                 className="text-[#fffae9]/70 hover:text-[#fffae9] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E]"
               >
@@ -101,7 +101,7 @@ function HeaderSection({ onNavigate }: { onNavigate: (path: string) => void }) {
           <p className="text-[#FABA1E] mb-4 uppercase tracking-wider text-sm">
             {HDR_TAGLINE}
           </p>
-          <h1 
+          <h1
             className="font-['SVN-Gotham'] text-white mb-6"
             style={{ fontSize: '48px', lineHeight: '1.24' }}
           >
@@ -113,7 +113,7 @@ function HeaderSection({ onNavigate }: { onNavigate: (path: string) => void }) {
           <p className="text-lg text-[#fffae9]/90 mb-8 leading-relaxed max-w-2xl">
             {HDR_LEAD}
           </p>
-          
+
           {/* CTA Button */}
           <motion.button
             onClick={() => {
@@ -175,17 +175,17 @@ function HeroVisualSection() {
           <h2 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#1a5336] mb-6">
             OPEN DAY
           </h2>
-          
+
           {/* Subtitle */}
           <h3 className="text-2xl md:text-3xl text-[#212121] mb-4">
             {HV_SUBTITLE}
           </h3>
-          
+
           {/* Time */}
           <p className="text-xl text-[#1a5336] font-semibold mb-8">
             {HV_TIME}
           </p>
-          
+
           {/* Highlights */}
           <div className="space-y-3">
             {HV_HIGHLIGHTS.map((highlight, index) => (
@@ -202,7 +202,7 @@ function HeroVisualSection() {
             ))}
           </div>
         </motion.div>
-        
+
         {/* Right: Image */}
         <motion.div
           className="relative h-[500px] md:h-[600px]"
@@ -261,7 +261,7 @@ function AdmissionOfferSection() {
             className="w-full h-full object-cover"
           />
         </motion.div>
-        
+
         {/* Right: Content Box */}
         <motion.div
           className="bg-white p-8 md:p-12"
@@ -272,7 +272,7 @@ function AdmissionOfferSection() {
           <h3 className="text-3xl md:text-4xl font-bold text-[#1a5336] mb-8">
             {AO_TITLE}
           </h3>
-          
+
           {/* List Items */}
           <ul className="space-y-4 mb-8">
             {AO_LIST_ITEMS.map((item, index) => (
@@ -288,7 +288,7 @@ function AdmissionOfferSection() {
               </motion.li>
             ))}
           </ul>
-          
+
           {/* Note */}
           <p className="text-sm text-[#666] italic">
             {AO_NOTE}
@@ -335,7 +335,7 @@ function OpportunitiesSection() {
         >
           {OP_TITLE}
         </motion.h3>
-        
+
         <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Left: List in Box */}
           <motion.div
@@ -359,7 +359,7 @@ function OpportunitiesSection() {
               ))}
             </ul>
           </motion.div>
-          
+
           {/* Right: Image */}
           <motion.div
             className="relative h-[400px] md:h-[500px]"
@@ -433,7 +433,7 @@ function RegistrationFormSection() {
           <h3 className="text-3xl md:text-4xl font-bold text-[#1a5336] mb-8 text-center">
             Register for Open Day
           </h3>
-          
+
           {showSuccess ? (
             <div className="text-center py-8">
               <div className="w-16 h-16 bg-[#FABA1E] mx-auto mb-4 flex items-center justify-center">
@@ -456,7 +456,7 @@ function RegistrationFormSection() {
                   className="w-full px-4 py-3 border-2 border-[#ddd] focus:border-[#1a5336] focus:outline-none text-lg"
                 />
               </div>
-              
+
               {/* Phone */}
               <div>
                 <label className="block text-lg font-semibold text-[#212121] mb-2">
@@ -470,7 +470,7 @@ function RegistrationFormSection() {
                   className="w-full px-4 py-3 border-2 border-[#ddd] focus:border-[#1a5336] focus:outline-none text-lg"
                 />
               </div>
-              
+
               {/* Email */}
               <div>
                 <label className="block text-lg font-semibold text-[#212121] mb-2">
@@ -484,7 +484,7 @@ function RegistrationFormSection() {
                   className="w-full px-4 py-3 border-2 border-[#ddd] focus:border-[#1a5336] focus:outline-none text-lg"
                 />
               </div>
-              
+
               {/* Child Name */}
               <div>
                 <label className="block text-lg font-semibold text-[#212121] mb-2">
@@ -498,7 +498,7 @@ function RegistrationFormSection() {
                   className="w-full px-4 py-3 border-2 border-[#ddd] focus:border-[#1a5336] focus:outline-none text-lg"
                 />
               </div>
-              
+
               {/* Grade */}
               <div>
                 <label className="block text-lg font-semibold text-[#212121] mb-2">
@@ -517,7 +517,7 @@ function RegistrationFormSection() {
                   <option value="high">High School (15-18 years)</option>
                 </select>
               </div>
-              
+
               {/* Message */}
               <div>
                 <label className="block text-lg font-semibold text-[#212121] mb-2">
@@ -530,7 +530,7 @@ function RegistrationFormSection() {
                   className="w-full px-4 py-3 border-2 border-[#ddd] focus:border-[#1a5336] focus:outline-none text-lg resize-none"
                 />
               </div>
-              
+
               {/* Consent */}
               <div className="flex items-start gap-3">
                 <input
@@ -544,7 +544,7 @@ function RegistrationFormSection() {
                   {FORM_CONSENT} *
                 </label>
               </div>
-              
+
               {/* Submit Button */}
               <motion.button
                 type="submit"
@@ -575,7 +575,7 @@ function LearningWithoutLimitsSection() {
   const LWL_SUBDESC = "Through project-based learning, interdisciplinary studies, and real-world applications, we prepare students for challenges that don't yet exist.";
   const LWL_IMAGES = [
     'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop&q=80',
-    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80', 
+    'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80',
     'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&auto=format&fit=crop&q=80'
   ];
 
@@ -597,7 +597,7 @@ function LearningWithoutLimitsSection() {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16 items-center">
-        
+
         {/* Right: Image Carousel */}
         <motion.div
           className="relative h-[500px]"
@@ -610,7 +610,7 @@ function LearningWithoutLimitsSection() {
             alt="Students engaged in innovative learning activities"
             className="w-full h-full object-cover"
           />
-          
+
           {/* Carousel Controls */}
           <button
             onClick={prevImage}
@@ -619,7 +619,7 @@ function LearningWithoutLimitsSection() {
           >
             <ChevronLeft className="w-6 h-6 text-[#1a5336]" />
           </button>
-          
+
           <button
             onClick={nextImage}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-80 hover:bg-opacity-100 flex items-center justify-center transition-all"
@@ -627,7 +627,7 @@ function LearningWithoutLimitsSection() {
           >
             <ChevronRight className="w-6 h-6 text-[#1a5336]" />
           </button>
-          
+
           {/* Dots Indicator */}
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
             {LWL_IMAGES.map((_, index) => (
@@ -651,11 +651,11 @@ function LearningWithoutLimitsSection() {
           <h3 className="text-4xl md:text-5xl font-bold text-[#1a5336] mb-6">
             {LWL_TITLE}
           </h3>
-          
+
           <p className="text-lg text-[#212121] mb-8 leading-relaxed">
             {LWL_DESC}
           </p>
-          
+
           <div className="border-l-4 border-[#FABA1E] pl-6">
             <h4 className="text-2xl font-bold text-[#1a5336] mb-4">
               {LWL_SUBTITLE}
@@ -678,7 +678,7 @@ function SuccessStoriesSection() {
   // Content placeholders
   const SS_TITLE = "Success Stories";
   const SS_SUBTEXT = "Hear from our graduates and current students about their LHBS experience";
-  
+
   const successStories = [
     {
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80',
@@ -730,7 +730,7 @@ function SuccessStoriesSection() {
             {SS_SUBTEXT}
           </p>
         </motion.div>
-        
+
         {/* Success Story Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {successStories.map((story, index) => (
@@ -749,17 +749,17 @@ function SuccessStoriesSection() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              
+
               {/* Name */}
               <h4 className="text-xl font-bold text-[#1a5336] mb-2">
                 {story.name}
               </h4>
-              
+
               {/* Class */}
               <p className="text-sm font-semibold text-[#FABA1E] mb-4">
                 {story.class}
               </p>
-              
+
               {/* Description */}
               <p className="text-sm text-[#212121] leading-relaxed italic">
                 "{story.description}"
@@ -807,7 +807,7 @@ function WelcomingMessageSection({ onNavigate }: { onNavigate: (path: string) =>
             className="w-full h-full"
           />
         </motion.div>
-        
+
         {/* Right: Content */}
         <motion.div
           className="flex flex-col justify-center order-1 md:order-2"
@@ -818,11 +818,11 @@ function WelcomingMessageSection({ onNavigate }: { onNavigate: (path: string) =>
           <h3 className="text-4xl md:text-5xl font-bold text-[#1a5336] mb-6">
             {WM_TITLE}
           </h3>
-          
+
           <p className="text-lg text-[#212121] mb-8 leading-relaxed">
             {WM_DESC}
           </p>
-          
+
           <motion.button
             onClick={() => onNavigate(WM_CTA_LINK)}
             className="px-8 py-4 bg-[#FABA1E] text-[#1a5336] font-bold hover:bg-[#e5a812] transition-colors self-start"

@@ -1,6 +1,6 @@
 import { motion, useInView } from 'motion/react'
 import { useRef } from 'react'
-import heroImage from '@/images/home-page/section-01.jpg'
+import heroImage from '@assets/images/home-page/section-01.jpg'
 import { AnimatedHighlight } from '~/components/animated-highlight'
 
 // ==================== SECTION 1: Solid Education Foundation ====================

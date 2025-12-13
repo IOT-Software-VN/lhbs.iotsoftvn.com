@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react'
-import logoImage from '@/images/base/logo-head.png'
+import logoImage from '@assets/images/base/logo-head.png'
 
 export default function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
   // Footer content data

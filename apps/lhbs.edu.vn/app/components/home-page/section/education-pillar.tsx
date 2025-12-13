@@ -1,9 +1,9 @@
 import { useRef, useEffect } from 'react'
 import { motion, useInView } from 'motion/react'
 import { Users, BookOpen, Award, Link2, GraduationCap } from 'lucide-react'
-import img061 from '@/images/home-page/Section-06-1.png'
-import img062 from '@/images/home-page/Section-06-2.png'
-import img063 from '@/images/home-page/Section-06-3.jpg'
+import img061 from '@assets/images/home-page/Section-06-1.png'
+import img062 from '@assets/images/home-page/Section-06-2.png'
+import img063 from '@assets/images/home-page/Section-06-3.jpg'
 
 interface StatCardData {
   icon: React.ReactNode
