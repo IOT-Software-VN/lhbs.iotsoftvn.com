@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { ChevronRight, ArrowRight, Download, Users, Calendar, FileText } from 'lucide-react';
-import { ImageWithFallback } from '~/components/ImageWithFallback';
+import { ImageWithFallback } from '@sites/index';
 import { useNavigate } from 'react-router';
 
 export default function ExtracurricularActivitiesPage() {

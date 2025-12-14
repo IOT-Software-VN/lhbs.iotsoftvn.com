@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi
-} from '@/components/ui/carousel'
+} from '@sites/index'
 const statsData = [
   {
     number: '11',

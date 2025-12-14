@@ -1,17 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import type { Route } from './+types/home'
-import { EducationLevel, TheNumbers, TestimonialQuoteSection, EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, HeroCarousel, CollegeAcceptancesSection, EducationPillarModal } from '@/components/home-page'
-import ScrollToTop from '@/components/ui/components/ScrollToTop';
-import { SolidEducationSection } from '@/components/home-page/section/solid-education';
-import { LHBSLifeVideoSection } from '@/components/home-page/section/life-video';
+import { EducationLevel, TheNumbers, TestimonialQuoteSection, FoundingMessageSection, NewsEventsSection, HeroCarousel } from '@/components/home-page'
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'LHBS - Trường Song Ngữ Lạc Hồng' }, { name: 'description', content: 'Chào mừng tới Trường Song Ngữ Lạc Hồng - LHBS' }]
 }
 
 export default function Home() {
   const navigate = useNavigate();
-  
+
   const handleNavigate = (path: string) => {
     navigate(path);
   };
@@ -20,12 +17,12 @@ export default function Home() {
 
     return(
     <>
-    
+
       <HeroCarousel onNavigate={handleNavigate} />
       {/* <SolidEducationSection onNavigate={handleNavigate} />
       <EducationPillarsSection showModal={showEducationModal} setShowModal={setShowEducationModal}/>
       {showEducationModal && (
-        <EducationPillarModal 
+        <EducationPillarModal
           image={showEducationModal.image}
           alt={showEducationModal.alt}
           title={showEducationModal.title || ''}
@@ -41,7 +38,7 @@ export default function Home() {
       {/* Section xxx: Core Strengths - 5 Pillars */}
       {/* <CoreStrengthsSection showModal={showCoreStrengthModal} setShowModal={setShowCoreStrengthModal} />
       {showCoreStrengthModal && (
-        <CoreStrengthModal 
+        <CoreStrengthModal
           title={showCoreStrengthModal.title}
           description={showCoreStrengthModal.description}
           points={showCoreStrengthModal.points}
@@ -49,13 +46,9 @@ export default function Home() {
           alt={showCoreStrengthModal.alt}
           onClose={() => setShowCoreStrengthModal(null)}
         />
-      )}
-
-      <TestimonialsSection />
-      <LHBSLifeVideoSection/> */}
+      )} */}
       <NewsEventsSection onNavigate={handleNavigate} />
       <TestimonialQuoteSection onNavigate={handleNavigate} />
-      <ScrollToTop/>
     </>
   )
 }

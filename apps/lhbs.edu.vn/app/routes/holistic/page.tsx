@@ -22,7 +22,7 @@ import {
   Palette,
   Calculator
 } from 'lucide-react';
-import { ImageWithFallback } from '~/components/ImageWithFallback';
+import { ImageWithFallback } from '@sites/index';
 import { useNavigate } from 'react-router';
 
 

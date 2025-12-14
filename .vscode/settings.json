@@ -1,5 +1,45 @@
 {
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
-  }
+    "source.fixAll.eslint": "never",
+    "source.fixAll": "never"
+  },
+
+  // Tắt hoàn toàn auto format
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+
+  // Tắt Prettier extension
+  "prettier.enable": false,
+
+  // ⚠️ QUAN TRỌNG: Tắt EditorConfig
+  "editorconfig.enable": false,
+
+  // Disable cho từng loại file
+  "[typescript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "[json]": {
+    "editor.formatOnSave": false
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": false
+  },
+
+  // Tắt auto-fix khác
+  "eslint.format.enable": false,
+  "eslint.autoFixOnSave": false
 }

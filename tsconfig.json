@@ -14,6 +14,9 @@
     },
     {
       "path": "./apps/longkhanh.galaxy.lhbs.edu.vn"
+    },
+    {
+      "path": "./ui"
     }
   ]
 }

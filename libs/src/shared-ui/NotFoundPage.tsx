@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { Home, Search, ArrowLeft } from 'lucide-react';
 
-export default function NotFoundPage() {
+export function NotFoundPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a5336] to-[#0f3a26] flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">

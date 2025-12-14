@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronRight, Download, Users, Award, Globe, Target } from 'lucide-react';
-import { ImageWithFallback } from '~/components/ImageWithFallback';
+import { ImageWithFallback } from '@sites/index';
 import { useNavigate } from 'react-router';
 
 export default function UniversityCareerCounsellingPage() {

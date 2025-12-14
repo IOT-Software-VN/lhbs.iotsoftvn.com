@@ -4,8 +4,10 @@
   "semi": false,
   "trailingComma": "none",
   "tabWidth": 2,
-  "endOfLine": "auto",
+  "endOfLine": "auto",    
   "useTabs": false,
   "jsxSingleQuote": true,
-  "printWidth": 120
+  "printWidth": 120,
+  "requirePragma": true  // ← Chỉ format file có comment /** @format */
 }
+ 

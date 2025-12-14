@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ChevronRight, ChevronDown, ChevronUp, Phone, Mail, Users, Calendar, FileText, CheckCircle, Award, Trophy, DollarSign, BookOpen, Target, Heart, Globe, Sparkles, Building, GraduationCap } from 'lucide-react';
-import { ImageWithFallback } from '~/components/ImageWithFallback';
-import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { ImageWithFallback } from '@sites/index';
+import { Card, CardContent } from '@sites/index';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@sites/index';
 import { useNavigate } from 'react-router';
 
 

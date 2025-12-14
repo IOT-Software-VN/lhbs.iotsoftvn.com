@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router'
 import lhbs from '@assets/images/base/lhbs.png'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@sites/index'
 import { ChevronRight, Clock, Sparkles, Sprout } from 'lucide-react'
 
 const learningCards = [

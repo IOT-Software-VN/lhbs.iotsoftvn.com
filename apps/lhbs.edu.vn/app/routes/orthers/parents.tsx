@@ -1,5 +1,4 @@
-import { PageTemplate } from '~/components/PageTemplate';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@sites/index';
 import { ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router';
 

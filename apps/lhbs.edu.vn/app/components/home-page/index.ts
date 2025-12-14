@@ -1,4 +1,3 @@
-import { EducationPillarsSection, EducationPillarModal } from '@/components/home-page/section/education-pillar';
 import VideoHero from './hero-video'
 import HeroCarousel from './hero-carousel'
 import FoundingMessageSection from './section/founding-message'
@@ -19,8 +18,6 @@ export {
   NewsEventsSection,
   TestimonialsSection,
   CollegeAcceptancesSection,
-  EducationPillarModal,
-  EducationPillarsSection,
   TestimonialQuoteSection,
   TheNumbers,
   EducationLevel

@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { Link } from 'react-router'
-import { siteNavigation, moreLinks } from '@/types/navigation'
-import type { NavParent } from '@/types/navigation'
 import { ChevronRight, ArrowRight } from 'lucide-react'
+import type { NavParent, NavigationData } from '../../types/navigation'
 
 interface FullScreenMenuProps {
   isOpen: boolean
   onClose: () => void
   onNavigate: (path: string) => void
   currentPath: string
+  navigationData: NavigationData
 }
 
-export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: FullScreenMenuProps) {
+export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath, navigationData }: FullScreenMenuProps) {
   const [activeParent, setActiveParent] = useState<NavParent | null>(null)
+  const { siteNavigation, moreLinks } = navigationData
   const [isMobile, setIsMobile] = useState(false)
   const [expandedMobile, setExpandedMobile] = useState<string | null>(null)
 

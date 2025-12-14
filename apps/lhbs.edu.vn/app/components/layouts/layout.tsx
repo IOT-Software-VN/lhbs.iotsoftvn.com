@@ -1,8 +1,9 @@
 import { Outlet, useNavigate, useLocation } from 'react-router'
 import { useState, useEffect } from 'react'
-import StickyHeader from './StickyHeader'
-import Footer from './Footer'
-import { FullScreenMenu } from '@/components/layouts/FullScreenMenu'
+import { StickyHeader, Footer, FullScreenMenu, ScrollToTop } from '@sites/index'
+import type { NavigationData } from '@sites/index'
+import { siteNavigation, moreLinks } from '@/types/navigation'
+import logoImage from '@assets/images/base/logo-head.png'
 
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false)
@@ -10,6 +11,12 @@ export default function Layout() {
   const navigate = useNavigate()
   const location = useLocation()
   const [currentPath, setCurrentPath] = useState('/')
+
+  // Navigation data for this app
+  const navigationData: NavigationData = {
+    siteNavigation,
+    moreLinks
+  }
 
   // Update current path when location changes
   useEffect(() => {
@@ -29,10 +36,11 @@ export default function Layout() {
   // Navigation handlers
   const handleMenuClick = () => setMenuOpen(true)
   const handleMenuClose = () => setMenuOpen(false)
-
   const handleNavigate = (path: string) => {
     navigate(path)
   }
+  const handleLogoClick = () => navigate('/')
+  const handleApplyClick = () => navigate('/admissions/apply-now')
 
   return (
     <>
@@ -41,6 +49,7 @@ export default function Layout() {
         onClose={handleMenuClose}
         currentPath={currentPath}
         onNavigate={handleNavigate}
+        navigationData={navigationData}
       />
 
       <StickyHeader
@@ -48,12 +57,15 @@ export default function Layout() {
         onMenuClick={handleMenuClick}
         onMenuClose={handleMenuClose}
         menuOpen={menuOpen}
+        logoImage={logoImage}
+        onLogoClick={handleLogoClick}
+        onApplyClick={handleApplyClick}
       />
 
       <main>
         <Outlet />
       </main>
-
+      <ScrollToTop />
       <Footer onNavigate={handleNavigate} />
     </>
   )

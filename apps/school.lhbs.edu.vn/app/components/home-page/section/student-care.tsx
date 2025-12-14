@@ -1,7 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef, useEffect, useState, useCallback } from 'react';
 import Autoplay from "embla-carousel-autoplay";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@sites/index';
 import { Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import cardlhbs from '@assets/images/home-page/section-studentcare/card-lhbs.png';

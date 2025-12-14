@@ -1,7 +1,5 @@
 import { motion } from 'motion/react'
-import { Search, Menu, X } from 'lucide-react'
-import { Link, useNavigate } from 'react-router'
-import logoImage from '@assets/images/base/logo-head.png'
+import { Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 interface StickyHeaderProps {
@@ -9,20 +7,21 @@ interface StickyHeaderProps {
   onMenuClick: () => void
   onMenuClose: () => void
   menuOpen: boolean
+  logoImage: string
+  onLogoClick: () => void
+  onApplyClick: () => void
 }
 
-export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: StickyHeaderProps) {
+export function StickyHeader({ 
+  scrolled, 
+  onMenuClick, 
+  onMenuClose, 
+  menuOpen,
+  logoImage,
+  onLogoClick,
+  onApplyClick
+}: StickyHeaderProps) {
   const [isVisible, setIsVisible] = useState(true)
-  const navigate = useNavigate()
-
-  const handleLogoClick = () => {
-    navigate('/')
-  }
-
-  const handleEnquireClick = () => {
-    // Handle enquire/apply now action
-    navigate('/admissions/apply-now')
-  }
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -41,9 +40,6 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
       const foundingSection = document.getElementById('founding-message-section')
       if (foundingSection) {
         const rect = foundingSection.getBoundingClientRect()
-        // If the top of the section is near the top of the viewport (or above it)
-        // AND the bottom of the section is still below the header area.
-        // This means the user is currently looking at this section.
         if (rect.top <= 100 && rect.bottom > 100) {
           setIsVisible(false)
           lastScrollY = currentScrollY
@@ -71,7 +67,7 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-70 transition-all duration-300 mb-2${
+      className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-300 mb-2${
         isTransparent ? 'py-2' : 'py-1'
       } ${menuOpen ? 'shadow-none' : ''}`}
       style={{ minHeight: '66px' }}
@@ -94,7 +90,7 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
       <div className='h-full w-full px-4 md:px-10 flex items-center justify-between gap-8  py-4'>
         {/* Logo - Left */}
         <motion.div
-          onClick={handleLogoClick}
+          onClick={onLogoClick}
           className={`shrink-0 cursor-pointer ${
             isTransparent
               ? 'focus:ring-offset-[#1a5336]'
@@ -113,7 +109,7 @@ export default function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuO
         <div className='flex items-center gap-3'>
           {/* Primary CTA Button - Apply Now */}
           <motion.button
-            onClick={handleEnquireClick}
+            onClick={onApplyClick}
             className={`rounded-full flex items-center justify-center px-6 h-12 bg-[#FABA1E] text-[#1a5336] font-bold uppercase text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2 ${
               isTransparent
                 ? 'focus:ring-offset-[#1a5336]'

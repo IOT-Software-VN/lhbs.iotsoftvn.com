@@ -10,7 +10,7 @@ import {
   OverviewSection,
   GlobalRankingSection
 } from '@/components/home-page'
-import ScrollToTop from '@/components/ui/components/ScrollToTop'
+import ScrollToTop from '@sites/index'
 export function meta({}: Route.MetaArgs) {
   return [
     { title: 'LHBS - Trường Song Ngữ Lạc Hồng' },

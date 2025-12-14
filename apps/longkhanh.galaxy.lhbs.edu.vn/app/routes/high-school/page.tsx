@@ -1,8 +1,8 @@
 import { ChevronRight, Check, BookOpen, Users, Globe, Target, Lightbulb, Heart, Beaker, Award, Brain, Sparkles, Building, GraduationCap, Trophy, Briefcase, DollarSign, Languages } from 'lucide-react';
 import { useNavigate } from 'react-router';
-import { ImageWithFallback } from '~/components/ImageWithFallback';
-import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@/components/ui/carousel';
+import { ImageWithFallback } from '@sites/index';
+import { Card, CardContent } from '@sites/index';
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from '@sites/index';
 
 export default function HighSchoolPage() {
   const navigate = useNavigate();

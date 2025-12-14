@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronUp } from 'lucide-react';
 
-export default function ScrollToTop() {
+export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when user scrolls down 300px
@@ -32,7 +32,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#FABA1E] hover:bg-[#e5a812] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+          className="z-80 fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#FABA1E] hover:bg-[#e5a812] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
           initial={{ opacity: 0, scale: 0, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0, y: 20 }}

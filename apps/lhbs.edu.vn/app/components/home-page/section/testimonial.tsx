@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
 import { Quote } from 'lucide-react'
-import { ImageWithFallback } from '~/components/ImageWithFallback'
+import { ImageWithFallback } from '@sites/index'
 
 interface Testimonial {
   quote: string

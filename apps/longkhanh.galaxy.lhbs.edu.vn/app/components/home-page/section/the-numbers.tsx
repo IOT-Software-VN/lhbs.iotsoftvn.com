@@ -6,7 +6,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from '@/components/ui/carousel';
+} from '@sites/index';
 import lhbslogo from "@assets/images/base/logo.png"
 const statsData = [
   {

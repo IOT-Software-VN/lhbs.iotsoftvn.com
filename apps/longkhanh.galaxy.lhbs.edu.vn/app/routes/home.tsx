@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Route } from './+types/home'
 import { LetsBeginCTA, EducationLevel, TheNumbers, TestimonialQuoteSection, EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, HeroCarousel, CollegeAcceptancesSection, EducationPillarModal, TypicalDaySection, AcademicSection, StudentCareSection } from '@/components/home-page'
-import ScrollToTop from '@/components/ui/components/ScrollToTop';
+import ScrollToTop from '@sites/index';
 import { SolidEducationSection } from '@/components/home-page/section/solid-education';
 import { LHBSLifeVideoSection } from '@/components/home-page/section/life-video';
 import { useOutletContext } from 'react-router';

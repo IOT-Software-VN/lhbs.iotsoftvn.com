@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import { AnimatedHighlight } from '~/components/animated-highlight'
-import { ScrollIndicator } from '~/components/ScrollIndicator'
+import { AnimatedHighlight } from '@sites/index'
+import { ScrollIndicator } from '@sites/index'
 
 interface VideoHeroProps {
   onNavigate: (path: string) => void

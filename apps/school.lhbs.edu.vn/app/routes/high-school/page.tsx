@@ -12,7 +12,7 @@ import {
   GlobalRankingSection,
   FacilitiesSection,
   ActivitiesSection } from '@/components/high-school'
-import ScrollToTop from '@/components/ui/components/ScrollToTop';
+import ScrollToTop from '@sites/index';
 
 
 export function meta({}: Route.MetaArgs) {

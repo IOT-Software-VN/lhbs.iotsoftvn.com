@@ -9,7 +9,9 @@
     "paths": {
       "@/*": ["./app/*", "./public/*"],
       "~/*": ["./app/components/ui/*"],
-      "@assets/*": ["./assets/*"]
+      "@assets/*": ["./assets/*"],
+      "@sites": ["./libs/src"],
+      "@sites/*": ["./libs/src/*"]
     },
     "module": "esnext",
     "moduleResolution": "bundler",

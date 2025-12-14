@@ -8,7 +8,7 @@ import { FormTextarea } from '@/components/form/FormTextarea';
 import { FormRadio } from '@/components/form/FormRadio';
 import { FormCheckbox } from '@/components/form/FormCheckbox';
 import { ChildDetailsForm } from '@/components/form/ChildDetailsForm';
-import { ImageWithFallback } from '~/components/ImageWithFallback';
+import { ImageWithFallback } from '@sites/index';
 import { useNavigate } from 'react-router';
 
 interface ChildFormData {

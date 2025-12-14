@@ -12,7 +12,7 @@ import {
   OverviewSection,
   FoundingMessageSection,
   } from '@/components/primary-school'
-import ScrollToTop from '@/components/ui/components/ScrollToTop';
+import ScrollToTop from '@sites/index';
 
 
 export function meta({}: Route.MetaArgs) {

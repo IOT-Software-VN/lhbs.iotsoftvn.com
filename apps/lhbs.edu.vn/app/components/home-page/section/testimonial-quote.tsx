@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@sites/index'
 import tour360Bird from '@assets/images/home-page/section-news/360.png'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+
 
 interface Testimonial {
   quote: string

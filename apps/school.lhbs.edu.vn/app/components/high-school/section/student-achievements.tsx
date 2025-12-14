@@ -1,7 +1,7 @@
 import { motion, useInView } from 'motion/react'
 import { useRef, useEffect, useState, useCallback } from 'react'
 import Autoplay from 'embla-carousel-autoplay'
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem } from '@sites/index'
 import { cn } from '@/lib/utils'
 
 const studentAchievements = [
