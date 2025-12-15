@@ -17,6 +17,12 @@
     },
     {
       "path": "./ui"
+    },
+    {
+      "path": "./libs-1/mylib"
+    },
+    {
+      "path": "./libs"
     }
   ]
 }

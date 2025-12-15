@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import type { Route } from './+types/home'
-import { EducationLevel, TheNumbers, TestimonialQuoteSection, FoundingMessageSection, NewsEventsSection, HeroCarousel } from '@/components/home-page'
+import { EducationLevel, TheNumbers, TestimonialQuoteSection, FoundingMessageSection, NewsEventsSection } from '@/components/home-page'
+import { HeroCarousel } from "@sites/index"
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'LHBS - Trường Song Ngữ Lạc Hồng' }, { name: 'description', content: 'Chào mừng tới Trường Song Ngữ Lạc Hồng - LHBS' }]
 }

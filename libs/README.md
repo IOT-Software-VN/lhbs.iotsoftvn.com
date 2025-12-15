@@ -1,7 +1,7 @@
-# ui
+# libs
 
 This library was generated with [Nx](https://nx.dev).
 
-## Running unit tests
+## Building
 
-Run `nx test ui` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx build libs` to build the library.
