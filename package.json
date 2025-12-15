@@ -77,8 +77,6 @@
   },
   "workspaces": [
     "apps/*",
-    "ui",
-    "libs-1/*",
     "libs"
   ]
 }
