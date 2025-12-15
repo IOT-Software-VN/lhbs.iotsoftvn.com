@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import "tw-animate-css";
 
+/* Cấu hình các file nguồn để Tailwind scan - bao gồm cả libs */
+@source "../../libs/src/**/*.{ts,tsx,js,jsx}";
+@source "../**/*.{ts,tsx,js,jsx}";
+
 @custom-variant dark (&:is(.dark *));
 
 /* Local Font Declarations - SVN-Gotham */

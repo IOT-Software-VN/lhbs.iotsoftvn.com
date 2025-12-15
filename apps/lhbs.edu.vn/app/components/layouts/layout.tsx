@@ -1,8 +1,9 @@
 import { Outlet, useNavigate, useLocation } from 'react-router'
 import { useState, useEffect } from 'react'
-import { StickyHeader, Footer, FullScreenMenu, ScrollToTop } from '@sites/index'
+import {Footer, FullScreenMenu, ScrollToTop, StickyHeader } from '@sites/index'
 import type { NavigationData } from '@sites/index'
 import { siteNavigation, moreLinks } from '@/types/navigation'
+// import { StickyHeader } from './StickyHeader'
 import logoImage from '@assets/images/base/logo-head.png'
 
 export default function Layout() {

@@ -32,7 +32,7 @@ export function ScrollToTop() {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="z-80 fixed bottom-8 right-8 z-50 w-14 h-14 bg-[#FABA1E] hover:bg-[#e5a812] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#FABA1E] hover:bg-[#e5a812] text-[#1a5336] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group focus:outline-none focus:ring-2 focus:ring-[#FABA1E] focus:ring-offset-2"
           initial={{ opacity: 0, scale: 0, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0, y: 20 }}
@@ -41,7 +41,7 @@ export function ScrollToTop() {
           whileTap={{ scale: 0.95 }}
           aria-label="Scroll to top"
         >
-          <ChevronUp className="w-8 h-8 mb-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          <ChevronUp className="w-7 h-7 group-hover:-translate-y-0.5 transition-transform" />
         </motion.button>
       )}
     </AnimatePresence>
