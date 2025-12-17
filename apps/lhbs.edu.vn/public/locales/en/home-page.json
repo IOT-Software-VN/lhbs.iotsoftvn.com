@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "subtitle": "Welcome to LHBS",
+    "title": {
+      "line1": "Vietnamese Culture",
+      "line2": "International Vision"
+    },
+    "tagline": "#A solid stepping stone to becoming a global citizen",
+    "ctaButton": {
+      "text": "Enquire Now"
+    }
+  }
+}
