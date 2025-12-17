@@ -21,6 +21,7 @@ export default defineConfig(() => ({
       '@': path.resolve(import.meta.dirname, 'app'),
       '~': path.resolve(import.meta.dirname, 'app/components/ui'),
       '@assets': path.resolve(import.meta.dirname, 'assets'),
+      '@sites': path.resolve(import.meta.dirname, '../../libs/src'),
     },
   },
   // Uncomment this if you are using workers.
