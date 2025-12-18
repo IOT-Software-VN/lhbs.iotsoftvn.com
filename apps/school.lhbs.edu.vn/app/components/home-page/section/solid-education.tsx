@@ -1,7 +1,7 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import heroImage from '@assets/images/home-page/section-01.jpg';
-import { AnimatedHighlight } from '~/components/animated-highlight'
+import { AnimatedHighlight } from '@sites/index'
 
 // ==================== SECTION 1: Solid Education Foundation ====================
 export function SolidEducationSection({ onNavigate }: { onNavigate: (path: string) => void }) {

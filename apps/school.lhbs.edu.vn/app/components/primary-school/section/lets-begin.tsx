@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
-import { AnimatedHighlight } from '~/components/animated-highlight';
+import { AnimatedHighlight } from '@sites/index';
 import bgadmissionsCTA from '@assets/images/home-page/bg-admissionsCTA.png'
 
 export default function LetsBeginCTA({ onNavigate }: { onNavigate: (path: string) => void }) {

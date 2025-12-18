@@ -2,7 +2,7 @@ import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration }
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import '@sites/i18n/i18n.config'
-import { LanguageSwitcher } from '@sites/index'
+// import { LanguageSwitcher } from '@sites/index'
 import AppQueryProvider from "./providers/query-providers"
 import type { Route } from './+types/root'
 import './app.css'
@@ -58,7 +58,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <LanguageSwitcher />
         <ToastContainer />
         <ScrollRestoration />
         <Scripts />

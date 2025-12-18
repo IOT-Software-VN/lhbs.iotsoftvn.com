@@ -1,10 +1,18 @@
 import { Outlet, useNavigate, useLocation } from 'react-router'
 import { useState, useEffect } from 'react'
-import {FullScreenMenu, ScrollToTop, StickyHeader, Footer } from '@sites/index'
+import { FullScreenMenu, CTABottomFixed, StickyHeader, Footer } from '@sites/index'
 import type { NavigationData } from '@sites/index'
 import { siteNavigation, moreLinks } from '@/types/navigation'
-// import { StickyHeader } from './StickyHeader'
 import logoImage from '@assets/images/base/logo-head.png'
+
+// ============================================================================
+// CONSTANTS
+// ============================================================================
+
+const SOCIAL_LINKS = {
+  zalo: 'https://zalo.me/0908567890', // Replace with actual Zalo ID
+  messenger: 'https://m.me/lhbsedu' // Replace with actual Messenger page
+} as const
 
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false)
@@ -66,7 +74,14 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
-      <ScrollToTop />
+
+      <CTABottomFixed 
+        zaloUrl={SOCIAL_LINKS.zalo}
+        messengerUrl={SOCIAL_LINKS.messenger}
+        showScrollTop={true}
+        scrollThreshold={300}
+      />
+
       <Footer onNavigate={handleNavigate} />
     </>
   )

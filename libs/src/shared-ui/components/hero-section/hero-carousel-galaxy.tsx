@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
-import { AnimatedHighlight } from '~/components/animated-highlight';
 import { ScrollIndicator } from '@sites/index';
 import Herobg from '@assets/images/home-page/section-hero/main.png'
 import Bottombg from '@assets/images/home-page/section-hero/bottom.png'
@@ -16,11 +15,6 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
   // Only background images array - content stays the same
   const backgroundImages = [
     Herobg,
-    // "https://lhbs.edu.vn/wp-content/uploads/2025/08/IMG_0057.jpg",
-    // "https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg",
-    // "https://lhbs.edu.vn/wp-content/uploads/2025/04/487416882_640655751929902_4676467757656853160_n.jpg",
-    // "https://lhbs.edu.vn/wp-content/uploads/2021/05/MG_5074.jpg",
-
   ];
 
   // Auto-play functionality
@@ -33,25 +27,6 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, backgroundImages.length]);
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-    // Resume auto-play after 10 seconds
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  };
 
   return (
     <section className="relative w-full  h-screen flex items-center overflow-hidden">
@@ -180,39 +155,6 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
           </motion.div>
         </div>
       </div>
-
-      {/* Carousel Indicators */}
-      {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
-        {backgroundImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FABA1E] ${
-              index === currentSlide
-                ? 'bg-[#FABA1E] scale-125'
-                : 'bg-white/50 hover:bg-white/70'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div> */}
-
-      {/* Progress Bar */}
-      {/* <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-30">
-        <motion.div
-          className="h-full bg-[#FABA1E]"
-          initial={{ width: '0%' }}
-          animate={{ width: '100%' }}
-          transition={{
-            duration: 5,
-            ease: 'linear',
-            repeat: Infinity,
-            repeatType: 'restart'
-          }}
-          key={currentSlide}
-        />
-      </div> */}
-
       {/* Scroll Indicator */}
       <ScrollIndicator targetSectionId="academic-divisions" />
     </section>

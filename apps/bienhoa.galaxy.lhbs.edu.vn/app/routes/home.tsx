@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
 import type { Route } from './+types/home'
-import { LetsBeginCTA, EducationLevel, TheNumbers, TestimonialQuoteSection, EducationPillarsSection, CoreStrengthModal, CoreStrengthsSection, FoundingMessageSection, NewsEventsSection, TestimonialsSection, HeroCarousel, CollegeAcceptancesSection, EducationPillarModal, TypicalDaySection, AcademicSection, StudentCareSection } from '@/components/home-page'
+import { TestimonialQuoteSection, FoundingMessageSection, NewsEventsSection, HeroCarousel, TypicalDaySection, AcademicSection, StudentCareSection } from '@/components/home-page'
 import { ScrollToTop } from '@sites/index';
 import { useOutletContext } from 'react-router';
 
@@ -13,7 +12,6 @@ export default function Home() {
 
     return(
     <>
-    
       <HeroCarousel onNavigate={onNavigate} />
       <AcademicSection onNavigate={onNavigate} />
       <TypicalDaySection />

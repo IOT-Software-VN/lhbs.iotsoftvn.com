@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { ScrollIndicator } from '~/components/ScrollIndicator' // Giả sử đường dẫn đúng
+import { ScrollIndicator } from '@sites/index' // Giả sử đường dẫn đúng
 import Herobg from '@assets/images/home-page/Hero-bg.png'
 
 interface HeroProps {
