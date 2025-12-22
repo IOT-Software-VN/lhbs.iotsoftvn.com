@@ -1,0 +1,22 @@
+# Project Overview
+
+- **Name**: lhbs.edu.vn (school.iotsoftvn.com)
+- **Purpose**: A production-ready full-stack React web application for a school, built on the official React Router v7 template and customized with a marketing-style homepage, layout components, UI primitives, and form components.
+- **Tech Stack**:
+  - React 19.1.1
+  - React Router 7.9.2 with `@react-router/dev`, `@react-router/node`, `@react-router/serve`
+  - TypeScript 5.9.2 (strict mode, ES2022, JSX `react-jsx`)
+  - Vite 7.1.7 as dev server/build tool
+  - TailwindCSS 4.1.13 with `@tailwindcss/vite` (utility-first styling)
+  - UI utils: `class-variance-authority`, `clsx`, `tailwind-merge`, `lucide-react`, `motion`, `embla-carousel-react`, `react-icons`, Radix UI accordion
+- **Rendering**: SPA mode (`ssr: false` in `react-router.config.ts`), built with `react-router build`.
+- **Routing**:
+  - Central route config in `app/routes.ts`
+  - Route components in `app/routes/` (e.g. `home.tsx`, `404.tsx`)
+  - Root layout in `app/root.tsx`.
+- **UI / Components**:
+  - Layout components in `app/components/layouts` (header, footer, fullscreen menu, main layout)
+  - Shared UI primitives in `app/components/ui` (button, card, accordion, carousel, form inputs, error boundary, not-found page, scroll helpers, etc.)
+  - Home page feature components in `app/components/home-page` (hero carousel, sections, mock data, mobile hook).
+- **Styling**: Global styles in `app/app.css`, Tailwind utility classes used throughout, plus custom font assets in `public/fonts`.
+- **Build Artifacts**: Production build outputs to `build/client` and `build/server` (already present in repo).
