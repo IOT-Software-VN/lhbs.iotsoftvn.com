@@ -18,13 +18,13 @@ export const schoolWebsites: SchoolWebsite[] = [
   { 
     label: 'Khối Phổ thông (Cấp 1-2-3)', 
     url: 'https://school.lhbs.edu.vn',
-    description: 'Tiểu học & Trung học',
+    description: 'Tiểu học, Trung học, Phổ thông',
     hasNews: true
   },
   { 
-    label: 'Mầm non Galaxy (Biên Hòa)', 
+    label: 'Mầm non Galaxy (Trấn Biên)', 
     url: 'https://bienhoa.galaxy.lhbs.edu.vn',
-    description: 'Cơ sở Biên Hòa',
+    description: 'Cơ sở Trấn Biên',
     hasNews: true
   },
   { 

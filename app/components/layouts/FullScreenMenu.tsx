@@ -78,7 +78,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                         <motion.button
                           key={item.id}
                           onClick={() => handleNavClick(item.path)}
-                          className={`group text-left py-3 px-4 rounded-lg transition-all ${
+                          className={`group text-left py-3.5 px-5 rounded-lg transition-all ${
                             currentPath === item.path
                               ? 'bg-[#FABA1E]/20 text-[#FABA1E] border border-[#FABA1E]/40'
                               : 'text-white hover:bg-white/5 hover:text-white border border-white/10 hover:border-white/20'
@@ -87,14 +87,11 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.05 }}
                         >
-                          <div className='flex items-center justify-between gap-3'>
+                          <div className='flex items-center justify-between gap-4S'>
                             <div className='flex-1 min-w-0'>
-                              <div className='text-[15px] font-bold mb-1 leading-snug'>{item.label}</div>
-                              {item.description && (
-                                <div className='text-xs text-white/40 leading-relaxed line-clamp-2'>{item.description}</div>
-                              )}
+                              <div className='text-base font-bold leading-snug tracking-tight'>{item.label}</div>
                             </div>
-                            <ChevronRight className='center w-4 h-4 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0' />
+                            <ChevronRight className='w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity shrink-0' />
                           </div>
                         </motion.button>
                       ))}
