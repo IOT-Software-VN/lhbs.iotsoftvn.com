@@ -249,12 +249,21 @@ export default function TheNumbers() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className='relative w-full'
         >
-          {/* Section Header */}
-          <div className='flex flex-col items-center mb-6 md:mb-10'>
-            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
-            <h3 className='text-xl md:text-2xl lg:text-3xl font-black text-[#005C42] uppercase tracking-wide drop-shadow-sm text-center'>
-              Chương trình hợp tác
-            </h3>
+          {/* Section Header - Unique Split Design */}
+          <div className='flex items-center justify-center gap-4 mb-6 md:mb-10 w-full max-w-4xl mx-auto'>
+            {/* Left Line */}
+            <div className='flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FDB913] to-[#FDB913]' />
+            
+            {/* Center Content */}
+            <div className='flex flex-col items-center shrink-0'>
+              <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
+              <h3 className='text-xl md:text-2xl lg:text-3xl font-black text-[#005C42] uppercase tracking-wide drop-shadow-sm text-center whitespace-nowrap px-4'>
+                Chương trình hợp tác
+              </h3>
+            </div>
+            
+            {/* Right Line */}
+            <div className='flex-1 h-[2px] bg-gradient-to-l from-transparent via-[#FDB913] to-[#FDB913]' />
           </div>
 
           <Carousel
