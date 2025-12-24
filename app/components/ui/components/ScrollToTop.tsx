@@ -79,7 +79,7 @@ export default function CTABottomFixed({
             label: 'Scroll to top',
             icon: <ChevronUp className="w-5 h-5" />,
             onClick: scrollToTop,
-            className: 'bg-[#005C42] hover:bg-[#FABA1E] text-white hover:text-[#1E5338] shadow-lg hover:shadow-xl',
+            className: 'bg-[#FABA1E] hover:bg-[#005C42] text-[#005C42] hover:text-white shadow-lg hover:shadow-xl',
             ariaLabel: 'Scroll to top',
             isExternal: false
           }
@@ -92,7 +92,7 @@ export default function CTABottomFixed({
       label: 'Chat Zalo',
       icon: <Phone className="w-5 h-5" />,
       href: zaloUrl,
-      className: 'bg-[#005C42] hover:bg-[#FABA1E] text-white hover:text-[#1E5338] shadow-lg hover:shadow-xl',
+      className: 'bg-[#FABA1E] hover:bg-[#005C42] text-[#005C42] hover:text-white shadow-lg hover:shadow-xl',
       ariaLabel: 'Chat on Zalo',
       isExternal: true
     },
@@ -103,7 +103,7 @@ export default function CTABottomFixed({
       label: 'Chat Messenger',
       icon: <MessageCircle className="w-5 h-5" />,
       href: messengerUrl,
-      className: 'bg-[#005C42] hover:bg-[#FABA1E] text-white hover:text-[#1E5338] shadow-lg hover:shadow-xl',
+      className: 'bg-[#FABA1E] hover:bg-[#005C42] text-[#005C42] hover:text-white shadow-lg hover:shadow-xl',
       ariaLabel: 'Chat on Messenger',
       isExternal: true
     }

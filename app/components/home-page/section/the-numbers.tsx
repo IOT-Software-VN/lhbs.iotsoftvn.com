@@ -142,7 +142,7 @@ export default function TheNumbers() {
   }, [api])
 
   return (
-    <section className='relative w-full h-dvh bg-white overflow-hidden font-sans flex flex-col'>
+    <section className='relative w-full h-full bg-white overflow-hidden font-sans flex flex-col'>
       {/* Scrollable Container */}
       <div className='grow w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 overflow-y-auto no-scrollbar py-8 md:py-16 flex flex-col justify-center'>
         {/* Header - Left Aligned */}

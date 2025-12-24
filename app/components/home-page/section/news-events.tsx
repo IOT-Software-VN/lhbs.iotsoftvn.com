@@ -55,7 +55,7 @@ export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: s
   }
 
   return (
-    <section ref={ref} className='w-full h-dvh bg-white font-sans relative overflow-hidden flex flex-col'>
+    <section ref={ref} className='w-full h-full bg-white font-sans relative overflow-hidden flex flex-col'>
       {/* Background Image - Subtle */}
       <div
         className='absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-5'
