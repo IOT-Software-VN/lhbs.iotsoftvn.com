@@ -27,9 +27,9 @@ export interface MoreLink {
 }
 
 export const moreLinks: MoreLink[] = [
-  { label: 'Tin tức & Sự kiện', path: '/news-events' },
-  { label: 'Tuyển dụng', path: '/careers' },
-  { label: 'Liên hệ', path: '/contact' }
+  { label: 'Tin tức & Sự kiện', path: '/tin-tuc-su-kien' },
+  { label: 'Tuyển dụng', path: '/tuyen-dung' },
+  { label: 'Liên hệ', path: '/lien-he' }
 ]
 
 // External School Links (with external domains)
@@ -50,37 +50,37 @@ export const siteNavigation: NavParent[] = [
   {
     id: 'about-lhbs',
     label: 'Giới thiệu chung',
-    path: '/about',
+    path: '/gioi-thieu',
     description: 'Tìm hiểu về LHBS',
     children: [
       {
         id: 'about-vision',
         label: 'Tầm nhìn & Sứ mệnh',
-        path: '/about/vision-mission',
+        path: '/gioi-thieu/tam-nhin-su-menh',
         description: 'Định hướng và cam kết của LHBS'
       },
       {
         id: 'about-history',
         label: 'Lịch sử hình thành',
-        path: '/about/history',
+        path: '/gioi-thieu/lich-su-hinh-thanh',
         description: 'Hành trình phát triển của LHBS'
       },
       {
         id: 'about-milestones',
         label: 'Các cột mốc đáng nhớ',
-        path: '/about/milestones',
+        path: '/gioi-thieu/cot-moc-dang-nho',
         description: 'Những thành tựu nổi bật'
       },
       {
         id: 'about-leadership',
         label: 'Ban lãnh đạo và giám hiệu',
-        path: '/about/leadership',
+        path: '/gioi-thieu/ban-lanh-dao',
         description: 'Đội ngũ lãnh đạo LHBS'
       },
       {
         id: 'about-transparency',
         label: 'Công khai thông tin',
-        path: '/about/transparency',
+        path: '/gioi-thieu/cong-khai-thong-tin',
         description: 'Thông tin công khai theo quy định'
       }
     ]
@@ -88,13 +88,13 @@ export const siteNavigation: NavParent[] = [
   {
     id: 'education-program',
     label: 'Chương trình đào tạo',
-    path: '/education',
+    path: '/chuong-trinh-dao-tao',
     description: 'Chương trình học toàn diện',
     children: [
       {
         id: 'education-pathway',
         label: 'Lộ trình học tập',
-        path: '/education/learning-pathway',
+        path: '/chuong-trinh-dao-tao/lo-trinh-hoc-tap',
         description: 'Lộ trình phát triển liên tục từ mẫu giáo đến phổ thông'
       }
     ]
@@ -102,13 +102,13 @@ export const siteNavigation: NavParent[] = [
   {
     id: 'campuses',
     label: 'Hệ thống cơ sở',
-    path: '/campuses',
+    path: '/he-thong-co-so',
     description: 'Các cơ sở giáo dục',
     children: [
       {
         id: 'campuses-info',
         label: 'Thông tin các cơ sở giáo dục',
-        path: '/campuses/information',
+        path: '/he-thong-co-so/thong-tin',
         description: 'Hệ thống cơ sở giáo dục của LHBS'
       },
       {
