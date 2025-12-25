@@ -200,8 +200,8 @@ export default function TheNumbers() {
 
   return (
     <section className='relative w-full h-full bg-white overflow-hidden font-sans flex flex-col'>
-      {/* Scrollable Container */}
-      <div className='grow w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 overflow-y-auto no-scrollbar py-8 md:py-16 flex flex-col justify-center'>
+      {/* White Section - Why Choose LHBS */}
+      <div className='w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 py-8 md:py-16'>
         {/* Header - Left Aligned */}
         <div className='flex flex-col items-start mb-8 md:mb-12'>
           <motion.div
@@ -240,72 +240,55 @@ export default function TheNumbers() {
             />
           ))}
         </div>
+      </div>
 
-        {/* University Logos Carousel */}
+      {/* Partnership Programs Section - Two Column Layout */}
+      <div className='w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 pb-8 md:pb-16'>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className='relative w-full'
+          className='relative w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-8 items-center'
         >
-          {/* Section Header - Unique Split Design */}
-          <div className='flex items-center justify-center gap-4 mb-6 md:mb-10 w-full max-w-4xl mx-auto'>
-            {/* Left Line */}
-            <div className='flex-1 h-[2px] bg-gradient-to-r from-transparent via-[#FDB913] to-[#FDB913]' />
+          {/* Left Column - Content */}
+          <div className='w-full flex flex-col items-start space-y-5 lg:pr-4'>
+            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 rounded-full shadow-[0_0_12px_rgba(253,185,19,0.4)]' />
             
-            {/* Center Content */}
-            <div className='flex flex-col items-center shrink-0'>
-              <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
-              <h3 className='text-xl md:text-2xl lg:text-3xl font-black text-[#005C42] uppercase tracking-wide drop-shadow-sm text-center whitespace-nowrap px-4'>
-                Chương trình hợp tác
-              </h3>
-            </div>
-            
-            {/* Right Line */}
-            <div className='flex-1 h-[2px] bg-gradient-to-l from-transparent via-[#FDB913] to-[#FDB913]' />
+            <h3 className='text-xl sm:text-2xl md:text-3xl lg:text-[35px] font-black text-[#005C42] uppercase tracking-tight leading-tight drop-shadow-2xl'>
+              Chương trình hợp tác
+            </h3>
+
+            <p className='text-base md:text-md lg:text-lg text-gray-700 leading-relaxed'>
+              LHBS tự hào hợp tác cùng các <span className='font-bold text-[#005C42]'>chương trình giáo dục hàng đầu thế giới</span> để mang đến cho học sinh những trải nghiệm học tập đẳng cấp quốc tế, phát triển toàn diện cả kiến thức và kỹ năng.
+            </p>
           </div>
 
-          <Carousel
-            setApi={setApi}
-            className='w-full px-2 md:px-10'
-            opts={{
-              align: 'start',
-              loop: true,
-              skipSnaps: false,
-              dragFree: true
-            }}
-          >
-            <CarouselContent className='-ml-4'>
-              {[...universityLogos, ...universityLogos, ...universityLogos].map((logo, index) => (
-                <CarouselItem key={`${logo.id}-${index}`} className='pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4'>
-                  <div className='h-full p-2'>
-                    <motion.div
-                      whileHover={{ y: -4 }}
-                      className='flex items-center justify-center h-24 md:h-28 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FDB913] hover:bg-white hover:shadow-lg'
-                    >
-                      <img
-                        src={logo.image}
-                        alt={logo.name}
-                        className='max-h-full max-w-full object-contain transition-all duration-500'
-                        loading='lazy'
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement
-                          target.style.display = 'none'
-                        }}
-                      />
-                    </motion.div>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-
-            {/* Custom Navigation - Minimal Arrows */}
-            <div className='hidden md:block'>
-              <CarouselPrevious className='h-auto w-auto border-none bg-transparent text-[#FDB913] hover:bg-transparent hover:text-[#d49e19] -left-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
-              <CarouselNext className='h-auto w-auto border-none bg-transparent text-[#FDB913] hover:bg-transparent hover:text-[#d49e19] -right-8 [&_svg]:size-12 md:[&_svg]:size-16 transition-transform hover:scale-110' />
-            </div>
-          </Carousel>
+          {/* Right Column - Logo Grid 2x3 */}
+          <div className='w-full grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6'>
+            {universityLogos.concat(universityLogos.slice(0, 2)).map((logo, index) => (
+              <motion.div
+                key={`${logo.id}-${index}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.9 + index * 0.1 }}
+                whileHover={{ y: -4 }}
+                className='flex items-center justify-center h-32 md:h-36 lg:h-40 bg-gray-50/50 border border-gray-200 rounded-sm p-5 md:p-6 transition-all duration-300 cursor-pointer hover:border-[#FDB913] hover:bg-white hover:shadow-md'
+              >
+                <img
+                  src={logo.image}
+                  alt={logo.name}
+                  className='max-h-full max-w-full object-contain transition-all duration-500'
+                  loading='lazy'
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement
+                    target.style.display = 'none'
+                  }}
+                />
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
 
