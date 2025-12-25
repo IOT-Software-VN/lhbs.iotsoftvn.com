@@ -91,7 +91,15 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                           activeParent?.id === parent.id ? 'text-white' : 'text-white/50 hover:text-white/80'
                         }`}
                       >
-                        {parent.label}
+                        {parent.id === 'education-program' ? (
+                          <>
+                            Chương trình
+                            <br />
+                            Đào tạo
+                          </>
+                        ) : (
+                          parent.label
+                        )}
                       </button>
                     ))}
                   </nav>
@@ -197,7 +205,15 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                         onClick={() => setExpandedMobile(expandedMobile === parent.id ? null : parent.id)}
                         className='w-full text-left py-4  text-[24px] text-white flex items-center justify-between'
                       >
-                        {parent.label}
+                        {parent.id === 'education-program' ? (
+                          <span>
+                            Chương trình
+                            <br />
+                            Đào tạo
+                          </span>
+                        ) : (
+                          parent.label
+                        )}
                         <motion.div
                           animate={{ rotate: expandedMobile === parent.id ? 90 : 0 }}
                           transition={{ duration: 0.2 }}
