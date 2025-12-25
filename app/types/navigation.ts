@@ -56,31 +56,31 @@ export const siteNavigation: NavParent[] = [
       {
         id: 'about-vision',
         label: 'Tầm nhìn & Sứ mệnh',
-        path: '/gioi-thieu/tam-nhin-su-menh',
+        path: '/tam-nhin-su-menh',
         description: 'Định hướng và cam kết của LHBS'
       },
       {
         id: 'about-history',
         label: 'Lịch sử hình thành',
-        path: '/gioi-thieu/lich-su-hinh-thanh',
+        path: '/lich-su-hinh-thanh',
         description: 'Hành trình phát triển của LHBS'
       },
       {
         id: 'about-milestones',
         label: 'Các cột mốc đáng nhớ',
-        path: '/gioi-thieu/cot-moc-dang-nho',
+        path: '/cot-moc-dang-nho',
         description: 'Những thành tựu nổi bật'
       },
       {
         id: 'about-leadership',
         label: 'Ban lãnh đạo và giám hiệu',
-        path: '/gioi-thieu/ban-lanh-dao',
+        path: '/ban-lanh-dao',
         description: 'Đội ngũ lãnh đạo LHBS'
       },
       {
         id: 'about-transparency',
         label: 'Công khai thông tin',
-        path: '/gioi-thieu/cong-khai-thong-tin',
+        path: '/cong-khai-thong-tin',
         description: 'Thông tin công khai theo quy định'
       }
     ]
@@ -94,7 +94,7 @@ export const siteNavigation: NavParent[] = [
       {
         id: 'education-pathway',
         label: 'Lộ trình học tập',
-        path: '/chuong-trinh-dao-tao/lo-trinh-hoc-tap',
+        path: '/lo-trinh-hoc-tap',
         description: 'Lộ trình phát triển liên tục từ mẫu giáo đến phổ thông'
       }
     ]
@@ -108,7 +108,7 @@ export const siteNavigation: NavParent[] = [
       {
         id: 'campuses-info',
         label: 'Thông tin các cơ sở giáo dục',
-        path: '/he-thong-co-so/thong-tin',
+        path: '/thong-tin-co-so',
         description: 'Hệ thống cơ sở giáo dục của LHBS'
       },
       {

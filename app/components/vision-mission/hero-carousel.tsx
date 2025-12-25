@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
-import { ScrollIndicator } from '~/components/ScrollIndicator' // Giả sử đường dẫn đúng
+import { ScrollIndicator } from '~/components/ScrollIndicator'
+import { Breadcrumb, type BreadcrumbItem } from '~/Breadcrumb'
 import Herobg from '@/images/home-page/Hero-bg.png'
 
 interface HeroProps {
@@ -11,6 +12,11 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [isContentVisible, setIsContentVisible] = useState(true)
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: 'Giới thiệu', path: '/gioi-thieu' },
+    { label: 'Tầm nhìn & Sứ mệnh' }
+  ]
 
   const backgroundImages = [
     Herobg,
@@ -92,6 +98,16 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
+              {/* Breadcrumb */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className='mb-4 md:mb-6'
+              >
+                <Breadcrumb items={breadcrumbItems} />
+              </motion.div>
+
               {/* Decorative Line & Subtitle */}
               <motion.div
                 className='flex flex-col items-start mb-2 md:mb-4'
@@ -133,7 +149,6 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                // Avoid cutting off shadow in scroll container by adding margin bottom
                 className='mb-2'
               >
                 <button

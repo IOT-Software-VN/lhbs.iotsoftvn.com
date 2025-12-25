@@ -1,13 +1,13 @@
 import type { Route } from './+types/page'
-import { 
+import {
   VisionMissionHero,
   FoundingMessageSection,
   MissionSection,
   VisionSection,
-  CoreStrengthsSection
+  CoreValuesSection
 } from '@/components/vision-mission'
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: 'Tầm nhìn & Sứ mệnh - LHBS' },
     { name: 'description', content: 'Tìm hiểu về tầm nhìn, sứ mệnh và giá trị cốt lõi của Trường Song ngữ Lạc Hồng - LHBS' }
@@ -25,7 +25,7 @@ export default function VisionMissionPage() {
       <FoundingMessageSection onNavigate={handleNavigate} />
       <MissionSection />
       <VisionSection />
-      <CoreStrengthsSection />
+      <CoreValuesSection />
     </>
   )
 }
