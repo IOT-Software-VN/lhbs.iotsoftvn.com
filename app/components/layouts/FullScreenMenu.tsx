@@ -109,18 +109,33 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       <nav className='space-y-3 mb-6' aria-label={`${activeParent.label} pages`}>
                         {/* Child pages */}
                         {activeParent.children.map((child) => (
-                          <button
-                            key={child.id}
-                            onClick={() => handleNavClick(child.path)}
-                            className={`block w-full text-left text-[15px] transition-colors group ${
-                              currentPath === child.path ? 'text-[#FABA1E]' : 'text-white hover:text-[#FABA1E]'
-                            }`}
-                          >
-                            <div className='flex items-center justify-between'>
-                              <span className='truncate'>{child.label}</span>
-                              <ChevronRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
-                            </div>
-                          </button>
+                          child.isExternal && child.url ? (
+                            <a
+                              key={child.id}
+                              href={child.url}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='block w-full text-left text-[15px] text-white hover:text-[#FABA1E] transition-colors group'
+                            >
+                              <div className='flex items-center justify-between'>
+                                <span className='truncate'>{child.label}</span>
+                                <ExternalLink className='w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity' />
+                              </div>
+                            </a>
+                          ) : (
+                            <button
+                              key={child.id}
+                              onClick={() => handleNavClick(child.path!)}
+                              className={`block w-full text-left text-[15px] transition-colors group ${
+                                currentPath === child.path ? 'text-[#FABA1E]' : 'text-white hover:text-[#FABA1E]'
+                              }`}
+                            >
+                              <div className='flex items-center justify-between'>
+                                <span className='truncate'>{child.label}</span>
+                                <ChevronRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
+                              </div>
+                            </button>
+                          )
                         ))}
                       </nav>
                     </div>
@@ -144,27 +159,6 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       </button>
                     ))}
                   </nav>
-
-                  {/* School System Links */}
-                  <div className='pt-6 border-t border-white/20'>
-                    <h3 className='text-white/60 text-[14px] uppercase tracking-wider mb-6'>Hệ thống trường</h3>
-                    <nav className='space-y-3' aria-label='School system'>
-                      {schoolLinks.map((link, index) => (
-                        <a
-                          key={index}
-                          href={link.url}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          className='block w-full text-left text-[15px] text-white hover:text-[#FABA1E] transition-colors group'
-                        >
-                          <div className='flex items-center justify-between'>
-                            <span className='truncate'>{link.label}</span>
-                            <ExternalLink className='w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity' />
-                          </div>
-                        </a>
-                      ))}
-                    </nav>
-                  </div>
                 </div>
               </div>
 
@@ -222,15 +216,28 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                           >
                             <div className='space-y-2 pl-4'>
                               {parent.children.map((child) => (
-                                <button
-                                  key={child.id}
-                                  onClick={() => handleNavClick(child.path)}
-                                  className={`block w-full text-left py-2  text-[15px] ${
-                                    currentPath === child.path ? 'text-[#FABA1E]' : 'text-white/80 hover:text-white'
-                                  }`}
-                                >
-                                  {child.label}
-                                </button>
+                                child.isExternal && child.url ? (
+                                  <a
+                                    key={child.id}
+                                    href={child.url}
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    className='flex items-center justify-between w-full py-2 text-[15px] text-white/80 hover:text-white'
+                                  >
+                                    <span>{child.label}</span>
+                                    <ExternalLink className='w-4 h-4 opacity-60' />
+                                  </a>
+                                ) : (
+                                  <button
+                                    key={child.id}
+                                    onClick={() => handleNavClick(child.path!)}
+                                    className={`block w-full text-left py-2  text-[15px] ${
+                                      currentPath === child.path ? 'text-[#FABA1E]' : 'text-white/80 hover:text-white'
+                                    }`}
+                                  >
+                                    {child.label}
+                                  </button>
+                                )
                               ))}
                             </div>
                           </motion.div>
@@ -252,25 +259,6 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
                       >
                         {link.label}
                       </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* School System Links - Mobile */}
-                <div className='mt-6 pt-6 border-t border-white/20'>
-                  <h3 className=' text-white/60 text-sm uppercase tracking-wider mb-4'>Hệ thống trường</h3>
-                  <div className='space-y-2'>
-                    {schoolLinks.map((link, index) => (
-                      <a
-                        key={index}
-                        href={link.url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='flex items-center justify-between w-full py-2  text-[15px] text-white/80 hover:text-white'
-                      >
-                        <span>{link.label}</span>
-                        <ExternalLink className='w-4 h-4 opacity-60' />
-                      </a>
                     ))}
                   </div>
                 </div>

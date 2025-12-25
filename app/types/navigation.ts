@@ -1,8 +1,10 @@
 export interface NavChild {
   id: string
   label: string
-  path: string
+  path?: string
+  url?: string
   description?: string
+  isExternal?: boolean
 }
 
 export interface NavParent {
@@ -38,9 +40,9 @@ export interface SchoolLink {
 }
 
 export const schoolLinks: SchoolLink[] = [
-  { label: 'Khối phổ thông (Cấp 1-2-3)', url: 'https://school.lhbs.edu.vn', isExternal: true },
   { label: 'Mầm non Galaxy - Trấn Biên', url: 'https://bienhoa.galaxy.edu.vn', isExternal: true },
-  { label: 'Mầm non Galaxy - Long Khánh', url: 'https://longkhanh.galaxy.edu.vn', isExternal: true }
+  { label: 'Mầm non Galaxy - Long Khánh', url: 'https://longkhanh.galaxy.edu.vn', isExternal: true },
+  { label: 'Khối phổ thông (Cấp 1-2-3)', url: 'https://school.lhbs.edu.vn', isExternal: true }
 ]
 
 // New sitemap based on concept slide
@@ -108,6 +110,27 @@ export const siteNavigation: NavParent[] = [
         label: 'Thông tin các cơ sở giáo dục',
         path: '/campuses/information',
         description: 'Hệ thống cơ sở giáo dục của LHBS'
+      },
+      {
+        id: 'campuses-galaxy-tb',
+        label: 'Mầm non Galaxy - Trấn Biên',
+        url: 'https://bienhoa.galaxy.edu.vn',
+        description: 'Mầm non Galaxy cơ sở Trấn Biên',
+        isExternal: true
+      },
+      {
+        id: 'campuses-galaxy-lk',
+        label: 'Mầm non Galaxy - Long Khánh',
+        url: 'https://longkhanh.galaxy.edu.vn',
+        description: 'Mầm non Galaxy cơ sở Long Khánh',
+        isExternal: true
+      },
+      {
+        id: 'campuses-school',
+        label: 'Khối phổ thông (Cấp 1-2-3)',
+        url: 'https://school.lhbs.edu.vn',
+        description: 'Trường phổ thông LHBS',
+        isExternal: true
       }
     ]
   }
