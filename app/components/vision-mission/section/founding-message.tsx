@@ -13,7 +13,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
     <section
       id='founding-message-section'
       ref={ref}
-      className='w-full h-dvh bg-[#00602F] relative snap-start overflow-hidden flex flex-col'
+      className='w-full min-h-dvh h-auto md:h-dvh bg-[#00602F] relative snap-start overflow-hidden flex flex-col'
     >
       {/* Background Pattern - Fully Visible */}
       <div
@@ -26,10 +26,10 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
         }}
       />
 
-      <div className='w-full max-w-[1920px] mx-auto flex flex-col md:grid md:grid-cols-2 grow relative z-10 h-full max-h-dvh'>
+      <div className='w-full max-w-[1920px] mx-auto flex flex-col md:grid md:grid-cols-2 grow relative z-10 h-auto md:h-full md:max-h-dvh'>
         {/* Left: Founder Image */}
         <motion.div
-          className='relative w-full order-2 md:order-1 shrink-0 md:shrink md:h-full overflow-hidden min-h-[30vh] md:min-h-0'
+          className='relative w-full order-2 md:order-1 shrink-0 md:shrink md:h-full overflow-hidden min-h-[50vh] md:min-h-0'
           initial={{ opacity: 0, x: -50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -44,13 +44,13 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
 
         {/* Right: Content */}
         <motion.div
-          className='relative w-full h-full flex flex-col order-1 md:order-2 bg-[#00602F]/95 md:bg-transparent overflow-hidden'
+          className='relative w-full h-auto md:h-full flex flex-col order-1 md:order-2 bg-[#00602F]/95 md:bg-transparent overflow-hidden'
           initial={{ opacity: 0, x: 50 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          {/* Scrollable Container for Text Content */}
-          <div className='w-full h-full overflow-y-auto no-scrollbar p-6 md:p-8 lg:p-12 xl:p-16 2xl:p-24 flex flex-col justify-center'>
+          {/* Scrollable Container for Text Content - Auto height on mobile, Scroll on desktop */}
+          <div className='w-full h-auto md:h-full md:overflow-y-auto no-scrollbar p-8 pb-12 md:p-8 lg:p-12 xl:p-16 2xl:p-24 flex flex-col justify-center'>
             <div className='flex flex-col gap-3 md:gap-4 lg:gap-6 xl:gap-8'>
               {/* Header Group */}
               <div>

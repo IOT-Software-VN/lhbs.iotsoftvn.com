@@ -116,7 +116,7 @@ export default function CoreValuesSection() {
                                         <span className={`text-[10px] font-medium uppercase tracking-wider ${isActive ? 'opacity-80' : 'opacity-60'}`}>
                                             {/* Optionally showing EN title if needed or just styling */}
                                         </span>
-                                        <span className="text-sm font-bold uppercase whitespace-nowrap overflow-hidden text-ellipsis">
+                                        <span className="text-[10px] sm:text-xs md:text-sm font-bold uppercase text-center break-words w-full">
                                             {value.title}
                                         </span>
                                     </div>

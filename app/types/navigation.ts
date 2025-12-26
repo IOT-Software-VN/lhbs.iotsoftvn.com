@@ -55,8 +55,8 @@ export const siteNavigation: NavParent[] = [
     children: [
       {
         id: 'about-vision',
-        label: 'Tầm nhìn & Sứ mệnh',
-        path: '/tam-nhin-su-menh',
+        label: 'Tầm nhìn & Sứ mạng',
+        path: '/tam-nhin-su-mang',
         description: 'Định hướng và cam kết của LHBS'
       },
       {
