@@ -2,80 +2,7 @@ import { motion } from 'motion/react'
 import { useState } from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { cn } from '@/lib/utils'
-
-// Types
-interface Director {
-  id: string | number
-  image: string
-  name: string
-  role1: string
-  role2?: string
-}
-
-const leadershipData: Director[] = [
-  {
-    id: 1,
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/06/197923928_1977389272413160_177191815206870043_n-min.jpg',
-    name: 'Bà Nguyễn Thị Lan Hương',
-    role1: 'Chủ tịch Hội đồng quản trị Công ty TNHH Hương Nguyên',
-    role2: 'Chủ đầu tư Trường TH-THCS-THPT Song ngữ Lạc Hồng'
-  },
-  {
-    id: 2,
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/07/122482938_1797344593750963_7347811336665844878_n.jpg',
-    name: 'ThS. Lê Hoàng Bình',
-    role1: 'Hiệu trưởng Nhà trường',
-    role2: 'Giám đốc Điều hành'
-  },
-  {
-    id: 3,
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/06/197923928_1977389272413160_177191815206870043_n-min.jpg',
-    name: 'Ông Trương Quang Mẫn',
-    role1: 'Phó Hiệu trưởng',
-    role2: 'Phụ trách Chuyên môn'
-  },
-  {
-    id: 4,
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/07/122482938_1797344593750963_7347811336665844878_n.jpg',
-    name: 'Bà Nguyễn Thị Ngọc',
-    role1: 'Giám đốc Tài chính',
-    role2: ''
-  }
-]
-
-const preschoolData: Director[] = [
-  {
-    id: 'p1',
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/07/122482938_1797344593750963_7347811336665844878_n.jpg',
-    name: 'Cô Nguyễn Thị Hoa',
-    role1: 'Hiệu phó Mầm non',
-    role2: ''
-  },
-  {
-    id: 'p2',
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/06/197923928_1977389272413160_177191815206870043_n-min.jpg',
-    name: 'Thầy Trần Văn B',
-    role1: 'Tổ trưởng chuyên môn',
-    role2: ''
-  }
-]
-
-const highSchoolData: Director[] = [
-  {
-    id: 'h1',
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/06/197923928_1977389272413160_177191815206870043_n-min.jpg',
-    name: 'Thầy Nguyễn Văn C',
-    role1: 'Hiệu phó Phổ thông',
-    role2: ''
-  },
-  {
-    id: 'h2',
-    image: 'https://lhbs.edu.vn/wp-content/uploads/2021/07/122482938_1797344593750963_7347811336665844878_n.jpg',
-    name: 'Cô Lê Thị D',
-    role1: 'Tổ trưởng Toán',
-    role2: ''
-  }
-]
+import { leadershipData, preschoolData, highSchoolData, type Director } from '../mock-data'
 
 
 type Category = 'leadership' | 'preschool' | 'highschool'
@@ -95,43 +22,68 @@ export default function DirectorsCarousel() {
   const items = getData()
 
   return (
-    <section className='relative w-full py-20 pb-32 bg-[#FABA1E] overflow-hidden transition-colors duration-500'>
-      {/* Background Strip - Restored "UI background nền phía dưới" effect */}
-      {/* Using a lighter/white strip to create depth behind the cards, similar to the original green/dark strip */}
-      <div className='absolute top-1/2 left-0 w-full h-[280px] md:h-[320px] -translate-y-[40%] bg-white/20 shadow-inner border-y border-white/30 z-0 backdrop-blur-sm' />
+    <section className='relative h-full w-full py-12 md:py-24 bg-[#00602f] transition-colors duration-500'>
+      {/* Background Pattern */}
+      <div className='absolute inset-0 opacity-5 overflow-hidden'>
+        <div className='absolute inset-0' style={{
+          backgroundImage: `radial-gradient(circle at 20px 20px, white 2px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
 
       <div className='container mx-auto px-4 md:px-8 max-w-[1400px] relative z-10'>
 
-        {/* TABS */}
-        <div className='flex flex-wrap justify-center gap-4 mb-16 relative z-20'>
-          {[
-            { id: 'leadership', label: 'BAN LÃNH ĐẠO' },
-            { id: 'preschool', label: 'MẦM NON' },
-            { id: 'highschool', label: 'PHỔ THÔNG' }
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveCategory(tab.id as Category)}
-              className={cn(
-                'px-6 py-3 rounded-full text-sm md:text-base font-bold tracking-wider transition-all duration-300 border-2',
-                activeCategory === tab.id
-                  ? 'bg-white text-[#FABA1E] border-white shadow-lg scale-105'
-                  : 'bg-transparent text-white border-white/50 hover:bg-white/10 hover:border-white'
-              )}
-            >
-              {tab.label}
-            </button>
-          ))}
+        {/* TITLE SECTION */}
+        <div className='mb-12 md:mb-16'>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='flex flex-col items-center text-center'
+          >
+            <div className='bg-[#faba1e] w-12 h-1 md:w-16 md:h-1.5 mb-4 md:mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+            <p className='text-[#faba1e] text-xs md:text-sm lg:text-base font-bold uppercase tracking-[0.2em] mb-2'>
+              Ban lãnh đạo
+            </p>
+            <h2 className='text-3xl leading-tight md:text-4xl md:leading-tight lg:text-5xl lg:leading-none 2xl:text-6xl font-black text-white uppercase tracking-tight drop-shadow-2xl'>
+              Đội ngũ quản lý
+            </h2>
+          </motion.div>
+        </div>
+
+        {/* TABS - Shared Background Container */}
+        <div className='flex justify-center mb-12 md:mb-16 relative z-20'>
+          <div className='inline-flex flex-wrap justify-center gap-2 p-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20'>
+            {[
+              { id: 'leadership', label: 'BAN LÃNH ĐẠO' },
+              { id: 'preschool', label: 'MẦM NON' },
+              { id: 'highschool', label: 'PHỔ THÔNG' }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveCategory(tab.id as Category)}
+                className={cn(
+                  'px-5 py-2 rounded-full text-xs md:text-sm font-bold tracking-wider transition-all duration-300',
+                  activeCategory === tab.id
+                    ? 'bg-white text-[#1e5338] shadow-lg scale-105'
+                    : 'bg-transparent text-white hover:bg-white/10'
+                )}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* CAROUSEL */}
-        <div className='relative px-4 md:px-12'>
+        <div className='relative -mx-4 md:-mx-8 px-4 md:px-8'>
           <Carousel
             opts={{
               align: 'start',
               loop: items.length > 4,
             }}
-            className='w-full'
+            className='w-full overflow-visible'
           >
             <CarouselContent className='-ml-4 md:-ml-6 py-10'>
               {items.map((item, index) => (
@@ -142,9 +94,8 @@ export default function DirectorsCarousel() {
                   <div className='group relative h-full'>
                     {/* CARD UI */}
                     <div className={cn(
-                      'bg-white rounded-2xl overflow-hidden h-full flex flex-col transition-all duration-500 hover:-translate-y-2',
-                      // Restored "Shadow Vàng" effect for items - applied generally to keep style consistent active/inactive
-                      'shadow-[0_20px_50px_rgba(200,140,20,0.25)] hover:shadow-[0_30px_60px_rgba(200,140,20,0.4)]'
+                      'bg-white rounded-2xl overflow-hidden h-full flex flex-col transition-all duration-500 hover:-translate-y-2 hover:z-10',
+                      'shadow-[0_20px_50px_rgba(0,92,66,0.3)] hover:shadow-[0_30px_60px_rgba(0,92,66,0.5)]'
                     )}>
 
                       {/* IMAGE */}
@@ -154,17 +105,17 @@ export default function DirectorsCarousel() {
                           alt={item.name}
                           className='w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110'
                         />
-                        {/* Inner Glow Effect - Restored from user request */}
-                        <div className='absolute inset-0 shadow-[inset_0_0_40px_rgba(250,186,30,0.3)] pointer-events-none' />
+                        {/* Inner Glow Effect */}
+                        <div className='absolute inset-0 shadow-[inset_0_0_40px_rgba(0,92,66,0.2)] pointer-events-none' />
                       </div>
 
                       {/* CONTENT */}
                       <div className='p-6 flex-1 flex flex-col items-center text-center'>
-                        <h3 className='text-lg md:text-xl font-bold text-[#1E5338] mb-3 uppercase leading-tight'>
+                        <h3 className='text-lg md:text-xl font-bold text-[#1e5338] mb-3 uppercase leading-tight'>
                           {item.name}
                         </h3>
 
-                        <div className='w-12 h-0.5 bg-[#FABA1E] mb-3 opacity-50' />
+                        <div className='w-12 h-0.5 bg-[#faba1e] mb-3 opacity-50' />
 
                         <p className='text-sm md:text-base text-[#555] font-semibold mb-1 leading-snug'>
                           {item.role1}
@@ -183,8 +134,8 @@ export default function DirectorsCarousel() {
               ))}
             </CarouselContent>
 
-            <CarouselPrevious className="left-0 md:-left-4 bg-white/20 hover:bg-white text-white hover:text-[#FABA1E] border-none" />
-            <CarouselNext className="right-0 md:-right-4 bg-white/20 hover:bg-white text-white hover:text-[#FABA1E] border-none" />
+            <CarouselPrevious className="left-4 md:left-0 bg-white/20 hover:bg-white text-white hover:text-[#1e5338] border-none" />
+            <CarouselNext className="right-4 md:right-0 bg-white/20 hover:bg-white text-white hover:text-[#1e5338] border-none" />
 
           </Carousel>
         </div>

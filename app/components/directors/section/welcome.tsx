@@ -12,7 +12,7 @@ export default function WelcomeSection({ onNavigate }: WelcomeSectionProps) {
     ]
 
     return (
-        <section className='w-full py-16 md:py-24 bg-white overflow-hidden'>
+        <section className='relative w-full py-16 md:py-24 bg-white overflow-hidden'>
             {/* Breadcrumb Container - In Flow */}
             <div className='w-full pb-4 md:pb-6 relative z-10'>
                 <div className='container mx-auto px-4 md:px-8 lg:px-12'>
@@ -57,7 +57,7 @@ export default function WelcomeSection({ onNavigate }: WelcomeSectionProps) {
                     >
                         <div className='relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]'>
                             <img
-                                src="https://lhbs.edu.vn/wp-content/uploads/2021/06/197923928_1977389272413160_177191815206870043_n-min.jpg"
+                                src="https://lhbs.edu.vn/wp-content/uploads/2021/04/MG_5271_Recovered.jpg"
                                 alt="Ban Giám Hiệu LHBS"
                                 className='w-full h-full object-cover hover:scale-105 transition-transform duration-700'
                             />
