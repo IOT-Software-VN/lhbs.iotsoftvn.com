@@ -2,52 +2,57 @@ import { motion } from 'motion/react'
 
 export default function VisionSection() {
   return (
-    <section className='relative w-full h-[80vh] min-h-[600px] overflow-hidden font-sans group'>
-      {/* Background Image - Full Cover */}
-      {/* Background Video - Full Cover */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover object-center transition-transform duration-[20s] group-hover:scale-110"
-        >
-          <source src="/video/hero-video.mp4" type="video/mp4" />
-        </video>
-        {/* Overlay Gradient - Darker for better text contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-      </div>
+    <section className='relative w-full py-16 md:py-24 lg:py-32 bg-white overflow-hidden'>
+      <div className='container mx-auto px-4 md:px-8 lg:px-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
 
-      <div className='relative z-10 w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16 h-full flex items-center'>
+          {/* Left: Text Content - ORDER 2 on mobile to be below image, ORDER 1 on Desktop */}
+          <motion.div
+            className='order-2 lg:order-1 flex flex-col items-start'
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className='bg-[#FDB913] w-12 h-1 md:w-20 md:h-1.5 mb-6 rounded-full' />
 
-        {/* Content Card - Overlapping Left */}
-        <motion.div
-          className='max-w-2xl bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-12 lg:p-16 rounded-3xl shadow-2xl'
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Header */}
-          <div className='flex flex-col items-start mb-6 md:mb-8'>
-            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-4 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
-            {/* Main Title 60px */}
-            <h2 className='text-[32px] md:text-[48px] lg:text-[60px] font-black text-white uppercase tracking-tight leading-none drop-shadow-md'>
-              TẦM NHÌN
+            <h2 className='text-4xl md:text-5xl lg:text-6xl font-black text-[#1E5338] uppercase tracking-tight mb-6 md:mb-8 leading-tight'>
+              Tầm nhìn
             </h2>
-          </div>
 
-          {/* Description */}
-          <div className='space-y-6 text-base md:text-lg text-white/95 leading-relaxed font-light'>
-            <p>
-              Trường Song ngữ Lạc Hồng là <span className="font-bold text-[#FDB913]">trường song ngữ hàng đầu tại Đồng Nai</span>, nơi mỗi học sinh được nuôi dưỡng để phát triển toàn diện về trí tuệ, nhân cách và năng lực hội nhập toàn cầu trong thời đại số.
-            </p>
-            <p>
-              Nhà trường gìn giữ và lan tỏa <span className="font-bold text-[#FDB913]">giá trị văn hóa Việt Nam</span>, đồng thời khơi dậy tư duy sáng tạo, tinh thần học tập suốt đời và ý thức trách nhiệm với cộng đồng, giúp học sinh trở thành những <span className="font-bold text-[#FDB913]">công dân nhân ái, tự tin, sáng tạo</span> và thích ứng trong thế giới không ngừng đổi thay.
-            </p>
-          </div>
-        </motion.div>
+            <div className='flex flex-col gap-4 text-base md:text-lg lg:text-xl text-[#333] font-light leading-relaxed text-justify'>
+              <p>
+                Trường Song ngữ Lạc Hồng là <span className='font-bold text-[#FDB913]'>trường song ngữ hàng đầu tại Đồng Nai</span>, nơi mỗi học sinh được nuôi dưỡng để phát triển toàn diện về trí tuệ, nhân cách và năng lực hội nhập toàn cầu trong thời đại số.
+              </p>
+              <p>
+                Nhà trường gìn giữ và lan tỏa <span className='font-bold text-[#FDB913]'>giá trị văn hóa Việt Nam</span>, đồng thời khơi dậy tư duy sáng tạo, tinh thần học tập suốt đời và ý thức trách nhiệm với cộng đồng, giúp học sinh trở thành những <span className='font-bold text-[#FDB913]'>công dân nhân ái, tự tin, sáng tạo</span> và thích ứng trong thế giới không ngừng đổi thay.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Right: Image with Stepped Block Effect - ORDER 1 on mobile */}
+          <motion.div
+            className='order-1 lg:order-2 relative'
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {/* Decorative Stepped Block (background) */}
+            <div className='absolute top-8 left-8 w-full h-full bg-[#FDB913]/20 rounded-3xl -z-10' />
+            <div className='absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-[#1E5338]/10 rounded-3xl -z-20' />
+
+            {/* Main Image Container */}
+            <div className='relative rounded-2xl overflow-hidden shadow-2xl'>
+              <img
+                src="https://lhbs.edu.vn/wp-content/uploads/2025/02/333A1050.jpg"
+                alt="Vision - Tầm nhìn LHBS"
+                className='w-full h-auto object-cover aspect-[4/3] hover:scale-105 transition-transform duration-700'
+              />
+            </div>
+          </motion.div>
+
+        </div>
       </div>
     </section>
   )

@@ -36,8 +36,8 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
         >
           <img
             src={founderImage}
-            alt="Nhà giáo nhân dân, Tiến sĩ Đỗ Hữu Tài - Người sáng lập LHBS"
-            className='w-full h-full object-cover object-top'
+            alt="Cố Nhà giáo nhân dân, Tiến sĩ Đỗ Hữu Tài - Người sáng lập LHBS"
+            className='w-full h-full object-cover object-top grayscale'
             loading='lazy'
           />
         </motion.div>
@@ -77,7 +77,7 @@ export default function FoundingMessageSection({ onNavigate }: { onNavigate: (pa
               <div className='border-l-4 border-[#FABA1E] pl-3 md:pl-4 lg:pl-6'>
                 <p className='text-base md:text-lg lg:text-xl xl:text-2xl text-white font-bold uppercase tracking-wide mb-1'>TS. Đỗ Hữu Tài</p>
                 <p className='text-xs md:text-sm lg:text-base text-[#FABA1E] uppercase tracking-wider font-semibold'>
-                  Nhà giáo nhân dân & Người sáng lập LHBS
+                  Cố Nhà giáo nhân dân & Người sáng lập LHBS
                 </p>
               </div>
 

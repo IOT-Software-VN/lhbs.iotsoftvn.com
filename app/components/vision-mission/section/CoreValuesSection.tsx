@@ -41,14 +41,14 @@ const CORE_VALUES: CoreValue[] = [
         icon: Heart,
         title: 'Nhân ái',
         description: 'Sống tử tế, biết yêu thương, sẻ chia và tôn trọng sự khác biệt; quan tâm đến người khác và cộng đồng.',
-        image: 'https://lhbs.edu.vn/wp-content/uploads/2025/10/572331153_803654888963320_928581099648076096_n.jpg'
+        image: 'https://lhbs.edu.vn/wp-content/uploads/2025/02/333A0358.jpg'
     },
     {
         id: 'global_competence',
         icon: Globe,
         title: 'Trách nhiệm',
         description: 'Chủ động và có trách nhiệm với bản thân, cộng đồng và môi trường; hành động vì sự phát triển bền vững.',
-        image: 'https://lhbs.edu.vn/wp-content/uploads/2025/10/573186746_804888342173308_4889398892092085854_n.jpg'
+        image: 'https://lhbs.edu.vn/wp-content/uploads/2021/07/122482938_1797344593750963_7347811336665844878_n.jpg'
     }
 ]
 

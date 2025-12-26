@@ -8,7 +8,7 @@ interface HeroProps {
 export default function VisionMissionHero({ onNavigate }: HeroProps) {
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: 'Trang chủ', path: '/' },
-    { label: 'Tầm nhìn & Sứ mạng' }
+    { label: 'Tầm nhìn & Sứ mệnh' }
   ]
 
   return (
@@ -47,7 +47,7 @@ export default function VisionMissionHero({ onNavigate }: HeroProps) {
 
           {/* Title */}
           <h1 className='text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight drop-shadow-2xl mb-4 leading-tight'>
-            Tầm nhìn & Sứ mạng
+            Tầm nhìn & Sứ mệnh
           </h1>
 
           {/* Subtitle */}
