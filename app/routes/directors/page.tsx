@@ -15,7 +15,7 @@ export default function DirectorsPage() {
             <SubPageHero
                 title="Ban Lãnh đạo"
                 subtitle="Kiến tạo tương lai - Vươn tầm quốc tế"
-                backgroundImage="https://lhbs.edu.vn/wp-content/uploads/2021/06/197923928_1977389272413160_177191815206870043_n-min.jpg"
+                backgroundImage="https://lhbs.edu.vn/wp-content/uploads/2022/11/MG_5251.jpg"
             />
 
             <WelcomeSection />
