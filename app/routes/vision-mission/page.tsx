@@ -4,7 +4,8 @@ import {
   FoundingMessageSection,
   MissionSection,
   VisionSection,
-  CoreValuesSection
+  CoreValuesSection,
+  TestimonialQuoteSection
 } from '@/components/vision-mission'
 import SubPageHero from '@/components/shared-ui/hero-carousel'
 
@@ -34,6 +35,7 @@ export default function VisionMissionPage() {
       <VisionSection />
       <MissionSection />
       <CoreValuesSection />
+      <TestimonialQuoteSection onNavigate={handleNavigate} />
     </>
   )
 }

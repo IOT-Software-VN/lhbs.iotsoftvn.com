@@ -2,7 +2,7 @@ import FoundingMessageSection from './section/founding-message'
 import MissionSection from './section/mission'
 import VisionSection from './section/vision'
 import CoreValuesSection from './section/CoreValuesSection'
-
+import TestimonialQuoteSection from './section/testimonial-quote'
 import WelcomeSection from './section/welcome'
 
 export { 
@@ -10,5 +10,6 @@ export {
   FoundingMessageSection,
   MissionSection,
   VisionSection,
-  CoreValuesSection
+  CoreValuesSection,
+  TestimonialQuoteSection
 }
