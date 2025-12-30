@@ -39,9 +39,7 @@ export const footerLinksGroup1: FooterLink[] = [
 
 export const footerLinksGroup2: FooterLink[] = [
   { label: 'Tuyển dụng', url: '/contact/careers' },
-  { label: 'Liên hệ', url: '/contact' },
-  { label: 'Chính sách bảo mật', url: '/legal/privacy-policy' },
-  { label: 'Điều khoản sử dụng', url: '/legal/terms-of-use' }
+  { label: 'Liên hệ', url: '/contact' }
 ]
 
 export const socialLinks: SocialLink[] = [
