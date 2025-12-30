@@ -1,34 +1,14 @@
 import { MapPin, Phone, Mail } from 'lucide-react'
 import logoImage from '@/images/base/logo-head.png'
+import {
+  footerData,
+  footerLinksGroup1,
+  footerLinksGroup2,
+  socialLinks,
+  partnerLogos
+} from './mock-data'
 
 export default function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
-  // Footer content data
-  const addressLine = '152/16 Huỳnh Văn Nghệ, KP Tân Lại, P. Trấn Biên, Đồng Nai.'
-  const phone = '+0251 3952 953'
-  const email = 'tuyensinh@lhbs.vn'
-
-  const linksGroup1 = [
-    { label: 'Về chúng tôi', url: '/our-school/about-us' },
-    { label: 'Chương trình học', url: '/academics' },
-    { label: 'Tuyển sinh', url: '/admissions' },
-    { label: 'Tin tức & Sự kiện', url: '/news-events' }
-  ]
-
-  const linksGroup2 = [
-    { label: 'Tuyển dụng', url: '/contact/careers' },
-    { label: 'Liên hệ', url: '/contact' },
-    { label: 'Chính sách bảo mật', url: '/legal/privacy-policy' },
-    { label: 'Điều khoản sử dụng', url: '/legal/terms-of-use' }
-  ]
-
-  const socialLinks = [
-    { platform: 'facebook', url: 'https://facebook.com/lhbs', icon: 'facebook' },
-    { platform: 'instagram', url: 'https://instagram.com/lhbs', icon: 'instagram' },
-    { platform: 'twitter', url: 'https://twitter.com/lhbs', icon: 'twitter' },
-    { platform: 'linkedin', url: 'https://linkedin.com/company/lhbs', icon: 'linkedin' }
-  ]
-
-  const copyrightText = '© 2025 Lac Hong Bilingual School. All rights reserved.'
 
   return (
     <footer className='footer relative z-50 overflow-visible font-sans text-white'>
@@ -145,21 +125,21 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
             <img src={logoImage} alt='LHBS Logo' className='h-20 md:h-26 w-auto mb-6' />
 
             <div className='space-y-4 text-sm md:text-base font-light tracking-wide text-white/90'>
-              <h3 className='font-bold text-lg uppercase mb-2 text-[#FABA1E]'>Trường Song Ngữ Lạc Hồng</h3>
+              <h3 className='font-bold text-lg uppercase mb-2 text-[#FABA1E]'>{footerData.schoolName}</h3>
               <div className='flex items-start gap-3'>
                 <MapPin className='w-5 h-5 text-[#FABA1E] shrink-0 mt-0.5' />
-                <span className='leading-relaxed'>{addressLine}</span>
+                <span className='leading-relaxed'>{footerData.address}</span>
               </div>
               <div className='flex items-center gap-3'>
                 <Phone className='w-5 h-5 text-[#FABA1E] shrink-0' />
-                <a href={`tel:${phone}`} className='hover:text-[#FABA1E] transition-colors'>
-                  {phone}
+                <a href={`tel:${footerData.phone}`} className='hover:text-[#FABA1E] transition-colors'>
+                  {footerData.phone}
                 </a>
               </div>
               <div className='flex items-center gap-3'>
                 <Mail className='w-5 h-5 text-[#FABA1E] shrink-0' />
-                <a href={`mailto:${email}`} className='hover:text-[#FABA1E] transition-colors'>
-                  {email}
+                <a href={`mailto:${footerData.email}`} className='hover:text-[#FABA1E] transition-colors'>
+                  {footerData.email}
                 </a>
               </div>
             </div>
@@ -169,7 +149,7 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
           <div className='lg:col-span-7 flex flex-col justify-end lg:items-end'>
             {/* Navigation Grid */}
             <div className='grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 mb-12 text-right'>
-              {linksGroup1.concat(linksGroup2).map((link, idx) => (
+              {footerLinksGroup1.concat(footerLinksGroup2).map((link, idx) => (
                 <button
                   key={idx}
                   onClick={() => onNavigate(link.url)}
@@ -197,25 +177,24 @@ export default function Footer({ onNavigate }: { onNavigate: (path: string) => v
             </div>
 
             <div className='flex flex-wrap items-center justify-end gap-6 mb-8'>
-              <img
-                src='https://resources.finalsite.net/images/f_auto,q_auto/v1704855019/saigon/xhdrp8lgsl6lzsyp1dwg/CIS_Member_icon-3_RGB.png'
-                alt='CIS Member'
-                className='h-12 w-auto object-contain hover:scale-105 transition-transform duration-300'
-              />
-              <img
-                src='https://resources.finalsite.net/images/f_auto,q_auto/v1704855019/saigon/ixplefnt9uellcffrmj3/AMISMemberLogoWHITE.png'
-                alt='AMIS Member'
-                className='h-12 w-auto object-contain hover:scale-105 transition-transform duration-300'
-              />
-              <img
-                src='https://acswasc.org/wp-content/uploads/2020/01/acs-logo-1.png'
-                alt='WASC Accredited'
-                className='h-12 w-auto object-contain hover:scale-105 transition-transform duration-300'
-              />
+              {partnerLogos.map((logo) => (
+                <div key={logo.id} className='bg-white rounded-lg p-3 shadow-sm min-w-[200px] h-16 flex items-center justify-center'>
+                  <img
+                    src={logo.image}
+                    alt={logo.name}
+                    className='max-w-full max-h-full object-contain hover:scale-105 transition-transform duration-300'
+                    loading='lazy'
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement
+                      target.style.display = 'none'
+                    }}
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Copyright */}
-            <div className='text-[10px] uppercase tracking-widest text-white/50'>{copyrightText}</div>
+            <div className='text-[10px] uppercase tracking-widest text-white/50'>{footerData.copyright}</div>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router';
 import type { Route } from './+types/home'
-import { EducationLevel, TheNumbers, TestimonialQuoteSection, NewsEventsSection, HeroCarousel, ProgramsSection} from '@/components/home-page'
+import { EducationLevel, TheNumbers, TestimonialQuoteSection, NewsEventsSection, HeroCarousel} from '@/components/home-page'
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'LHBS - Trường Song Ngữ Lạc Hồng' }, { name: 'description', content: 'Chào mừng tới Trường Song Ngữ Lạc Hồng - LHBS' }]
 }
@@ -18,7 +18,6 @@ export default function Home() {
       <TheNumbers/>
       <NewsEventsSection onNavigate={handleNavigate} />
       <TestimonialQuoteSection onNavigate={handleNavigate} />
-      <ProgramsSection />
     </>
   )
 }
