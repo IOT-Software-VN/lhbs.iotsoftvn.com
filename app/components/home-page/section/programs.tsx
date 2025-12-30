@@ -53,7 +53,7 @@ export default function ProgramsSection() {
   }, [api])
 
   return (
-    <section className='relative w-full bg-white overflow-hidden font-sans py-8 md:py-16'>
+    <section className='relative w-full bg-white overflow-hidden font-sans py-8 md:py-16 mb-8 md:mb-12'>
       <div className='w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-16'>
         {/* University Logos Carousel */}
         <motion.div
@@ -63,14 +63,6 @@ export default function ProgramsSection() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className='relative w-full'
         >
-          {/* Section Header */}
-          <div className='flex flex-col items-center mb-6 md:mb-10'>
-            <div className='bg-[#FDB913] w-12 h-1 md:w-16 md:h-1.5 mb-3 rounded-full shadow-[0_0_15px_rgba(253,185,19,0.4)]' />
-            <h3 className='text-xl md:text-2xl lg:text-3xl font-black text-[#005C42] uppercase tracking-wide drop-shadow-sm text-center'>
-              Chương trình hợp tác
-            </h3>
-          </div>
-
           <Carousel
             setApi={setApi}
             className='w-full px-2 md:px-10'
@@ -87,7 +79,7 @@ export default function ProgramsSection() {
                   <div className='h-full p-2'>
                     <motion.div
                       whileHover={{ y: -4 }}
-                      className='flex items-center justify-center h-24 md:h-28 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FDB913] hover:bg-white hover:shadow-lg'
+                      className='flex items-center justify-center h-20 md:h-24 bg-gray-50/30 border border-gray-200 rounded-sm p-4 transition-all duration-300 cursor-pointer group hover:border-[#FDB913] hover:bg-white hover:shadow-lg'
                     >
                       <img
                         src={logo.image}

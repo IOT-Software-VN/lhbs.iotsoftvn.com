@@ -41,7 +41,7 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
   return (
     <motion.section
       ref={ref}
-      className='w-full min-h-[400px] md:min-h-[500px] bg-[#f2f2f28d] overflow-hidden relative py-8 md:py-12'
+      className='w-full min-h-[400px] md:min-h-[500px] bg-[#fff] overflow-hidden relative py-8 md:py-12'
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -90,7 +90,7 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
             <div className='w-full'>
             <Carousel className='w-full flex items-center relative' opts={{ loop: true }}>
               {/* Custom Navigation */}
-              <CarouselPrevious className='absolute left-0 -ml-2 md:-ml-8 h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] [&_svg]:size-8 md:[&_svg]:size-12 transition-transform hover:scale-110 z-30' />
+              <CarouselPrevious className='absolute left-0 -ml-2 md:-ml-8 h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] [&_svg]:size-8 md:[&_svg]:size-12 transition-transform hover:scale-110 z-40' />
 
               <CarouselContent className='cursor-grab active:cursor-grabbing'>
                 {testimonials.map((testimonial, index) => (
@@ -129,7 +129,7 @@ export function TestimonialQuoteSection({ onNavigate }: TestimonialQuoteSectionP
                 ))}
               </CarouselContent>
 
-              <CarouselNext className='absolute right-0 -mr-2 md:-mr-8 h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] [&_svg]:size-8 md:[&_svg]:size-12 transition-transform hover:scale-110 z-30' />
+              <CarouselNext className='absolute right-0 -mr-2 md:-mr-8 h-auto w-auto border-none bg-transparent text-[#FABA1E] hover:bg-transparent hover:text-[#d49e19] [&_svg]:size-8 md:[&_svg]:size-12 transition-transform hover:scale-110 z-40' />
             </Carousel>
           </div>
         </motion.div>

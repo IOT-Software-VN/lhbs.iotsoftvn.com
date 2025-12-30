@@ -17,8 +17,8 @@ export default function Home() {
       <EducationLevel />
       <TheNumbers/>
       <NewsEventsSection onNavigate={handleNavigate} />
-      <ProgramsSection />
       <TestimonialQuoteSection onNavigate={handleNavigate} />
+      <ProgramsSection />
     </>
   )
 }
