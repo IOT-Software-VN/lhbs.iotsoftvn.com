@@ -1,4 +1,4 @@
-import TheLHBSEdge from './saection/the-lhbs-edge'
+import TheLHBSEdge from './section/the-lhbs-edge'
 
 export {
   TheLHBSEdge
