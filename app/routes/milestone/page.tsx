@@ -2,7 +2,7 @@ import type { Route } from './+types/page'
 import { TheLHBSEdge } from '@/components/milestone'
 import SubPageHero from '@/components/shared-ui/hero-carousel'
 
-export function meta({}: Route.MetaArgs) {
+export function meta({ }: Route.MetaArgs) {
   return [
     { title: 'Cột mốc phát triển - LHBS' },
     {
@@ -33,13 +33,17 @@ export default function MilestonePage() {
       />
 
       {/* Breadcrumb Section */}
-      <div className='w-full bg-white pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
+      <div className='w-full bg-[#00602f] pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
         <div className='container mx-auto px-4 md:px-8 lg:px-12'>
-          <Breadcrumb items={breadcrumbItems} />
+          <Breadcrumb
+            textClassName='text-white '
+            activeTextClassName='text-white'
+            separatorClassName='text-white'
+            items={breadcrumbItems} />
         </div>
       </div>
 
-      <TheLHBSEdge/>
+      <TheLHBSEdge />
     </>
   )
 }

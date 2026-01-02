@@ -111,11 +111,11 @@ export default function TheLHBSEdge() {
   }
 
   return (
-    <section ref={containerRef} className='relative w-full bg-[#00602f] text-white'>
-      <div className='flex flex-col lg:flex-row relative transition-colors duration-700'>
+    <section ref={containerRef} className='relative w-full bg-gradient-to-b from-[#00602f] to-[#013b1d] text-white'>
+      <div className='flex flex-col lg:flex-row relative'>
 
         {/* Left Content Column - SCROLLABLE */}
-        <div className='w-full lg:w-[60%] flex flex-col'>
+        <div className='w-full lg:w-[65%] flex flex-col'>
           {edgeSections.map((section, index) => (
             <MilestoneSection
               key={section.id}
@@ -127,15 +127,14 @@ export default function TheLHBSEdge() {
         </div>
 
         {/* Right Navigation Column - STICKY */}
-        <div className='hidden lg:flex lg:w-[40%] h-screen sticky top-0 flex-col justify-center items-center border-l border-white/10 bg-[#004d26]/50 backdrop-blur-sm'>
+        <div className='hidden lg:flex lg:w-[35%] h-screen sticky top-0 flex-col justify-center items-start pl-12 pr-6'>
           {/* Decorative Background */}
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(250,186,30,0.05)_0%,transparent_70%)] pointer-events-none' />
+          <div className='absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(250,186,30,0.03)_0%,transparent_70%)] pointer-events-none' />
 
-          <div className='relative w-full max-w-lg px-6 md:px-12 lg:px-20'>
-            <div className='relative space-y-12 z-10'>
-              {/* Minimalist Vertical Timeline */}
-              <div className='absolute left-7 lg:left-8 top-7 lg:top-8 bottom-7 lg:bottom-8 w-px bg-white/10 -translate-x-1/2 z-0'>
-                {/* Visual Indicator of Progress */}
+          <div className='relative w-full'>
+            <div className='relative space-y-8 z-10'>
+              {/* Minimalist Vertical Timeline Line */}
+              <div className='absolute left-8 top-8 bottom-8 w-0.5 bg-white/10 -translate-x-1/2 z-0'>
                 <motion.div
                   className='absolute top-0 left-0 w-full bg-[#FABA1E] shadow-[0_0_15px_rgba(250,186,30,0.3)] origin-top'
                   style={{ height: `${(activeTab / (edgeSections.length - 1)) * 100}%` }}
@@ -149,17 +148,16 @@ export default function TheLHBSEdge() {
                   <button
                     key={item.id}
                     onClick={() => scrollToTab(index)}
-                    className={cn(
-                      'group relative w-full flex items-center gap-6 lg:gap-10 transition-all duration-700 outline-none'
-                    )}
+                    className='group relative w-full flex items-center gap-6 outline-none text-left'
                   >
+                    {/* Icon Box */}
                     <div className='relative shrink-0 z-20'>
                       <div
                         className={cn(
-                          'w-14 h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center transition-all duration-700 relative overflow-hidden border',
+                          'w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-700 relative overflow-hidden border',
                           isActive
-                            ? 'bg-[#FABA1E] border-[#FABA1E] text-[#00602f] shadow-[0_0_40px_rgba(250,186,30,0.3)] scale-110'
-                            : 'bg-[#004d26] border-white/10 text-white/40 group-hover:border-[#FABA1E]/50 group-hover:text-white group-hover:scale-110 shadow-lg'
+                            ? 'bg-[#FABA1E] border-[#FABA1E] text-[#00602f] shadow-[0_0_40px_rgba(250,186,30,0.3)] scale-105'
+                            : 'bg-[#004d26] border-white/5 text-white/40 group-hover:border-[#FABA1E]/50 group-hover:text-white group-hover:scale-105 shadow-lg'
                         )}
                       >
                         <div
@@ -179,43 +177,37 @@ export default function TheLHBSEdge() {
                       )}
                     </div>
 
+                    {/* Text Info */}
                     <div
                       className={cn(
-                        'flex flex-col text-left space-y-2 transition-all duration-700',
-                        isActive ? 'opacity-100' : 'opacity-30 group-hover:opacity-70'
+                        'flex flex-col text-left space-y-1 transition-all duration-700 w-full',
+                        isActive ? 'opacity-100' : 'opacity-40 group-hover:opacity-80'
                       )}
                     >
-                      <div className='flex items-center gap-3'>
-                        <span
-                          className={cn(
-                            'text-[11px] font-black uppercase tracking-[0.3em] transition-colors',
-                            isActive ? 'text-[#FABA1E]' : 'text-white/20'
-                          )}
-                        >
-                          Step 0{index + 1}
-                        </span>
-                        {isActive && (
-                          <motion.div initial={{ width: 0 }} animate={{ width: 30 }} className='h-px bg-[#FABA1E]/30' />
-                        )}
-                      </div>
                       <h4
                         className={cn(
-                          'text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tighter transition-all duration-700 leading-none',
+                          'text-xl xl:text-2xl font-black uppercase tracking-tight transition-all duration-700 leading-tight whitespace-nowrap',
                           isActive
-                            ? 'text-white translate-x-1 lg:translate-x-2'
-                            : 'text-white/20 group-hover:text-white/40'
+                            ? 'text-white'
+                            : 'text-white/60 group-hover:text-white'
                         )}
                       >
                         {item.title}
                       </h4>
-                      <div
-                        className={cn(
-                          'overflow-hidden transition-all duration-700',
-                          isActive ? 'max-h-12 opacity-100 mt-1' : 'max-h-0 opacity-0'
-                        )}
-                      >
-                        <p className='text-[10px] text-[#FABA1E] uppercase font-bold tracking-widest'>{item.timeRange}</p>
-                      </div>
+
+                      {isActive && (
+                        <div className='overflow-hidden'>
+                          <motion.div
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            className='inline-flex items-center mt-1'
+                          >
+                            <span className='text-xs font-bold bg-[#FABA1E] text-[#00602f] px-3 py-1 rounded-full uppercase tracking-wide'>
+                              {item.timeRange}
+                            </span>
+                          </motion.div>
+                        </div>
+                      )}
                     </div>
                   </button>
                 )
@@ -260,7 +252,7 @@ function MilestoneSection({ section, index, onInView }: { section: EdgeSection, 
     <div
       id={`milestone-${index}`}
       ref={ref}
-      className='min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 xl:px-40 py-24 relative odd:bg-black/5 even:bg-transparent'
+      className='min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 xl:px-32 py-24 relative even:bg-black/10'
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -269,56 +261,55 @@ function MilestoneSection({ section, index, onInView }: { section: EdgeSection, 
         transition={{ duration: 0.8 }}
         className='max-w-4xl space-y-12'
       >
-        <div className='space-y-10'>
-          <div className='flex flex-col gap-5'>
-            <div className='flex items-center gap-4'>
+        <div className='space-y-8'>
+          <div className='flex flex-col gap-4'>
+            <div className='flex items-center gap-3'>
               <div className='w-12 h-1 bg-[#FABA1E] rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-              <span className='text-[11px] font-black tracking-[0.4em] text-[#FABA1E] uppercase'>
-                0{index + 1} &mdash; KỶ NIỆM 15 NĂM
+              <span className='text-sm font-black tracking-[0.2em] text-[#FABA1E] uppercase'>
+                KỶ NIỆM 15 NĂM
               </span>
             </div>
-
           </div>
 
-          <div className='relative'>
-            {/* Title Full */}
-            <h3 className='text-[32px] md:text-[48px] lg:text-[60px] 2xl:text-[72px] font-black text-white tracking-tight uppercase leading-tight drop-shadow-2xl'>
+          <div className='relative space-y-4'>
+            <h3 className='text-[32px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black text-white tracking-tight uppercase leading-none drop-shadow-xl'>
               {section.titleFull}
             </h3>
+            <div className='inline-flex'>
+              <span className="bg-[#FABA1E] text-[#00602f] text-base md:text-lg font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-lg">
+                {section.timeRange}
+              </span>
+            </div>
           </div>
 
-          <p className='text-xl md:text-2xl text-white/80 font-medium font-serif italic'>
-            "{section.subtitle}" <br />
-            <span className="text-[#FABA1E] text-lg not-italic font-sans font-bold mt-2 inline-block tracking-widest">{section.timeRange}</span>
+          <p className='text-xl md:text-2xl text-white/90 font-medium font-serif italic max-w-2xl'>
+            "{section.subtitle}"
           </p>
         </div>
 
-        <div className='max-w-2xl border-l-2 border-[#FABA1E]/20 pl-8'>
-          <p className='text-lg md:text-xl text-white/70 font-light leading-relaxed'>
+        <div className='max-w-3xl'>
+          <p className='text-lg md:text-xl text-white/80 font-light leading-relaxed border-l-2 border-[#FABA1E]/30 pl-6'>
             {section.description}
           </p>
         </div>
 
-        {/* Feature Cards */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        {/* Feature Cards - Clean & Minimal */}
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 pt-6'>
           {section.features.map((feature, i) => (
             <div
               key={feature.title}
-              className='relative group overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 p-5 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-1 hover:border-[#FABA1E]/30'
+              className='group flex items-start gap-4 p-5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 transition-all duration-300 hover:-translate-y-1'
             >
-              <div className='flex items-start gap-4'>
-                <div className='w-10 h-10 shrink-0 rounded-xl bg-[#FABA1E]/10 flex items-center justify-center text-[#FABA1E] group-hover:bg-[#FABA1E] group-hover:text-[#004d26] transition-all duration-500'>
-                  {feature.icon}
-                </div>
-
-                <div className='space-y-1'>
-                  <h5 className='text-sm font-bold text-white uppercase group-hover:text-[#FABA1E] transition-colors'>
-                    {feature.title}
-                  </h5>
-                  <p className='text-[10px] text-white/50 leading-relaxed uppercase font-semibold tracking-wider group-hover:text-white/80 transition-colors'>
-                    {feature.desc}
-                  </p>
-                </div>
+              <div className='shrink-0 w-12 h-12 rounded-full bg-[#FABA1E]/10 flex items-center justify-center text-[#FABA1E] group-hover:bg-[#FABA1E] group-hover:text-[#00602f] transition-all duration-500'>
+                {feature.icon}
+              </div>
+              <div>
+                <h5 className='text-base font-bold text-white uppercase mb-1 group-hover:text-[#FABA1E] transition-colors'>
+                  {feature.title}
+                </h5>
+                <p className='text-sm text-white/60 leading-snug font-medium'>
+                  {feature.desc}
+                </p>
               </div>
             </div>
           ))}
