@@ -1,5 +1,5 @@
 import type { Route } from './+types/page'
-import { TheLHBSEdge } from '@/components/milestone'
+import { TheLHBSEdge, TestimonialQuoteSection } from '@/components/milestone'
 import SubPageHero from '@/components/shared-ui/hero-carousel'
 
 export function meta({ }: Route.MetaArgs) {
@@ -33,17 +33,18 @@ export default function MilestonePage() {
       />
 
       {/* Breadcrumb Section */}
-      <div className='w-full bg-[#00602f] pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
+      <div className='w-full bg-[#013b1d] pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
         <div className='container mx-auto px-4 md:px-8 lg:px-12'>
           <Breadcrumb
             textClassName='text-white '
-            activeTextClassName='text-white'
+            activeTextClassName='text-white font-medium'
             separatorClassName='text-white'
             items={breadcrumbItems} />
         </div>
       </div>
 
       <TheLHBSEdge />
+      <TestimonialQuoteSection onNavigate={handleNavigate} />
     </>
   )
 }

@@ -101,21 +101,23 @@ const edgeSections: EdgeSection[] = [
 export default function TheLHBSEdge() {
   const [activeTab, setActiveTab] = useState(0)
   const containerRef = useRef<HTMLElement>(null)
+  const yOffsetHeader = 80 // Height of sticky header approximately
 
   const scrollToTab = (index: number) => {
     const element = document.getElementById(`milestone-${index}`)
     if (element) {
-      const top = element.getBoundingClientRect().top + window.scrollY
+      const yOffset = -yOffsetHeader // Sticky header offset
+      const top = element.getBoundingClientRect().top + window.scrollY + yOffset
       window.scrollTo({ top: top, behavior: 'smooth' })
     }
   }
 
   return (
-    <section ref={containerRef} className='relative w-full bg-gradient-to-b from-[#00602f] to-[#013b1d] text-white'>
+    <section ref={containerRef} className='relative w-full bg-gradient-to-b from-[#013b1d] to-[#00602f] text-white'>
       <div className='flex flex-col lg:flex-row relative'>
 
         {/* Left Content Column - SCROLLABLE */}
-        <div className='w-full lg:w-[65%] flex flex-col'>
+        <div className='w-full lg:w-[60%] flex flex-col'>
           {edgeSections.map((section, index) => (
             <MilestoneSection
               key={section.id}
@@ -126,15 +128,13 @@ export default function TheLHBSEdge() {
           ))}
         </div>
 
-        {/* Right Navigation Column - STICKY */}
-        <div className='hidden lg:flex lg:w-[35%] h-screen sticky top-0 flex-col justify-center items-start pl-12 pr-6'>
-          {/* Decorative Background */}
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_right,rgba(250,186,30,0.03)_0%,transparent_70%)] pointer-events-none' />
+        {/* Right Navigation Column - RETRO DESIGN (No Steps) */}
+        <div className='hidden lg:flex lg:w-[40%] h-screen sticky top-0 flex-col justify-center items-center  py-20 px-6 md:px-12 lg:px-20'>
 
-          <div className='relative w-full'>
-            <div className='relative space-y-8 z-10'>
-              {/* Minimalist Vertical Timeline Line */}
-              <div className='absolute left-8 top-8 bottom-8 w-0.5 bg-white/10 -translate-x-1/2 z-0'>
+          <div className='relative w-full max-w-lg'>
+            <div className='relative space-y-12 z-10'>
+              {/* Vertical Timeline Line */}
+              <div className='absolute left-7 lg:left-8 top-7 lg:top-8 bottom-0 w-px bg-white/10 -translate-x-1/2 z-0'>
                 <motion.div
                   className='absolute top-0 left-0 w-full bg-[#FABA1E] shadow-[0_0_15px_rgba(250,186,30,0.3)] origin-top'
                   style={{ height: `${(activeTab / (edgeSections.length - 1)) * 100}%` }}
@@ -148,16 +148,16 @@ export default function TheLHBSEdge() {
                   <button
                     key={item.id}
                     onClick={() => scrollToTab(index)}
-                    className='group relative w-full flex items-center gap-6 outline-none text-left'
+                    className='group relative w-full flex items-center gap-6 lg:gap-10 transition-all duration-700 outline-none text-left'
                   >
                     {/* Icon Box */}
                     <div className='relative shrink-0 z-20'>
                       <div
                         className={cn(
-                          'w-16 h-16 rounded-2xl flex items-center justify-center transition-all duration-700 relative overflow-hidden border',
+                          'w-14 h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center transition-all duration-700 relative overflow-hidden border',
                           isActive
-                            ? 'bg-[#FABA1E] border-[#FABA1E] text-[#00602f] shadow-[0_0_40px_rgba(250,186,30,0.3)] scale-105'
-                            : 'bg-[#004d26] border-white/5 text-white/40 group-hover:border-[#FABA1E]/50 group-hover:text-white group-hover:scale-105 shadow-lg'
+                            ? 'bg-[#FABA1E] border-[#FABA1E] text-[#00602f] shadow-[0_0_40px_rgba(250,186,30,0.3)] scale-110'
+                            : 'bg-[#004d26] border-white/5 text-white/40 group-hover:border-[#FABA1E]/50 group-hover:text-white group-hover:scale-110 shadow-lg'
                         )}
                       >
                         <div
@@ -180,34 +180,38 @@ export default function TheLHBSEdge() {
                     {/* Text Info */}
                     <div
                       className={cn(
-                        'flex flex-col text-left space-y-1 transition-all duration-700 w-full',
-                        isActive ? 'opacity-100' : 'opacity-40 group-hover:opacity-80'
+                        'flex flex-col text-left space-y-2 transition-all duration-700 w-full',
+                        isActive ? 'opacity-100' : 'opacity-30 group-hover:opacity-70'
                       )}
                     >
+                      {/* REMOVED STEP INDICATOR */}
+
                       <h4
                         className={cn(
-                          'text-xl xl:text-2xl font-black uppercase tracking-tight transition-all duration-700 leading-tight whitespace-nowrap',
+                          'text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black uppercase tracking-tighter transition-all duration-700 leading-none',
                           isActive
-                            ? 'text-white'
-                            : 'text-white/60 group-hover:text-white'
+                            ? 'text-white translate-x-1 lg:translate-x-2'
+                            : 'text-white/20 group-hover:text-white/40'
                         )}
                       >
                         {item.title}
                       </h4>
 
-                      {isActive && (
-                        <div className='overflow-hidden'>
-                          <motion.div
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            className='inline-flex items-center mt-1'
-                          >
-                            <span className='text-xs font-bold bg-[#FABA1E] text-[#00602f] px-3 py-1 rounded-full uppercase tracking-wide'>
-                              {item.timeRange}
-                            </span>
-                          </motion.div>
-                        </div>
-                      )}
+                      <div
+                        className={cn(
+                          'overflow-hidden transition-all duration-700',
+                          isActive ? 'max-h-12 opacity-100 mt-1' : 'max-h-0 opacity-0'
+                        )}
+                      >
+                        <p
+                          className={cn(
+                            'text-[10px] lg:text-[11px] font-bold text-[#FABA1E]/90 uppercase tracking-[0.1em] leading-tight transition-transform duration-700',
+                            isActive ? 'translate-x-1 lg:translate-x-2' : ''
+                          )}
+                        >
+                          {item.timeRange}
+                        </p>
+                      </div>
                     </div>
                   </button>
                 )
@@ -252,7 +256,7 @@ function MilestoneSection({ section, index, onInView }: { section: EdgeSection, 
     <div
       id={`milestone-${index}`}
       ref={ref}
-      className='min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 xl:px-32 py-24 relative even:bg-black/10'
+      className='min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 xl:px-32 py-24 relative'
     >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -275,11 +279,11 @@ function MilestoneSection({ section, index, onInView }: { section: EdgeSection, 
             <h3 className='text-[32px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-black text-white tracking-tight uppercase leading-none drop-shadow-xl'>
               {section.titleFull}
             </h3>
-            <div className='inline-flex'>
+            {/* <div className='inline-flex'>
               <span className="bg-[#FABA1E] text-[#00602f] text-base md:text-lg font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-lg">
                 {section.timeRange}
               </span>
-            </div>
+            </div> */}
           </div>
 
           <p className='text-xl md:text-2xl text-white/90 font-medium font-serif italic max-w-2xl'>
