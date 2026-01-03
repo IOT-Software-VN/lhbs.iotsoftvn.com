@@ -50,25 +50,25 @@ export const socialLinks: SocialLink[] = [
 ]
 
 export const partnerLogos: PartnerLogo[] = [
-  {
+    {
     id: 1,
-    name: 'English Central',
-    image: 'https://blog.englishcentral.com/wp-content/uploads/2022/05/cropped-ec.png'
+    name: 'Cambridge',
+    image: 'https://vectorseek.com/wp-content/uploads/2023/08/Cambridge-English-Language-Assessment-Logo-Vector.svg-.png'
   },
   {
     id: 2,
-    name: 'STEM',
-    image:
-      'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
-  },
-  {
-    id: 3,
     name: 'ASI',
     image: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png'
   },
   {
+    id: 3,
+    name: 'English Central',
+    image: 'https://blog.englishcentral.com/wp-content/uploads/2022/05/cropped-ec.png'
+  },
+  {
     id: 4,
-    name: 'Cambridge',
-    image: 'https://vectorseek.com/wp-content/uploads/2023/08/Cambridge-English-Language-Assessment-Logo-Vector.svg-.png'
-  }
+    name: 'STEM',
+    image:
+      'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
+  },
 ]
