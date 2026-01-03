@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
-import backgroundImage from '@/images/home-page/section-news/Layer_5.png'
+import backgroundImage from '@/images/base/lhbs-hac-bg.png'
 
 export default function NewsEventsSection({ onNavigate }: { onNavigate: (path: string) => void }) {
   const ref = useRef(null)
