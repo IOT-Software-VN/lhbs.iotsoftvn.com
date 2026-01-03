@@ -153,6 +153,11 @@ button.rounded-lg,
 }
 
 :root {
+  /* LHBS Brand Colors */
+  --color-brand-green: #1e5338;
+  --color-brand-yellow: #fdb913;
+  --color-brand-gold: #faba1e;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -281,6 +286,6 @@ button.rounded-lg,
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

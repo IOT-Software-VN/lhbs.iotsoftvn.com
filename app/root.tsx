@@ -61,8 +61,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
+import { AppProviders } from './providers/AppProviders'
+
 export default function App() {
-  return <Outlet />
+  return (
+    <AppProviders>
+      <Outlet />
+    </AppProviders>
+  )
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
@@ -90,7 +96,7 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
         )}
         <a
           href='/'
-          className='inline-flex items-center gap-2 bg-[#FABA1E] text-[#1a5336] px-6 py-3 rounded-full font-bold hover:bg-[#e5a812] transition-colors'
+          className='inline-flex items-center gap-2 bg-brand-gold text-[#1a5336] px-6 py-3 rounded-full font-bold hover:bg-[#e5a812] transition-colors'
         >
           Back to Home
         </a>
@@ -98,5 +104,3 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     </div>
   )
 }
-
-

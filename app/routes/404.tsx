@@ -24,7 +24,7 @@ export default function CatchAllPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="/"
-            className="group inline-flex items-center gap-3 bg-[#FABA1E] text-[#1a5336] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e5a812] transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center gap-3 bg-brand-gold text-[#1a5336] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#e5a812] transition-all duration-300 hover:scale-105"
           >
             <Home className="w-5 h-5" />
             Về trang chủ

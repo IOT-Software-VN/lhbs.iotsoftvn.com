@@ -1,0 +1,6 @@
+export * from './section/core-values'
+export * from './section/founding-message'
+export * from './section/mission'
+export * from './section/testimonial-quote'
+export * from './section/vision'
+export * from './section/welcome'

@@ -1,22 +1,37 @@
-FROM node:20-alpine AS development-dependencies-env
-COPY . /app
-WORKDIR /app
-RUN npm ci
+# This Dockerfile uses `serve` npm package to serve the static files with node process.
+# You can find the Dockerfile for nginx in the following link:
+# https://github.com/refinedev/dockerfiles/blob/main/vite/Dockerfile.nginx
+FROM refinedev/node:18 AS base
 
-FROM node:20-alpine AS production-dependencies-env
-COPY ./package.json package-lock.json /app/
-WORKDIR /app
-RUN npm ci --omit=dev
+FROM base as deps
 
-FROM node:20-alpine AS build-env
-COPY . /app/
-COPY --from=development-dependencies-env /app/node_modules /app/node_modules
-WORKDIR /app
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* .npmrc* ./
+
+RUN \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
+
+FROM base as builder
+
+ENV NODE_ENV production
+
+COPY --from=deps /app/refine/node_modules ./node_modules
+
+COPY . .
+
 RUN npm run build
 
-FROM node:20-alpine
-COPY ./package.json package-lock.json /app/
-COPY --from=production-dependencies-env /app/node_modules /app/node_modules
-COPY --from=build-env /app/build /app/build
-WORKDIR /app
-CMD ["npm", "run", "start"]
+FROM base as runner
+
+ENV NODE_ENV production
+
+RUN npm install -g serve
+
+COPY --from=builder /app/refine/dist ./
+
+USER refine
+
+CMD ["serve"]

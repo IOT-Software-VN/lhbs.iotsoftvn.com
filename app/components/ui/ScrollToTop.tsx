@@ -77,7 +77,7 @@ export default function CTABottomFixed({
       label: 'Chat Zalo',
       icon: <Phone className="w-5 h-5" />,
       href: zaloUrl,
-      className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-xl',
+      className: 'bg-brand-gold text-[#005C42] shadow-lg hover:shadow-xl',
       ariaLabel: 'Chat on Zalo',
       isExternal: true
     },
@@ -86,7 +86,7 @@ export default function CTABottomFixed({
       label: 'Chat Messenger',
       icon: <MessageCircle className="w-5 h-5" />,
       href: messengerUrl,
-      className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-xl',
+      className: 'bg-brand-gold text-[#005C42] shadow-lg hover:shadow-xl',
       ariaLabel: 'Chat on Messenger',
       isExternal: true
     }
@@ -99,7 +99,7 @@ export default function CTABottomFixed({
       label: 'Scroll to top',
       icon: <ChevronUp className="w-5 h-5" />,
       onClick: scrollToTop,
-      className: 'bg-[#FABA1E] text-[#005C42] shadow-lg hover:shadow-2xl',
+      className: 'bg-brand-gold text-[#005C42] shadow-lg hover:shadow-2xl',
       ariaLabel: 'Scroll to top',
       isExternal: false
     }
@@ -141,7 +141,7 @@ export default function CTABottomFixed({
               absolute right-full mr-0 px-3 py-2 h-10 text-xs font-semibold whitespace-nowrap
               opacity-0 group-hover:opacity-100 pointer-events-none shadow-xl transition-all duration-200
               flex items-center
-              bg-[#FABA1E] text-[#005C42]
+              bg-brand-gold text-[#005C42]
             ">
               {button.label}
             </span>
@@ -164,7 +164,7 @@ export default function CTABottomFixed({
               className={`
                 w-12 h-12 rounded-full transition-all duration-300 
                 flex items-center justify-center 
-                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FABA1E]
+                focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-gold
                 ${scrollButton.className}
               `}
               aria-label={scrollButton.ariaLabel}

@@ -1,0 +1,6 @@
+export * from './hero-carousel'
+export * from './section/education-level'
+export * from './section/news-events'
+export * from './section/programs'
+export * from './section/testimonial-quote'
+export * from './section/the-numbers'

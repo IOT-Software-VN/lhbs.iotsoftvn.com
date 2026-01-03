@@ -1,9 +1,39 @@
-.DS_Store
-.env
-/node_modules/
+# Logs
 
-# React Router
-/.react-router/
-/build/
-app/routes/our-campus/page.tsx
+logs
+_.log
+npm-debug.log_
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+\*.local
+build
+.react-router
+.github
+
+# Editor directories and files
+
+.vscode/_
+!.vscode/extensions.json
+.idea
+.DS_Store
+_.suo
+_.ntvs_
+_.njsproj
+_.sln
+\*.sw?
+
+# Environment files
+.env
+.agent
+shadcn-admin
+.serena
+.idea
+.DS_Store
+.cursor
 tongram-admin-main
