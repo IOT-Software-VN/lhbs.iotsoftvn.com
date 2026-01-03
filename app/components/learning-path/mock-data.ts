@@ -1,6 +1,12 @@
-import { GraduationCap, BookOpen, Baby, Star, Zap, Globe, Award } from 'lucide-react'
+import { Baby, Star, BookOpen, GraduationCap, Zap, Globe, Award, Palette, Brain, Heart, Coins, Mic, Rocket, PenTool } from 'lucide-react'
 
 export type SchoolLevel = 'preschool' | 'primary' | 'secondary' | 'high'
+
+export interface Certificate {
+  name: string
+  icon: any
+  description?: string
+}
 
 export const schoolData: Record<SchoolLevel, {
   title: string
@@ -8,65 +14,83 @@ export const schoolData: Record<SchoolLevel, {
   description: string
   link: string
   competencies: string[]
+  certificates: Certificate[]
   icon: any
 }> = {
   preschool: {
     title: 'Mầm non Galaxy',
     grade: '(18 tháng - 5 tuổi)',
-    description: 'Khơi dậy tiềm năng đầu đời thông qua phương pháp "Học qua chơi", phát triển đa giác quan và làm quen với ngôn ngữ thứ hai một cách tự nhiên.',
-    link: '/mam-non',
+    description: 'Giai đoạn "Cửa sổ vàng" để khơi dậy tiềm năng thông qua phương pháp "Học qua chơi", phát triển đa giác quan và làm quen Tiếng Anh tự nhiên với giáo viên nước ngoài.',
+    link: 'https://bienhoa.galaxy.edu.vn', // Defaulting to Bien Hoa for main button, maybe handle split later if requested strictly
     competencies: [
-      'Phát triển thể chất & vận động',
-      'Làm quen Tiếng Anh chuẩn mực',
-      'Kỹ năng tự phục vụ & xã hội',
-      'Tư duy sáng tạo & Thẩm mỹ'
+      'Phát triển Thể chất & Vận động thô/tinh',
+      'Nhận thức & Toán học sơ đẳng',
+      'Tự lập & Kỹ năng xã hội (Social Skills)',
+      'Cảm thụ Nghệ thuật & Sáng tạo'
+    ],
+    certificates: [
+      { name: 'Bộ GD&ĐT', icon: BookOpen },
+      { name: 'Tiếng Anh GVNN', icon: Globe },
+      { name: 'Montessori Inspired', icon:  Palette }, // Symbolic
+      { name: 'Kỹ năng sống', icon: Heart }
     ],
     icon: Baby
   },
   primary: {
     title: 'Tiểu học',
     grade: '(Lớp 1 - 5)',
-    description: 'Xây dựng nền tảng học thuật vững chắc và nhân cách tốt đẹp. Học sinh được phát triển toàn diện về kiến thức, kỹ năng và tư duy song ngữ.',
-    link: '/tieu-hoc',
+    description: 'Xây dựng nền tảng kiến thức vững chắc với chương trình Song ngữ (Bộ GD&ĐT + Cambridge). Chú trọng phát triển tư duy khoa học (STEM), tài chính (JA) và văn hóa đọc.',
+    link: 'https://school.lhbs.edu.vn/tieu-hoc',
     competencies: [
-      'Thành thạo Tiếng Việt & Tiếng Anh',
-      'Tư duy Toán học & Khoa học',
-      'Kỹ năng giao tiếp & Hợp tác',
-      'Giáo dục phẩm chất & Lối sống'
+      'Tiếng Anh Cambridge (Starters/Movers/Flyers)',
+      'Tư duy STEM & Robotics (UBTech)',
+      'Tài chính cá nhân (Junior Achievement)',
+      'Văn hóa đọc (Reading A-Z)'
+    ],
+    certificates: [
+      { name: 'Cambridge YLE', icon: Award },
+      { name: 'STEM Robotics', icon: Zap },
+      { name: 'Junior Achievement', icon: Coins },
+      { name: 'Reading A-Z', icon: BookOpen }
     ],
     icon: Star
   },
   secondary: {
     title: 'Trung học Cơ sở',
     grade: '(Lớp 6 - 9)',
-    description: 'Giai đoạn tăng tốc với chương trình học thuật chuyên sâu, rèn luyện tư duy phản biện và hình thành bản sắc cá nhân độc đáo.',
-    link: '/trung-hoc-co-so',
+    description: 'Giai đoạn tăng tốc và định hình tư duy phản biện. Chương trình Song ngữ nâng cao, học qua dự án (PBL) và các hoạt động công dân toàn cầu giúp học sinh khám phá bản sắc.',
+    link: 'https://school.lhbs.edu.vn/trung-hoc-co-so',
     competencies: [
-      'Tiếng Anh học thuật & Chứng chỉ',
-      'Tư duy phản biện & Giải quyết vấn đề',
-      'Năng lực Công nghệ thông tin',
-      'Kỹ năng Lãnh đạo bản thân'
+      'Tiếng Anh Cambridge (KET/PET)',
+      'Tư duy Công dân toàn cầu (Global Citizen)',
+      'Kỹ năng Tranh biện (Debate) & Hùng biện',
+      'Công nghệ AI & Lập trình Alpha Mini'
+    ],
+    certificates: [
+      { name: 'Cambridge KET/PET', icon: Award },
+      { name: 'AI & Coding', icon: Brain },
+      { name: 'Debate & Public Speaking', icon: Mic },
+      { name: 'Global Projects', icon: Globe }
     ],
     icon: BookOpen
   },
   high: {
     title: 'Trung học Phổ thông',
     grade: '(Lớp 10 - 12)',
-    description: 'Chuẩn bị hành trang vững vàng cho Cánh cửa Đại học và Cuộc sống. Định hướng nghề nghiệp rõ ràng và hoàn thiện năng lực công dân toàn cầu.',
-    link: '/trung-hoc-pho-thong',
+    description: 'Giai đoạn về đích, tập trung tối đa cho kỳ thi Tốt nghiệp THPT và chuẩn bị hồ sơ Đại học/Du học. Cơ hội nhận bằng Tú tài Mỹ (Dual Diploma) và chứng chỉ IELTS.',
+    link: 'https://school.lhbs.edu.vn/trung-hoc-pho-thong',
     competencies: [
-      'Định hướng Đại học & Du học',
-      'Năng lực Nghiên cứu khoa học',
-      'Tư duy Khởi nghiệp & Dự án',
-      'Chứng chỉ Quốc tế (IELTS/SAT)'
+      'Chứng chỉ IELTS 4.0 - 6.0+',
+      'Tú tài Mỹ (ASI Dual Diploma) - Tùy chọn',
+      'Năng lực Nghiên cứu khoa học & Tự học',
+      'Định hướng Nghề nghiệp & Du học'
+    ],
+    certificates: [
+      { name: 'IELTS Preparation', icon: Globe },
+      { name: 'ASI Dual Diploma', icon: Award }, // American School International
+      { name: 'Career Orient', icon: Rocket },
+      { name: 'Research Skills', icon: PenTool }
     ],
     icon: GraduationCap
   }
 }
-
-export const partnerCerts = [
-  { name: 'STEAM', icon: Zap },
-  { name: 'Song ngữ', icon: Globe },
-  { name: 'English Central', icon: BookOpen },
-  { name: 'Cambridge', icon: Award }
-]

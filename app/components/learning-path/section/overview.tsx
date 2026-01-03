@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { motion } from 'motion/react'
-import { CheckCircle2, Star } from 'lucide-react'
+import { motion, AnimatePresence } from 'motion/react'
+import { CheckCircle2, ChevronRight, Star } from 'lucide-react'
 import cardlhbs from '@/images/base/card-lhbs.png'
-import lhbs from '@/images/base/lhbs.png'
-import { schoolData, partnerCerts, type SchoolLevel } from '../mock-data'
+import { schoolData, type SchoolLevel } from '../mock-data'
 
 interface OverviewSectionProps {
   onNavigate: (path: string) => void
@@ -56,9 +55,9 @@ export default function OverviewSection({ onNavigate }: OverviewSectionProps) {
           </motion.div>
         </div>
 
-        {/* Timeline Navigation - 4 Steps */}
+        {/* Timeline Navigation */}
         <div className='mb-16 md:mb-24'>
-          <div className='grid grid-cols-2 md:grid-cols-4 mb-12 text-center relative z-10 gap-y-8'>
+          <div className='grid grid-cols-2 md:grid-cols-4 mb-12 text-center relative z-10 gap-y-8 max-w-6xl mx-auto'>
             {(['preschool', 'primary', 'secondary', 'high'] as const).map((level) => (
               <div
                 key={level}
@@ -79,22 +78,13 @@ export default function OverviewSection({ onNavigate }: OverviewSectionProps) {
             ))}
           </div>
 
-          {/* Timeline Bar Container */}
-          <div className='hidden md:block max-w-6xl mx-auto px-4 relative h-12'>
+          <div className='hidden md:block max-w-6xl mx-auto px-16 relative h-12'>
             <div className='flex items-center justify-between relative w-full h-full'>
-              {/* Background Line */}
               <div className='absolute inset-x-0 top-1/2 -translate-y-1/2 h-[3px] bg-gray-100 rounded-full' />
-
-              {/* Active Progress Line */}
               <div
                 className='absolute top-1/2 -translate-y-1/2 h-[4px] bg-gradient-to-r from-[#006b3d] to-[#FABA1E] rounded-full transition-all duration-500 ease-out shadow-[0_0_10px_rgba(250,186,30,0.3)]'
-                style={{
-                  left: '0',
-                  width: getProgressWidth()
-                }}
+                style={{ left: '0', width: getProgressWidth() }}
               />
-
-              {/* Dots / Icons */}
               {(['preschool', 'primary', 'secondary', 'high'] as const).map((level) => {
                 const isActive = activeTab === level
                 const Icon = schoolData[level].icon
@@ -114,107 +104,116 @@ export default function OverviewSection({ onNavigate }: OverviewSectionProps) {
           </div>
         </div>
 
-        {/* Content Section */}
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch'>
-
-          {/* Left Column - Certificates */}
-          <div className='lg:col-span-4 flex flex-col justify-center'>
-            <div className='flex items-center gap-3 mb-8'>
-              <div className='w-1 h-8 bg-[#FABA1E] rounded-full' />
-              <h3 className='text-2xl font-bold text-[#006b3d] uppercase tracking-wide'>Đối tác & Chứng nhận</h3>
-            </div>
-
-            <div className='grid grid-cols-2 gap-4'>
-              {partnerCerts.map((cert, idx) => (
-                <div
-                  key={idx}
-                  className='group bg-white rounded-xl p-5 border border-gray-100 shadow-sm hover:shadow-lg hover:border-[#FABA1E]/30 transition-all duration-300 flex flex-col items-center justify-center text-center aspect-square'
-                >
-                  <div className='mb-3 text-gray-300 group-hover:text-[#FABA1E] transition-all duration-500 scale-110'>
-                    <cert.icon className='w-8 h-8' />
-                  </div>
-                  <p className='text-xs font-bold text-gray-500 uppercase tracking-wider group-hover:text-[#006b3d] transition-colors'>
-                    {cert.name}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column - Dynamic School Card */}
-          <div className='lg:col-span-8 relative'>
+        {/* REDESIGNED CONTENT SECTION: Single Premium Card */}
+        <div className='max-w-6xl mx-auto relative'>
+          <AnimatePresence mode='wait'>
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className='w-full h-full bg-gradient-to-br from-[#006b3d] to-[#004d2c] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl flex flex-col justify-between group min-h-[450px]'
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+              className='relative w-full overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-[#006b3d] to-[#004d2c] shadow-2xl group min-h-[500px]'
             >
-              {/* Background Decor */}
-              <div className='absolute top-0 right-0 w-64 h-64 bg-[#FABA1E] rounded-full blur-[100px] opacity-20 -mr-20 -mt-20 pointer-events-none' />
-              <div className='absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-[80px] opacity-10 -ml-10 -mb-10 pointer-events-none' />
+              {/* Background Effects */}
+              <div className='absolute top-0 right-0 w-[500px] h-[500px] bg-[#FABA1E] rounded-full blur-[120px] opacity-[0.15] -mr-32 -mt-32 pointer-events-none' />
+              <div className='absolute bottom-0 left-0 w-[400px] h-[400px] bg-white rounded-full blur-[100px] opacity-[0.08] -ml-20 -mb-20 pointer-events-none' />
 
-              <div className='relative z-10 grid md:grid-cols-2 gap-10 items-start'>
-                {/* Info Text */}
-                <div className='space-y-6'>
+              {/* Logo Watermark - Bottom Right (Higher Z-Index but behind main content) */}
+              <img
+                src={cardlhbs}
+                alt="LHBS Logo"
+                className="absolute bottom-0 right-0 w-auto h-32 md:h-56 object-contain opacity-10 pointer-events-none translate-x-[10%] translate-y-[10%] z-0"
+              />
+
+              <div className='relative z-10 p-8 md:p-12 lg:p-16 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
+
+                {/* Left Column: Core Info */}
+                <div className='space-y-8'>
                   <div>
-                    <div className='inline-block px-3 py-1 bg-[#FABA1E]/20 border border-[#FABA1E]/50 rounded-full text-[#FABA1E] text-xs font-bold uppercase tracking-widest mb-4'>
-                      {schoolData[activeTab].grade}
+                    <div className='inline-flex items-center gap-2 px-4 py-1.5 bg-[#FABA1E]/20 border border-[#FABA1E]/30 rounded-full text-[#FABA1E] text-xs font-bold uppercase tracking-widest backdrop-blur-sm mb-6 shadow-inner'>
+                      <SchoolIcon level={activeTab} />
+                      <span>{schoolData[activeTab].grade}</span>
                     </div>
-                    <h3 className='text-3xl md:text-4xl font-bold mb-4 leading-tight'>{schoolData[activeTab].title}</h3>
-                    <p className='text-white/80 text-lg leading-relaxed'>
+                    <h2 className='text-3xl md:text-5xl font-bold text-white mb-6 leading-tight'>
+                      {schoolData[activeTab].title}
+                    </h2>
+                    <p className='text-lg text-white/90 leading-relaxed font-light text-justify'>
                       {schoolData[activeTab].description}
                     </p>
                   </div>
 
                   <button
                     onClick={() => onNavigate(schoolData[activeTab].link)}
-                    className='group/btn inline-flex items-center gap-3 px-8 py-3 bg-[#FABA1E] text-[#003820] font-bold text-sm uppercase tracking-widest rounded-xl hover:bg-white transition-all duration-300 shadow-lg hover:shadow-xl'
+                    className='group/btn inline-flex items-center gap-3 px-8 py-3.5 bg-white text-[#00602f] font-bold text-sm uppercase tracking-widest rounded-full hover:bg-[#FABA1E] hover:text-[#003820] transition-all duration-300 shadow-lg hover:shadow-[#FABA1E]/30'
                   >
-                    Tìm hiểu thêm
-                    <svg
-                      className='w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform'
-                      fill='none'
-                      stroke='currentColor'
-                      viewBox='0 0 24 24'
-                    >
-                      <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
-                    </svg>
+                    Tìm hiểu chi tiết
+                    <ChevronRight className='w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform' />
                   </button>
                 </div>
 
-                {/* Competencies List - The "Detail" part */}
-                <div className='bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10'>
-                  <h4 className='text-[#FABA1E] font-bold uppercase tracking-wider mb-4 flex items-center gap-2'>
-                    <Star className="w-4 h-4" /> Khung năng lực cốt lõi
-                  </h4>
-                  <ul className='space-y-3'>
+                {/* Right Column: Competencies & Highlights */}
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-8 shadow-2xl relative z-10'>
+                  <div className='flex items-center gap-3 mb-6'>
+                    <div className='p-2 bg-[#FABA1E]/20 rounded-lg text-[#FABA1E]'>
+                      <Star className='w-5 h-5 fill-current' />
+                    </div>
+                    <h3 className='text-lg font-bold text-white uppercase tracking-wider'>
+                      Khung năng lực cốt lõi
+                    </h3>
+                  </div>
+
+                  <ul className='space-y-4'>
                     {schoolData[activeTab].competencies.map((item, index) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: 10 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className='flex items-start gap-3'
+                        transition={{ delay: 0.1 + index * 0.1 }}
+                        className='flex items-start gap-4 group/item'
                       >
-                        <CheckCircle2 className='w-5 h-5 text-[#FABA1E] shrink-0 mt-0.5' />
-                        <span className='text-white/90 text-sm md:text-base font-medium'>{item}</span>
+                        <div className='mt-1 p-0.5 rounded-full bg-[#FABA1E]/20 text-[#FABA1E] group-hover/item:bg-[#FABA1E] group-hover/item:text-[#004d2c] transition-colors'>
+                          <CheckCircle2 className='w-4 h-4' />
+                        </div>
+                        <span className='text-white/90 text-sm md:text-base font-medium leading-normal'>
+                          {item}
+                        </span>
                       </motion.li>
                     ))}
                   </ul>
                 </div>
 
               </div>
-
-              {/* Card Image Decoration (Subtle) */}
-              <div className='absolute bottom-0 right-0 w-64 translate-y-12 translate-x-12 opacity-10 pointer-events-none'>
-                <img src={cardlhbs} alt="" className="w-full h-auto" />
-              </div>
-
             </motion.div>
+          </AnimatePresence>
+
+          {/* Bottom Row: Trust Indicators / Certificates (Dynamic) */}
+          <div className='mt-16 border-t border-gray-100 pt-10'>
+            <h4 className='text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8'>
+              Chương trình & Chứng chỉ
+            </h4>
+            <div className='flex flex-wrap justify-center gap-8 md:gap-16'>
+              {schoolData[activeTab].certificates.map((cert, idx) => (
+                <div key={idx} className='flex flex-col items-center gap-2 group cursor-default'>
+                  <div className='p-4 bg-gray-50 rounded-2xl text-gray-400 group-hover:text-[#006b3d] group-hover:bg-[#006b3d]/10 transition-all duration-300 scale-100 group-hover:scale-110 shadow-sm group-hover:shadow-md border border-transparent group-hover:border-[#006b3d]/20'>
+                    <cert.icon className='w-8 h-8 md:w-10 md:h-10' />
+                  </div>
+                  <span className='text-xs md:text-sm font-bold text-gray-500 text-center max-w-[120px] group-hover:text-[#00602f] transition-colors'>
+                    {cert.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
+
       </div>
     </section>
   )
+}
+
+function SchoolIcon({ level }: { level: SchoolLevel }) {
+  const Icon = schoolData[level].icon
+  return <Icon className='w-4 h-4' />
 }
