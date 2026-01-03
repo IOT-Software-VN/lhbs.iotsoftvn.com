@@ -1,25 +1,18 @@
 import type { Route } from './+types/page'
-import SubPageHero from '@/components/shared-ui/Hero-Carousel-SubPage'
-import {
-  MainReportSection,
-  ArchiveReportsSection,
-  FormsSection
-} from "@/components/public-information/index"
+import SubPageHero from '@/components/shared-ui/sub-page-hero'
+import { MainReportSection, ArchiveReportsSection, FormsSection } from '@/components/public-information/index'
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Công khai thông tin - LHBS' },
     { name: 'description', content: 'Công khai thông tin thường niên của Trường Song ngữ Lạc Hồng - LHBS' }
   ]
 }
 
-import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/components/Breadcrumb'
+import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/Breadcrumb'
 
 export default function PublicInformationPage() {
-  const breadcrumbItems: BreadcrumbItem[] = [
-    { label: 'Trang chủ', path: '/' },
-    { label: 'Công khai thông tin' }
-  ]
+  const breadcrumbItems: BreadcrumbItem[] = [{ label: 'Trang chủ', path: '/' }, { label: 'Công khai thông tin' }]
 
   return (
     <>
@@ -41,4 +34,4 @@ export default function PublicInformationPage() {
       <ArchiveReportsSection />
     </>
   )
-} 
+}

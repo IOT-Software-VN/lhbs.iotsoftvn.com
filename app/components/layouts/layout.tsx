@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import StickyHeader from './StickyHeader'
 import Footer from './Footer'
 import { FullScreenMenu } from '@/components/layouts/FullScreenMenu'
-import ScrollToTop from '@/components/ui/components/ScrollToTop';
+import { ScrollToTop } from '../ui/ScrollToTop'
 
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false)
@@ -54,7 +54,7 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Footer onNavigate={handleNavigate} />
     </>
   )

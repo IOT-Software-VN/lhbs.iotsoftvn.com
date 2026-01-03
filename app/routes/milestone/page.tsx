@@ -1,8 +1,9 @@
+import { useNavigate } from 'react-router'
 import type { Route } from './+types/page'
 import { TheLHBSEdge, TestimonialQuoteSection } from '@/components/milestone'
-import SubPageHero from '@/components/shared-ui/Hero-Carousel-SubPage'
+import SubPageHero from '@/components/shared-ui/sub-page-hero'
 
-export function meta({ }: Route.MetaArgs) {
+export function meta({}: Route.MetaArgs) {
   return [
     { title: 'Cột mốc phát triển - LHBS' },
     {
@@ -12,24 +13,22 @@ export function meta({ }: Route.MetaArgs) {
   ]
 }
 
-import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/components/Breadcrumb'
+import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/Breadcrumb'
 
 export default function MilestonePage() {
+  const navigate = useNavigate()
   const handleNavigate = (path: string) => {
-    window.location.href = path
+    navigate(path)
   }
 
-  const breadcrumbItems: BreadcrumbItem[] = [
-    { label: 'Trang chủ', path: '/' },
-    { label: 'Cột mốc đáng nhớ' }
-  ]
+  const breadcrumbItems: BreadcrumbItem[] = [{ label: 'Trang chủ', path: '/' }, { label: 'Cột mốc đáng nhớ' }]
 
   return (
     <>
       <SubPageHero
-        title="CỘT MỐC ĐÁNG NHỚ"
-        subtitle="Hành trình vươn tầm xuất sắc của LHBS"
-        backgroundImage="https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg"
+        title='CỘT MỐC ĐÁNG NHỚ'
+        subtitle='Hành trình vươn tầm xuất sắc của LHBS'
+        backgroundImage='https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg'
       />
 
       {/* Breadcrumb Section */}
@@ -39,7 +38,8 @@ export default function MilestonePage() {
             textClassName='text-white '
             activeTextClassName='text-white font-medium'
             separatorClassName='text-white'
-            items={breadcrumbItems} />
+            items={breadcrumbItems}
+          />
         </div>
       </div>
 

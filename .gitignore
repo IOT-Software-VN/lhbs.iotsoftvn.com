@@ -5,3 +5,5 @@
 # React Router
 /.react-router/
 /build/
+app/routes/our-campus/page.tsx
+tongram-admin-main
