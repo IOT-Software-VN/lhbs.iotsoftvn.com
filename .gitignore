@@ -15,6 +15,7 @@ dist-ssr
 build
 .react-router
 .github
+.next
 
 # Editor directories and files
 

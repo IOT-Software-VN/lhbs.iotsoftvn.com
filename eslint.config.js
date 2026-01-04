@@ -7,14 +7,12 @@ import pluginQuery from '@tanstack/eslint-plugin-query'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
-import { defineConfig } from 'eslint/config'
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const tsconfigPath = path.join(__dirname, 'tsconfig.json')
 const tsconfigNodePath = path.join(__dirname, 'tsconfig.node.json')
 const isProd = process.env.NODE_ENV === 'production'
 
-export default defineConfig(
+export default [
   {
     ignores: ['dist', 'node_modules', 'src/components/ui']
   },
@@ -89,4 +87,4 @@ export default defineConfig(
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
     }
   }
-)
+]
