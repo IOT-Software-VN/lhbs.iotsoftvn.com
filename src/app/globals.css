@@ -4,9 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-primary: var(--font-svn-gotham), 'Inter', system-ui, sans-serif;
-  --font-serif: var(--font-svn-gotham), 'Crimson Pro', Georgia, serif;
-  --font-sans: var(--font-svn-gotham), 'Inter', system-ui, sans-serif;
+  /* Font Families - Use CSS variable from next/font/local */
+  --font-sans: var(--font-svn-gotham), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-svn-gotham), ui-serif, Georgia, serif;
+
+  /* LHBS Brand Colors - These will generate utility classes */
+  --color-brand-green: #1e5338;
+  --color-brand-gold: #faba1e;
+  --color-lhbs-green: #1e5338;
+  --color-lhbs-green-dark: #00602f;
+  --color-lhbs-yellow: #faba1e;
 }
 
 html {
@@ -72,16 +79,9 @@ button.rounded-lg,
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --color-lhbs-green: #1e5338;
-  --color-lhbs-green-dark: #00602f;
-  --color-lhbs-yellow: #faba1e;
 }
 
 :root {
-  /* LHBS Brand Colors */
-  --color-brand-green: #1e5338;
-  --color-brand-gold: #faba1e;
-
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -119,6 +119,8 @@ button.rounded-lg,
   --color-lhbs-green: #1e5338;
   --color-lhbs-green-dark: #00602f;
   --color-lhbs-yellow: #faba1e;
+  --brand-green: #1e5338;
+  --brand-gold: #faba1e;
 }
 
 .dark {

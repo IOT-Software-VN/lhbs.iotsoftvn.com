@@ -48,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='vi' className='scroll-smooth snap-y snap-mandatory'>
-      <body className={`${svnGotham.variable} font-sans`}>
+    <html lang='vi' className={`scroll-smooth snap-y snap-mandatory ${svnGotham.variable}`}>
+      <body className='font-sans antialiased'>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

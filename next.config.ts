@@ -3,9 +3,10 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  assetPrefix: './', // Use relative paths for file:// protocol
+  assetPrefix: './',
   images: {
-    unoptimized: true
+    unoptimized: true,
+    qualities: [75, 90]
   }
 }
 
