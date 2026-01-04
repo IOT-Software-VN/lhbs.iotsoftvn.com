@@ -21,7 +21,10 @@ const svnGotham = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'LHBS - Trường Song Ngữ Lạc Hồng',
+  title: {
+    default: 'LHBS - Trường Song Ngữ Lạc Hồng',
+    template: '%s | LHBS'
+  },
   description: 'Trường Song Ngữ Lạc Hồng - LHBS',
   icons: {
     icon: [

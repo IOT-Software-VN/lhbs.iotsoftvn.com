@@ -17,7 +17,8 @@ build
 .github
 .next
 \*out
-out 
+out
+
 out/**
 # Editor directories and files
 
@@ -40,102 +41,3 @@ shadcn-admin
 .DS_Store
 .cursor
 tongram-admin-main
-out/__next.__PAGE__.txt
-out/__next._full.txt
-out/__next._head.txt
-out/__next._index.txt
-out/__next._tree.txt
-out/_not-found.html
-out/_not-found.txt
-out/404.html
-out/ban-lanh-dao.html
-out/ban-lanh-dao.txt
-out/cong-khai-thong-tin.html
-out/cong-khai-thong-tin.txt
-out/cot-moc-dang-nho.html
-out/cot-moc-dang-nho.txt
-out/he-thong-co-so.html
-out/he-thong-co-so.txt
-out/index.html
-out/index.txt
-out/lo-trinh-hoc-tap.html
-out/lo-trinh-hoc-tap.txt
-out/tam-nhin-su-menh.html
-out/tam-nhin-su-menh.txt
-out/_next/static/chunks/6aa979675396e33e.js
-out/_next/static/chunks/8c41331d7f95165a.js
-out/_next/static/chunks/9a4c16ae49edc9aa.js
-out/_next/static/chunks/34beedeca52fe7f5.js
-out/_next/static/chunks/76deee93e1048293.js
-out/_next/static/chunks/0935ca41b3457601.js
-out/_next/static/chunks/b6b348271458c593.js
-out/_next/static/chunks/c4bf7b8477b85b71.js
-out/_next/static/chunks/cba19d06bf86074d.css
-out/_next/static/chunks/df2fec662d919051.js
-out/_next/static/chunks/edfa7d30065701f6.js
-out/_next/static/chunks/f2ffb202e125c1bf.js
-out/_next/static/chunks/f7438703b9e80098.js
-out/_next/static/chunks/turbopack-a63c718740a69d9a.js
-out/_next/static/sXgaXdw8uZ5O5GPjwW98s/_buildManifest.js
-out/_next/static/sXgaXdw8uZ5O5GPjwW98s/_clientMiddlewareManifest.json
-out/_next/static/sXgaXdw8uZ5O5GPjwW98s/_ssgManifest.js
-out/_not-found/__next._full.txt
-out/_not-found/__next._head.txt
-out/_not-found/__next._index.txt
-out/_not-found/__next._not-found.txt
-out/_not-found/__next._tree.txt
-out/_not-found/__next._not-found/__PAGE__.txt
-out/ban-lanh-dao/__next._full.txt
-out/ban-lanh-dao/__next._head.txt
-out/ban-lanh-dao/__next._index.txt
-out/ban-lanh-dao/__next._tree.txt
-out/ban-lanh-dao/__next.ban-lanh-dao.txt
-out/ban-lanh-dao/__next.ban-lanh-dao/__PAGE__.txt
-out/cong-khai-thong-tin/__next._full.txt
-out/cong-khai-thong-tin/__next._head.txt
-out/cong-khai-thong-tin/__next._index.txt
-out/cong-khai-thong-tin/__next._tree.txt
-out/cong-khai-thong-tin/__next.cong-khai-thong-tin.txt
-out/cong-khai-thong-tin/__next.cong-khai-thong-tin/__PAGE__.txt
-out/cot-moc-dang-nho/__next._full.txt
-out/cot-moc-dang-nho/__next._head.txt
-out/cot-moc-dang-nho/__next._index.txt
-out/cot-moc-dang-nho/__next._tree.txt
-out/cot-moc-dang-nho/__next.cot-moc-dang-nho.txt
-out/cot-moc-dang-nho/__next.cot-moc-dang-nho/__PAGE__.txt
-out/fonts/SVN-Gotham Black Italic.otf
-out/fonts/SVN-Gotham Black.otf
-out/fonts/SVN-Gotham Bold Italic.otf
-out/fonts/SVN-Gotham Bold.otf
-out/fonts/SVN-Gotham Bold.ttf
-out/fonts/SVN-Gotham Book Italic.otf
-out/fonts/SVN-Gotham Book.otf
-out/fonts/SVN-Gotham Italic.otf
-out/fonts/SVN-Gotham Light Italic.otf
-out/fonts/SVN-Gotham Light.otf
-out/fonts/SVN-Gotham Light.ttf
-out/fonts/SVN-Gotham Regular.otf
-out/fonts/SVN-Gotham Thin Italic.otf
-out/fonts/SVN-Gotham Thin.otf
-out/fonts/SVN-Gotham Ultra Italic.otf
-out/fonts/SVN-Gotham Ultra.otf
-out/fonts/SVN-Gotham XLight Italic.otf
-out/fonts/SVN-Gotham XLight.otf
-out/he-thong-co-so/__next._full.txt
-out/he-thong-co-so/__next._head.txt
-out/he-thong-co-so/__next._index.txt
-out/he-thong-co-so/__next._tree.txt
-out/he-thong-co-so/__next.he-thong-co-so.txt
-out/he-thong-co-so/__next.he-thong-co-so/__PAGE__.txt
-out/lo-trinh-hoc-tap/__next._full.txt
-out/lo-trinh-hoc-tap/__next._head.txt
-out/lo-trinh-hoc-tap/__next._index.txt
-out/lo-trinh-hoc-tap/__next._tree.txt
-out/lo-trinh-hoc-tap/__next.lo-trinh-hoc-tap.txt
-out/lo-trinh-hoc-tap/__next.lo-trinh-hoc-tap/__PAGE__.txt
-out/tam-nhin-su-menh/__next._full.txt
-out/tam-nhin-su-menh/__next._head.txt
-out/tam-nhin-su-menh/__next._index.txt
-out/tam-nhin-su-menh/__next._tree.txt
-out/tam-nhin-su-menh/__next.tam-nhin-su-menh.txt
-out/tam-nhin-su-menh/__next.tam-nhin-su-menh/__PAGE__.txt

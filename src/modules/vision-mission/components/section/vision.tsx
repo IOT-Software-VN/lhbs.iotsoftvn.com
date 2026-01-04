@@ -16,7 +16,7 @@ export function VisionSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className='bg-brand-yellow w-12 h-1 md:w-20 md:h-1.5 mb-6 rounded-full' />
+            <div className='bg-brand-gold w-12 h-1 md:w-20 md:h-1.5 mb-6 rounded-full' />
 
             <h2 className='text-4xl md:text-5xl lg:text-6xl font-black text-brand-green uppercase tracking-tight mb-6 md:mb-8 leading-tight'>
               Tầm nhìn
@@ -25,16 +25,16 @@ export function VisionSection() {
             <div className='flex flex-col gap-4 text-base md:text-lg lg:text-xl text-[#333] font-light leading-relaxed text-justify'>
               <p>
                 Trường Song ngữ Lạc Hồng là{' '}
-                <span className='font-bold text-brand-yellow'>trường song ngữ hàng đầu tại Đồng Nai</span>, nơi mỗi học
+                <span className='font-bold text-brand-gold'>trường song ngữ hàng đầu tại Đồng Nai</span>, nơi mỗi học
                 sinh được nuôi dưỡng để phát triển toàn diện về trí tuệ, nhân cách và năng lực hội nhập toàn cầu trong
                 thời đại số.
               </p>
               <p>
                 Nhà trường gìn giữ và lan tỏa{' '}
-                <span className='font-bold text-brand-yellow'>giá trị văn hóa Việt Nam</span>, đồng thời khơi dậy tư duy
+                <span className='font-bold text-brand-gold'>giá trị văn hóa Việt Nam</span>, đồng thời khơi dậy tư duy
                 sáng tạo, tinh thần học tập suốt đời và ý thức trách nhiệm với cộng đồng, giúp học sinh trở thành những{' '}
-                <span className='font-bold text-brand-yellow'>công dân nhân ái, tự tin, sáng tạo</span> và thích ứng
-                trong thế giới không ngừng đổi thay.
+                <span className='font-bold text-brand-gold'>công dân nhân ái, tự tin, sáng tạo</span> và thích ứng trong
+                thế giới không ngừng đổi thay.
               </p>
             </div>
           </motion.div>
@@ -48,7 +48,7 @@ export function VisionSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Decorative Stepped Block (background) */}
-            <div className='absolute top-8 left-8 w-full h-full bg-brand-yellow/20 rounded-3xl -z-10' />
+            <div className='absolute top-8 left-8 w-full h-full bg-brand-gold/20 rounded-3xl -z-10' />
             <div className='absolute -bottom-6 -right-6 w-2/3 h-2/3 bg-brand-green/10 rounded-3xl -z-20' />
 
             {/* Main Image Container */}

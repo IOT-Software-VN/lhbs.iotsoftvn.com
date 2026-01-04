@@ -6,7 +6,7 @@ import {
   ProgramsSection
 } from '../components'
 import { TestimonialQuoteSection } from '@/components/common/testimonial-quote-section'
-import { TESTIMONIALS } from '@/components/common/testimonials-data'
+import { TESTIMONIALS } from '@/data/testimonials-data'
 
 export function HomePage() {
   return (

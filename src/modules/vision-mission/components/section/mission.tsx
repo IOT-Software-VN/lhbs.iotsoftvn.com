@@ -18,7 +18,7 @@ export function MissionSection() {
         >
           {/* Subtitle / Tagline */}
           <div className='flex flex-col items-center mb-6'>
-            <div className='bg-brand-yellow w-12 h-1 md:w-20 md:h-1.5 rounded-full' />
+            <div className='bg-brand-gold w-12 h-1 md:w-20 md:h-1.5 rounded-full' />
           </div>
 
           {/* Main Title 60px */}
@@ -30,15 +30,15 @@ export function MissionSection() {
           <div className='flex flex-col gap-4 text-base md:text-lg lg:text-xl text-[#333] font-light leading-relaxed md:leading-relaxed'>
             <p>
               Trường Song ngữ Lạc Hồng nuôi dưỡng{' '}
-              <span className='font-bold text-brand-yellow'>tinh thần học hỏi suốt đời</span>, bồi dưỡng nhân cách và
-              hình thành bản lĩnh hội nhập thông qua{' '}
-              <span className='font-bold text-brand-yellow'>nền giáo dục song ngữ toàn diện</span>, kết hợp hài hòa giá
+              <span className='font-bold text-brand-gold'>tinh thần học hỏi suốt đời</span>, bồi dưỡng nhân cách và hình
+              thành bản lĩnh hội nhập thông qua{' '}
+              <span className='font-bold text-brand-gold'>nền giáo dục song ngữ toàn diện</span>, kết hợp hài hòa giá
               trị văn hóa Việt Nam với tinh hoa giáo dục quốc tế.
             </p>
             <p>
               Nhà trường giúp học sinh phát triển{' '}
-              <span className='font-bold text-brand-yellow'>trí tuệ, cảm xúc và năng lực toàn cầu</span> để sống nhân
-              ái, tự tin và đóng góp tích cực cho xã hội.
+              <span className='font-bold text-brand-gold'>trí tuệ, cảm xúc và năng lực toàn cầu</span> để sống nhân ái,
+              tự tin và đóng góp tích cực cho xã hội.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export function MissionSection() {
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
-            className='h-px w-32 md:w-64 bg-linear-to-r from-transparent via-brand-yellow to-transparent mx-auto mt-12 md:mt-16 opacity-50'
+            className='h-px w-32 md:w-64 bg-linear-to-r from-transparent via-brand-gold to-transparent mx-auto mt-12 md:mt-16 opacity-50'
           />
         </motion.div>
       </div>

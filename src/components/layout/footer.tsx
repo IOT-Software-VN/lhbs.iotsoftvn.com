@@ -1,7 +1,7 @@
 import { MapPin, Phone, Mail } from 'lucide-react'
 import Image from 'next/image'
 const logoImage = '/images/base/logo-head.png'
-import { footerData, footerLinksGroup1, footerLinksGroup2, socialLinks, partnerLogos } from './mock-data'
+import { footerData, footerLinksGroup1, footerLinksGroup2, socialLinks, partnerLogos } from './layout-data'
 
 export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
   return (

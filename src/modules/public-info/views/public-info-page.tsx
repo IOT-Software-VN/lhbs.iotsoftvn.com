@@ -1,6 +1,6 @@
 import { MainReportSection, ArchiveReportsSection, FormsSection } from '../components'
 import { SubPageHero } from '@/components/common/sub-page-hero'
-import { Breadcrumb } from '@/components/ui/breadcrumb'
+import { BreadcrumbSection } from '@/components/common/breadcrumb-section'
 import { PUBLIC_INFO_BREADCRUMB_ITEMS } from '../constants'
 
 export function PublicInfoPage() {
@@ -11,14 +11,7 @@ export function PublicInfoPage() {
         subtitle='Báo cáo thường niên và quy chế hoạt động chính thức của Trường Song ngữ Lạc Hồng'
         backgroundImage='https://lhbs.edu.vn/wp-content/uploads/2025/02/IMG_8910.jpg'
       />
-
-      {/* Breadcrumb Section */}
-      <div className='w-full bg-white pt-12 pb-4 md:pt-20 md:pb-6 relative z-10'>
-        <div className='container mx-auto px-4 md:px-8 lg:px-12'>
-          <Breadcrumb items={PUBLIC_INFO_BREADCRUMB_ITEMS} />
-        </div>
-      </div>
-
+      <BreadcrumbSection items={PUBLIC_INFO_BREADCRUMB_ITEMS} />
       <MainReportSection />
       <FormsSection />
       <ArchiveReportsSection />

@@ -87,7 +87,7 @@ export function OverviewSection({ onNavigate }: OverviewSectionProps) {
             <div className='flex items-center justify-between relative w-full h-full'>
               <div className='absolute inset-x-0 top-1/2 -translate-y-1/2 h-[3px] bg-gray-100 rounded-full' />
               <div
-                className='absolute top-1/2 -translate-y-1/2 h-[4px] bg-linear-to-r from-[#006b3d] to-brand-gold rounded-full transition-all duration-500 ease-out shadow-[0_0_10px_rgba(250,186,30,0.3)]'
+                className='absolute top-1/2 -translate-y-1/2 h-1 bg-linear-to-r from-[#006b3d] to-brand-gold rounded-full transition-all duration-500 ease-out shadow-[0_0_10px_rgba(250,186,30,0.3)]'
                 style={{ left: '0', width: getProgressWidth() }}
               />
               {(['preschool', 'primary', 'secondary', 'high'] as const).map((level) => {

@@ -1,4 +1,4 @@
-import type { Testimonial } from './testimonial-quote-section'
+import type { Testimonial } from '@/components/common/testimonial-quote-section'
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -20,4 +20,3 @@ export const TESTIMONIALS: Testimonial[] = [
     parentWork: 'Phụ huynh học sinh mẫu giáo'
   }
 ]
-
