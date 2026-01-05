@@ -5,16 +5,16 @@ import { MainLayout } from '@lhbs/ui'
 
 const svnGotham = localFont({
   src: [
-    { path: './fonts/SVN-Gotham Light.otf', weight: '300', style: 'normal' },
-    { path: './fonts/SVN-Gotham Light Italic.otf', weight: '300', style: 'italic' },
-    { path: './fonts/SVN-Gotham Regular.otf', weight: '400', style: 'normal' },
-    { path: './fonts/SVN-Gotham Italic.otf', weight: '400', style: 'italic' },
-    { path: './fonts/SVN-Gotham Book.otf', weight: '500', style: 'normal' },
-    { path: './fonts/SVN-Gotham Book Italic.otf', weight: '500', style: 'italic' },
-    { path: './fonts/SVN-Gotham Bold.otf', weight: '700', style: 'normal' },
-    { path: './fonts/SVN-Gotham Bold Italic.otf', weight: '700', style: 'italic' },
-    { path: './fonts/SVN-Gotham Black.otf', weight: '900', style: 'normal' },
-    { path: './fonts/SVN-Gotham Black Italic.otf', weight: '900', style: 'italic' }
+    { path: '../fonts/SVN-Gotham Light.otf', weight: '300', style: 'normal' },
+    { path: '../fonts/SVN-Gotham Light Italic.otf', weight: '300', style: 'italic' },
+    { path: '../fonts/SVN-Gotham Regular.otf', weight: '400', style: 'normal' },
+    { path: '../fonts/SVN-Gotham Italic.otf', weight: '400', style: 'italic' },
+    { path: '../fonts/SVN-Gotham Book.otf', weight: '500', style: 'normal' },
+    { path: '../fonts/SVN-Gotham Book Italic.otf', weight: '500', style: 'italic' },
+    { path: '../fonts/SVN-Gotham Bold.otf', weight: '700', style: 'normal' },
+    { path: '../fonts/SVN-Gotham Bold Italic.otf', weight: '700', style: 'italic' },
+    { path: '../fonts/SVN-Gotham Black.otf', weight: '900', style: 'normal' },
+    { path: '../fonts/SVN-Gotham Black Italic.otf', weight: '900', style: 'italic' }
   ],
   variable: '--font-svn-gotham',
   display: 'swap'
