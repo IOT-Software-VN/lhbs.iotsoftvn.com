@@ -12,13 +12,13 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
   {
     id: 'galaxy-kc',
     title: 'MẦM NON',
-    subtitle: '18 tháng - 3 tuổi',
+    subtitle: '12 tháng - 5 tuổi',
     descriptions: [
-      'Chương trình mầm non hiện đại với phương pháp quốc tế.',
-      'Chương trình tích hợp kết hợp Bộ GD&ĐT và chuẩn toàn cầu.',
-      'Tập trung phát triển thể chất, nhân cách và kỹ năng xã hội.'
+      'Tôn trọng sự khác biệt của từng trẻ',
+      'Phát triển toàn diện Đức - Trí - Thể Mỹ',
+      'Trang bị nền tảng, kỹ năng để sẵn sàng cho tương lai hội nhập'
     ],
-    image: '/images/home-page/cac-cap-hoc-section/program-03.png',
+    image: '/images/home-page/cac-cap-hoc-section/mam-non.jpg',
     slug: '/campus/galaxy-kc'
   },
 

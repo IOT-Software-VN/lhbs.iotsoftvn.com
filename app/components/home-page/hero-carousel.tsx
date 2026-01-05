@@ -1,8 +1,11 @@
 import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import { ScrollIndicator } from '~/components/ScrollIndicator' // Giả sử đường dẫn đúng
-import Herobg from '@/images/home-page/hero-section/hero-bg.png'
-import Herobg1 from '@/images/home-page/hero-section/hero-bg-1.jpg'
+import hero1 from '@/images/home-page/hero-section/hero-1.jpg'
+import hero2 from '@/images/home-page/hero-section/hero-2.jpg'
+import hero3 from '@/images/home-page/hero-section/hero-3.jpg'
+import hero4 from '@/images/home-page/hero-section/hero-4.jpg'
+
 
 
 interface HeroProps {
@@ -15,8 +18,10 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
   const [isContentVisible, setIsContentVisible] = useState(true)
 
   const backgroundImages = [
-    Herobg,
-    Herobg1
+    hero1,
+    hero2,
+    hero3,
+    hero4
   ]
 
   useEffect(() => {
@@ -103,7 +108,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
               >
                 <div className='bg-[#FABA1E] w-8 h-1 md:w-12 md:h-1.5 mb-2 md:mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
                 <h2 className='text-xs md:text-sm lg:text-base font-bold text-[#FABA1E] uppercase tracking-[0.2em] leading-none drop-shadow-md'>
-                  Chào mừng đến LHBS
+                  Chào mừng đến với Song Ngữ Lạc Hồng
                 </h2>
               </motion.div>
 
@@ -127,7 +132,7 @@ export default function HeroCarousel({ onNavigate }: HeroProps) {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className='text-white/90 text-sm md:text-base lg:text-lg font-medium mb-4 md:mb-6 lg:mb-8 max-w-xl lg:max-w-2xl leading-relaxed drop-shadow-lg'
               >
-                #Bước đệm vững chắc trở thành công dân toàn cầu
+                #Bước đệm vững chắc để trở thành công dân toàn cầu
               </motion.p>
 
               {/* CTA Button */}
