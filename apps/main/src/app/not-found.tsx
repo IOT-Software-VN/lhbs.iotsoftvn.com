@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { Home, ArrowLeft } from 'lucide-react' // Sử dụng thư viện lucide-react (phổ biến với Next.js)
+import { Home, ArrowLeft } from 'lucide-react'
 
 export default function NotFound() {
   return (
