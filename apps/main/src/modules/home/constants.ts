@@ -1,4 +1,4 @@
-import { TrendingUp, HeartHandshake, MonitorSmartphone } from 'lucide-react'
+import { BookOpen, UtensilsCrossed, Globe, MonitorSmartphone } from 'lucide-react'
 import type { SchoolLevel, NewsItem, EventItem, GalleryItem, UniversityLogo, WhyChooseItem } from './types'
 
 export const NEWS_ITEMS: NewsItem[] = [
@@ -73,13 +73,13 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
   {
     id: 'galaxy-kc',
     title: 'MẦM NON',
-    subtitle: '18 tháng - 3 tuổi',
+    subtitle: '12 tháng - 5 tuổi',
     descriptions: [
-      'Chương trình mầm non hiện đại với phương pháp quốc tế.',
-      'Chương trình tích hợp kết hợp Bộ GD&ĐT và chuẩn toàn cầu.',
-      'Tập trung phát triển thể chất, nhân cách và kỹ năng xã hội.'
+      'Tôn trọng sự khác biệt của từng trẻ',
+      'Phát triển toàn diện Đức - Trí - Thể Mỹ',
+      'Trang bị nền tảng, kỹ năng để sẵn sàng cho tương lai hội nhập'
     ],
-    image: '/images/home-page/cac-cap-hoc-section/program-03.png',
+    image: '/images/home-page/cac-cap-hoc-section/mam-non.jpg',
     slug: '/campus/galaxy-kc'
   },
 
@@ -88,11 +88,11 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     title: 'TIỂU HỌC',
     subtitle: 'Lớp 1 - Lớp 5',
     descriptions: [
-      'Chương trình song ngữ toàn diện với nền tảng vững chắc.',
-      'Phát triển toàn diện nhấn mạnh sáng tạo và tư duy logic.',
-      'Hoạt động hấp dẫn xây dựng sự tự tin và khám phá.'
+      'Chương trình học tập cá nhân hóa.',
+      'Phát triển toàn diện thể chất và trí tuệ',
+      'Trang bị nền tảng, kỹ năng để sẵn sàng cho tương lai hội nhập'
     ],
-    image: '/images/home-page/cac-cap-hoc-section/program-02.png',
+    image: '/images/home-page/cac-cap-hoc-section/tieu-hoc.png',
     slug: '/campus/elementary',
     learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/primary-school'
   },
@@ -102,11 +102,11 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     title: 'TRUNG HỌC CƠ SỞ',
     subtitle: 'Lớp 6 - Lớp 9',
     descriptions: [
-      'Chương trình học thuật tập trung kỹ năng tư duy phản biện.',
-      'Học tập dựa trên dự án khuyến khích làm việc nhóm và đổi mới.',
-      'Chuẩn bị cho những thách thức học thuật cao hơn.'
+      'Chương trình học tập cá nhân hóa',
+      'Phát triển toàn diện thể chất và trí tuệ.',
+      'Trang bị nền tảng, kỹ năng để sẵn sàng cho tương lai hội nhập'
     ],
-    image: '/images/home-page/cac-cap-hoc-section/program.jpg',
+    image: '/images/home-page/cac-cap-hoc-section/trung-hoc.png',
     slug: '/campus/middle-school',
     learnMoreUrl: 'https://school-lhbs-iotsoftvn-com.vercel.app/secondary-school'
   },
@@ -116,9 +116,9 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
     title: 'TRUNG HỌC PHỔ THÔNG',
     subtitle: 'Lớp 10 - Lớp 12',
     descriptions: [
-      'Chương trình học thuật nâng cao phù hợp chuẩn quốc tế.',
-      'Định hướng chuyên biệt cho con đường đại học và nghề nghiệp.',
-      'Cơ hội lãnh đạo và xuất sắc trong hoạt động ngoại khóa.'
+      'Chương trình học tập cá nhân hóa',
+      'Chương trình hướng nghiệp phù hợp với năng lực',
+      'Sẵn sàng chinh phục các trường đại học hàng đầu trong nước và quốc tế'
     ],
     image: '/images/home-page/cac-cap-hoc-section/program-01.png',
     slug: '/campus/high-school',
@@ -128,48 +128,39 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
 export const WHY_CHOOSE_DATA: WhyChooseItem[] = [
   {
-    icon: TrendingUp,
-    title: 'Lộ trình học\u00A0tập cá\u00A0nhân\u00A0hóa',
-    description: 'Mỗi học sinh được thiết kế chương trình học phù hợp với năng lực và mục tiêu phát triển riêng.',
+    icon: BookOpen,
+    title: 'Cá nhân hóa lộ\u00A0trình học\u00A0tập',
+    description: 'Chương trình học, phương pháp giảng dạy phù hợp với năng lực của từng học sinh',
     fullDescription:
-      'LHBS cam kết mang đến cho mỗi học sinh một lộ trình học tập được thiết kế riêng, phù hợp với năng lực, sở thích và mục tiêu phát triển cá nhân. Chúng tôi tin rằng mỗi em đều có tiềm năng riêng biệt cần được phát huy.',
+      'Tại LHBS, chúng tôi hiểu rằng mỗi học sinh là một cá nhân độc đáo với năng lực, sở thích và tốc độ học tập riêng biệt. Vì vậy, chúng tôi xây dựng lộ trình học tập cá nhân hóa, điều chỉnh chương trình và phương pháp giảng dạy để phù hợp với từng em, giúp các em phát triển tối đa tiềm năng của bản thân.',
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
-    alt: 'Lộ trình học tập cá nhân hóa tại LHBS',
-    points: [
-      'Đánh giá năng lực và sở thích cá nhân',
-      'Thiết kế chương trình học phù hợp',
-      'Theo dõi tiến độ và điều chỉnh linh hoạt',
-      'Hỗ trợ phát triển toàn diện'
-    ]
+    alt: 'Cá nhân hóa lộ trình học tập tại LHBS'
   },
   {
-    icon: HeartHandshake,
-    title: 'Lấy\u00A0học\u00A0sinh\u00A0làm trung\u00A0tâm',
-    description: 'Phương pháp giảng dạy chủ động, khuyến khích tư duy sáng tạo độc lập và phát triển kỹ năng.',
+    icon: Globe,
+    title: 'Môi trường song\u00A0ngữ thực\u00A0chất',
+    description: 'Chương trình tiếng Anh Me - Us - Our world giúp học sinh tự tin sử dụng tiếng Anh, sẵn sàng hội nhập',
     fullDescription:
-      'Triết lý giáo dục của LHBS đặt học sinh vào trung tâm của mọi hoạt động. Chúng tôi khuyến khích học sinh chủ động trong học tập, phát triển tư duy phản biện và kỹ năng giải quyết vấn đề thực tế.',
+      'LHBS tự hào mang đến môi trường song ngữ thực chất với chương trình tiếng Anh Me - Us - Our world, giúp học sinh không chỉ học tiếng Anh mà còn sử dụng thành thạo trong giao tiếp hàng ngày. Chúng tôi tạo điều kiện để các em tự tin hội nhập với cộng đồng quốc tế, sẵn sàng cho tương lai toàn cầu.',
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/576931936_808502421811900_4863998363654667053_n.jpg',
-    alt: 'Lấy học sinh làm trung tâm tại LHBS',
-    points: [
-      'Phương pháp học tập tích cực',
-      'Khuyến khích tư duy sáng tạo',
-      'Phát triển kỹ năng mềm',
-      'Học qua trải nghiệm thực tế'
-    ]
+    alt: 'Môi trường song ngữ thực chất tại LHBS'
   },
   {
     icon: MonitorSmartphone,
     title: 'Tiên phong ứng\u00A0dụng công\u00A0nghệ',
-    description: 'Tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, tạo môi trường học tập tương tác.',
+    description: 'Tích hợp công nghệ hiện đại vào các hoạt động giảng dạy, học tập và quản lý',
     fullDescription:
-      'LHBS là đơn vị tiên phong trong việc ứng dụng công nghệ giáo dục tiên tiến. Chúng tôi tích hợp các công cụ công nghệ hiện đại vào giảng dạy để tạo ra môi trường học tập tương tác, hấp dẫn và hiệu quả cao.',
+      'LHBS là đơn vị tiên phong trong việc ứng dụng công nghệ giáo dục tiên tiến. Chúng tôi tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, học tập và quản lý, tạo ra môi trường học tập thông minh, tương tác và hiệu quả cao. Công nghệ không chỉ là công cụ hỗ trợ mà còn là nền tảng để phát triển tư duy sáng tạo và kỹ năng số cho học sinh.',
     image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/2.jpg',
-    alt: 'Tiên phong ứng dụng công nghệ tại LHBS',
-    points: [
-      'Lớp học thông minh với công nghệ hiện đại',
-      'Nền tảng học trực tuyến tương tác',
-      'Ứng dụng AI hỗ trợ cá nhân hóa',
-      'Thư viện số đa dạng và phong phú'
-    ]
+    alt: 'Tiên phong ứng dụng công nghệ tại LHBS'
+  },
+  {
+    icon: UtensilsCrossed,
+    title: 'Dinh dưỡng cân\u00A0bằng',
+    description: 'Thực đơn phong phú và rõ ràng về hàm lượng',
+    fullDescription:
+      'LHBS quan tâm đến sức khỏe và sự phát triển toàn diện của học sinh thông qua chế độ dinh dưỡng khoa học. Thực đơn được thiết kế phong phú, đa dạng với các món ăn bổ dưỡng, đảm bảo đầy đủ dưỡng chất cần thiết. Mỗi bữa ăn đều được công bố rõ ràng về hàm lượng dinh dưỡng, giúp phụ huynh yên tâm về sức khỏe của con em mình.',
+    image: 'https://lhbs.edu.vn/wp-content/uploads/2025/11/578369959_810928768235932_2189832322315432240_n.jpg',
+    alt: 'Dinh dưỡng cân bằng tại LHBS'
   }
 ]

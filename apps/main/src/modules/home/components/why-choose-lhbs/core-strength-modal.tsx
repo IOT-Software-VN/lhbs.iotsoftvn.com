@@ -8,13 +8,12 @@ interface CoreStrengthModalProps {
   title: string
   description: string
   fullDescription: string
-  points: string[]
   image: string
   alt: string
   onClose: () => void
 }
 
-export function CoreStrengthModal({ title, fullDescription, points, image, alt, onClose }: CoreStrengthModalProps) {
+export function CoreStrengthModal({ title, fullDescription, image, alt, onClose }: CoreStrengthModalProps) {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -74,22 +73,9 @@ export function CoreStrengthModal({ title, fullDescription, points, image, alt, 
             <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-[#005C42] mb-3 md:mb-4 uppercase tracking-wide'>
               {title}
             </h2>
-
             <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-5 md:mb-6'>
               {fullDescription}
-            </p>
-
-            <h3 className='text-lg sm:text-xl md:text-2xl font-bold text-[#005C42] mb-3 md:mb-4 uppercase'>
-              Điểm nổi bật:
-            </h3>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 md:gap-4'>
-              {points.map((point, index) => (
-                <div key={index} className='flex items-start gap-2 md:gap-3'>
-                  <span className='text-brand-yellow text-lg md:text-xl font-bold shrink-0'>✓</span>
-                  <span className='text-gray-700 text-sm md:text-base leading-relaxed'>{point}</span>
-                </div>
-              ))}
-            </div>
+            </p>{' '}
           </div>
         </div>
       </motion.div>

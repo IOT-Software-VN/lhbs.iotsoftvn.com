@@ -37,7 +37,7 @@ export function TheNumbersSection() {
         </div>
 
         {/* Info Cards Grid - Extra top padding for floating icons */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-20 pt-16'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-20 pt-16'>
           {WHY_CHOOSE_DATA.map((item, index) => (
             <InfoCard
               key={index}
@@ -58,7 +58,6 @@ export function TheNumbersSection() {
             title={selectedStrength.title}
             description={selectedStrength.description}
             fullDescription={selectedStrength.fullDescription}
-            points={selectedStrength.points}
             image={selectedStrength.image}
             alt={selectedStrength.alt}
             onClose={() => setSelectedStrength(null)}

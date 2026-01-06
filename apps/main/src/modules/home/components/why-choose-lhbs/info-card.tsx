@@ -37,7 +37,7 @@ export function InfoCard({ icon: Icon, title, description, index, onClick }: Inf
           {/* Icon Circle with Glow Effect */}
           <div className='relative w-24 h-24 md:w-28 md:h-28'>
             {/* Outer Glow Ring */}
-            <div className='absolute inset-0 rounded-full  bg-gradient-to-br from-[#FDB913]/20 to-[#FDB913]/5 blur-xl group-hover:from-[#FDB913]/40 group-hover:to-[#FDB913]/10 transition-all duration-500' />
+            <div className='absolute inset-0 rounded-full bg-gradient-to-br from-[#FDB913]/20 to-[#FDB913]/5 blur-xl group-hover:from-[#FDB913]/40 group-hover:to-[#FDB913]/10 transition-all duration-500' />
 
             {/* Main Icon Circle */}
             <div className='relative w-full h-full rounded-full bg-gradient-to-br from-[#FDB913] to-[#f5a700] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500'>
@@ -45,7 +45,7 @@ export function InfoCard({ icon: Icon, title, description, index, onClick }: Inf
             </div>
 
             {/* Decorative Ring */}
-            <div className='absolute -inset-2 rounded-full border-2 border-brand-yellow/20 group-hover:border-brand-yellow/40 transition-colors duration-500' />
+            <div className='absolute -inset-2 rounded-full border-2 border-[#FDB913]/20 group-hover:border-[#FDB913]/40 transition-colors duration-500' />
           </div>
         </motion.div>
 
@@ -61,7 +61,7 @@ export function InfoCard({ icon: Icon, title, description, index, onClick }: Inf
         </div>
 
         {/* Subtle Bottom Accent */}
-        <div className='absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-linear-to-r from-transparent via-brand-yellow/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
+        <div className='absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-transparent via-[#FDB913]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
       </div>
     </motion.div>
   )

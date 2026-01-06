@@ -7,8 +7,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { ScrollIndicator } from '@lhbs/ui'
 
-const HERO_BACKGROUND_IMAGE_1 = '/images/home-page/hero-section/hero-bg.png'
-const HERO_BACKGROUND_IMAGE_2 = '/images/home-page/hero-section/hero-bg-1.jpg'
+const HERO_BACKGROUND_IMAGE_1 = '/images/home-page/hero-section/hero-1.jpg'
+const HERO_BACKGROUND_IMAGE_2 = '/images/home-page/hero-section/hero-2.jpg'
+const HERO_BACKGROUND_IMAGE_3 = '/images/home-page/hero-section/hero-3  .jpg'
+const HERO_BACKGROUND_IMAGE_4 = '/images/home-page/hero-section/hero-4.jpg'
 
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -105,7 +107,7 @@ export function HeroCarousel() {
               >
                 <div className='bg-brand-gold w-8 h-1 md:w-12 md:h-1.5 mb-2 md:mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
                 <h2 className='text-xs md:text-sm lg:text-base font-bold text-brand-gold uppercase tracking-[0.2em] leading-none drop-shadow-md'>
-                  Chào mừng đến LHBS
+                  Chào mừng đến với Song Ngữ Lạc Hồng
                 </h2>
               </motion.div>
 

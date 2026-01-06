@@ -43,5 +43,4 @@ export interface WhyChooseItem {
   fullDescription: string
   image: string
   alt: string
-  points: string[]
 }
