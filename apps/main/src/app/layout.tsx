@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='vi' className={`scroll-smooth snap-y snap-mandatory ${svnGotham.variable}`}>
-      <body className='font-sans antialiased'>
+      <body className='font-sans antialiased' suppressHydrationWarning>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

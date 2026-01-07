@@ -28,12 +28,13 @@
     "turbo:cache:clear": "node scripts/clean.js .turbo",
     "turbo:cache:test": "pnpm turbo:cache:clear && pnpm build",
     "reset": "pnpm clean:all && pnpm install",
-    "serve:static": "node scripts/serve-static.js"
+    "serve:static": "node scripts/serve-static.js",
+    "test": "turbo run test"
   },
   "devDependencies": {
     "glob": "^11.0.0",
     "rimraf": "^5.0.5",
-    "turbo": "^2.7.2",
+    "turbo": "latest",
     "typescript": "^5.9.2"
   },
   "packageManager": "pnpm@9.0.0",

@@ -1,0 +1,32 @@
+import type { ElementType } from 'react'
+import type { ReactNode } from 'react'
+
+export interface HistoryChapter {
+  id: string
+  label: string
+  years: string
+  title: string
+  description: string
+  image?: string
+  mediaContent?: ReactNode
+}
+
+// Legacy types for reused components
+export interface TimelineEvent {
+  id: string
+  year: number
+  title: string
+  subtitle?: string
+  description: string
+  image?: string
+  icon?: ElementType
+  featured?: boolean
+}
+
+export interface MilestoneHighlight {
+  id: string
+  icon: ElementType
+  value: string
+  label: string
+  description?: string
+}

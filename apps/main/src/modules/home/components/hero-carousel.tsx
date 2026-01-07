@@ -9,7 +9,7 @@ import { ScrollIndicator } from '@lhbs/ui'
 
 const HERO_BACKGROUND_IMAGE_1 = '/images/home-page/hero-section/hero-1.jpg'
 const HERO_BACKGROUND_IMAGE_2 = '/images/home-page/hero-section/hero-2.jpg'
-const HERO_BACKGROUND_IMAGE_3 = '/images/home-page/hero-section/hero-3  .jpg'
+const HERO_BACKGROUND_IMAGE_3 = '/images/home-page/hero-section/hero-3.jpg'
 const HERO_BACKGROUND_IMAGE_4 = '/images/home-page/hero-section/hero-4.jpg'
 
 export function HeroCarousel() {
