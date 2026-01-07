@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion, useInView } from 'motion/react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@lhbs/ui'
 import { TESTIMONIALS } from '@/data/testimonials-data'
+import { Quote } from 'lucide-react'
 
 export function HistoryTestimonialSection() {
   const ref = useRef(null)
@@ -13,7 +14,7 @@ export function HistoryTestimonialSection() {
   return (
     <motion.section
       ref={ref}
-      className='w-full min-h-[500px] bg-[#00602f] overflow-hidden relative py-20'
+      className='w-full min-h-[500px] bg-brand-green overflow-hidden relative py-20'
       initial={{ opacity: 0 }}
       animate={isInView ? { opacity: 1 } : {}}
       transition={{ duration: 0.8 }}
@@ -41,8 +42,8 @@ export function HistoryTestimonialSection() {
           transition={{ duration: 0.6 }}
           className='mb-12 md:mb-16'
         >
-          <div className='bg-brand-gold w-12 h-1 md:w-16 md:h-1.5 mb-4 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.5)]' />
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight'>
+          <div className='bg-brand-gold w-20 h-2 mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+          <h2 className='text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-white uppercase tracking-tight drop-shadow-2xl'>
             LHBS <span className='text-brand-gold'>Trong Tôi</span>
           </h2>
         </motion.div>
@@ -63,14 +64,7 @@ export function HistoryTestimonialSection() {
                     <CarouselItem key={index}>
                       <div className='flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 px-8 md:px-12 py-2'>
                         <div className='shrink-0 pt-2'>
-                          <svg
-                            xmlns='http://www.w3.org/2000/svg'
-                            viewBox='0 0 448 512'
-                            fill='currentColor'
-                            className='w-8 h-8 md:w-12 md:h-12 text-brand-gold opacity-90'
-                          >
-                            <path d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V216z' />
-                          </svg>
+                          <Quote className='w-8 h-8 md:w-12 md:h-12 text-brand-gold/90 fill-brand-gold/20' />
                         </div>
 
                         <div className='flex flex-col w-full text-center md:text-left'>

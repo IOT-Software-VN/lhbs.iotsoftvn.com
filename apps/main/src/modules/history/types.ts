@@ -12,17 +12,7 @@ export interface HistoryChapter {
 }
 
 // Legacy types for reused components
-export interface TimelineEvent {
-  id: string
-  year: number
-  title: string
-  subtitle?: string
-  description: string
-  image?: string
-  icon?: ElementType
-  featured?: boolean
-}
-
+// Legacy types for reused components
 export interface MilestoneHighlight {
   id: string
   icon: ElementType

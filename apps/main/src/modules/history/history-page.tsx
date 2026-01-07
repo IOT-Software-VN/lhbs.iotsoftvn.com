@@ -1,10 +1,4 @@
-import {
-  ScrollStory,
-  HistoryMilestonesGrid,
-  HistoryFutureSection,
-  HistoryFounderSection,
-  HistoryTestimonialSection
-} from './components'
+import { HistoryTimeline, HistoryMilestonesGrid, HistoryFutureSection, HistoryTestimonialSection } from './components'
 import { BreadcrumbSection, SubPageHero } from '@lhbs/ui'
 import { HISTORY_BREADCRUMB_ITEMS, HERO_BACKGROUND_IMAGE } from './constants'
 
@@ -19,11 +13,11 @@ export function HistoryPage() {
 
       <BreadcrumbSection items={HISTORY_BREADCRUMB_ITEMS} />
 
-      <ScrollStory />
-
-      <HistoryFounderSection />
+      {/* Main Timeline */}
+      <HistoryTimeline />
 
       <HistoryMilestonesGrid />
+
       <HistoryFutureSection />
 
       <HistoryTestimonialSection />
