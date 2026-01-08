@@ -8,10 +8,12 @@
     "start": "next start",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
+    "serve:static": "npx serve out",
     "clean": "pnpm exec rimraf .next out tsconfig.tsbuildinfo",
     "clean:cache": "pnpm exec rimraf .next",
     "clean:export": "pnpm exec rimraf out",
-    "export": "pnpm clean:export && pnpm build"
+    "export": "pnpm clean:export && pnpm build",
+    "build:static": "pnpm build && node scripts/make-relative-paths.mjs"
   },
   "dependencies": {
     "@lhbs/styles": "workspace:*",
