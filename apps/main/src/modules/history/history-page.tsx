@@ -1,6 +1,7 @@
-import { HistoryTimeline, HistoryMilestonesGrid, HistoryFutureSection, HistoryTestimonialSection } from './components'
-import { BreadcrumbSection, SubPageHero } from '@lhbs/ui'
+import { HistoryTimeline, HistoryMilestonesGrid, HistoryFutureSection } from './components'
+import { BreadcrumbSection, SubPageHero, TestimonialQuoteSection } from '@lhbs/ui'
 import { HISTORY_BREADCRUMB_ITEMS, HERO_BACKGROUND_IMAGE } from './constants'
+import { TESTIMONIALS } from '@/data/testimonials-data'
 
 export function HistoryPage() {
   return (
@@ -20,7 +21,7 @@ export function HistoryPage() {
 
       <HistoryFutureSection />
 
-      <HistoryTestimonialSection />
+      <TestimonialQuoteSection testimonials={TESTIMONIALS} imagePath='/images/base/360.png' />
     </main>
   )
 }
