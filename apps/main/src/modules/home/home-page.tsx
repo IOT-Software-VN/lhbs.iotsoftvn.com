@@ -9,7 +9,7 @@ export function HomePage() {
       <EducationLevelSection />
       <TheNumbersSection />
       <NewsEventsSection />
-      <TestimonialQuoteSection testimonials={TESTIMONIALS} imagePath='/images/home-page/quote-section/360.png' />
+      <TestimonialQuoteSection testimonials={TESTIMONIALS} imagePath='/images/base/360.png' />
     </>
   )
 }

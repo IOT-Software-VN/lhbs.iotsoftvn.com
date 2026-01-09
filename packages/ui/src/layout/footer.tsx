@@ -21,21 +21,21 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
             background: `
                 radial-gradient(
                   ellipse at top left,
-                  rgba(0, 96, 47, 1) 30%,
-                  rgba(0, 96, 47, 0.95) 40%,
-                  rgba(0, 96, 47, 0.75) 55%,
-                  rgba(0, 96, 47, 0.50) 60%,
-                  rgba(0, 96, 47, 0.30) 80%,
-                  rgba(0, 96, 47, 0.15) 100%
+                  rgba(1, 92, 52, 1) 30%,
+                  rgba(1, 92, 52, 0.95) 40%,
+                  rgba(1, 92, 52, 0.75) 55%,
+                  rgba(1, 92, 52, 0.50) 60%,
+                  rgba(1, 92, 52, 0.30) 80%,
+                  rgba(1, 92, 52, 0.15) 100%
                 ),
                 radial-gradient(
                   ellipse at top right,
-                  rgba(0, 96, 47, 1) 10%,
-                  rgba(0, 96, 47, 0.95) 20%,
-                  rgba(0, 96, 47, 0.75) 45%,
-                  rgba(0, 96, 47, 0.50) 60%,
-                  rgba(0, 96, 47, 0.30) 80%,
-                  rgba(0, 96, 47, 0.15) 100%
+                  rgba(1, 92, 52, 1) 10%,
+                  rgba(1, 92, 52, 0.95) 20%,
+                  rgba(1, 92, 52, 0.75) 45%,
+                  rgba(1, 92, 52, 0.50) 60%,
+                  rgba(1, 92, 52, 0.30) 80%,
+                  rgba(1, 92, 52, 0.15) 100%
                 )
               `
           }}

@@ -75,10 +75,10 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
       animate={{
         y: isVisible ? 0 : '-100%',
         backgroundColor: isTransparent
-          ? 'rgba(26, 83, 54, 0)'
+          ? 'rgba(1, 92, 52, 0)'
           : menuOpen
-          ? 'rgba(26, 83, 54, 1)'
-          : 'rgba(255, 255, 255, 0.98)',
+            ? 'rgba(1, 92, 52, 1)'
+            : 'rgba(255, 255, 255, 0.98)',
         backdropFilter: isTransparent ? 'blur(0px)' : 'blur(10px)'
       }}
       transition={{
@@ -94,10 +94,10 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
           onClick={handleLogoClick}
           className={`shrink-0 cursor-pointer w-full flex justify-center md:w-auto md:block ${
             isTransparent
-              ? 'focus:ring-offset-[#1a5336]'
+              ? 'focus:ring-offset-brand-green-dark'
               : menuOpen
-              ? 'focus:ring-offset-[#1a5336]'
-              : 'focus:ring-offset-white'
+                ? 'focus:ring-offset-brand-green-dark'
+                : 'focus:ring-offset-white'
           }`}
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -119,12 +119,12 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
           {/* Primary CTA Button - Apply Now */}
           <motion.button
             onClick={handleEnquireClick}
-            className={`rounded-full flex items-center justify-center px-4 md:px-6 h-10 md:h-12 bg-brand-gold text-[#1a5336] font-bold uppercase text-xs md:text-sm tracking-wider hover:bg-[#e5a812] transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 ${
+            className={`rounded-full flex items-center justify-center px-4 md:px-6 h-10 md:h-12 bg-brand-gold text-brand-green-dark font-bold uppercase text-xs md:text-sm tracking-wider hover:bg-brand-gold/90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 ${
               isTransparent
-                ? 'focus:ring-offset-[#1a5336]'
+                ? 'focus:ring-offset-brand-green-dark'
                 : menuOpen
-                ? 'focus:ring-offset-[#1a5336]'
-                : 'focus:ring-offset-white'
+                  ? 'focus:ring-offset-brand-green-dark'
+                  : 'focus:ring-offset-white'
             }`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -137,10 +137,10 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
             onClick={menuOpen ? onMenuClose : onMenuClick}
             className={`p-2 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 ${
               isTransparent
-                ? 'text-white hover:text-brand-gold focus:ring-offset-[#1a5336]'
+                ? 'text-white hover:text-brand-gold focus:ring-offset-brand-green-dark'
                 : menuOpen
-                ? 'text-white hover:text-brand-gold focus:ring-offset-[#1a5336]'
-                : 'text-[#1a5336] hover:text-brand-gold focus:ring-offset-white'
+                  ? 'text-white hover:text-brand-gold focus:ring-offset-brand-green-dark'
+                  : 'text-brand-green-dark hover:text-brand-gold focus:ring-offset-white'
             }`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}

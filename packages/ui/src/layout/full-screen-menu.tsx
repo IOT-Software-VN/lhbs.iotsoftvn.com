@@ -68,7 +68,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           {/* Desktop Layout */}
           {!isMobile ? (
             <motion.div
-              className='fixed left-0 right-0 z-71 bg-[#1a5336] overflow-hidden'
+              className='fixed left-0 right-0 z-71 bg-brand-green-dark overflow-hidden'
               style={{
                 top: 'calc(72px + 3rem)',
                 maxHeight: 'calc(100vh - 72px - 4rem)',
@@ -187,7 +187,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
             </motion.div>
           ) : (
             <motion.div
-              className='fixed left-0 right-0 bottom-0 z-70 bg-[#1a5336] overflow-y-auto'
+              className='fixed left-0 right-0 bottom-0 z-70 bg-brand-green-dark overflow-y-auto'
               style={{ top: 'calc(72px + 2.5rem)' }}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
