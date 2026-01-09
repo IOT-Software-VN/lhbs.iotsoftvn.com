@@ -26,7 +26,7 @@ export function MainReportSection() {
         <div
           className='absolute inset-0'
           style={{
-            backgroundImage: `radial-gradient(circle at 20px 20px, var(--color-lhbs-green) 2px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 20px 20px, var(--color-brand-green) 2px, transparent 0)`,
             backgroundSize: '40px 40px'
           }}
         />
@@ -43,12 +43,12 @@ export function MainReportSection() {
         >
           <div>
             <div className='flex items-center gap-3 mb-2'>
-              <span className='px-3 py-1 bg-lhbs-yellow text-lhbs-green text-xs font-black rounded-full uppercase shadow-sm'>
+              <span className='px-3 py-1 bg-brand-gold text-brand-green text-xs font-black rounded-full uppercase shadow-sm'>
                 Mới nhất
               </span>
               <span className='text-gray-500 font-medium text-sm'>Năm học {featuredReport.year}</span>
             </div>
-            <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-lhbs-green leading-tight'>
+            <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-brand-green leading-tight'>
               {featuredReport.title}
             </h2>
           </div>
@@ -56,7 +56,7 @@ export function MainReportSection() {
           <div className='flex gap-3'>
             <button
               onClick={handleDownload}
-              className='flex items-center gap-2 px-5 py-2.5 bg-lhbs-green hover:bg-lhbs-green-dark text-white font-bold text-sm rounded-full transition-all duration-300 shadow-md hover:shadow-lg'
+              className='flex items-center gap-2 px-5 py-2.5 bg-brand-green hover:bg-brand-green-dark text-white font-bold text-sm rounded-full transition-all duration-300 shadow-md hover:shadow-lg'
             >
               <Download className='w-4 h-4' />
               <span>Tải báo cáo</span>
@@ -76,12 +76,12 @@ export function MainReportSection() {
           <div className='mb-2 flex justify-end'>
             <div className='flex items-center gap-4 text-xs text-gray-500'>
               <div className='flex items-center gap-1.5'>
-                <Calendar className='w-3.5 h-3.5 text-lhbs-yellow' />
+                <Calendar className='w-3.5 h-3.5 text-brand-gold' />
                 <span>{featuredReport.publishDate}</span>
               </div>
               <div className='w-px h-3 bg-gray-300' />
               <div className='flex items-center gap-1.5'>
-                <FileCheck className='w-3.5 h-3.5 text-lhbs-yellow' />
+                <FileCheck className='w-3.5 h-3.5 text-brand-gold' />
                 <span>{featuredReport.fileSize}</span>
               </div>
             </div>

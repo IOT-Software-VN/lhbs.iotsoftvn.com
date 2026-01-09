@@ -39,24 +39,24 @@ export function ArchiveReportsSection() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <div
-                className='group bg-white rounded-xl p-4 border border-gray-200 hover:border-lhbs-yellow/50 transition-all duration-300 hover:shadow-md flex items-center gap-4 cursor-pointer'
+                className='group bg-white rounded-xl p-4 border border-gray-200 hover:border-brand-gold/50 transition-all duration-300 hover:shadow-md flex items-center gap-4 cursor-pointer'
                 onClick={() => handleDownload(report.pdfUrl)}
               >
                 {/* Icon */}
-                <div className='shrink-0 w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-lhbs-yellow/10 transition-colors'>
-                  <FileText className='w-5 h-5 text-gray-400 group-hover:text-lhbs-yellow transition-colors' />
+                <div className='shrink-0 w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-brand-gold/10 transition-colors'>
+                  <FileText className='w-5 h-5 text-gray-400 group-hover:text-brand-gold transition-colors' />
                 </div>
 
                 {/* Content */}
                 <div className='flex-1 min-w-0'>
                   <div className='flex items-center justify-between mb-1'>
-                    <span className='text-xs font-bold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full group-hover:bg-lhbs-yellow/10 group-hover:text-lhbs-yellow-dark transition-colors'>
+                    <span className='text-xs font-bold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full group-hover:bg-brand-gold/10 group-hover:text-brand-gold-dark transition-colors'>
                       {report.year}
                     </span>
-                    <Download className='w-3.5 h-3.5 text-gray-300 group-hover:text-lhbs-green transition-colors' />
+                    <Download className='w-3.5 h-3.5 text-gray-300 group-hover:text-brand-green transition-colors' />
                   </div>
                   <h4
-                    className='text-sm font-bold text-gray-700 truncate group-hover:text-lhbs-green transition-colors'
+                    className='text-sm font-bold text-gray-700 truncate group-hover:text-brand-green transition-colors'
                     title={report.title}
                   >
                     {report.title}

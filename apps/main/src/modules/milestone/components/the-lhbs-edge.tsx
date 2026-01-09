@@ -22,7 +22,10 @@ export function TheLHBSEdge() {
   }
 
   return (
-    <section ref={containerRef} className='relative w-full bg-linear-to-b from-[#013b1d] to-lhbs-green-dark text-white'>
+    <section
+      ref={containerRef}
+      className='relative w-full bg-linear-to-b from-[#013b1d] to-brand-green-dark text-white'
+    >
       <div className='flex flex-col lg:flex-row relative'>
         {/* Left Content Column - SCROLLABLE */}
         <div className='w-full lg:w-[60%] flex flex-col'>

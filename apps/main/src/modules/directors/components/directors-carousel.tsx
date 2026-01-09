@@ -28,7 +28,7 @@ export function DirectorsCarousel() {
   const items = getDirectorsByCategory()
 
   return (
-    <section className='relative py-20 pb-32 overflow-hidden bg-lhbs-green-dark transition-colors duration-500'>
+    <section className='relative py-20 pb-32 overflow-hidden bg-brand-green-dark transition-colors duration-500'>
       {/* Background Pattern */}
       <div className='absolute inset-0 opacity-5'>
         <div

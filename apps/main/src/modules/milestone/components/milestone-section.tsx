@@ -65,7 +65,7 @@ export function MilestoneSection({ section, index, onInView }: MilestoneSectionP
               key={feature.title}
               className='group flex items-start gap-4 p-5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 transition-all duration-300 hover:-translate-y-1'
             >
-              <div className='shrink-0 w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-lhbs-green-dark transition-all duration-500'>
+              <div className='shrink-0 w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-green-dark transition-all duration-500'>
                 {feature.icon}
               </div>
               <div>

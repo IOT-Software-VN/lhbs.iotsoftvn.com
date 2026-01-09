@@ -23,7 +23,7 @@ export function MilestoneNavTab({ item, index: _index, isActive, onClick }: Mile
           className={cn(
             'w-14 h-14 lg:w-16 lg:h-16 rounded-2xl flex items-center justify-center transition-all duration-700 relative overflow-hidden border',
             isActive
-              ? 'bg-brand-gold border-brand-gold text-lhbs-green-dark shadow-[0_0_40px_rgba(250,186,30,0.3)] scale-110'
+              ? 'bg-brand-gold border-brand-gold text-brand-green-dark shadow-[0_0_40px_rgba(250,186,30,0.3)] scale-110'
               : 'bg-[#004d26] border-white/5 text-white/40 group-hover:border-brand-gold/50 group-hover:text-white group-hover:scale-110 shadow-lg'
           )}
         >

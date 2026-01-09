@@ -22,8 +22,8 @@ export function FormCard({ form, index, failedIframes, onIframeError, onDownload
     >
       <div className='bg-white rounded-xl overflow-hidden border border-gray-200 shadow-[0_4px_20px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 hover:-translate-y-1 h-full flex flex-col'>
         {/* Header */}
-        <div className='bg-linear-to-r from-lhbs-green to-lhbs-green-dark p-3 md:p-4 relative overflow-hidden'>
-          <div className='absolute top-0 right-0 w-24 h-24 bg-lhbs-yellow opacity-10 rounded-full -mr-12 -mt-12' />
+        <div className='bg-linear-to-r from-brand-green to-brand-green-dark p-3 md:p-4 relative overflow-hidden'>
+          <div className='absolute top-0 right-0 w-24 h-24 bg-brand-gold opacity-10 rounded-full -mr-12 -mt-12' />
           <div className='relative z-10 flex items-start gap-3'>
             <div className='shrink-0 w-9 h-9 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center'>
               <FileText className='w-5 h-5 text-white' />
@@ -76,7 +76,7 @@ export function FormCard({ form, index, failedIframes, onIframeError, onDownload
           <div className='flex gap-2 px-3 md:px-4 pb-3 md:pb-4'>
             <button
               onClick={() => onDownload(form.pdfUrl)}
-              className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-lhbs-yellow hover:bg-[#e5a812] text-lhbs-green font-bold text-xs rounded-full transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md'
+              className='flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-brand-gold hover:bg-[#e5a812] text-brand-green font-bold text-xs rounded-full transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md'
             >
               <Download className='w-3.5 h-3.5' />
               <span>Tải xuống</span>

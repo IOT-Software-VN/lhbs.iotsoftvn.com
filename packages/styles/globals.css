@@ -15,7 +15,7 @@
   --color-primary-white: #ffffff; /* C0 M0 Y0 K0 - White */
 
   /* Màu hỗ trợ (5% usage each) */
-  --color-support-dark-green: #006b00; /* C100 M40 Y100 K30 - Dark green */
+  --color-support-dark-green: #015c34; /* C100 M40 Y100 K30 - Dark green */
   --color-support-gold: #e6a100; /* C0 M30 Y100 K10 - Gold */
   --color-support-bright-green: #00ff00; /* C100 M0 Y100 K0 - Bright green */
 
@@ -26,9 +26,7 @@
   /* Legacy colors for backward compatibility */
   --color-brand-green: #217d46;
   --color-brand-gold: #e6a915;
-  --color-lhbs-green: #1a9900;
-  --color-lhbs-green-dark: #006b00;
-  --color-lhbs-yellow: #e6a100;
+  --color-brand-green-dark: #015c34;
   /* 1e5338, faba1e, 015C34 */
 }
 
