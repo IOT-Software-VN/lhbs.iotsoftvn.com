@@ -7,8 +7,8 @@ import Image from 'next/image'
 const DISTINCTIONS = [
   {
     id: 'years',
-    value: '11',
-    label: 'NĂM VƯỢT TRỘI'
+    value: '15',
+    label: 'NĂM KINH NGHIỆM'
   },
   {
     id: 'teachers',
@@ -62,7 +62,7 @@ export function HistoryMilestonesGrid() {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
-    <section ref={ref} className='relative w-full py-20 md:py-32 bg-gray-50 overflow-hidden'>
+    <section ref={ref} className='relative w-full py-20 md:py-32 bg-white overflow-hidden'>
       <div className='absolute top-0 left-0 right-0 h-32 md:h-40 bg-linear-to-b from-gray-100 via-gray-50/50 to-transparent pointer-events-none' />
 
       {/* Logo Watermark - Center, Full Section */}
@@ -98,7 +98,7 @@ export function HistoryMilestonesGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-brand-green uppercase tracking-tight drop-shadow-2xl'
+            className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black text-brand-green uppercase tracking-tight drop-shadow-2xl'
           >
             CON SỐ TỰ HÀO
           </motion.h2>

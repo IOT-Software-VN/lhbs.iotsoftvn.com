@@ -46,7 +46,11 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
         icon: Blocks,
         logo: 'https://images.ctfassets.net/pc40tpn1u6ef/53uHpRwHaK9sso1qyHHEac/ff0836356ad19c1610be81b5ae6f06d4/STEM-Logo-220801.svg'
       },
-      { name: 'Kỹ năng sống', icon: LifeBuoy, logo: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png' }
+      {
+        name: 'Kỹ năng sống',
+        icon: LifeBuoy,
+        logo: 'https://advantagesschool.com/wp-content/uploads/2022/10/asi-logo.png'
+      }
     ],
     icon: Baby
   },
@@ -83,7 +87,7 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
     icon: Star
   },
   secondary: {
-    title: 'Trung học Cơ sở',
+    title: 'Trung\u00A0học Cơ\u00A0sở',
     grade: '(Lớp 6 - 9)',
     description:
       'Giai đoạn tăng tốc và định hình tư duy phản biện. Chương trình Song ngữ nâng cao, học qua dự án (PBL) và các hoạt động công dân toàn cầu giúp học sinh khám phá bản sắc.',
@@ -115,7 +119,7 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
     icon: GraduationCap
   },
   high: {
-    title: 'Trung học Phổ thông',
+    title: 'Trung\u00A0học Phổ\u00A0thông',
     grade: '(Lớp 10 - 12)',
     description:
       'Giai đoạn về đích, tập trung tối đa cho kỳ thi Tốt nghiệp THPT và chuẩn bị hồ sơ Đại học/Du học. Cơ hội nhận bằng Tú tài Mỹ (Dual Diploma) và chứng chỉ IELTS.',

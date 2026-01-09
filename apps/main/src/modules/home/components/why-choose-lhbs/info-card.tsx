@@ -52,7 +52,7 @@ export function InfoCard({ icon: Icon, title, description, index, onClick }: Inf
         {/* Content Area - Center Aligned */}
         <div className='flex flex-col items-center text-center space-y-4 flex-1'>
           {/* Title */}
-          <h3 className='text-lg md:text-xl lg:text-2xl font-black text-[#005C42] uppercase tracking-wide leading-tight transition-colors duration-300 group-hover:text-[#FDB913]'>
+          <h3 className='text-lg md:text-xl lg:text-2xl font-black text-brand-green uppercase tracking-wide leading-tight transition-colors duration-300 group-hover:text-[#FDB913]'>
             {title}
           </h3>
 

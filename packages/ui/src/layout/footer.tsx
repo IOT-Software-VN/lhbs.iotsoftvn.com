@@ -191,7 +191,6 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
                 </div>
               ))}
             </div>
-
             {/* Copyright */}
             <div className='text-[10px] uppercase tracking-widest text-white/50'>{footerData.copyright}</div>
           </div>

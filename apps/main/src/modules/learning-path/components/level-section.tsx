@@ -81,7 +81,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
           {/* Floating Glass Card Effect */}
           <motion.div
             style={{ y, opacity }}
-            className='relative z-10 w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 bg-linear-to-br from-[#006b3d] to-[#004d2c]'
+            className='relative z-10 w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20 bg-linear-to-br from-brand-green to-[#004d2c]'
           >
             {/* Background Orbs */}
             <div className='absolute top-0 right-0 w-[300px] h-[300px] bg-brand-gold rounded-full blur-[80px] opacity-[0.2] -mr-10 -mt-10 mix-blend-screen' />
@@ -101,7 +101,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
             {/* Dynamic Competencies Slider overlay */}
             <div className='absolute inset-0 p-4 md:p-6 lg:p-8 flex flex-col justify-center overflow-hidden'>
               {/* Multi-layer gradient background with depth */}
-              <div className='absolute inset-0 bg-linear-to-t from-[#004d2c]/98 via-[#006b3d]/85 via-[#004d2c]/70 to-transparent' />
+              <div className='absolute inset-0 bg-linear-to-t from-[#004d2c]/98 via-brand-green/85 via-[#004d2c]/70 to-transparent' />
               {/* Accent glow from center */}
               <div className='absolute inset-0 bg-radial from-brand-gold/10 via-transparent to-transparent opacity-60' />
               {/* Top subtle fade */}
@@ -205,7 +205,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className='relative'
           >
-            <div className='inline-flex items-center gap-2 px-4 py-1.5 bg-brand-gold/10 border border-brand-gold/20 rounded-full text-[#006b3d] text-xs font-bold uppercase tracking-widest mb-6 relative z-30 bg-white'>
+            <div className='inline-flex items-center gap-2 px-4 py-1.5 bg-brand-gold/10 border border-brand-gold/20 rounded-full text-brand-green text-xs font-bold uppercase tracking-widest mb-6 relative z-30 bg-white'>
               {/* Explicit Anchor Point for Timeline Calculation */}
               <div id={`timeline-anchor-${level}`} className='absolute left-1/2 top-1/2 w-0 h-0' />
 
@@ -213,7 +213,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
               <span>{schoolData[level].grade}</span>
             </div>
 
-            <h2 className='text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#006b3d] mb-6 leading-tight uppercase relative z-30 bg-white/95 px-2 py-1 -mx-2 -my-1 rounded'>
+            <h2 className='text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-green mb-6 leading-tight uppercase relative z-30 bg-white/95 px-2 py-1 -mx-2 -my-1 rounded'>
               {schoolData[level].title}
             </h2>
 
@@ -225,7 +225,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => onNavigate(schoolData[level].link)}
-              className='group inline-flex items-center gap-3 px-8 py-4 bg-[#006b3d] text-white font-bold text-sm uppercase tracking-widest rounded-full hover:bg-brand-gold hover:text-[#003820] transition-colors shadow-xl shadow-[#006b3d]/20'
+              className='group inline-flex items-center gap-3 px-8 py-4 bg-brand-green text-white font-bold text-sm uppercase tracking-widest rounded-full hover:bg-brand-gold hover:text-[#003820] transition-colors shadow-xl shadow-brand-green/20'
             >
               Khám phá ngay
               <ChevronRight className='w-4 h-4 transform group-hover:translate-x-1 transition-transform' />

@@ -9,11 +9,27 @@
   --font-sans: var(--font-svn-gotham), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-svn-gotham), ui-serif, Georgia, serif;
 
-  --color-brand-green: #1e5338;
-  --color-brand-gold: #faba1e;
-  --color-lhbs-green: #1e5338;
-  --color-lhbs-green-dark: #00602f;
-  --color-lhbs-yellow: #faba1e;
+  /* CMYK Color Palette */
+  /* Màu chính (40% usage each) */
+  --color-primary-green: #1a9900; /* C90 M40 Y100 K0 - Primary green */
+  --color-primary-white: #ffffff; /* C0 M0 Y0 K0 - White */
+
+  /* Màu hỗ trợ (5% usage each) */
+  --color-support-dark-green: #006b00; /* C100 M40 Y100 K30 - Dark green */
+  --color-support-gold: #e6a100; /* C0 M30 Y100 K10 - Gold */
+  --color-support-bright-green: #00ff00; /* C100 M0 Y100 K0 - Bright green */
+
+  /* Màu nhấn (5% usage) */
+  --color-accent-orange: #ffb300; /* C0 M30 Y100 K0 - Orange gold */
+  --color-accent-gray: #999999; /* C0 M0 Y0 K40 - Gray */
+
+  /* Legacy colors for backward compatibility */
+  --color-brand-green: #006b00;
+  --color-brand-gold: #e6a100;
+  --color-lhbs-green: #1a9900;
+  --color-lhbs-green-dark: #006b00;
+  --color-lhbs-yellow: #e6a100;
+  /* 1e5338, faba1e */
 }
 
 html {

@@ -41,7 +41,7 @@ export function HistoryFutureSection() {
           className='text-center max-w-3xl mx-auto mb-16 md:mb-24'
         >
           <div className='bg-brand-gold w-20 h-2 mx-auto mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-black text-brand-green uppercase tracking-tight mb-4'>
+          <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black text-brand-green uppercase tracking-tight mb-4'>
             Hướng về <span className='text-brand-gold'>tương lai</span>
           </h2>
           <p className='text-lg md:text-xl text-brand-green/70 font-light'>
@@ -73,9 +73,7 @@ export function HistoryFutureSection() {
                       {goal.title}
                     </h3>
                     {goal.description && (
-                      <p className='text-sm text-brand-green/50 font-medium leading-tight'>
-                        {goal.description}
-                      </p>
+                      <p className='text-sm text-brand-green/50 font-medium leading-tight'>{goal.description}</p>
                     )}
                   </div>
                 </div>

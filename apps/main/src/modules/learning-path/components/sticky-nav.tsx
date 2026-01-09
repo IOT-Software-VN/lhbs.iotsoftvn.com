@@ -26,7 +26,7 @@ export function StickyNav({ activeSection, onNavigate, isVisible = true }: Stick
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className='fixed left-8 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col items-center gap-2 select-none'
+          className='fixed left-8 top-1/2 -translate-y-1/2 z-51 hidden xl:flex flex-col items-center gap-2 select-none'
         >
           {/* --- Navigation Items with Moving Lac Bird --- */}
           {/* No gap needed because items have fixed height */}

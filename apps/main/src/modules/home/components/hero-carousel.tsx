@@ -90,7 +90,7 @@ export function HeroCarousel() {
         transition={{ duration: 0.5 }}
       >
         {/* Scrollable Text Area - Allows content to fit or scroll in smaller viewports */}
-        <div className='w-full max-w-[1920px] mx-auto max-h-[85vh] overflow-y-auto no-scrollbar pointer-events-auto'>
+        <div className='w-full max-w-[1920px] mx-auto max-h-[85vh] no-scrollbar pointer-events-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-12 gap-8'>
             <motion.div
               className='lg:col-span-9 xl:col-span-8 flex flex-col items-start'
@@ -105,7 +105,7 @@ export function HeroCarousel() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className='bg-brand-gold w-8 h-1 md:w-12 md:h-1.5 mb-2 md:mb-3 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
+                <div className='bg-brand-gold w-12 h-1 md:w-16 md:h-1.5 mb-4 md:mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
                 <h2 className='text-xs md:text-sm lg:text-base font-bold text-brand-gold uppercase tracking-[0.2em] leading-none drop-shadow-md'>
                   Chào mừng đến với Song Ngữ Lạc Hồng
                 </h2>
@@ -118,7 +118,7 @@ export function HeroCarousel() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className='mb-2 md:mb-4 lg:mb-6'
               >
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
+                <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
                   <span className='block mb-1 md:mb-2'>Văn hóa Việt Nam</span>
                   <span className='block text-white/90'>Tầm nhìn quốc tế</span>
                 </h1>

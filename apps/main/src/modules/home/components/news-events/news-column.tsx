@@ -56,7 +56,7 @@ export function NewsColumn({ newsItems, backgroundImage }: NewsColumnProps) {
             href={item.link}
             className='p-3 block cursor-pointer bg-gray-50 border border-gray-100 hover:border-brand-green/20 hover:bg-brand-gold/10 transition-all rounded-sm! group/item grow items-center'
           >
-            <div className='flex items-center gap-4 w-full'>
+            <div className='flex items-center gap-4 w-full h-full'>
               <div className='flex flex-col items-center shrink-0 text-brand-green/80 w-14'>
                 <span className='text-3xl font-black leading-none'>{item.date.split('/')[0]}</span>
                 <span className='text-[10px] font-bold uppercase tracking-wider text-gray-400'>

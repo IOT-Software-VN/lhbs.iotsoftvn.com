@@ -144,8 +144,8 @@ export function DirectorsCarousel() {
             ))}
           </CarouselContent>
 
-          <CarouselPrevious className='left-0 md:-left-4 bg-white/20 hover:bg-white text-white hover:text-brand-green border-none' />
-          <CarouselNext className='right-0 md:-right-4 bg-white/20 hover:bg-white text-white hover:text-brand-green border-none' />
+          <CarouselPrevious className='left-[30] bg-white/20 hover:bg-white text-white hover:text-brand-green border-none' />
+          <CarouselNext className='right-[30] bg-white/20 hover:bg-white text-white hover:text-brand-green border-none' />
         </Carousel>
       </div>
     </section>

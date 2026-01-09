@@ -163,7 +163,7 @@ export function HistoryTimeline() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-3xl md:text-5xl lg:text-7xl font-black text-brand-gold mb-6 leading-[1.1] drop-shadow-2xl uppercase tracking-tight'
+            className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black text-white mb-6 leading-[1.1] drop-shadow-2xl uppercase tracking-tight'
           >
             LỊCH SỬ PHÁT TRIỂN
           </motion.h2>
@@ -172,7 +172,7 @@ export function HistoryTimeline() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className='text-white/80 text-sm md:text-lg font-medium leading-relaxed max-w-2xl'
+            className='text-brand-gold text-sm md:text-lg font-medium leading-relaxed max-w-2xl'
           >
             15 năm kiên định với sứ mệnh kiến tạo môi trường giáo dục chuẩn quốc tế.
           </motion.p>
@@ -274,7 +274,7 @@ export function HistoryTimeline() {
                   >
                     {/* Chapter Badge */}
                     <div className='mb-6'>
-                      <span className='inline-flex px-4 py-2 bg-brand-gold text-brand-green text-xs md:text-sm font-black rounded-md uppercase tracking-[0.2em] shadow-xl'>
+                      <span className='inline-flex px-4 py-2 bg-brand-gold text-brand-green text-xs md:text-sm font-black rounded-full uppercase tracking-[0.2em] shadow-xl'>
                         {item.label}
                       </span>
                     </div>

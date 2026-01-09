@@ -36,7 +36,7 @@ export function NewsEventsSection() {
             <h3 className='text-xs md:text-sm lg:text-base font-bold text-brand-gold uppercase tracking-[0.2em] mb-2 text-center'>
               Cập nhật mới nhất
             </h3>
-            <h2 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black text-brand-green uppercase tracking-tight text-center drop-shadow-sm leading-tight'>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl font-black text-brand-green uppercase tracking-tight text-center drop-shadow-sm leading-tight'>
               Tin tức & Sự kiện
             </h2>
           </motion.div>

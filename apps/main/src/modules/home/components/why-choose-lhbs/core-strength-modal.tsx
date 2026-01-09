@@ -70,7 +70,7 @@ export function CoreStrengthModal({ title, fullDescription, image, alt, onClose 
 
           {/* Content - Responsive Padding */}
           <div className='p-6 sm:p-8 md:p-10 lg:p-12'>
-            <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-[#005C42] mb-3 md:mb-4 uppercase tracking-wide'>
+            <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-brand-green mb-3 md:mb-4 uppercase tracking-wide'>
               {title}
             </h2>
             <p className='text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-5 md:mb-6'>

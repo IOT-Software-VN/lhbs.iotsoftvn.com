@@ -17,7 +17,7 @@ export function DirectorsWelcomeSection() {
             transition={{ duration: 0.8 }}
           >
             {/* Decoration */}
-            <div className='bg-brand-yellow w-12 h-1 md:w-20 md:h-1.5 mb-6 rounded-full' />
+            <div className='bg-brand-gold w-12 h-1 md:w-16 md:h-1.5 mb-4 md:mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
 
             {/* Title (Optional, based on context) */}
             <h2 className='text-4xl md:text-5xl lg:text-6xl font-black text-brand-green uppercase tracking-tight mb-6 md:mb-8 leading-tight'>
