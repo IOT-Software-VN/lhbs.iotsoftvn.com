@@ -188,7 +188,7 @@ export function FullScreenMenu({ isOpen, onClose, onNavigate, currentPath }: Ful
           ) : (
             <motion.div
               className='fixed left-0 right-0 bottom-0 z-70 bg-brand-green-dark overflow-y-auto'
-              style={{ top: 'calc(72px + 2.5rem)' }}
+              style={{ top: 'calc(72px + 0.5rem)' }}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}

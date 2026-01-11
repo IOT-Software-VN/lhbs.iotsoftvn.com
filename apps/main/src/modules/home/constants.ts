@@ -72,7 +72,7 @@ export const UNIVERSITY_LOGOS: UniversityLogo[] = [
 export const SCHOOL_LEVELS: SchoolLevel[] = [
   {
     id: 'galaxy-kc',
-    title: 'MẦM NON',
+    title: 'MẦM\u00A0NON',
     subtitle: '12 tháng - 5 tuổi',
     descriptions: [
       'Tôn trọng sự khác biệt của từng trẻ',
@@ -85,7 +85,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: 'elementary',
-    title: 'TIỂU HỌC',
+    title: 'TIỂU\u00A0HỌC',
     subtitle: 'Lớp 1 - Lớp 5',
     descriptions: [
       'Chương trình học tập cá nhân hóa.',
@@ -99,7 +99,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: 'middle',
-    title: 'TRUNG HỌC CƠ SỞ',
+    title: 'TRUNG\u00A0HỌC CƠ\u00A0SỞ',
     subtitle: 'Lớp 6 - Lớp 9',
     descriptions: [
       'Chương trình học tập cá nhân hóa',
@@ -113,7 +113,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 
   {
     id: 'highschool',
-    title: 'TRUNG HỌC PHỔ THÔNG',
+    title: 'TRUNG\u00A0HỌC PHỔ\u00A0THÔNG',
     subtitle: 'Lớp 10 - Lớp 12',
     descriptions: [
       'Chương trình học tập cá nhân hóa',
@@ -129,7 +129,7 @@ export const SCHOOL_LEVELS: SchoolLevel[] = [
 export const WHY_CHOOSE_DATA: WhyChooseItem[] = [
   {
     icon: BookOpen,
-    title: 'Cá nhân hóa lộ\u00A0trình học\u00A0tập',
+    title: 'Cá\u00A0nhân\u00A0hóa lộ\u00A0trình học\u00A0tập',
     description: 'Chương trình học, phương pháp giảng dạy phù hợp với năng lực của từng học sinh',
     fullDescription:
       'Tại LHBS, chúng tôi hiểu rằng mỗi học sinh là một cá nhân độc đáo với năng lực, sở thích và tốc độ học tập riêng biệt. Vì vậy, chúng tôi xây dựng lộ trình học tập cá nhân hóa, điều chỉnh chương trình và phương pháp giảng dạy để phù hợp với từng em, giúp các em phát triển tối đa tiềm năng của bản thân.',
@@ -147,7 +147,7 @@ export const WHY_CHOOSE_DATA: WhyChooseItem[] = [
   },
   {
     icon: MonitorSmartphone,
-    title: 'Tiên phong ứng\u00A0dụng công\u00A0nghệ',
+    title: 'Tiên\u00A0phong ứng\u00A0dụng công\u00A0nghệ',
     description: 'Tích hợp công nghệ hiện đại vào các hoạt động giảng dạy, học tập và quản lý',
     fullDescription:
       'LHBS là đơn vị tiên phong trong việc ứng dụng công nghệ giáo dục tiên tiến. Chúng tôi tích hợp công nghệ hiện đại vào mọi hoạt động giảng dạy, học tập và quản lý, tạo ra môi trường học tập thông minh, tương tác và hiệu quả cao. Công nghệ không chỉ là công cụ hỗ trợ mà còn là nền tảng để phát triển tư duy sáng tạo và kỹ năng số cho học sinh.',
@@ -156,7 +156,7 @@ export const WHY_CHOOSE_DATA: WhyChooseItem[] = [
   },
   {
     icon: UtensilsCrossed,
-    title: 'Dinh dưỡng cân\u00A0bằng',
+    title: 'Dinh\u00A0dưỡng cân\u00A0bằng',
     description: 'Thực đơn phong phú và rõ ràng về hàm lượng',
     fullDescription:
       'LHBS quan tâm đến sức khỏe và sự phát triển toàn diện của học sinh thông qua chế độ dinh dưỡng khoa học. Thực đơn được thiết kế phong phú, đa dạng với các món ăn bổ dưỡng, đảm bảo đầy đủ dưỡng chất cần thiết. Mỗi bữa ăn đều được công bố rõ ràng về hàm lượng dinh dưỡng, giúp phụ huynh yên tâm về sức khỏe của con em mình.',

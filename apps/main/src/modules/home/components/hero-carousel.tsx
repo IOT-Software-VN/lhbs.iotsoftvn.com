@@ -107,7 +107,7 @@ export function HeroCarousel() {
               >
                 <div className='bg-brand-gold w-12 h-1 md:w-16 md:h-1.5 mb-4 md:mb-6 rounded-full shadow-[0_0_15px_rgba(250,186,30,0.4)]' />
                 <h2 className='text-xs md:text-sm lg:text-base font-bold text-brand-gold uppercase tracking-[0.2em] leading-none drop-shadow-md'>
-                  Chào mừng đến với Song Ngữ Lạc Hồng
+                  Chào mừng đến với Song&nbsp;Ngữ Lạc&nbsp;Hồng
                 </h2>
               </motion.div>
 
@@ -119,7 +119,7 @@ export function HeroCarousel() {
                 className='mb-2 md:mb-4 lg:mb-6'
               >
                 <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl min-[1800px]:text-7xl font-black text-white leading-[1.1] drop-shadow-2xl uppercase tracking-tight'>
-                  <span className='block mb-1 md:mb-2'>Văn hóa Việt Nam</span>
+                  <span className='block mb-1 md:mb-2'>Văn hóa Việt&nbsp;Nam</span>
                   <span className='block text-white/90'>Tầm nhìn quốc tế</span>
                 </h1>
               </motion.div>

@@ -80,7 +80,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
         )}
       >
         {/* Visual/Image Side - Alternates */}
-        <div className={cn('relative group', isEven ? 'md:order-1' : 'md:order-2')}>
+        <div className={cn('relative group order-2', isEven ? 'md:order-1' : 'md:order-2')}>
           {/* Floating Glass Card Effect */}
           <motion.div
             style={{ y, opacity }}
@@ -200,7 +200,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
         </div>
 
         {/* Content Side - Alternates */}
-        <div className={cn('space-y-6 md:space-y-8 relative z-20', isEven ? 'md:order-2' : 'md:order-1')}>
+        <div className={cn('space-y-6 md:space-y-8 relative z-20 order-1', isEven ? 'md:order-2' : 'md:order-1')}>
           <motion.div
             initial={{ opacity: 0, x: isEven ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
