@@ -205,7 +205,7 @@ export function LevelSection({ level, index, onNavigate }: LevelSectionProps) {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             className='relative'
           >
-            <div className='inline-flex items-center gap-2 px-4 py-1.5 bg-brand-gold/10 border border-brand-gold/20 rounded-full text-brand-green text-xs font-bold uppercase tracking-widest mb-6 relative z-30 bg-white'>
+            <div className='inline-flex items-center gap-2 px-4 py-2 bg-brand-gold rounded-full text-white text-xs font-bold uppercase tracking-widest mb-6 relative z-30 shadow-lg shadow-brand-gold/30'>
               {/* Explicit Anchor Point for Timeline Calculation */}
               <div id={`timeline-anchor-${level}`} className='absolute left-1/2 top-1/2 w-0 h-0' />
 

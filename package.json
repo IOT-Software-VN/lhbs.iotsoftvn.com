@@ -29,7 +29,8 @@
     "turbo:cache:test": "pnpm turbo:cache:clear && pnpm build",
     "reset": "pnpm clean:all && pnpm install",
     "serve:static": "node scripts/serve-static.js",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "preview:main": "pnpm build:main && npx serve apps/main/out"
   },
   "devDependencies": {
     "glob": "^11.0.0",

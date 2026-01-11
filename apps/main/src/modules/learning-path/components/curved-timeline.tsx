@@ -124,10 +124,7 @@ export function CurvedTimeline({ levels }: CurvedTimelineProps) {
   }, [svgHeight]) // Recalc if SVG height changes
 
   return (
-    <div 
-      ref={containerRef} 
-      className='absolute inset-0 pointer-events-none z-0 hidden md:block'
-    >
+    <div ref={containerRef} className='absolute inset-0 pointer-events-none z-0 hidden md:block'>
       <svg width='100%' height={svgHeight} className='overflow-visible'>
         <defs>
           {/* Main Gradient for the Line */}
