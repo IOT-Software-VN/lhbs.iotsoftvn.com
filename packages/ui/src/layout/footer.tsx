@@ -44,10 +44,9 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
         <div className='absolute inset-0 z-10 bg-black/20 mix-blend-multiply' />
       </div>
 
-      {/* Floating Action Buttons */}
-      <div className='relative z-30 container mx-auto px-4 -translate-y-1/2'>
+      {/* Floating Action Buttons - Desktop only (floating above) */}
+      <div className='hidden md:block relative z-30 container mx-auto px-4 -translate-y-1/2'>
         <div className='flex justify-center items-center gap-6 md:gap-12'>
-          {/* Inquire */}
           <CircleActionButton
             label='Tư vấn'
             onClick={() => onNavigate('/contact/inquire')}
@@ -69,7 +68,6 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               </svg>
             }
           />
-          {/* Apply */}
           <CircleActionButton
             label='Đăng ký'
             onClick={() => onNavigate('/admissions/apply')}
@@ -90,7 +88,6 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               </svg>
             }
           />
-          {/* Visit */}
           <CircleActionButton
             label='Tham quan'
             onClick={() => onNavigate('/visit')}
@@ -114,16 +111,87 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
         </div>
       </div>
 
-      <div className='relative z-20 w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 pt-10 pb-16'>
+      <div className='relative z-20 w-full max-w-[1920px] mx-auto px-4 md:px-12 lg:px-24 pt-6 md:pt-10 pb-16'>
+        {/* Mobile Action Buttons - Full width rows */}
+        <div className='md:hidden flex flex-col gap-4 mb-8'>
+          <MobileActionButton
+            label='Tư vấn'
+            onClick={() => onNavigate('/contact/inquire')}
+            icon={
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              >
+                <circle cx='12' cy='12' r='10' />
+                <path d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3' />
+                <path d='M12 17h.01' />
+              </svg>
+            }
+          />
+          <MobileActionButton
+            label='Đăng ký'
+            onClick={() => onNavigate('/admissions/apply')}
+            icon={
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              >
+                <path d='M12 20h9' />
+                <path d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z' />
+              </svg>
+            }
+          />
+          <MobileActionButton
+            label='Tham quan'
+            onClick={() => onNavigate('/visit')}
+            icon={
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+                stroke='currentColor'
+                strokeWidth='2'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+              >
+                <path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z' />
+                <circle cx='12' cy='10' r='3' />
+              </svg>
+            }
+          />
+        </div>
+
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8'>
           {/* Left Column: Logo & Contact Info */}
-          <div className='lg:col-span-5 flex flex-col items-start'>
+          <div className='lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left'>
             <div className='relative h-20 md:h-26 w-full mb-6'>
-              <Image src={logoImage} alt='LHBS Logo' fill className='object-contain object-left' sizes='260px' />
+              <Image
+                src={logoImage}
+                alt='LHBS Logo'
+                fill
+                className='object-contain object-center lg:object-left'
+                sizes='260px'
+              />
             </div>
             <div className='space-y-4 text-sm md:text-base font-light tracking-wide text-white/90'>
               <h3 className='font-bold text-lg uppercase mb-2 text-brand-gold'>{footerData.schoolName}</h3>
-              <div className='flex items-start gap-3'>
+              <div className='flex items-start text-start gap-3'>
                 <MapPin className='w-5 h-5 text-brand-gold shrink-0 mt-0.5' />
                 <span className='leading-relaxed'>{footerData.address}</span>
               </div>
@@ -143,9 +211,9 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
           </div>
 
           {/* Right Column: Links & Socials */}
-          <div className='lg:col-span-7 flex flex-col justify-end lg:items-end'>
+          <div className='lg:col-span-7 flex flex-col justify-end items-center lg:items-end'>
             {/* Navigation Grid */}
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 mb-12 text-right'>
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-4 mb-12 text-center lg:text-right'>
               {footerLinksGroup1.concat(footerLinksGroup2).map((link, idx) => (
                 <button
                   key={idx}
@@ -158,7 +226,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
             </div>
 
             {/* Social Icons */}
-            <div className='flex items-center gap-6 mb-8'>
+            <div className='flex items-center justify-center lg:justify-start gap-6 mb-8'>
               {socialLinks.map((social, idx) => (
                 <a
                   key={idx}
@@ -173,7 +241,7 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               ))}
             </div>
 
-            <div className='flex flex-wrap items-center justify-end gap-4 md:gap-6 mb-8'>
+            <div className='flex flex-wrap items-center justify-center lg:justify-end gap-4 md:gap-6 mb-8'>
               {partnerLogos.map((logo) => (
                 <div
                   key={logo.id}
@@ -192,7 +260,9 @@ export function Footer({ onNavigate }: { onNavigate: (path: string) => void }) {
               ))}
             </div>
             {/* Copyright */}
-            <div className='text-[10px] uppercase tracking-widest text-white/50'>{footerData.copyright}</div>
+            <div className='text-[10px] uppercase tracking-widest text-white/50 text-center lg:text-right'>
+              {footerData.copyright}
+            </div>
           </div>
         </div>
       </div>
@@ -208,6 +278,20 @@ function CircleActionButton({ label, onClick, icon }: { label: string; onClick: 
     >
       <div className='mb-2 text-white group-hover:text-[#004a25] transition-colors duration-300'>{icon}</div>
       <span className='text-xs md:text-sm font-bold uppercase tracking-widest text-white group-hover:text-[#004a25] transition-colors duration-300'>
+        {label}
+      </span>
+    </button>
+  )
+}
+
+function MobileActionButton({ label, onClick, icon }: { label: string; onClick: () => void; icon: React.ReactNode }) {
+  return (
+    <button
+      onClick={onClick}
+      className='group flex items-center justify-center gap-4 w-full py-4 px-6 rounded-2xl bg-[#004a25] border-2 border-[#00602F] shadow-xl hover:bg-brand-gold hover:border-white transition-all duration-300 ease-out'
+    >
+      <div className='text-white group-hover:text-[#004a25] transition-colors duration-300'>{icon}</div>
+      <span className='text-sm font-bold uppercase tracking-widest text-white group-hover:text-[#004a25] transition-colors duration-300'>
         {label}
       </span>
     </button>

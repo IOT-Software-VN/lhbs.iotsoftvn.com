@@ -154,6 +154,5 @@ export const schoolData: Record<SchoolLevel, SchoolLevelData> = {
 
 export const LEARNING_PATH_BREADCRUMB_ITEMS: BreadcrumbItem[] = [
   { label: 'Trang chủ', path: '/' },
-  { label: 'Chương trình đào tạo' },
   { label: 'Lộ trình học tập' }
 ]

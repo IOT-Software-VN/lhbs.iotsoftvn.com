@@ -37,9 +37,9 @@ export function Breadcrumb({
             <ChevronRight className={`w-4 h-4 ${separatorClassName}`} />
 
             {isLast || !item.path ? (
-              <span className={`text-sm md:text-base ${activeTextClassName}`}>{item.label}</span>
+              <span className={`text-xs md:text-base ${activeTextClassName}`}>{item.label}</span>
             ) : (
-              <Link href={item.path} className={`text-sm md:text-base transition-colors ${textClassName}`}>
+              <Link href={item.path} className={`text-xs md:text-base transition-colors ${textClassName}`}>
                 {item.label}
               </Link>
             )}

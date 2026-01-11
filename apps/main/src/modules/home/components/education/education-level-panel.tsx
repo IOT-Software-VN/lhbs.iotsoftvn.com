@@ -172,7 +172,7 @@ export function EducationLevelPanel({
                       rel='noreferrer'
                       className='group relative w-full md:w-[200px] px-6 py-4 bg-brand-gold text-brand-green font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                     >
-                      <span className='relative z-10'>Bien Hoa</span>
+                      <span className='relative z-10'>Trấn Biên</span>
                     </a>
                     <a
                       href='https://lk-galaxykg-lhbs-iotsoftvn-com.vercel.app/'
@@ -180,7 +180,7 @@ export function EducationLevelPanel({
                       rel='noreferrer'
                       className='group relative w-full md:w-[200px] px-6 py-4 bg-brand-gold text-brand-green font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                     >
-                      <span className='relative z-10'>Long Khanh</span>
+                      <span className='relative z-10'>Long Khánh</span>
                     </a>
                   </>
                 ) : (
