@@ -37,7 +37,7 @@ export function TestimonialQuoteSection({
     >
       {/* --- 360 BIRD IMAGE: Absolute Bottom Right (Flush with edges) --- */}
       <div className='absolute bottom-0 right-0 z-30 h-full max-h-full w-auto flex items-end justify-end pointer-events-none'>
-        <div className='h-[70%] md:h-[85%] lg:h-[110%] w-auto aspect-square relative translate-y-0 lg:translate-y-0 pointer-events-auto transition-transform hover:scale-105 duration-500 origin-bottom-right'>
+        <div className='h-[50%] md:h-[85%] lg:h-[110%] w-auto aspect-square relative translate-y-0 lg:translate-y-0 pointer-events-auto transition-transform hover:scale-105 duration-500 origin-bottom-right'>
           <a
             href='https://360.lhu.edu.vn/'
             target='_blank'

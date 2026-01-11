@@ -7,7 +7,7 @@ interface OverviewSectionProps {
 
 export function OverviewSection({ onNavigate }: OverviewSectionProps) {
   return (
-    <section id='overview' className='py-16 md:py-32 bg-white overflow-hidden relative'>
+    <section id='overview' className=' bg-white overflow-hidden relative'>
       {/* Background Decoration */}
       <div className='absolute top-0 right-0 w-1/3 h-1/3 bg-linear-to-b from-brand-gold/5 to-transparent rounded-bl-full -z-10 blur-3xl' />
       <div className='absolute bottom-0 left-0 w-1/2 h-1/2 bg-radial from-[#006b3d]/5 to-transparent -z-10' />

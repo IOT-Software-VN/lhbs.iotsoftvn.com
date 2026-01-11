@@ -46,23 +46,29 @@ export function ScrollJourney({ onNavigate }: ScrollJourneyProps) {
     return () => observer.disconnect()
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Visibility Observer for StickyNav - Ẩn khi scroll qua hết section cuối cùng
+  // Visibility Observer for StickyNav - Chỉ hiển thị trong khu vực các cấp học
   useEffect(() => {
     const checkVisibility = () => {
+      // Lấy section đầu tiên và cuối cùng
+      const firstSectionEl = document.getElementById(`section-${levels[0]}`)
       const lastSectionEl = document.getElementById(`section-${levels[levels.length - 1]}`)
 
-      if (!lastSectionEl) {
+      if (!firstSectionEl || !lastSectionEl) {
         setIsInPathSection(false)
         return
       }
 
+      const firstRect = firstSectionEl.getBoundingClientRect()
       const lastRect = lastSectionEl.getBoundingClientRect()
 
-      // Ẩn sticky nav khi section cuối cùng đã hoàn toàn ở trên viewport
-      // Tức là khi top < 0 VÀ bottom < 0 (đã scroll qua hết section)
-      // Hiển thị khi section vẫn còn một phần trong viewport (bottom > 0)
-      const isFullyAboveViewport = lastRect.top < 0 && lastRect.bottom < 0
-      const shouldShow = !isFullyAboveViewport && lastRect.bottom > -50 // Buffer 50px để tránh flicker
+      // Hiển thị khi:
+      // 1. Section đầu tiên đã vào viewport (top < 80% viewport height)
+      // 2. Section cuối cùng vẫn còn trong viewport đủ nhiều (bottom > 50% viewport height)
+      //    Điều này đảm bảo ẩn sticky nav trước khi đến footer
+      const hasEnteredFirstSection = firstRect.top < window.innerHeight * 0.8
+      const hasNotLeftLastSection = lastRect.bottom > window.innerHeight * 0.5
+
+      const shouldShow = hasEnteredFirstSection && hasNotLeftLastSection
 
       setIsInPathSection(shouldShow)
     }

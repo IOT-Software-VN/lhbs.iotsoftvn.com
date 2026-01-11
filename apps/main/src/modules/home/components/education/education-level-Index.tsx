@@ -1,12 +1,21 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { SCHOOL_LEVELS } from '../../constants'
 import { EducationLevelPanel } from './education-level-panel'
+import { EducationLevelPanelMobile } from './education-level-panel-moblie'
 
 export function EducationLevelSection() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const handleMouseEnter = useCallback((index: number) => {
     if (timeoutRef.current) {
@@ -18,6 +27,12 @@ export function EducationLevelSection() {
     }, 100)
   }, [])
 
+  // Mobile view
+  if (isMobile) {
+    return <EducationLevelPanelMobile levels={SCHOOL_LEVELS} />
+  }
+
+  // Desktop view
   return (
     <section
       id='solid-education-level'

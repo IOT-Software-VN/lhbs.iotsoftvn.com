@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'motion/react'
 import type { SchoolLevel } from '../../types'
+import Link from 'next/link'
 
 interface EducationLevelPanelProps {
   item: SchoolLevel
@@ -166,22 +167,22 @@ export function EducationLevelPanel({
               >
                 {index === 0 ? (
                   <>
-                    <a
+                    <Link
                       href='https://bh-galaxykg-lhbs-iotsoftvn-com.vercel.app/'
                       target='_blank'
                       rel='noreferrer'
                       className='group relative w-full md:w-[200px] px-6 py-4 bg-brand-gold text-brand-green font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                     >
-                      <span className='relative z-10'>Bien Hoa</span>
-                    </a>
-                    <a
+                      <span className='relative z-10'>Trấn Biên</span>
+                    </Link>
+                    <Link
                       href='https://lk-galaxykg-lhbs-iotsoftvn-com.vercel.app/'
                       target='_blank'
                       rel='noreferrer'
                       className='group relative w-full md:w-[200px] px-6 py-4 bg-brand-gold text-brand-green font-bold rounded-sm hover:bg-white transition-all duration-300 uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex items-center justify-center'
                     >
-                      <span className='relative z-10'>Long Khanh</span>
-                    </a>
+                      <span className='relative z-10'>Long Khánh</span>
+                    </Link>
                   </>
                 ) : (
                   <a

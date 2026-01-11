@@ -87,12 +87,12 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
         backdropFilter: { duration: 0.3 }
       }}
     >
-      <div className='h-full w-full px-4 md:px-10 flex flex-col-reverse md:flex-row items-center justify-between gap-2 md:gap-8 py-2 md:py-4'>
-        {/* Logo - Left (Desktop) / Bottom Center (Mobile) */}
+      <div className='h-full w-full px-4 md:px-10 flex flex-row items-center justify-between gap-3 md:gap-8 py-4 md:py-4'>
+        {/* Logo - Left */}
 
         <motion.div
           onClick={handleLogoClick}
-          className={`shrink-0 cursor-pointer w-full flex justify-center md:w-auto md:block ${
+          className={`shrink-0 cursor-pointer ${
             isTransparent
               ? 'focus:ring-offset-brand-green-dark'
               : menuOpen
@@ -103,19 +103,19 @@ export function StickyHeader({ scrolled, onMenuClick, onMenuClose, menuOpen }: S
           whileTap={{ scale: 0.98 }}
           aria-label='Go to homepage'
         >
-          <div className='relative h-20 md:h-28 w-auto aspect-[3/1]'>
+          <div className='relative h-12 md:h-28 w-auto aspect-[3/1]'>
             <Image
               src={logoImage}
               alt='LHBS - Lac Hong Bilingual School'
               fill
               className='object-contain object-left'
-              sizes='(max-width: 768px) 250px, 400px'
+              sizes='(max-width: 768px) 150px, 400px'
               priority
             />
           </div>
         </motion.div>
-        {/* Right - Actions (Desktop) / Top Right (Mobile) */}
-        <div className='w-full flex justify-end md:w-auto items-center gap-3'>
+        {/* Right - Actions */}
+        <div className='flex justify-end items-center gap-2 md:gap-3'>
           {/* Primary CTA Button - Apply Now */}
           <motion.button
             onClick={handleEnquireClick}
