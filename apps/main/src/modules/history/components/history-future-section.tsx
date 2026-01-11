@@ -64,7 +64,7 @@ export function HistoryFutureSection() {
               >
                 {/* Icon - Gold accent */}
                 <div className='flex flex-col h-full justify-between gap-4'>
-                  <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center group-hover:bg-brand-gold group-hover:rotate-3 transition-all duration-300'>
+                  <div className='w-12 h-12 md:w-14 md:h-14 rounded-xl bg-brand-gold/10 flex items-center justify-center group-hover:bg-brand-gold transition-all duration-300'>
                     <Icon className='w-6 h-6 md:w-7 md:h-7 text-brand-gold group-hover:text-brand-green transition-colors duration-300' />
                   </div>
 
